@@ -39,10 +39,18 @@
 {
     self.babyName=@"Nathan";
     self.profilePicture = @"facebook-logo.png";
+    _firstName = @"Aarti";
+    _lastName = @"Munjal";
+    _userEmail = @"aarti.munjal@gmail.com";
+    _userPassword = @"artika12";
+    _babyGender = @"Female";
+    _babyDOB = @"06-06-2014";
+    _phoneNumber = @"4698342095";
+    _zipcode = @"80012";
+    
+
+
 }
-
-
-
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.

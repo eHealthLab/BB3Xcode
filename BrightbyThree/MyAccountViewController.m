@@ -24,6 +24,12 @@
 
     appDelegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
     
+    
+    
+    
+    //appDelegate.phoneNumber = @"4698346074";
+    
+    
     [super viewDidLoad];
 }
 
@@ -92,6 +98,19 @@
     UILabel *ZipcodeLabel;
     UILabel *PhoneNumberLabel;
     
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    
+    // getting an NSString
+    NSString *savedFirstName = [prefs stringForKey:@"firstName"];
+    NSString *savedLastName = [prefs stringForKey:@"lastName"];
+    NSString *savedEmail = [prefs stringForKey:@"email"];
+    NSString *savedPassword = [prefs stringForKey:@"password"];
+    NSString *savedBabyName = [prefs stringForKey:@"babyName"];
+    NSString *savedBabyDOB = [prefs stringForKey:@"babyDOB"];
+    NSString *savedBabyGender = [prefs stringForKey:@"babyGender"];
+    NSString *savedPhoneNumber = [prefs stringForKey:@"phoneNumber"];
+    NSString *savedZipcode = [prefs stringForKey:@"zipcode"];
+    
     
     //UITextView *name;
     cell = [tableView dequeueReusableCellWithIdentifier:@"MyCell"];
@@ -126,7 +145,8 @@
         UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(180, 120, 183, 30)];
         textField.borderStyle = UITextBorderStyleRoundedRect;
         textField.font = [UIFont systemFontOfSize:14];
-        textField.placeholder = appDelegate.firstName;
+        NSLog(@"delegate value: %@", appDelegate.firstName);
+        textField.placeholder = savedFirstName;
         textField.autocorrectionType = UITextAutocorrectionTypeNo;
         textField.keyboardType = UIKeyboardTypeDefault;
         textField.returnKeyType = UIReturnKeyDone;
@@ -146,7 +166,7 @@
         UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(180, 163, 183, 30)];
         textField.borderStyle = UITextBorderStyleRoundedRect;
         textField.font = [UIFont systemFontOfSize:14];
-        textField.placeholder = appDelegate.lastName;
+        textField.placeholder = savedLastName;
         textField.autocorrectionType = UITextAutocorrectionTypeNo;
         textField.keyboardType = UIKeyboardTypeDefault;
         textField.returnKeyType = UIReturnKeyDone;
@@ -166,7 +186,7 @@
         UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(180, 206, 183, 30)];
         textField.borderStyle = UITextBorderStyleRoundedRect;
         textField.font = [UIFont systemFontOfSize:14];
-        textField.placeholder = appDelegate.userEmail;
+        textField.placeholder = savedEmail;
         textField.autocorrectionType = UITextAutocorrectionTypeNo;
         textField.keyboardType = UIKeyboardTypeDefault;
         textField.returnKeyType = UIReturnKeyDone;
@@ -188,7 +208,7 @@
         UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(180, 252, 183, 30)];
         textField.borderStyle = UITextBorderStyleRoundedRect;
         textField.font = [UIFont systemFontOfSize:14];
-        textField.placeholder = appDelegate.userPassword;
+        textField.placeholder = savedPassword;
         textField.autocorrectionType = UITextAutocorrectionTypeNo;
         textField.keyboardType = UIKeyboardTypeDefault;
         textField.returnKeyType = UIReturnKeyDone;
@@ -211,7 +231,7 @@
         UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(180, 333, 183, 30)];
         textField.borderStyle = UITextBorderStyleRoundedRect;
         textField.font = [UIFont systemFontOfSize:15];
-        textField.placeholder = appDelegate.babyName;
+        textField.placeholder = savedBabyName;
         textField.autocorrectionType = UITextAutocorrectionTypeNo;
         textField.keyboardType = UIKeyboardTypeDefault;
         textField.returnKeyType = UIReturnKeyDone;
@@ -235,7 +255,7 @@
         UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(180, 375, 183, 30)];
         textField.borderStyle = UITextBorderStyleRoundedRect;
         textField.font = [UIFont systemFontOfSize:15];
-        textField.placeholder = appDelegate.babyDOB;
+        textField.placeholder = savedBabyDOB;
         textField.autocorrectionType = UITextAutocorrectionTypeNo;
         textField.keyboardType = UIKeyboardTypeDefault;
         textField.returnKeyType = UIReturnKeyDone;
@@ -258,7 +278,7 @@
         UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(180, 417, 183, 30)];
         textField.borderStyle = UITextBorderStyleRoundedRect;
         textField.font = [UIFont systemFontOfSize:15];
-        textField.placeholder = appDelegate.babyGender;
+        textField.placeholder = savedBabyGender;
         textField.autocorrectionType = UITextAutocorrectionTypeNo;
         textField.keyboardType = UIKeyboardTypeDefault;
         textField.returnKeyType = UIReturnKeyDone;
@@ -278,7 +298,7 @@
         UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(180, 500, 183, 30)];
         textField.borderStyle = UITextBorderStyleRoundedRect;
         textField.font = [UIFont systemFontOfSize:15];
-        textField.placeholder = appDelegate.phoneNumber;
+        textField.placeholder = savedPhoneNumber;
         textField.autocorrectionType = UITextAutocorrectionTypeNo;
         textField.keyboardType = UIKeyboardTypeDefault;
         textField.returnKeyType = UIReturnKeyDone;
@@ -302,7 +322,7 @@
         UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(180, 543, 183, 30)];
         textField.borderStyle = UITextBorderStyleRoundedRect;
         textField.font = [UIFont systemFontOfSize:15];
-        textField.placeholder = appDelegate.zipcode;
+        textField.placeholder = savedZipcode;
         textField.autocorrectionType = UITextAutocorrectionTypeNo;
         textField.keyboardType = UIKeyboardTypeDefault;
         textField.returnKeyType = UIReturnKeyDone;

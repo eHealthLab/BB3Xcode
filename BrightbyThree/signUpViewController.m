@@ -29,11 +29,13 @@
 
 
 #import "signUpViewController.h"
-#import "AFNetworking.h"
+//#import "AFNetworking.h"
 
 @implementation signUpViewController
 {
     AppDelegate *appDelegate;
+    NSData *responseData;
+    NSMutableData *receivedData;
 }
 
 @synthesize numberOfRows;
@@ -370,9 +372,25 @@
 
 -(void)sendSignUpRequest
 {
-    NSURL *url = [NSURL URLWithString:@"http://localhost:3000/loginSignup/TEST@TEST.COM/qwe"];
+    responseData = [NSMutableData data];
+    NSURLRequest *request = [NSURLRequest requestWithURL:
+                             [NSURL URLWithString:@"http://localhost:3000/loginSignup/TEST@TEST.COM/qwe" ] cachePolicy:NSURLRequestUseProtocolCachePolicy
+                                  timeoutInterval:60.0];
+    receivedData = [NSMutableData dataWithCapacity: 0];
+    NSURLConnection *theConnection=[[NSURLConnection alloc] initWithRequest:request delegate:self];
     
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60];
+    if (!theConnection) {
+        // Release the receivedData object.
+        receivedData = nil;
+        
+        // Inform the user that the connection failed.
+    }
+    
+    
+    
+    //NSURL *url = [NSURL URLWithString:@""];
+    
+    /*NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60];
     
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     operation.responseSerializer = [AFJSONResponseSerializer serializer];
@@ -395,11 +413,55 @@
         NSString *response = [[NSString alloc] initWithData:oResponseData encoding:NSUTF8StringEncoding];
         NSLog(@"%@", response);
         
+       
         UITabBarController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"tabbarController"];
         [self.navigationController pushViewController:uiViewController animated:YES];
         
         NSLog(@"done sending");
-    }
+    }*/
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+    NSLog(@"didReceiveResponse");
+    [receivedData setLength:0];
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    [receivedData appendData:data];
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+    NSLog(@"didFailWithError");
+    receivedData = nil;
+    NSLog(@"Connection failed! Error - %@ %@",
+          [error localizedDescription],
+          [[error userInfo] objectForKey:NSURLErrorFailingURLStringErrorKey]);
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection
+{
+    // do something with the data
+    // receivedData is declared as a property elsewhere
+    NSLog(@"Succeeded! Received %lu bytes of data",(unsigned long)[receivedData length]);
+    
+    NSError *myError = nil;
+    NSDictionary *res = [NSJSONSerialization JSONObjectWithData:receivedData options:NSJSONReadingMutableLeaves error:&myError];
+    NSLog(@"%@", res);
+    
+    
+    
+    UITabBarController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"tabbarController"];
+    [self.navigationController pushViewController:uiViewController animated:YES];
+    
+    // Release the connection and the data object
+    // by setting the properties (declared elsewhere)
+    // to nil.  Note that a real-world app usually
+    // requires the delegate to manage more than one
+    // connection at a time, so these lines would
+    // typically be replaced by code to iterate through
+    // whatever data structures you are using.
+    //theConnection = nil;
+    receivedData = nil;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {

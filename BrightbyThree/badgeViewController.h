@@ -33,9 +33,15 @@
 #import<UIKit/UIKit.h>
 
 @interface badgeViewController : UIViewController
-
+{
+    
+}
 @property(strong, nonatomic) NSMutableArray *badgeImagesArray;
-@property(strong, nonatomic) NSMutableArray *badgePointsArray;
+@property (weak, nonatomic) IBOutlet UIScrollView *badgeView;
+//@property(strong, nonatomic) NSMutableArray *badgePointsArray;
+@property(strong, nonatomic) NSMutableArray *badgeNamesArray;
+
+
 //@property (weak, nonatomic) IBOutlet UITableView *badgesTable;
 
 @end

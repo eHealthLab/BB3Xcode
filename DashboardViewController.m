@@ -20,6 +20,7 @@
 {
     appDelegate = (AppDelegate*) [[UIApplication sharedApplication] delegate];
     self.title = @"Dashboard";
+
     
     CGRect frame = CGRectMake(30, 320, 150, 80);
     HTPressableButton *goalsButton = [[HTPressableButton alloc] initWithFrame:frame buttonStyle:HTPressableButtonStyleCircular];
