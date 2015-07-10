@@ -44,7 +44,7 @@
     _userEmail = @"aarti.munjal@gmail.com";
     _userPassword = @"artika12";
     _babyGender = @"Female";
-    _babyDOB = @"06-06-2014";
+    _babyDOB = (NSDate *)@"06-06-2014";
     _phoneNumber = @"4698342095";
     _zipcode = @"80012";
     

@@ -41,8 +41,6 @@
 {
     delegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
     [super viewDidLoad];
-    //NSString *blurb1= [NSString stringWithFormat:@"%@/%@/%@", delegate.babyName, delegate.babyName, delegate.babyName];
-    
     
     
     NSString *blurb1= @"The Bright by Three (BB3) app brings information about how you can help your child  learn and develop directly to your phone several times per week.  You will get messages that have information about activities that you can do with your child to help him learn.   You can set goals  and earn badges and prizes  for looking at books with your child and doing activities.";
@@ -72,7 +70,7 @@
     _pageBlurbs = @[blurb1, blurb2, blurb3,blurb4,blurb5,blurb6,blurb7,blurb8,blurb9,blurb10,blurb11];
     
     
-    _pageImages = @[@"BB3_logo_horiz_WEB_rgb.png", @"page2.png", @"page3.png", @"page4.png",@"page4.png",@"page4.png",@"page4.png",@"page4.png",@"page4.png",@"page4.png",@"page4.png",@"page4.png"];
+    _pageImages = @[@"Mom reading with baby - anglo.jpg", @"page2.png", @"page3.png", @"page4.png",@"page4.png",@"page4.png",@"page4.png",@"page4.png",@"page4.png",@"page4.png",@"page4.png",@"page4.png"];
     
     // Create page view controller
     self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];
@@ -88,13 +86,32 @@
     [self addChildViewController:_pageViewController];
     [self.view addSubview:_pageViewController.view];
     [self.pageViewController didMoveToParentViewController:self];
-    CGRect frame = CGRectMake(150.0, 460.0, 100.0, 100.0);
-    HTPressableButton *startButton = [[HTPressableButton alloc] initWithFrame:frame buttonStyle:HTPressableButtonStyleCircular];
-    [startButton setTitle:@"Start" forState:UIControlStateNormal];
-    startButton.buttonColor = [UIColor ht_grapeFruitColor];
-    startButton.shadowColor = [UIColor ht_grapeFruitDarkColor];
-    [startButton addTarget:self action:@selector(startButtonPressed) forControlEvents:UIControlEventTouchUpInside];
-    [self.pageViewController.view addSubview:startButton];
+    
+    
+    //CGRect frame = CGRectMake(150.0, 460.0, 100.0, 100.0);
+    //CGRect frame = CGRectMake(150.0, 460.0, 100, self.view.frame.size.height - 10);
+    
+    
+    //self.skipButton = [[HTPressableButton alloc] buttonStyle:HTPressableButtonStyleCircular];
+    //self.skipButton = [[HTPressableButton alloc] buttonType:H
+    
+    [self.skipButton setStyle:HTPressableButtonStyleRounded];
+    [self.skipButton setShadowHeight:0.80];
+    [self.skipButton setTitle:@"Skip" forState:UIControlStateNormal];
+    self.skipButton.buttonColor = [UIColor ht_grapeFruitColor];
+    self.skipButton.shadowColor = [UIColor ht_mintDarkColor];
+    [self.skipButton addTarget:self action:@selector(startButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.skipButton];
+    //self.skipButton.translatesAutoresizingMaskIntoConstraints = NO;
+    //NSDictionary *viewsDictionary = @{@"view":self.view, @"startButton":startButton};
+    
+    /*NSArray *constraint_POS_V = [NSLayoutConstraint constraintsWithVisualFormat:@"V:[startButton]-30-|"
+                                                                        options:0
+                                                                        metrics:nil
+                                                                          views:viewsDictionary];*/
+    //[startButton addConstraints:constraint_POS_V];
+   // [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[startButton]-20|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(givenView)]];
+    
     
 }
 

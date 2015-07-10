@@ -22,60 +22,66 @@
     self.title = @"Dashboard";
 
     
-    CGRect frame = CGRectMake(30, 320, 150, 80);
-    HTPressableButton *goalsButton = [[HTPressableButton alloc] initWithFrame:frame buttonStyle:HTPressableButtonStyleCircular];
-    goalsButton.buttonColor = [UIColor ht_grapeFruitColor];
-    goalsButton.shadowColor = [UIColor ht_grapeFruitDarkColor];
-    [goalsButton setDisabledButtonColor:[UIColor ht_sunflowerColor]];
-    [goalsButton setTitle:@"Set Goals" forState:UIControlStateNormal];
-    [goalsButton addTarget:self action:@selector(setGoalsPressed) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:goalsButton];
+    //CGRect frame = CGRectMake(30, 320, 150, 80);
+    //HTPressableButton *goalsButton = [[HTPressableButton alloc] initWithFrame:frame buttonStyle:HTPressableButtonStyleCircular];
     
-    frame = CGRectMake(210, 320, 150, 80);
-    HTPressableButton *facebookButton = [[HTPressableButton alloc] initWithFrame:frame buttonStyle:HTPressableButtonStyleCircular];
-    facebookButton.buttonColor = [UIColor ht_blueJeansColor];
-    facebookButton.shadowColor = [UIColor ht_blueJeansDarkColor];
-    [facebookButton setDisabledButtonColor:[UIColor ht_sunflowerColor]];
-    [facebookButton setTitle:@"Facebook" forState:UIControlStateNormal];
-    [facebookButton addTarget:self action:@selector(visitBBFBPagePressed) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:facebookButton];
+    [self.setGoalsButton setStyle:HTPressableButtonStyleRounded];
+    self.setGoalsButton.buttonColor = [UIColor ht_grapeFruitColor];
+    self.setGoalsButton.shadowColor = [UIColor ht_grapeFruitDarkColor];
+    [self.setGoalsButton setDisabledButtonColor:[UIColor ht_sunflowerColor]];
+    [self.setGoalsButton setTitle:@"Set Goals" forState:UIControlStateNormal];
+    [self.setGoalsButton addTarget:self action:@selector(setGoalsPressed) forControlEvents:UIControlEventTouchUpInside];
+    //[self.view addSubview:goalsButton];
     
-    frame = CGRectMake(30, 420, 150, 80);
-    HTPressableButton *logMinutesButton = [[HTPressableButton alloc] initWithFrame:frame buttonStyle:HTPressableButtonStyleCircular];
-    logMinutesButton.buttonColor = [UIColor ht_mintColor];
-    logMinutesButton.shadowColor = [UIColor ht_mintDarkColor];
-    [logMinutesButton setDisabledButtonColor:[UIColor ht_sunflowerColor]];
-    [logMinutesButton setTitle:@"Log Minutes" forState:UIControlStateNormal];
-    [logMinutesButton addTarget:self action:@selector(logMinutesPressed) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:logMinutesButton];
+    //frame = CGRectMake(210, 320, 150, 80);
+    //HTPressableButton *facebookButton = [[HTPressableButton alloc] initWithFrame:frame buttonStyle:HTPressableButtonStyleCircular];
+    [self.facebookButton setStyle:HTPressableButtonStyleRounded];
+    self.facebookButton.buttonColor = [UIColor ht_blueJeansColor];
+    self.facebookButton.shadowColor = [UIColor ht_blueJeansDarkColor];
+    [self.facebookButton setDisabledButtonColor:[UIColor ht_sunflowerColor]];
+    [self.facebookButton setTitle:@"Facebook" forState:UIControlStateNormal];
+    [self.facebookButton addTarget:self action:@selector(visitBBFBPagePressed) forControlEvents:UIControlEventTouchUpInside];
+    //[self.view addSubview:facebookButton];
     
-    frame = CGRectMake(210, 420, 150, 80);
-    HTPressableButton *networkButton = [[HTPressableButton alloc] initWithFrame:frame buttonStyle:HTPressableButtonStyleCircular];
-    networkButton.buttonColor = [UIColor ht_carrotColor];
-    networkButton.shadowColor = [UIColor ht_pumpkinColor];
+    //frame = CGRectMake(30, 420, 150, 80);
+    //HTPressableButton *logMinutesButton = [[HTPressableButton alloc] initWithFrame:frame buttonStyle:HTPressableButtonStyleCircular];
+    [self.logMinutesButton setStyle:HTPressableButtonStyleRounded];
+    self.logMinutesButton.buttonColor = [UIColor ht_mintColor];
+    self.logMinutesButton.shadowColor = [UIColor ht_mintDarkColor];
+    [self.logMinutesButton setDisabledButtonColor:[UIColor ht_sunflowerColor]];
+    [self.logMinutesButton setTitle:@"Log Minutes" forState:UIControlStateNormal];
+    [self.logMinutesButton addTarget:self action:@selector(logMinutesPressed) forControlEvents:UIControlEventTouchUpInside];
+    //[self.view addSubview:logMinutesButton];
     
-    [networkButton setDisabledButtonColor:[UIColor ht_sunflowerColor]];
-    [networkButton setTitle:@"Network" forState:UIControlStateNormal];
-    [networkButton addTarget:self action:@selector(displayNetworkPressed) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:networkButton];
+    //frame = CGRectMake(210, 420, 150, 80);
+    //HTPressableButton *networkButton = [[HTPressableButton alloc] initWithFrame:frame buttonStyle:HTPressableButtonStyleCircular];
+    [self.networkButton setStyle:HTPressableButtonStyleRounded];
+    self.networkButton.buttonColor = [UIColor ht_carrotColor];
+    self.networkButton.shadowColor = [UIColor ht_pumpkinColor];
+    [self.networkButton setDisabledButtonColor:[UIColor ht_sunflowerColor]];
+    [self.networkButton setTitle:@"Network" forState:UIControlStateNormal];
+    [self.networkButton addTarget:self action:@selector(displayNetworkPressed) forControlEvents:UIControlEventTouchUpInside];
+    //[self.view addSubview:networkButton];
     
-    frame = CGRectMake(30, 520, 150, 80);
+    //frame = CGRectMake(30, 520, 150, 80);
     //frame = CGRectMake(110, 300, 100, 100);
-    HTPressableButton *badgesButton = [[HTPressableButton alloc] initWithFrame:frame buttonStyle:HTPressableButtonStyleCircular];
-    [badgesButton setTitle:@"My Badges" forState:UIControlStateNormal];
-    badgesButton.buttonColor = [UIColor ht_sunflowerColor];
-    badgesButton.shadowColor = [UIColor ht_citrusColor];
-    [badgesButton addTarget:self action:@selector(showBadgesPressed) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:badgesButton];
+    //HTPressableButton *badgesButton = [[HTPressableButton alloc] initWithFrame:frame buttonStyle:HTPressableButtonStyleCircular];
+    [self.badgesButton setStyle:HTPressableButtonStyleRounded];
+    [self.badgesButton setTitle:@"My Badges" forState:UIControlStateNormal];
+    self.badgesButton.buttonColor = [UIColor ht_sunflowerColor];
+    self.badgesButton.shadowColor = [UIColor ht_citrusColor];
+    [self.badgesButton addTarget:self action:@selector(showBadgesPressed) forControlEvents:UIControlEventTouchUpInside];
+    //[self.view addSubview:badgesButton];
     
-    frame = CGRectMake(210, 520, 150, 80);
-    HTPressableButton *messagesButton = [[HTPressableButton alloc] initWithFrame:frame buttonStyle:HTPressableButtonStyleCircular];
-    messagesButton.buttonColor = [UIColor ht_leadColor];
-    messagesButton.shadowColor = [UIColor ht_leadDarkColor];
-    [messagesButton setDisabledButtonColor:[UIColor ht_sunflowerColor]];
-    [messagesButton setTitle:@"Messages" forState:UIControlStateNormal];
-    [messagesButton addTarget:self action:@selector(loadMessagesLibraryPressed) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:messagesButton];
+    //frame = CGRectMake(210, 520, 150, 80);
+    //HTPressableButton *messagesButton = [[HTPressableButton alloc] initWithFrame:frame buttonStyle:HTPressableButtonStyleCircular];
+    [self.messagesButton setStyle:HTPressableButtonStyleRounded];
+    self.messagesButton.buttonColor = [UIColor ht_leadColor];
+    self.messagesButton.shadowColor = [UIColor ht_leadDarkColor];
+    [self.messagesButton setDisabledButtonColor:[UIColor ht_sunflowerColor]];
+    [self.messagesButton setTitle:@"Messages" forState:UIControlStateNormal];
+    [self.messagesButton addTarget:self action:@selector(loadMessagesLibraryPressed) forControlEvents:UIControlEventTouchUpInside];
+    //[self.view addSubview:messagesButton];
 
     
 }

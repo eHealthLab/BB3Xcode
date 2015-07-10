@@ -34,6 +34,7 @@
 #import "PageContentViewController.h"
 #import "HTPressableButton.h"
 #import "UIColor+HTColor.h"
+#import "ACPButton.h"
 
 @interface StartViewController : UIViewController <UIPageViewControllerDataSource>
 
@@ -43,6 +44,11 @@
 @property(strong, nonatomic) NSArray *pageTitles;
 @property(strong, nonatomic) NSArray *pageBlurbs;
 @property(strong, nonatomic) NSArray *pageImages;
+@property (strong, nonatomic) IBOutlet HTPressableButton *skipButton;
+
+
+
+
 
 @end
 

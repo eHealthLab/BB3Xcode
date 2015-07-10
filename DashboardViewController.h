@@ -14,6 +14,15 @@
 #import "UIColor+HTColor.h"
 
 @interface DashboardViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIScrollView *buttonScroll;
+
+@property (weak, nonatomic) IBOutlet HTPressableButton *setGoalsButton;
+@property (weak, nonatomic) IBOutlet HTPressableButton *facebookButton;
+@property (weak, nonatomic) IBOutlet HTPressableButton *logMinutesButton;
+@property (weak, nonatomic) IBOutlet HTPressableButton *networkButton;
+
+@property (weak, nonatomic) IBOutlet HTPressableButton *badgesButton;
+@property (weak, nonatomic) IBOutlet HTPressableButton *messagesButton;
 
 @end
 

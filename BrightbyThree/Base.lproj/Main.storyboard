@@ -14,7 +14,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="KE2-f1-lny">
@@ -44,14 +44,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="672" y="-796"/>
+            <point key="canvasLocation" x="952.5" y="-814"/>
         </scene>
         <!--About Us-->
         <scene sceneID="b6U-PY-RPd">
             <objects>
                 <tableViewController title="About Us" id="D6p-Rz-IBp" customClass="AboutUsViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="22" sectionFooterHeight="22" id="8RI-bU-bmN">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -74,7 +74,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CpV-O2-JmD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-84" y="-832"/>
+            <point key="canvasLocation" x="253.5" y="-814"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="rK1-2o-W8a">
@@ -85,7 +85,7 @@
                         <viewControllerLayoutGuide type="bottom" id="vAs-6Q-aBy"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="oIr-du-vn9">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -99,7 +99,7 @@
             <objects>
                 <tableViewController id="hhF-G8-Sig" customClass="AboutUsViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="H8C-8b-nvq">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <connections>
@@ -125,7 +125,7 @@
                         <viewControllerLayoutGuide type="bottom" id="u9r-50-owZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="q0w-Hh-PTL">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Baby with tongue out.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Tr8-MZ-ZYr">
@@ -158,7 +158,7 @@
             <objects>
                 <tableViewController id="P3j-y2-0VZ" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="KmA-Pc-9bl">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -237,44 +237,6 @@
             </objects>
             <point key="canvasLocation" x="-1233" y="-2965"/>
         </scene>
-        <!--Dashboard-->
-        <scene sceneID="dbR-jG-MvA">
-            <objects>
-                <viewController storyboardIdentifier="dashboard" id="fjI-1Z-TN1" customClass="Dashboard" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Wn1-3X-GJY"/>
-                        <viewControllerLayoutGuide type="bottom" id="HoJ-yt-8vT"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="uco-cv-yKa">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ss4-Su-bKZ">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="64" width="400" height="381"/>
-                                </variation>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.55576967180000003" green="0.71391261829999997" blue="0.88533775250000002" alpha="1" colorSpace="calibratedRGB"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="ss4-Su-bKZ"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="ss4-Su-bKZ"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Dashboard" image="glyphicons-157-show-thumbnails.png" id="ED6-Wu-f5e"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1J3-TQ-c1O" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1947" y="310"/>
-        </scene>
         <!--Set Goals-->
         <scene sceneID="97d-41-Kpy">
             <objects>
@@ -284,7 +246,7 @@
                         <viewControllerLayoutGuide type="bottom" id="e36-gy-FUW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="KOH-RX-gQa">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Erp-ME-E1j">
@@ -368,13 +330,24 @@ minutes per day.</string>
                         <viewControllerLayoutGuide type="bottom" id="hmJ-5v-any"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dSl-Vv-AcZ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JLq-yb-ajj">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">The mission of 'http://brightbythree.org/'     Bright by Three&lt;/a&gt;     (formerly Bright Beginnings) is to provide a bright beginning for all Colorado     children by helping families support their children’s physical, emotional, and     intellectual development during the critical first three years of life.     You can find more information about Bright by Three and our other sponsors under     “about” tab at the top of your screen.     The Bright by Three app is designed to bring information about how you can     help &lt;b&gt;{{babyName}}&lt;/b&gt; learn and develop directly to your phone several times per week.     You will receive this information via messages that contain useful information and     activities that you can engage in with &lt;b&gt;{{babyName}}&lt;/b&gt;.  You can set your own goals and     earn badges and prizes for reading with your child and completing recommended activities.
+                                <string key="text">The mission of 'http://brightbythree.org/'
+    Bright by Three&lt;/a&gt;
+    (formerly Bright Beginnings) is to provide a bright beginning for all Colorado
+    children by helping families support their children’s physical, emotional, and
+    intellectual development during the critical first three years of life.
+    You can find more information about Bright by Three and our other sponsors under
+    “about” tab at the top of your screen.
+    The Bright by Three app is designed to bring information about how you can
+    help &lt;b&gt;{{babyName}}&lt;/b&gt; learn and develop directly to your phone several times per week.
+    You will receive this information via messages that contain useful information and
+    activities that you can engage in with &lt;b&gt;{{babyName}}&lt;/b&gt;.  You can set your own goals and
+    earn badges and prizes for reading with your child and completing recommended activities.
 </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -409,7 +382,7 @@ minutes per day.</string>
                         <viewControllerLayoutGuide type="bottom" id="rb8-Lw-qsF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jRx-XY-kpv">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here is a summary of your minutes compared to other users in the network." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k3Q-Yg-Jaz">
@@ -453,7 +426,7 @@ minutes per day.</string>
             <objects>
                 <tableViewController storyboardIdentifier="signUpViewController" title="Sign up" id="oj4-oA-nHe" customClass="signUpViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Sec-6I-o5j">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" red="0.55576967180000003" green="0.71391261829999997" blue="0.88533775250000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -475,7 +448,7 @@ minutes per day.</string>
             <objects>
                 <tableViewController title="My Account" id="Adb-mW-ePe" customClass="MyAccountViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="c53-yc-Nlm">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -508,7 +481,7 @@ minutes per day.</string>
                         <viewControllerLayoutGuide type="bottom" id="i4u-0u-JbM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="KGs-4P-kOl">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" alpha="0.79999999999999982" contentMode="scaleToFill" placeholderIntrinsicWidth="249" placeholderIntrinsicHeight="42" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter your email " minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tCQ-Rz-izd">
@@ -593,7 +566,7 @@ minutes per day.</string>
                         <viewControllerLayoutGuide type="bottom" id="hg1-TR-Kd7"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="prt-wW-pII">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -607,7 +580,7 @@ minutes per day.</string>
             <objects>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="27M-5i-g6h" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="MO0-o6-dcV">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -654,7 +627,7 @@ minutes per day.</string>
                         <viewControllerLayoutGuide type="bottom" id="3rq-Jg-5NO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gsp-mZ-xWZ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="531"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="4kH-i5-G3s">
@@ -692,7 +665,7 @@ minutes per day.</string>
                         <viewControllerLayoutGuide type="bottom" id="cz7-hO-BqK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="AYz-ee-Qdk">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FLb-HJ-EX9">
@@ -782,7 +755,7 @@ minutes per day.</string>
                         <viewControllerLayoutGuide type="bottom" id="LkM-dw-tXd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Jto-z5-Bvq">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mom reading with baby - anglo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="dVK-w9-9c3">
@@ -829,7 +802,7 @@ minutes per day.</string>
                         <viewControllerLayoutGuide type="bottom" id="IYs-JO-fvp"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="I07-Q1-qyI">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jqc-oR-WsT">
@@ -888,7 +861,7 @@ minutes per day.</string>
                         <viewControllerLayoutGuide type="bottom" id="2Tc-5y-BGt"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5ac-q9-ZxG">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="531"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="d2L-Qu-LDD">
@@ -940,7 +913,7 @@ minutes per day.</string>
                         <viewControllerLayoutGuide type="bottom" id="Sn5-1Z-cl3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="h8c-20-NS8">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="531"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NW4-0Y-g9J">
@@ -1016,7 +989,7 @@ minutes per day.</string>
                         <viewControllerLayoutGuide type="bottom" id="Hch-Iu-h90"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="SBf-YS-NM7">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="531"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9qz-pj-PO4">
@@ -1064,7 +1037,7 @@ minutes per day.</string>
                         <viewControllerLayoutGuide type="bottom" id="ewW-5b-y4d"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fgU-uW-H22">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6g-ZP-pbv">
@@ -1090,14 +1063,14 @@ minutes per day.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uSh-Vn-xmr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3276" y="-1075"/>
+            <point key="canvasLocation" x="-3276" y="-1085"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="Yug-oo-ydM">
             <objects>
                 <tableViewController id="oOt-GV-EnN" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="rFT-qJ-gbp">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <connections>
@@ -1127,24 +1100,49 @@ minutes per day.</string>
                         <viewControllerLayoutGuide type="bottom" id="DLg-zf-sgS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LT9-kC-oJ9">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OUX-tn-wgq">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="36" y="128" width="329" height="199"/>
-                                </variation>
-                            </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujl-iq-APC">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="22"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="36" y="81" width="324" height="39"/>
+                                    <rect key="frame" x="65" y="81" width="281" height="21"/>
                                 </variation>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OUX-tn-wgq">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="83" y="124" width="211" height="183"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MYN-17-Slm">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="32" y="143" width="721" height="452"/>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEN-xp-tu9">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="372" y="44" width="42" height="21"/>
+                                </variation>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="FIY-H8-MvQ">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="32" y="627" width="721" height="128"/>
+                                </variation>
+                            </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CRZ-OW-cxp">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -1153,35 +1151,45 @@ minutes per day.</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="23" y="335" width="355" height="174"/>
+                                    <rect key="frame" x="23" y="340" width="354" height="224"/>
                                 </variation>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="OUX-tn-wgq"/>
                                 <exclude reference="ujl-iq-APC"/>
+                                <exclude reference="OUX-tn-wgq"/>
+                                <exclude reference="MYN-17-Slm"/>
+                                <exclude reference="hEN-xp-tu9"/>
+                                <exclude reference="FIY-H8-MvQ"/>
                                 <exclude reference="CRZ-OW-cxp"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="OUX-tn-wgq"/>
                                 <include reference="ujl-iq-APC"/>
+                                <include reference="OUX-tn-wgq"/>
                                 <include reference="CRZ-OW-cxp"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="MYN-17-Slm"/>
+                                <include reference="hEN-xp-tu9"/>
+                                <include reference="FIY-H8-MvQ"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="backgroundImageView" destination="OUX-tn-wgq" id="O9J-Ji-IDH"/>
-                        <outlet property="titleDescription" destination="CRZ-OW-cxp" id="csh-A6-Mbp"/>
-                        <outlet property="titleLabel" destination="ujl-iq-APC" id="joN-CV-Hed"/>
+                        <outlet property="backgroundImageView" destination="OUX-tn-wgq" id="TXJ-tH-2wB"/>
+                        <outlet property="titleDescription" destination="CRZ-OW-cxp" id="qod-oI-Ug1"/>
+                        <outlet property="titleLabel" destination="ujl-iq-APC" id="NYg-z0-2vc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FDb-ny-NtC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2481" y="-1486"/>
+            <point key="canvasLocation" x="-2416.5" y="-1629"/>
         </scene>
         <!--Bright by Three-->
         <scene sceneID="yl2-sM-qoP">
@@ -1249,7 +1257,6 @@ minutes per day.</string>
         <image name="BB3_logo_horiz_WEB_rgb.png" width="423" height="151"/>
         <image name="Baby with tongue out.jpg" width="3888" height="2592"/>
         <image name="Mom reading with baby - anglo.jpg" width="4256" height="2832"/>
-        <image name="glyphicons-157-show-thumbnails.png" width="22" height="22"/>
         <image name="goals.jpg" width="400" height="300"/>
         <image name="iStock_000015216865_Large.jpg" width="3861" height="2576"/>
         <image name="network.jpg" width="1600" height="1200"/>

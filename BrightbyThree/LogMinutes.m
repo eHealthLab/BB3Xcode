@@ -26,22 +26,23 @@
     _logInMinutesPickerView.delegate = self;
     _logInMinutesPickerView.dataSource = self;
     
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20, 320, 350, 100)];
-    label.numberOfLines = 3;
-    label.text = [[@"You currently have " stringByAppendingString:[NSString stringWithFormat:@"%d", (int)delegate.totalPoints]] stringByAppendingString:@" total points. Log in more minutes."];
+    //UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20, 320, 350, 100)];
+    self.label.numberOfLines = 3;
+    self.label.text = [[@"You currently have " stringByAppendingString:[NSString stringWithFormat:@"%d", (int)delegate.totalPoints]] stringByAppendingString:@" total points. Log in more minutes."];
     
     
-    CGRect frame = CGRectMake(150, 590, 100, 40);
-    HTPressableButton *saveButton = [[HTPressableButton alloc] initWithFrame:frame buttonStyle:HTPressableButtonStyleRounded];
-    saveButton.buttonColor = [UIColor ht_bitterSweetColor];
-    saveButton.shadowColor = [UIColor ht_bitterSweetDarkColor];
-    [saveButton setTitle:@"Save" forState:UIControlStateNormal];
-    [saveButton addTarget:self action:@selector(saveMinutesPressed) forControlEvents:UIControlEventTouchUpInside];
-    saveButton.tag = 1;
+    //CGRect frame = CGRectMake(150, 590, 100, 40);
+    //HTPressableButton *saveButton = [[HTPressableButton alloc] initWithFrame:frame buttonStyle:HTPressableButtonStyleRounded];
+    [self.saveButton setStyle:HTPressableButtonStyleRounded];
+    self.saveButton.buttonColor = [UIColor ht_bitterSweetColor];
+    self.saveButton.shadowColor = [UIColor ht_bitterSweetDarkColor];
+    [self.saveButton setTitle:@"Save" forState:UIControlStateNormal];
+    [self.saveButton addTarget:self action:@selector(saveMinutesPressed) forControlEvents:UIControlEventTouchUpInside];
+    self.saveButton.tag = 1;
     
     
-    [self.view addSubview:saveButton];
-    [self.view addSubview:label];
+    //[self.view addSubview:self.saveButton];
+    //[self.view addSubview:label];
     [_logInMinutesPickerView reloadAllComponents];
 }
 

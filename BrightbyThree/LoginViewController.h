@@ -34,6 +34,7 @@
 #import <MessageUI/MessageUI.h>
 #import "HTPressableButton.h"
 #import "UIColor+HTColor.h"
+#import "ACPButton.h"
 
 @interface LoginViewController : UIViewController
 
@@ -41,7 +42,13 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *loginEmail;
 @property (weak, nonatomic) IBOutlet UITextField *loginPassword;
-    
+@property (weak, nonatomic) IBOutlet HTPressableButton *loginButton;
+
+@property (weak, nonatomic) IBOutlet HTPressableButton *signupButton;
+@property (weak, nonatomic) IBOutlet UILabel *forgotPasswordLabel;
+
+@property (weak, nonatomic) IBOutlet UISwitch *rememberSwitch;
+
 
 @end
 

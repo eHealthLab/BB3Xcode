@@ -20,6 +20,7 @@
 		1D487B2F1B446D6700A64137 /* 1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D487B2E1B446D6700A64137 /* 1x.png */; };
 		1D487B311B446D6D00A64137 /* 2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D487B301B446D6D00A64137 /* 2x.png */; };
 		1D487B331B446D7300A64137 /* 3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D487B321B446D7300A64137 /* 3x.png */; };
+		1D487B391B4A344000A64137 /* Story1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D487B381B4A344000A64137 /* Story1.storyboard */; };
 		1D4AAE3F1B182B34002D3F72 /* EnrollNow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4AAE3E1B182B34002D3F72 /* EnrollNow.m */; };
 		1D4B120F1B39345200D194BA /* HTPressableButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4B12081B39345200D194BA /* HTPressableButton.m */; };
 		1D4B12101B39345200D194BA /* HTPressableButtonPrefs.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4B120A1B39345200D194BA /* HTPressableButtonPrefs.m */; };
@@ -32,6 +33,7 @@
 		1D7279B41B4356C800585A94 /* childrens.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D7279B31B4356C800585A94 /* childrens.png */; };
 		1D7279B61B4356DB00585A94 /* BB3_AboutUs.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D7279B51B4356DB00585A94 /* BB3_AboutUs.png */; };
 		1D7279B81B43574500585A94 /* Accords.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D7279B71B43574500585A94 /* Accords.png */; };
+		1D740AC71B4E92380077D370 /* ACPButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D740AC61B4E92380077D370 /* ACPButton.m */; };
 		1D8617AD1AFACA650047DE56 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8617AC1AFACA650047DE56 /* main.m */; };
 		1D8617B01AFACA650047DE56 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8617AF1AFACA650047DE56 /* AppDelegate.m */; };
 		1D8617B31AFACA650047DE56 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8617B21AFACA650047DE56 /* FirstViewController.m */; };
@@ -78,6 +80,7 @@
 		1D9FB5B31B0930260007886F /* 76-baby.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D9FB5B21B0930260007886F /* 76-baby.png */; };
 		1D9FB5B51B0930570007886F /* 19-gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D9FB5B41B0930570007886F /* 19-gear.png */; };
 		1D9FBB661B1017FA0075E097 /* BB3_logo-icon_WEB_rgb_28x28.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D9FBB651B1017FA0075E097 /* BB3_logo-icon_WEB_rgb_28x28.png */; };
+		1DA9635F1B4C8C800055758A /* Toddler on grass.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1DA9635E1B4C8C800055758A /* Toddler on grass.jpg */; };
 		1DAB27E21B35925000A2FA5D /* messages.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1DAB27E11B35925000A2FA5D /* messages.jpeg */; };
 		1DAB27E41B37213600A2FA5D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DAB27E31B37213600A2FA5D /* MessageUI.framework */; };
 		1DBA0E451B3B2A900018E759 /* 06-magnify.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DBA0E441B3B2A900018E759 /* 06-magnify.png */; };
@@ -116,6 +119,7 @@
 		1D487B2E1B446D6700A64137 /* 1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1x.png; sourceTree = "<group>"; };
 		1D487B301B446D6D00A64137 /* 2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2x.png; sourceTree = "<group>"; };
 		1D487B321B446D7300A64137 /* 3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3x.png; sourceTree = "<group>"; };
+		1D487B381B4A344000A64137 /* Story1.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Story1.storyboard; sourceTree = "<group>"; };
 		1D4AAE3D1B182B29002D3F72 /* EnrollNow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnrollNow.h; sourceTree = "<group>"; };
 		1D4AAE3E1B182B34002D3F72 /* EnrollNow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnrollNow.m; sourceTree = "<group>"; };
 		1D4B11621B3929B800D194BA /* DKCircleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKCircleButton.h; sourceTree = "<group>"; };
@@ -136,6 +140,8 @@
 		1D7279B31B4356C800585A94 /* childrens.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = childrens.png; path = BrightbyThree/childrens.png; sourceTree = "<group>"; };
 		1D7279B51B4356DB00585A94 /* BB3_AboutUs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BB3_AboutUs.png; path = BrightbyThree/BB3_AboutUs.png; sourceTree = "<group>"; };
 		1D7279B71B43574500585A94 /* Accords.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Accords.png; sourceTree = "<group>"; };
+		1D740AC51B4E92380077D370 /* ACPButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPButton.h; sourceTree = "<group>"; };
+		1D740AC61B4E92380077D370 /* ACPButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPButton.m; sourceTree = "<group>"; };
 		1D8617A71AFACA650047DE56 /* BrightbyThree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrightbyThree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D8617AB1AFACA650047DE56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D8617AC1AFACA650047DE56 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -211,6 +217,7 @@
 		1DA6E8371B156458001EE788 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		1DA6E8381B156458001EE788 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		1DA6E8391B156458001EE788 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		1DA9635E1B4C8C800055758A /* Toddler on grass.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Toddler on grass.jpg"; sourceTree = "<group>"; };
 		1DAB27E11B35925000A2FA5D /* messages.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = messages.jpeg; sourceTree = "<group>"; };
 		1DAB27E31B37213600A2FA5D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		1DBA0E441B3B2A900018E759 /* 06-magnify.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "06-magnify.png"; sourceTree = "<group>"; };
@@ -267,6 +274,8 @@
 		1D86179E1AFACA650047DE56 = {
 			isa = PBXGroup;
 			children = (
+				1D740AC51B4E92380077D370 /* ACPButton.h */,
+				1D740AC61B4E92380077D370 /* ACPButton.m */,
 				1D4B12061B39345200D194BA /* Classes */,
 				1D9A1EC91B16027C00DC66CE /* DKCircleButton */,
 				1DA6E8261B156458001EE788 /* AFNetworking */,
@@ -288,6 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				1D8617B71AFACA650047DE56 /* Main.storyboard */,
+				1D487B381B4A344000A64137 /* Story1.storyboard */,
 				1DEF81EC1B3EACDC003EEF92 /* MyAccountViewController.h */,
 				1DEF81ED1B3EACF7003EEF92 /* MyAccountViewController.m */,
 				1DBA0E531B3C9EEF0018E759 /* AboutUsViewController.m */,
@@ -352,6 +362,7 @@
 				1DBA0E4B1B3B44620018E759 /* Baby with tongue out.jpg */,
 				1DEF81EA1B3E9D1B003EEF92 /* goals.jpg */,
 				1DBA0E491B3B33040018E759 /* Mom reading with baby - anglo.jpg */,
+				1DA9635E1B4C8C800055758A /* Toddler on grass.jpg */,
 				1DBA0E511B3B49810018E759 /* network.jpg */,
 				1D9A1EC71B1600AA00DC66CE /* 187-pencil.png */,
 				1D9FB57C1B092E7E0007886F /* Badge150.png */,
@@ -523,6 +534,7 @@
 				1D0D87471B03123400BFC6DC /* page1.png in Resources */,
 				1D9FB58E1B092E7E0007886F /* Badge2000.png in Resources */,
 				1D9FB5931B092E7E0007886F /* Badge4500.png in Resources */,
+				1DA9635F1B4C8C800055758A /* Toddler on grass.jpg in Resources */,
 				1D9FB5951B092E7E0007886F /* badges.png in Resources */,
 				1D7279B81B43574500585A94 /* Accords.png in Resources */,
 				1D7279B61B4356DB00585A94 /* BB3_AboutUs.png in Resources */,
@@ -550,6 +562,7 @@
 				1D9FB5A21B092F250007886F /* 111-user.png in Resources */,
 				1D9FB5B31B0930260007886F /* 76-baby.png in Resources */,
 				1D9FB58B1B092E7E0007886F /* Badge700.png in Resources */,
+				1D487B391B4A344000A64137 /* Story1.storyboard in Resources */,
 				1D9A1ECE1B164E2F00DC66CE /* 28-star.png in Resources */,
 				1D9FB59F1B092F1A0007886F /* 86-camera.png in Resources */,
 				1D9FB5941B092E7E0007886F /* Badge5000.png in Resources */,
@@ -577,6 +590,7 @@
 				1D28EE9F1B1488E300C712CC /* NetworkViewController.m in Sources */,
 				1D0D873A1B02401600BFC6DC /* PageContentViewController.m in Sources */,
 				1D4AAE3F1B182B34002D3F72 /* EnrollNow.m in Sources */,
+				1D740AC71B4E92380077D370 /* ACPButton.m in Sources */,
 				1D8617B01AFACA650047DE56 /* AppDelegate.m in Sources */,
 				1D4B65051B1E9C1E007EAFAF /* TutorialViewController.m in Sources */,
 				1D4B12101B39345200D194BA /* HTPressableButtonPrefs.m in Sources */,

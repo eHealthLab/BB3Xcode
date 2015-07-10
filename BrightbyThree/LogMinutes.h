@@ -21,7 +21,8 @@
 
 @property(strong, nonatomic) NSString *selectedValue;
 @property(strong, nonatomic) NSArray *minutesArray;
-
+@property (weak, nonatomic) IBOutlet HTPressableButton *saveButton;
+@property (weak, nonatomic) IBOutlet UILabel *label;
 @end
 
 #endif

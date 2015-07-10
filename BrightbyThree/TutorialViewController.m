@@ -55,6 +55,12 @@
     self.title = @"Tutorial";
     
     
+    [self.button1 setStyle:HTPressableButtonStyleRounded];
+    [self.button1 setTitle:@"Login" forState:UIControlStateNormal];
+    self.button1.buttonColor = [UIColor ht_blueJeansColor];
+    self.button1.shadowColor = [UIColor ht_blueJeansDarkColor];
+    //[self.button1 addTarget:self action:@selector(LoginPressed) forControlEvents:UIControlEventTouchUpInside];
+    
     
     CGRect frame = CGRectMake(30, 50, 315, 50);
     HTPressableButton *roundedRectButton1 = [[HTPressableButton alloc] initWithFrame:frame buttonStyle:HTPressableButtonStyleRounded];

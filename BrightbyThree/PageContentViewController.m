@@ -39,6 +39,8 @@
     self.backgroundImageView.image = [UIImage imageNamed:self.imageFile];
     self.titleLabel.text = self.titleText;
     self.titleDescription.text = self.titleBlurb;
+    
+    self.skipButton.buttonColor = [UIColor ht_mintColor];
 }
 
 @end

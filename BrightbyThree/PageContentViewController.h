@@ -31,6 +31,9 @@
 #define BrightbyThree_PageContentViewController_h
 
 #import <UIKit/UIKit.h>
+#import "HTPressableButton.h"
+#import "UIColor+HTColor.h"
+
 
 @interface PageContentViewController : UIViewController
 
@@ -46,6 +49,7 @@
 @property NSString *titleBlurb;
 @property NSString *imageFile;
 
+@property (weak, nonatomic) IBOutlet HTPressableButton *skipButton;
 
 @end
 

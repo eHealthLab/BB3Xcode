@@ -17,6 +17,7 @@
 
 @property (weak, nonatomic) IBOutlet UIScrollView *tutorialScrollView;
 
+@property (weak, nonatomic) IBOutlet HTPressableButton *button1;
 
 @end
 
