@@ -7,22 +7,32 @@
 //
 
 #ifndef BrightbyThree_DashboardViewController_h
-#define BrightbyThree_DashboardViewController_h
+#define BrightbyThree_DashboardVie//wController_h
 
 #import<UIKit/UIKit.h>
 #import "HTPressableButton.h"
 #import "UIColor+HTColor.h"
+#import "MRoundedButton.h"
 
 @interface DashboardViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIScrollView *buttonScroll;
+
+@property (weak, nonatomic) IBOutlet UIImageView *centralImage;
+
+@property (weak, nonatomic) IBOutlet UIImageView *mainImage;
+@property (weak, nonatomic) IBOutlet UIScrollView *scroll;
+
 
 @property (weak, nonatomic) IBOutlet HTPressableButton *setGoalsButton;
 @property (weak, nonatomic) IBOutlet HTPressableButton *facebookButton;
 @property (weak, nonatomic) IBOutlet HTPressableButton *logMinutesButton;
 @property (weak, nonatomic) IBOutlet HTPressableButton *networkButton;
 
-@property (weak, nonatomic) IBOutlet HTPressableButton *badgesButton;
+@property (strong, nonatomic) IBOutlet HTPressableButton *badgesButton;
 @property (weak, nonatomic) IBOutlet HTPressableButton *messagesButton;
+@property (weak, nonatomic) IBOutlet UIView *buttonsView;
+
+@property (weak, nonatomic) IBOutlet UILabel *totalPointsLabel;
+
 
 @end
 

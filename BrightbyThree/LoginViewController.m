@@ -52,9 +52,37 @@
 {
     [super viewDidLoad];
     
+    //[self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Mom reading with baby - anglo.jpg"]]];
+    
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    [[UIImage imageNamed:@"Mom reading with baby - anglo.jpg"] drawInRect:self.view.bounds];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    [image drawAtPoint:CGPointZero blendMode:kCGBlendModeOverlay alpha:0.5];
+    UIGraphicsEndImageContext();
+    
+    self.view.backgroundColor = [[UIColor colorWithPatternImage:image] colorWithAlphaComponent:0.3];
+    //[UIView beginAnimations:@"fade in" context:nil];
+    //[UIView setAnimationDuration:1.0];
+    //[UIView commitAnimations];
+    
+    /*UIView *dimView = [[UIView alloc]initWithFrame:self.view.frame];
+    
+    dimView.backgroundColor = [UIColor blackColor];
+    dimView.alpha = 0;
+    [self.view addSubview:dimView];
+    [self.view bringSubviewToFront:dimView];
+    
+    [UIView animateWithDuration:0.3
+                     animations:^{
+                         dimView.alpha = 0.3;
+                     }];*/
+    
+    //self.view.alpha = 0.5;
+    //self.view.contentMode = UIViewContentModeTopLeft;
+    
     appDelegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
-    self.loginEmail.text = @" ";
-    self.loginPassword.text = @" ";
+    //self.loginEmail.text = @" ";
+    //self.loginPassword.text = @" ";
     
     //UISwitch *mySwitch = [[UISwitch alloc] initWithFrame:CGRectMake(80, 300, 10, 10)];
     [self.rememberSwitch addTarget:self action:@selector(rememberMePressed) forControlEvents:UIControlEventTouchUpInside];
@@ -64,17 +92,25 @@
     
     
         //CGRect frame = CGRectMake(110.0, 360.0, 150.0, 40.0);
+    
+        //UIImage *buttonImage = [UIImage imageNamed:@"orangeButton.png"];
+    // Set the background for any states you plan to use
+    //[self.loginButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
+    
+        //HTPressableButton *loginButton = [[HTPressableButton alloc] initWithFrame:frame buttonStyle:HTPressableButtonStyleRounded];
+    
+        //self.loginButton = [[HTPressableButton alloc] init];
         [self.loginButton  setStyle:HTPressableButtonStyleRounded];
         [self.loginButton setShadowHeight:0.80];
         [self.loginButton setTitle:@"Login" forState:UIControlStateNormal];
-        self.loginButton.buttonColor = [UIColor ht_grapeFruitColor];
+        self.loginButton.buttonColor = [UIColor ht_greenSeaColor];
         self.loginButton.shadowColor = [UIColor ht_mintDarkColor];
         [self.loginButton addTarget:self action:@selector(LoginPressed) forControlEvents:UIControlEventTouchUpInside];
     
     //loginButton.translatesAutoresizingMaskIntoConstraints = NO;
     //loginButton.translatesAutoresizingMaskIntoConstraints = NO;
     
-    //[self.view addSubview:loginButton];
+    [self.view addSubview:self.loginButton];
     
     //[self.view addSubview:mySwitch];
 
@@ -135,7 +171,7 @@
     [self.forgotPasswordLabel setUserInteractionEnabled:YES];
     //Adding label to tap gesture
     [self.forgotPasswordLabel addGestureRecognizer:gesture];
-    //[self.view addSubview:label];
+    [self.view addSubview:self.forgotPasswordLabel];
 
 }
 
@@ -292,7 +328,7 @@
                     appDelegate.babyGender = [key objectForKey:key1];
                     //NSLog(@"first name is: %@", appDelegate.firstName);
                 }
-                if ([key1  isEqual: @"phoneNumber"]) {
+                if ([key1  isEqual: @"phonenumber"]) {
                     appDelegate.phoneNumber = [key objectForKey:key1];
                     //NSLog(@"first name is: %@", appDelegate.firstName);
                 }
@@ -316,6 +352,7 @@
         [prefs setObject:appDelegate.babyDOB forKey:@"babyDOB"];
         [prefs setObject:appDelegate.babyGender forKey:@"babyGender"];
         [prefs setObject:appDelegate.phoneNumber forKey:@"phoneNumber"];
+        NSLog(@"inside log in: phone number is: %@", appDelegate.phoneNumber);
         [prefs setObject:appDelegate.zipcode forKey:@"zipcode"];
         
         
@@ -326,7 +363,15 @@
         
         UITabBarController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"tabbarController"];
         [self.navigationController pushViewController:uiViewController animated:YES];
+        UIImage *settingsImage = [UIImage imageNamed:@"19-gear.png"];
+        UIBarButtonItem *settingsButton = [[UIBarButtonItem alloc] initWithImage:settingsImage style:UIBarButtonItemStylePlain target:self action:@selector(settingsPressed)];
+        uiViewController.navigationItem.leftBarButtonItem = settingsButton;
+    
+        UIImage *accountImage = [UIImage imageNamed:@"76-baby.png"];
+        UIBarButtonItem *myAccountButton = [[UIBarButtonItem alloc] initWithImage:accountImage style:UIBarButtonItemStylePlain target:self action:@selector(myAccountPressed)];
+        uiViewController.navigationItem.leftBarButtonItem = settingsButton;
         
+        uiViewController.navigationItem.rightBarButtonItem = myAccountButton;
     }
     
     
@@ -391,5 +436,23 @@
                 
         NSLog(@"done sending");*/
 
-      
+-(void)myAccountPressed
+{
+    UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"accountViewController"];
+    [self.navigationController pushViewController:uiViewController animated:YES];
+    
+    //UIImage *accountImage = [UIImage imageNamed:@"76-baby.png"];
+    //UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:nil action:nil];
+    //[[UIBarButtonItem alloc] initWithImage:accountImage style:UIBarButtonItemStylePlain target:self action:@selector(myAccountPressed)];
+    //uiViewController.navigationItem.rightBarButtonItem = saveButton;
+    
+    //uiViewController.navigationItem.rightBarButtonItem = myAccountButton;
+}
+
+-(void)settingsPressed
+{
+    UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"settingsViewController"];
+    [self.navigationController pushViewController:uiViewController animated:YES];
+}
+
 @end

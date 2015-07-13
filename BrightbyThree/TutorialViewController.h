@@ -18,6 +18,16 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *tutorialScrollView;
 
 @property (weak, nonatomic) IBOutlet HTPressableButton *button1;
+@property (weak, nonatomic) IBOutlet HTPressableButton *button2;
+@property (weak, nonatomic) IBOutlet HTPressableButton *button3;
+@property (weak, nonatomic) IBOutlet HTPressableButton *button4;
+@property (weak, nonatomic) IBOutlet HTPressableButton *button5;
+@property (weak, nonatomic) IBOutlet HTPressableButton *button6;
+@property (weak, nonatomic) IBOutlet HTPressableButton *button7;
+@property (weak, nonatomic) IBOutlet HTPressableButton *button8;
+@property (weak, nonatomic) IBOutlet HTPressableButton *button9;
+@property (weak, nonatomic) IBOutlet HTPressableButton *button10;
+@property (weak, nonatomic) IBOutlet HTPressableButton *button11;
 
 @end
 

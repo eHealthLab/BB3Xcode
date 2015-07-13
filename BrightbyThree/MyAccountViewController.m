@@ -25,9 +25,11 @@
     appDelegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
     
     
+    UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:nil action:@selector(saveButtonPressed)];
     
-    
-    //appDelegate.phoneNumber = @"4698346074";
+    self.navigationItem.rightBarButtonItem = saveButton;
+    saveButton.tag = 10;
+
     
     
     [super viewDidLoad];
@@ -146,12 +148,13 @@
         textField.borderStyle = UITextBorderStyleRoundedRect;
         textField.font = [UIFont systemFontOfSize:14];
         NSLog(@"delegate value: %@", appDelegate.firstName);
-        textField.placeholder = savedFirstName;
+        textField.text = savedFirstName;
         textField.autocorrectionType = UITextAutocorrectionTypeNo;
         textField.keyboardType = UIKeyboardTypeDefault;
         textField.returnKeyType = UIReturnKeyDone;
         textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+        textField.tag = 1;
         [self.view addSubview:textField];
     }
     
@@ -166,12 +169,13 @@
         UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(180, 163, 183, 30)];
         textField.borderStyle = UITextBorderStyleRoundedRect;
         textField.font = [UIFont systemFontOfSize:14];
-        textField.placeholder = savedLastName;
+        textField.text = savedLastName;
         textField.autocorrectionType = UITextAutocorrectionTypeNo;
         textField.keyboardType = UIKeyboardTypeDefault;
         textField.returnKeyType = UIReturnKeyDone;
         textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+        textField.tag = 2;
         [self.view addSubview:textField];
     }
     
@@ -186,12 +190,13 @@
         UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(180, 206, 183, 30)];
         textField.borderStyle = UITextBorderStyleRoundedRect;
         textField.font = [UIFont systemFontOfSize:14];
-        textField.placeholder = savedEmail;
+        textField.text = savedEmail;
         textField.autocorrectionType = UITextAutocorrectionTypeNo;
         textField.keyboardType = UIKeyboardTypeDefault;
         textField.returnKeyType = UIReturnKeyDone;
         textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+        textField.tag = 3;
         [self.view addSubview:textField];
     }
     
@@ -208,12 +213,13 @@
         UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(180, 252, 183, 30)];
         textField.borderStyle = UITextBorderStyleRoundedRect;
         textField.font = [UIFont systemFontOfSize:14];
-        textField.placeholder = savedPassword;
+        textField.text = savedPassword;
         textField.autocorrectionType = UITextAutocorrectionTypeNo;
         textField.keyboardType = UIKeyboardTypeDefault;
         textField.returnKeyType = UIReturnKeyDone;
         textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+        textField.tag = 4;
         [self.view addSubview:textField];
     }
     
@@ -231,12 +237,13 @@
         UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(180, 333, 183, 30)];
         textField.borderStyle = UITextBorderStyleRoundedRect;
         textField.font = [UIFont systemFontOfSize:15];
-        textField.placeholder = savedBabyName;
+        textField.text = savedBabyName;
         textField.autocorrectionType = UITextAutocorrectionTypeNo;
         textField.keyboardType = UIKeyboardTypeDefault;
         textField.returnKeyType = UIReturnKeyDone;
         textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+        textField.tag = 5;
         [self.view addSubview:textField];
         
     }
@@ -255,12 +262,13 @@
         UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(180, 375, 183, 30)];
         textField.borderStyle = UITextBorderStyleRoundedRect;
         textField.font = [UIFont systemFontOfSize:15];
-        textField.placeholder = savedBabyDOB;
+        textField.text = savedBabyDOB;
         textField.autocorrectionType = UITextAutocorrectionTypeNo;
         textField.keyboardType = UIKeyboardTypeDefault;
         textField.returnKeyType = UIReturnKeyDone;
         textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+        textField.tag = 6;
         [self.view addSubview:textField];
         
     }
@@ -278,12 +286,13 @@
         UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(180, 417, 183, 30)];
         textField.borderStyle = UITextBorderStyleRoundedRect;
         textField.font = [UIFont systemFontOfSize:15];
-        textField.placeholder = savedBabyGender;
+        textField.text = savedBabyGender;
         textField.autocorrectionType = UITextAutocorrectionTypeNo;
         textField.keyboardType = UIKeyboardTypeDefault;
         textField.returnKeyType = UIReturnKeyDone;
         textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+        textField.tag = 7;
         [self.view addSubview:textField];
     }
     
@@ -298,12 +307,13 @@
         UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(180, 500, 183, 30)];
         textField.borderStyle = UITextBorderStyleRoundedRect;
         textField.font = [UIFont systemFontOfSize:15];
-        textField.placeholder = savedPhoneNumber;
+        textField.text = savedPhoneNumber;
         textField.autocorrectionType = UITextAutocorrectionTypeNo;
         textField.keyboardType = UIKeyboardTypeDefault;
         textField.returnKeyType = UIReturnKeyDone;
         textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+        textField.tag = 8;
         [self.view addSubview:textField];
         
         
@@ -322,12 +332,13 @@
         UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(180, 543, 183, 30)];
         textField.borderStyle = UITextBorderStyleRoundedRect;
         textField.font = [UIFont systemFontOfSize:15];
-        textField.placeholder = savedZipcode;
+        textField.text = savedZipcode;
         textField.autocorrectionType = UITextAutocorrectionTypeNo;
         textField.keyboardType = UIKeyboardTypeDefault;
         textField.returnKeyType = UIReturnKeyDone;
         textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+        textField.tag = 9;
         [self.view addSubview:textField];
         
     }
@@ -339,6 +350,52 @@
     // The header for the section is the region name -- get this from the region at the section index.
     
     return [sectionArray objectAtIndex:section];
+}
+
+-(void)saveButtonPressed
+{
+    UIBarButtonItem *saveButton = (UIBarButtonItem *)[self.view viewWithTag:10];
+    [saveButton setEnabled:NO];
+    
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    UITextField *field = (UITextField *)[self.view viewWithTag:1];
+    NSString *text = field.text;
+    [prefs setObject:text forKey:@"firstName"];
+    
+    field = (UITextField *)[self.view viewWithTag:2];
+    text = field.text;
+    [prefs setObject:text forKey:@"lastName"];
+    field.placeholder = text;
+    NSLog(@"last name is: %@", text);
+    
+    field = (UITextField *)[self.view viewWithTag:3];
+    text = field.text;
+    [prefs setObject:text forKey:@"email"];
+    
+    field = (UITextField *)[self.view viewWithTag:4];
+    text = field.text;
+    [prefs setObject:text forKey:@"password"];
+    
+    field = (UITextField *)[self.view viewWithTag:5];
+    text = field.text;
+    [prefs setObject:text forKey:@"babyName"];
+    
+    field = (UITextField *)[self.view viewWithTag:6];
+    text = field.text;
+    [prefs setObject:text forKey:@"babyDOB"];
+    
+    field = (UITextField *)[self.view viewWithTag:7];
+    text = field.text;
+    [prefs setObject:text forKey:@"babyGender"];
+    
+    field = (UITextField *)[self.view viewWithTag:8];
+    text = field.text;
+    [prefs setObject:text forKey:@"phoneNumber"];
+    
+    field = (UITextField *)[self.view viewWithTag:9];
+    text = field.text;
+    [prefs setObject:text forKey:@"zipcode"];
+    
 }
 
 

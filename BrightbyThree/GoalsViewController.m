@@ -36,16 +36,15 @@
     _goalsPicker.delegate = self;
     _goalsPicker.dataSource = self;
     
-    //CGRect frame = CGRectMake(150, 530, 100, 40);
-    //HTPressableButton *saveButton = [[HTPressableButton alloc] initWithFrame:frame buttonStyle:HTPressableButtonStyleRounded];
+    
     [self.saveButton setStyle:HTPressableButtonStyleRounded];
     self.saveButton.buttonColor = [UIColor ht_bitterSweetColor];
     self.saveButton.shadowColor = [UIColor ht_bitterSweetDarkColor];
+    [self.saveButton setStyle:HTPressableButtonStyleRounded];
+    [self.saveButton setShadowHeight:0.8];
     [self.saveButton setTitle:@"Save" forState:UIControlStateNormal];
     [self.saveButton addTarget:self action:@selector(saveGoalsPressed) forControlEvents:UIControlEventTouchUpInside];
     self.saveButton.tag = 1;
-    
-    //[self.view addSubview:saveButton];
 
     
 }

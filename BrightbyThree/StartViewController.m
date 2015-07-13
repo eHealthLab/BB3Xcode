@@ -42,6 +42,12 @@
     delegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
     [super viewDidLoad];
     
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame = self.view.bounds;
+    UIColor *startColour = [UIColor colorWithHue:.580555 saturation:0.31 brightness:0.90 alpha:1.0];
+    UIColor *endColour = [UIColor colorWithHue:.58333 saturation:0.50 brightness:0.62 alpha:1.0];
+    gradient.colors = [NSArray arrayWithObjects:(id)[startColour CGColor], (id)[endColour CGColor], nil];
+    [self.view.layer insertSublayer:gradient atIndex:0];
     
     NSString *blurb1= @"The Bright by Three (BB3) app brings information about how you can help your child  learn and develop directly to your phone several times per week.  You will get messages that have information about activities that you can do with your child to help him learn.   You can set goals  and earn badges and prizes  for looking at books with your child and doing activities.";
 
@@ -70,7 +76,7 @@
     _pageBlurbs = @[blurb1, blurb2, blurb3,blurb4,blurb5,blurb6,blurb7,blurb8,blurb9,blurb10,blurb11];
     
     
-    _pageImages = @[@"Mom reading with baby - anglo.jpg", @"page2.png", @"page3.png", @"page4.png",@"page4.png",@"page4.png",@"page4.png",@"page4.png",@"page4.png",@"page4.png",@"page4.png",@"page4.png"];
+    _pageImages = @[@"iStock_000015216865_Large.jpg", @"page2.png", @"page3.png", @"page4.png",@"page4.png",@"page4.png",@"page4.png",@"page4.png",@"page4.png",@"page4.png",@"page4.png",@"page4.png"];
     
     // Create page view controller
     self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];

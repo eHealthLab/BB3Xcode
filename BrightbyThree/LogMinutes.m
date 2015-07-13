@@ -27,22 +27,35 @@
     _logInMinutesPickerView.dataSource = self;
     
     //UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20, 320, 350, 100)];
-    self.label.numberOfLines = 3;
+    /*self.label.numberOfLines = 3;
     self.label.text = [[@"You currently have " stringByAppendingString:[NSString stringWithFormat:@"%d", (int)delegate.totalPoints]] stringByAppendingString:@" total points. Log in more minutes."];
     
+    self.label.textAlignment=NSTextAlignmentJustified;
+    [self.label sizeToFit];*/
+
+    /*CGRect frame = self.label.frame;
+    frame.size.height = self.label.
+    self.label.frame = frame;*/
     
-    //CGRect frame = CGRectMake(150, 590, 100, 40);
-    //HTPressableButton *saveButton = [[HTPressableButton alloc] initWithFrame:frame buttonStyle:HTPressableButtonStyleRounded];
+    self.totalPointsView.text = [[@"You currently have " stringByAppendingString:[NSString stringWithFormat:@"%d", (int)delegate.totalPoints]] stringByAppendingString:@" total points. Log in more minutes."];
+    self.totalPointsView.textAlignment=NSTextAlignmentJustified;
+    [self.totalPointsView sizeToFit];
+    [self.totalPointsView setScrollEnabled:YES];
+    //[uiViewController.view addSubview:textViewDetail1];
+    [self.view addSubview:self.totalPointsView];
+    CGRect frame = self.totalPointsView.frame;
+    frame.size.height = self.totalPointsView.contentSize.height;
+    self.totalPointsView.frame = frame;
+    
+
     [self.saveButton setStyle:HTPressableButtonStyleRounded];
     self.saveButton.buttonColor = [UIColor ht_bitterSweetColor];
     self.saveButton.shadowColor = [UIColor ht_bitterSweetDarkColor];
+    [self.saveButton setShadowHeight:0.8];
     [self.saveButton setTitle:@"Save" forState:UIControlStateNormal];
     [self.saveButton addTarget:self action:@selector(saveMinutesPressed) forControlEvents:UIControlEventTouchUpInside];
     self.saveButton.tag = 1;
     
-    
-    //[self.view addSubview:self.saveButton];
-    //[self.view addSubview:label];
     [_logInMinutesPickerView reloadAllComponents];
 }
 

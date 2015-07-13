@@ -23,6 +23,9 @@
 @property(strong, nonatomic) NSArray *minutesArray;
 @property (weak, nonatomic) IBOutlet HTPressableButton *saveButton;
 @property (weak, nonatomic) IBOutlet UILabel *label;
+@property (weak, nonatomic) IBOutlet UITextView *totalPointsView;
+
+
 @end
 
 #endif

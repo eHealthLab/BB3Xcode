@@ -105,7 +105,7 @@
     // NSLog(@"inside the table function");
     
     UITableViewCell *cell;
-    UILabel *FirstNameLabel;
+    /*UILabel *FirstNameLabel;
     UILabel *LastNameLabel;
     UILabel *EmailLabel;
     UILabel *PasswordLabel;
@@ -114,7 +114,7 @@
     UILabel *BabyDOBLabel;
     UILabel *BabyGenderLabel;
     UILabel *ZipcodeLabel;
-    UILabel *PhoneNumberLabel;
+    UILabel *PhoneNumberLabel;*/
     
     
     //UITextView *name;
@@ -128,7 +128,8 @@
     }
     
     if (indexPath.section == 0 && indexPath.row == 0) {
-        FirstNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 10.0, 100.0, 30.0)];
+        
+        UILabel *FirstNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 10.0, 100.0, 30.0)];
         FirstNameLabel.font = [UIFont boldSystemFontOfSize:16.0];
         FirstNameLabel.text = @"First Name";
         FirstNameLabel.textAlignment = NSTextAlignmentLeft;
@@ -144,11 +145,14 @@
         textField.returnKeyType = UIReturnKeyDone;
         textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+        textField.tag = 1;
         [self.view addSubview:textField];
+        
     }
     
     if (indexPath.section == 0 && indexPath.row == 1) {
-        LastNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 10.0, 100.0, 30.0)];
+        
+        UILabel *LastNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 10.0, 100.0, 30.0)];
         LastNameLabel.font = [UIFont boldSystemFontOfSize:16.0];
         LastNameLabel.text = @"Last Name";
         LastNameLabel.textAlignment = NSTextAlignmentLeft;
@@ -164,11 +168,14 @@
         textField.returnKeyType = UIReturnKeyDone;
         textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+        textField.tag = 2;
         [self.view addSubview:textField];
+        
     }
     
     if (indexPath.section == 0 && indexPath.row == 2) {
-        PasswordLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 10.0, 100.0, 30.0)];
+        
+        UILabel *PasswordLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 10.0, 100.0, 30.0)];
         PasswordLabel.font = [UIFont boldSystemFontOfSize:16.0];
         PasswordLabel.text = @"Email";
         PasswordLabel.textAlignment = NSTextAlignmentLeft;
@@ -184,11 +191,13 @@
         textField.returnKeyType = UIReturnKeyDone;
         textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+        textField.tag = 3;
         [self.view addSubview:textField];
     }
     
     if (indexPath.section == 0 && indexPath.row == 3) {
-        PasswordConfirmLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 10.0, 100.0, 30.0)];
+        
+        UILabel *PasswordConfirmLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 10.0, 100.0, 30.0)];
         //name = [UITextView alloc] ini
         //[[[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, 220.0, 15.0)]];
         PasswordConfirmLabel.font = [UIFont boldSystemFontOfSize:16.0];
@@ -207,11 +216,13 @@
         textField.returnKeyType = UIReturnKeyDone;
         textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+        textField.tag = 4;
         [self.view addSubview:textField];
     }
     
     if (indexPath.section == 0 && indexPath.row == 4) {
-        EmailLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 10.0, 170.0, 30.0)];
+        
+        UILabel *EmailLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 10.0, 170.0, 30.0)];
         //name = [UITextView alloc] ini
         //[[[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, 220.0, 15.0)]];
         EmailLabel.font = [UIFont boldSystemFontOfSize:16.0];
@@ -230,11 +241,13 @@
         textField.returnKeyType = UIReturnKeyDone;
         textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+        
         [self.view addSubview:textField];
     }
     
     if (indexPath.section == 1 && indexPath.row == 0) {
-        BabyNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 10.0, 100.0, 30.0)];
+        
+        UILabel *BabyNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 10.0, 100.0, 30.0)];
         //name = [UITextView alloc] ini
         //[[[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, 150.0, 15.0)]];
         BabyNameLabel.font = [UIFont boldSystemFontOfSize:16.0];
@@ -253,12 +266,14 @@
         textField.returnKeyType = UIReturnKeyDone;
         textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+        textField.tag = 5;
         [self.view addSubview:textField];
 
     }
     
     if (indexPath.section == 1 && indexPath.row == 1) {
-        BabyDOBLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 10.0, 100.0, 30.0)];
+        
+        UILabel *BabyDOBLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 10.0, 100.0, 30.0)];
         //name = [UITextView alloc] ini
         //[[[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, 220.0, 15.0)]];
         BabyDOBLabel.font = [UIFont boldSystemFontOfSize:16.0];
@@ -277,12 +292,14 @@
         textField.returnKeyType = UIReturnKeyDone;
         textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+        textField.tag = 6;
         [self.view addSubview:textField];
 
     }
     
     if (indexPath.section == 1 && indexPath.row == 2) {
-        BabyGenderLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 10.0, 100.0, 30.0)];
+        
+        UILabel *BabyGenderLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 10.0, 100.0, 30.0)];
         //name = [UITextView alloc] ini
         //[[[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, 220.0, 15.0)]];
         BabyGenderLabel.font = [UIFont boldSystemFontOfSize:16.0];
@@ -301,11 +318,13 @@
         textField.returnKeyType = UIReturnKeyDone;
         textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+        textField.tag = 7;
         [self.view addSubview:textField];
     }
     
     if (indexPath.section == 2 && indexPath.row == 0) {
-        PhoneNumberLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 10.0, 100.0, 30.0)];
+        
+        UILabel *PhoneNumberLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 10.0, 100.0, 30.0)];
         PhoneNumberLabel.font = [UIFont boldSystemFontOfSize:16.0];
         PhoneNumberLabel.text = @"Phone";
         PhoneNumberLabel.textAlignment = NSTextAlignmentLeft;
@@ -321,13 +340,15 @@
         textField.returnKeyType = UIReturnKeyDone;
         textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+        textField.tag = 8;
         [self.view addSubview:textField];
         
         
     }
     
     if (indexPath.section == 2 && indexPath.row == 1) {
-        ZipcodeLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 10.0, 100.0, 30.0)];
+        
+        UILabel *ZipcodeLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 10.0, 100.0, 30.0)];
         
         ZipcodeLabel.font = [UIFont boldSystemFontOfSize:16.0];
         ZipcodeLabel.text = @"Zipcode";
@@ -345,6 +366,7 @@
         textField.returnKeyType = UIReturnKeyDone;
         textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+        textField.tag = 9;
         [self.view addSubview:textField];
         
     }
@@ -372,21 +394,57 @@
 
 -(void)sendSignUpRequest
 {
-    responseData = [NSMutableData data];
-    NSURLRequest *request = [NSURLRequest requestWithURL:
+    UITextField *field = (UITextField *)[self.view viewWithTag:1];
+    NSString *text1 = field.text;
+    
+    field = (UITextField *)[self.view viewWithTag:2];
+    NSString *text2 = field.text;
+    
+    field = (UITextField *)[self.view viewWithTag:3];
+    NSString *text3 = field.text;
+    
+    field = (UITextField *)[self.view viewWithTag:4];
+    NSString *text4 = field.text;
+    
+    field = (UITextField *)[self.view viewWithTag:5];
+    NSString *text5 = field.text;
+    
+    field = (UITextField *)[self.view viewWithTag:6];
+    NSString *text6 = field.text;
+    
+    field = (UITextField *)[self.view viewWithTag:7];
+    NSString *text7 = field.text;
+    
+    field = (UITextField *)[self.view viewWithTag:8];
+    NSString *text8 = field.text;
+    
+    field = (UITextField *)[self.view viewWithTag:9];
+    NSString *text9 = field.text;
+    
+    if ([text1 isEqualToString:@""] || [text2 isEqualToString:@""] || [text3 isEqualToString:@""] || [text4 isEqualToString:@""] || [text5 isEqualToString:@""] || [text6 isEqualToString:@""] || [text7 isEqualToString:@""] || [text8 isEqualToString:@""] || [text9 isEqualToString:@""] ) {
+        
+            UIAlertView *messageAlert = [[UIAlertView alloc]
+                                     initWithTitle:@"Error" message:@"All information is required."   delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [messageAlert show];
+    }
+    else {
+        
+    
+        responseData = [NSMutableData data];
+        NSURLRequest *request = [NSURLRequest requestWithURL:
                              [NSURL URLWithString:@"http://localhost:3000/loginSignup/TEST@TEST.COM/qwe" ] cachePolicy:NSURLRequestUseProtocolCachePolicy
                                   timeoutInterval:60.0];
-    receivedData = [NSMutableData dataWithCapacity: 0];
-    NSURLConnection *theConnection=[[NSURLConnection alloc] initWithRequest:request delegate:self];
+        receivedData = [NSMutableData dataWithCapacity: 0];
+        NSURLConnection *theConnection=[[NSURLConnection alloc] initWithRequest:request delegate:self];
     
-    if (!theConnection) {
-        // Release the receivedData object.
-        receivedData = nil;
+        if (!theConnection) {
+            // Release the receivedData object.
+            receivedData = nil;
         
-        // Inform the user that the connection failed.
+            // Inform the user that the connection failed.
+        }
+    
     }
-    
-    
     
     //NSURL *url = [NSURL URLWithString:@""];
     

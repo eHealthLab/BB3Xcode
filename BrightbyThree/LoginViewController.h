@@ -42,9 +42,9 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *loginEmail;
 @property (weak, nonatomic) IBOutlet UITextField *loginPassword;
-@property (weak, nonatomic) IBOutlet HTPressableButton *loginButton;
+@property (strong, nonatomic) IBOutlet HTPressableButton *loginButton;
 
-@property (weak, nonatomic) IBOutlet HTPressableButton *signupButton;
+@property (strong, nonatomic) IBOutlet HTPressableButton *signupButton;
 @property (weak, nonatomic) IBOutlet UILabel *forgotPasswordLabel;
 
 @property (weak, nonatomic) IBOutlet UISwitch *rememberSwitch;
