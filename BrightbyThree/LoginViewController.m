@@ -107,9 +107,6 @@
         self.loginButton.shadowColor = [UIColor ht_mintDarkColor];
         [self.loginButton addTarget:self action:@selector(LoginPressed) forControlEvents:UIControlEventTouchUpInside];
     
-    //loginButton.translatesAutoresizingMaskIntoConstraints = NO;
-    //loginButton.translatesAutoresizingMaskIntoConstraints = NO;
-    
     [self.view addSubview:self.loginButton];
     
     //[self.view addSubview:mySwitch];
@@ -212,11 +209,6 @@
     }
     else {
         
-        /** If no email account has been setup, user gets a message alert with Error message.
-         *
-         */
-        
-        //NSLog(@"please setup an email ID first");
         UIAlertView *messageAlert = [[UIAlertView alloc]
                                      initWithTitle:@"Error" message:@"Please Set Up an email accout on your device first." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [messageAlert show];
@@ -226,7 +218,7 @@
 
 -(void)ShowSignUpForm
 {
-    UITableViewController *uiTableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"signUpViewController"];
+    UITableViewController *uiTableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"signupView"];
     [self.navigationController pushViewController:uiTableViewController animated:YES];
 }
 
@@ -239,6 +231,12 @@
         [messageAlert show];
 
     }
+    else if (![self validateEmail:self.loginEmail.text]) {
+        UIAlertView *messageAlert = [[UIAlertView alloc]
+                                     initWithTitle:@"Invalid email" message:@"Please enter a valid email id." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [messageAlert show];
+    }
+        
     else {
     
         NSLog(@"login info entered: %@ %@", self.loginEmail.text , self.loginPassword.text);
@@ -247,9 +245,10 @@
         NSString *url = [[[@"http://localhost:3000/loginSignup/" stringByAppendingString:newEmail] stringByAppendingString:@"/"] stringByAppendingString:self.loginPassword.text];
         url = [url stringByReplacingOccurrencesOfString:@" " withString:@""];
         NSLog(@"url is: %@", url);
-        NSURLRequest *request = [NSURLRequest requestWithURL:
+        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:
                              [NSURL URLWithString:url] cachePolicy:NSURLRequestUseProtocolCachePolicy
                                          timeoutInterval:60.0];
+        //[request setHTTPMethod:@"POST"];
         receivedData = [NSMutableData dataWithCapacity: 0];
         NSURLConnection *theConnection=[[NSURLConnection alloc] initWithRequest:request     delegate:self];
     
@@ -287,6 +286,7 @@
     // receivedData is declared as a property elsewhere
     NSLog(@"Succeeded! Received %lu bytes of data",(unsigned long)[receivedData length]);
     
+    NSLog(@"received data: %@", receivedData);
     NSError *myError = nil;
     NSDictionary *res = [NSJSONSerialization JSONObjectWithData:receivedData options:NSJSONReadingMutableLeaves error:&myError];
     NSLog(@"%@", res);
@@ -299,6 +299,10 @@
     else {
     
         for (id key in res) {
+            
+            if ([key count] == 16 ) {
+                
+            
             for (id key1 in key) {
                 if ([key1  isEqual: @"firstname"]) {
                     appDelegate.firstName = [key objectForKey:key1];
@@ -336,9 +340,45 @@
                     appDelegate.zipcode = [key objectForKey:key1];
                     //NSLog(@"first name is: %@", appDelegate.firstName);
                 }
+                if ([key1 isEqual:@"ID"]) {
+                    appDelegate.userID = [NSString stringWithFormat:@"%@", [key objectForKey:key1]];
+                    NSLog(@"id is: %@", appDelegate.userID);
+                }
                 
             }
             NSLog(@"values are: %@, %@, %@, %@, %@, %@, %@, %@, %@", appDelegate.firstName, appDelegate.lastName, appDelegate.userEmail, appDelegate.userPassword, appDelegate.babyName, appDelegate.babyDOB, appDelegate.babyGender, appDelegate.phoneNumber, appDelegate.zipcode);
+            }
+            else if ([key count] > 3 )
+            {
+                for (id key1 in key) {
+                    if ([key1 isEqualToString:@"daysPerWeek"]) {
+                        NSLog(@"goals info\n");
+                        //NSLog(@"days per week is: %@", [key objectAtIndex:key1]);
+                        //NSLog(@"minutes per day is: %@", [key objectAtIndex:key1]);
+                    }
+                }
+            }
+            
+            else if ([key count] == 3)
+            {
+                for (id key1 in key) {
+                    if ([key1 isEqualToString:@"totalPoints"]) {
+                        appDelegate.totalPoints = [[key objectForKey:key1] intValue];
+                        NSLog(@"total points is: %d", appDelegate.totalPoints);
+                        break;
+                    }
+                    else if ([key1 isEqualToString:@"badgeToEarn"]) {
+                        appDelegate.nextBadgeToEarn = [[key objectForKey:key1] intValue];
+                        NSLog(@"badge to earn is : %d", appDelegate.nextBadgeToEarn);
+                        break;
+                    }
+                }
+
+            }
+                
+            
+            
+            
             }
         
         NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
@@ -369,22 +409,11 @@
     
         UIImage *accountImage = [UIImage imageNamed:@"76-baby.png"];
         UIBarButtonItem *myAccountButton = [[UIBarButtonItem alloc] initWithImage:accountImage style:UIBarButtonItemStylePlain target:self action:@selector(myAccountPressed)];
-        uiViewController.navigationItem.leftBarButtonItem = settingsButton;
+        //uiViewController.navigationItem.leftBarButtonItem = settingsButton;
         
         uiViewController.navigationItem.rightBarButtonItem = myAccountButton;
     }
     
-    
-    
-    
-    // Release the connection and the data object
-    // by setting the properties (declared elsewhere)
-    // to nil.  Note that a real-world app usually
-    // requires the delegate to manage more than one
-    // connection at a time, so these lines would
-    // typically be replaced by code to iterate through
-    // whatever data structures you are using.
-    //theConnection = nil;
     receivedData = nil;
 }
 
@@ -453,6 +482,13 @@
 {
     UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"settingsViewController"];
     [self.navigationController pushViewController:uiViewController animated:YES];
+}
+
+- (BOOL) validateEmail: (NSString *) candidate {
+    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}";
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    
+    return [emailTest evaluateWithObject:candidate];
 }
 
 @end

@@ -44,14 +44,17 @@
 @property(strong, nonatomic) NSMutableArray *goalsArray;
 
 @property(strong, nonatomic) NSString *babyName;
-@property(strong, nonatomic) NSDate *babyDOB;
+@property(strong, nonatomic) NSString *babyDOB;
 @property(strong, nonatomic) NSString *babyGender;
 @property(strong, nonatomic) NSString *zipcode;
 @property(strong, nonatomic) NSString *loginStatus;
 @property(assign, nonatomic) int minutesComponent;
-@property(assign, nonatomic) int goalsMinutesComponent;
-@property(assign, nonatomic) int goalsDaysComponent;
+@property(strong, nonatomic) NSString *goalsMinutesComponent;
+@property(strong, nonatomic) NSString *goalsDaysComponent;
 @property(strong, nonatomic) NSString *profilePicture;
+
+@property(strong, nonatomic) NSString *userID;
+@property(assign, nonatomic) int nextBadgeToEarn;
 
 
 @property(assign, nonatomic) int totalPoints;

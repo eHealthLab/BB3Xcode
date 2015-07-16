@@ -45,12 +45,18 @@
 
 -(void)viewDidLoad
 {
+    appDelegate = (AppDelegate*) [[UIApplication sharedApplication] delegate];
+    NSLog(@"total points: %d", appDelegate.totalPoints);
+    [self.badgeProgressView setProgress:appDelegate.totalPoints/5000.0];
+    
+    [self.imageView setImage:[UIImage imageNamed:@"iStock_000015216865_Large.jpg"]];
     
     [_badgeView setScrollEnabled:YES];
     [_badgeView setContentSize:CGSizeMake(320,400)];
-    appDelegate = (AppDelegate*) [[UIApplication sharedApplication] delegate];
+    
     self.title = @"Badges";
-    appDelegate.totalPoints = 870;
+    NSLog(@"total points: %d", appDelegate.totalPoints);
+    //appDelegate.totalPoints = 870;
     
     _badgeImagesArray = [[NSMutableArray alloc] initWithObjects:@"Badge150.png", @"Badge400.png", @"Badge700.png", @"Badge1000.png", @"Badge1500.png", @"Badge2000.png", @"Badge2500.png", @"Badge3000.png", @"Badge3500.png", @"Badge4000.png", @"Badge4500.png", @"Badge5000", nil];
     
@@ -109,30 +115,30 @@
     badge12.image=[UIImage imageNamed:@"Badge5000.png"];
     
     
-    if (appDelegate.totalPoints > 150)
+    if (appDelegate.totalPoints >= 150)
     {
         [_badgeView addSubview:badge1];
-        if (appDelegate.totalPoints > 400) {
+        if (appDelegate.totalPoints >= 400) {
             [_badgeView addSubview:badge2];
-            if (appDelegate.totalPoints > 700) {
+            if (appDelegate.totalPoints >= 700) {
                 [_badgeView addSubview:badge3];
-                if (appDelegate.totalPoints > 1000) {
+                if (appDelegate.totalPoints >= 1000) {
                     [_badgeView addSubview:badge4];
-                    if (appDelegate.totalPoints > 1500) {
+                    if (appDelegate.totalPoints >= 1500) {
                         [_badgeView addSubview:badge5];
-                        if (appDelegate.totalPoints > 2000) {
+                        if (appDelegate.totalPoints >= 2000) {
                             [_badgeView addSubview:badge6];
-                            if (appDelegate.totalPoints > 2500) {
+                            if (appDelegate.totalPoints >= 2500) {
                                 [_badgeView addSubview:badge7];
-                                if (appDelegate.totalPoints > 3000) {
+                                if (appDelegate.totalPoints >= 3000) {
                                     [_badgeView addSubview:badge8];
-                                    if (appDelegate.totalPoints > 3500) {
+                                    if (appDelegate.totalPoints >= 3500) {
                                         [_badgeView addSubview:badge9];
-                                        if (appDelegate.totalPoints > 4000) {
+                                        if (appDelegate.totalPoints >= 4000) {
                                             [_badgeView addSubview:badge10];
-                                            if (appDelegate.totalPoints > 4500) {
+                                            if (appDelegate.totalPoints >= 4500) {
                                                 [_badgeView addSubview:badge11];
-                                                if (appDelegate.totalPoints > 5000) {
+                                                if (appDelegate.totalPoints >= 5000) {
                                                     [_badgeView addSubview:badge12];
                                                 }
                                             }
@@ -147,14 +153,6 @@
         }
         
     }
-    /*for (int i=0; i < 12; i++) {
-        if (appDelegate.totalPoints > (int)_badgePointsArray[i])
-            ;
-        [_badgeView addSubview:badge1];
-            //[_badgeView addSubview:_badgeNamesArray[i]];
-    }*/
-    
-    
 }
 
 

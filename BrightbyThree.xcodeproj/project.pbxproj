@@ -15,7 +15,8 @@
 		1D0D87491B03123400BFC6DC /* page3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D0D87451B03123400BFC6DC /* page3.png */; };
 		1D0D874A1B03123400BFC6DC /* page4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D0D87461B03123400BFC6DC /* page4.png */; };
 		1D0D874D1B0387E400BFC6DC /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0D874C1B0387E400BFC6DC /* LoginViewController.m */; };
-		1D0D9E341B543854009FD90C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D0D9E331B543854009FD90C /* Main.storyboard */; };
+		1D0D9E371B545269009FD90C /* FormTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0D9E361B545268009FD90C /* FormTableController.m */; };
+		1D0D9E3A1B54C19A009FD90C /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0D9E391B54C19A009FD90C /* SettingsViewController.m */; };
 		1D14A5551B504C2A000EECAB /* blackButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D14A5381B504C2A000EECAB /* blackButton.png */; };
 		1D14A5561B504C2A000EECAB /* blackButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D14A5391B504C2A000EECAB /* blackButton@2x.png */; };
 		1D14A5571B504C2A000EECAB /* blackButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D14A53A1B504C2A000EECAB /* blackButtonHighlight.png */; };
@@ -73,6 +74,8 @@
 		1D8617BB1AFACA650047DE56 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D8617BA1AFACA650047DE56 /* Images.xcassets */; };
 		1D8617BE1AFACA650047DE56 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D8617BC1AFACA650047DE56 /* LaunchScreen.xib */; };
 		1D8617D51AFB16210047DE56 /* glyphicons-157-show-thumbnails.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D8617D41AFB16210047DE56 /* glyphicons-157-show-thumbnails.png */; };
+		1D8A32CA1B57F9A1006343E1 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D8A32C81B57F9A1006343E1 /* Icon-72.png */; };
+		1D8A32CB1B57F9A1006343E1 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D8A32C91B57F9A1006343E1 /* Icon.png */; };
 		1D9872BF1AFC56DB00C0AC5D /* BB3_logo-icon_WEB_rgb.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D9872BE1AFC56DB00C0AC5D /* BB3_logo-icon_WEB_rgb.png */; };
 		1D9872C11AFC5BC600C0AC5D /* Dashboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9872C01AFC5BC600C0AC5D /* Dashboard.m */; };
 		1D9872C41B01381B00C0AC5D /* signUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9872C31B01381B00C0AC5D /* signUpViewController.m */; };
@@ -140,7 +143,10 @@
 		1D0D87461B03123400BFC6DC /* page4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page4.png; sourceTree = "<group>"; };
 		1D0D874B1B0387AF00BFC6DC /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		1D0D874C1B0387E400BFC6DC /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		1D0D9E331B543854009FD90C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		1D0D9E351B545268009FD90C /* FormTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormTableController.h; sourceTree = "<group>"; };
+		1D0D9E361B545268009FD90C /* FormTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormTableController.m; sourceTree = "<group>"; };
+		1D0D9E381B54C189009FD90C /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		1D0D9E391B54C19A009FD90C /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		1D14A5381B504C2A000EECAB /* blackButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackButton.png; sourceTree = "<group>"; };
 		1D14A5391B504C2A000EECAB /* blackButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackButton@2x.png"; sourceTree = "<group>"; };
 		1D14A53A1B504C2A000EECAB /* blackButtonHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackButtonHighlight.png; sourceTree = "<group>"; };
@@ -219,6 +225,8 @@
 		1D8617BA1AFACA650047DE56 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1D8617BD1AFACA650047DE56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		1D8617D41AFB16210047DE56 /* glyphicons-157-show-thumbnails.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glyphicons-157-show-thumbnails.png"; sourceTree = "<group>"; };
+		1D8A32C81B57F9A1006343E1 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "BrightbyThree/Images.xcassets/Icon.png.imageset/Icon-72.png"; sourceTree = "<group>"; };
+		1D8A32C91B57F9A1006343E1 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = BrightbyThree/Images.xcassets/Icon.png.imageset/Icon.png; sourceTree = "<group>"; };
 		1D9872BE1AFC56DB00C0AC5D /* BB3_logo-icon_WEB_rgb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BB3_logo-icon_WEB_rgb.png"; sourceTree = "<group>"; };
 		1D9872C01AFC5BC600C0AC5D /* Dashboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dashboard.m; sourceTree = "<group>"; };
 		1D9872C31B01381B00C0AC5D /* signUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = signUpViewController.m; sourceTree = "<group>"; };
@@ -401,7 +409,8 @@
 			isa = PBXGroup;
 			children = (
 				1D487B381B4A344000A64137 /* Story1.storyboard */,
-				1D0D9E331B543854009FD90C /* Main.storyboard */,
+				1D0D9E381B54C189009FD90C /* SettingsViewController.h */,
+				1D0D9E391B54C19A009FD90C /* SettingsViewController.m */,
 				1DEF81EC1B3EACDC003EEF92 /* MyAccountViewController.h */,
 				1DEF81ED1B3EACF7003EEF92 /* MyAccountViewController.m */,
 				1DBA0E531B3C9EEF0018E759 /* AboutUsViewController.m */,
@@ -424,6 +433,8 @@
 				1D28EE981B12C54E00C712CC /* GoalsViewController.m */,
 				1D28EEA01B1488F400C712CC /* NetworkViewController.h */,
 				1D28EE9E1B1488E300C712CC /* NetworkViewController.m */,
+				1D0D9E351B545268009FD90C /* FormTableController.h */,
+				1D0D9E361B545268009FD90C /* FormTableController.m */,
 				1D9FB5791B0922050007886F /* badgeViewController.m */,
 				1D9FB57B1B0922100007886F /* badgeViewController.h */,
 				1D99088D1B0A9E1400D2A38F /* LogMinutes.h */,
@@ -468,6 +479,8 @@
 				1DAB27E11B35925000A2FA5D /* messages.jpeg */,
 				1DBA0E4F1B3B44A50018E759 /* iStock_000015216865_Large.jpg */,
 				1DBA0E4D1B3B449E0018E759 /* iStock_000024919385_XXXLarge.jpg */,
+				1D8A32C81B57F9A1006343E1 /* Icon-72.png */,
+				1D8A32C91B57F9A1006343E1 /* Icon.png */,
 				1DBA0E4B1B3B44620018E759 /* Baby with tongue out.jpg */,
 				1DEF81EA1B3E9D1B003EEF92 /* goals.jpg */,
 				1DBA0E491B3B33040018E759 /* Mom reading with baby - anglo.jpg */,
@@ -664,15 +677,16 @@
 				1D9FB5951B092E7E0007886F /* badges.png in Resources */,
 				1D7279B81B43574500585A94 /* Accords.png in Resources */,
 				1D7279B61B4356DB00585A94 /* BB3_AboutUs.png in Resources */,
+				1D8A32CB1B57F9A1006343E1 /* Icon.png in Resources */,
 				1DBA0E501B3B44A50018E759 /* iStock_000015216865_Large.jpg in Resources */,
 				1DBA0E521B3B49810018E759 /* network.jpg in Resources */,
 				1D14A56F1B504C2A000EECAB /* whiteButton@2x.png in Resources */,
 				1D7279B21B4352B000585A94 /* daniels.png in Resources */,
+				1D8A32CA1B57F9A1006343E1 /* Icon-72.png in Resources */,
 				1DEF81EB1B3E9D1B003EEF92 /* goals.jpg in Resources */,
 				1D9872BF1AFC56DB00C0AC5D /* BB3_logo-icon_WEB_rgb.png in Resources */,
 				1DBA0E4E1B3B449E0018E759 /* iStock_000024919385_XXXLarge.jpg in Resources */,
 				1D14A5681B504C2A000EECAB /* orangeButtonHighlight.png in Resources */,
-				1D0D9E341B543854009FD90C /* Main.storyboard in Resources */,
 				1D9FB5AF1B092FFF0007886F /* 18-envelope.png in Resources */,
 				1D9FB58F1B092E7E0007886F /* Badge2500.png in Resources */,
 				1D9FB5B51B0930570007886F /* 19-gear.png in Resources */,
@@ -731,6 +745,7 @@
 				1D0D873A1B02401600BFC6DC /* PageContentViewController.m in Sources */,
 				1D4AAE3F1B182B34002D3F72 /* EnrollNow.m in Sources */,
 				1D740AC71B4E92380077D370 /* ACPButton.m in Sources */,
+				1D0D9E3A1B54C19A009FD90C /* SettingsViewController.m in Sources */,
 				1D8617B01AFACA650047DE56 /* AppDelegate.m in Sources */,
 				1D4B65051B1E9C1E007EAFAF /* TutorialViewController.m in Sources */,
 				1D4B12101B39345200D194BA /* HTPressableButtonPrefs.m in Sources */,
@@ -741,6 +756,7 @@
 				1DBA0E541B3C9EEF0018E759 /* AboutUsViewController.m in Sources */,
 				1D0D874D1B0387E400BFC6DC /* LoginViewController.m in Sources */,
 				1D9FB57A1B0922050007886F /* badgeViewController.m in Sources */,
+				1D0D9E371B545269009FD90C /* FormTableController.m in Sources */,
 				1D0D873D1B02498E00BFC6DC /* StartViewController.m in Sources */,
 				1D8617AD1AFACA650047DE56 /* main.m in Sources */,
 				1DBA20E51B52858900982CA1 /* tutorialDetails.m in Sources */,
@@ -860,16 +876,16 @@
 		1D8617CE1AFACA650047DE56 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Sheana Bull (8B2Z9YK54P)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Sheana Bull (8B2Z9YK54P)";
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
 				INFOPLIST_FILE = BrightbyThree/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "bcff49f4-4072-4a45-a3c1-0ef23a1ecd7a";
+				PROVISIONING_PROFILE = "555aeb1c-189f-47e0-99db-3d46fe18f00e";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -877,17 +893,17 @@
 		1D8617CF1AFACA650047DE56 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Sheana Bull (8B2Z9YK54P)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Sheana Bull (8B2Z9YK54P)";
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
 				INFOPLIST_FILE = BrightbyThree/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "bcff49f4-4072-4a45-a3c1-0ef23a1ecd7a";
-				"PROVISIONING_PROFILE[sdk=*]" = "bcff49f4-4072-4a45-a3c1-0ef23a1ecd7a";
+				PROVISIONING_PROFILE = "555aeb1c-189f-47e0-99db-3d46fe18f00e";
+				"PROVISIONING_PROFILE[sdk=*]" = "555aeb1c-189f-47e0-99db-3d46fe18f00e";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

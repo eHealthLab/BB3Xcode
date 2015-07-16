@@ -40,6 +40,8 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *badgeView;
 //@property(strong, nonatomic) NSMutableArray *badgePointsArray;
 @property(strong, nonatomic) NSMutableArray *badgeNamesArray;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIProgressView *badgeProgressView;
 
 
 //@property (weak, nonatomic) IBOutlet UITableView *badgesTable;

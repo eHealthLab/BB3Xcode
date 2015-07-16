@@ -24,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet HTPressableButton *saveButton;
 @property (weak, nonatomic) IBOutlet UILabel *label;
 @property (weak, nonatomic) IBOutlet UITextView *totalPointsView;
+@property (weak, nonatomic) IBOutlet UIImageView *logMinutesImage;
 
 
 @end

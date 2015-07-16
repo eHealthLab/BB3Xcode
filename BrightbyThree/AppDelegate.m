@@ -37,16 +37,21 @@
 
 -(void)initProfile
 {
-    self.babyName=@"Nathan";
-    self.profilePicture = @"facebook-logo.png";
-    _firstName = @"Aarti";
-    _lastName = @"Munjal";
-    _userEmail = @"aarti.munjal@gmail.com";
-    _userPassword = @"artika12";
-    _babyGender = @"Female";
-    _babyDOB = (NSDate *)@"06-06-2014";
-    _phoneNumber = @"4698342095";
-    _zipcode = @"80012";
+    self.babyName=@"";
+    self.profilePicture = @"";
+    _firstName = @"";
+    _lastName = @"";
+    _userEmail = @"";
+    _userPassword = @"";
+    _babyGender = @"";
+    _babyDOB = @"";
+    _phoneNumber = @"";
+    _zipcode = @"";
+    _goalsDaysComponent = @"";
+    _goalsMinutesComponent = @"";
+    _userID = @"";
+    self.nextBadgeToEarn = 3;
+    self.badgesArray = [[NSMutableArray alloc] initWithObjects:@"150", @"400", @"700", @"1000", @"1500", @"2000", @"2500", @"3000", @"3500", @"4000", @"4500", @"5000", nil];
     
 
 

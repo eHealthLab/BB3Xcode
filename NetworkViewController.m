@@ -21,7 +21,7 @@
     
     delegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
     [super viewDidLoad];
-    
+    /*
     UILabel *label1 = [[UILabel alloc] initWithFrame:CGRectMake(30,425,100,50)];
     label1.text = @"Total Points";
     [self.view addSubview:label1];
@@ -55,6 +55,7 @@
     self.totalPointsSoFar.progress=.15;
     self.pointsPerWeek.progress = .25;
     self.pointsPerMonth.progress = .35;
+     */
     
 }
 

@@ -24,6 +24,7 @@
 @property(strong, nonatomic) NSString *selectedValueMinutesPerDay;
 @property(strong, nonatomic) NSArray *minutesPerDayArray;
 @property(strong, nonatomic) NSArray *daysPerWeekArray;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @property (weak, nonatomic) IBOutlet HTPressableButton *saveButton;
 

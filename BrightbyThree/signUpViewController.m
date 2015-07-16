@@ -31,6 +31,12 @@
 #import "signUpViewController.h"
 //#import "AFNetworking.h"
 
+@interface signUpViewController()
+{
+    UIDatePicker *datePicker;
+}
+
+@end
 @implementation signUpViewController
 {
     AppDelegate *appDelegate;
@@ -42,15 +48,25 @@
 @synthesize sectionArray;
 @synthesize signUptableView;
 
+
+
 - (void)viewDidLoad
 {
     appDelegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
     
     
-    [super viewDidLoad];
+    appDelegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
     
-    // Do any additional setup after loading the view.
+    self.title = @"Sign Up";
+    UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:nil action:@selector(sendSignUpRequest)];
+    
+    self.navigationItem.rightBarButtonItem = saveButton;
+    saveButton.tag = 10;
+    
+    [super viewDidLoad];
+
 }
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -77,17 +93,18 @@
     tableView.delegate = self;
     tableView.dataSource = self;
     
+    
     self.sectionArray = [[NSMutableArray alloc] initWithCapacity:2];
     self.numberOfRows = [[NSMutableArray alloc] initWithCapacity:2];
-    [sectionArray addObject:@"Personal Information"];
-    [sectionArray addObject:@"Child Information"];
-    [sectionArray addObject:@"Demographics"];
+    [sectionArray addObject:@""];
+    [sectionArray addObject:@""];
+    [sectionArray addObject:@""];
     [sectionArray addObject:@""];
     
-    [numberOfRows addObject:@"5"];
+    [numberOfRows addObject:@"1"];
+    [numberOfRows addObject:@"4"];
     [numberOfRows addObject:@"3"];
     [numberOfRows addObject:@"2"];
-    [numberOfRows addObject:@"1"];
     
     [signUptableView insertSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationTop];
     [signUptableView insertSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationTop];
@@ -104,21 +121,22 @@
 {
     // NSLog(@"inside the table function");
     
-    UITableViewCell *cell;
-    /*UILabel *FirstNameLabel;
+    UITableViewCell *cell, *cell1, *cell2, *cell3, *cell4, *cell5, *cell6, *cell7, *cell8, *cell9;
+    UILabel *FirstNameLabel;
     UILabel *LastNameLabel;
     UILabel *EmailLabel;
     UILabel *PasswordLabel;
-    UILabel *PasswordConfirmLabel;
+    //UILabel *PasswordConfirmLabel;
     UILabel *BabyNameLabel;
     UILabel *BabyDOBLabel;
     UILabel *BabyGenderLabel;
     UILabel *ZipcodeLabel;
-    UILabel *PhoneNumberLabel;*/
+    UILabel *PhoneNumberLabel;
     
     
     //UITextView *name;
-    cell = [tableView dequeueReusableCellWithIdentifier:@"MyCell"];
+    cell = [tableView dequeueReusableCellWithIdentifier:@"MyCell1"];
+    
     
     //Step 2:
     if(cell == nil)
@@ -128,6 +146,263 @@
     }
     
     if (indexPath.section == 0 && indexPath.row == 0) {
+        
+        UILabel *DescriptionLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 10.0, 400.0, 30.0)];
+        DescriptionLabel.font = [UIFont boldSystemFontOfSize:14.0];
+        DescriptionLabel.textColor = [UIColor redColor];
+        DescriptionLabel.text = @"Tap on each field to edit its value.";
+        DescriptionLabel.textAlignment = NSTextAlignmentCenter;
+        DescriptionLabel.backgroundColor = [UIColor clearColor];
+        [cell.contentView addSubview:DescriptionLabel];
+        
+    }
+    
+    if (indexPath.section == 1 && indexPath.row == 0) {
+        FirstNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 10.0, 100.0, 30.0)];
+        FirstNameLabel.font = [UIFont boldSystemFontOfSize:16.0];
+        FirstNameLabel.text = @"First Name";
+        FirstNameLabel.textAlignment = NSTextAlignmentLeft;
+        FirstNameLabel.backgroundColor = [UIColor clearColor];
+        [cell.contentView addSubview:FirstNameLabel];
+        
+        UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(180, 120, 183, 30)];
+        textField.borderStyle = UITextBorderStyleRoundedRect;
+        textField.font = [UIFont systemFontOfSize:14];
+        NSLog(@"delegate value: %@", appDelegate.firstName);
+        textField.placeholder = @"enter first name";
+        textField.autocorrectionType = UITextAutocorrectionTypeNo;
+        textField.keyboardType = UIKeyboardTypeDefault;
+        textField.returnKeyType = UIReturnKeyDone;
+        textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+        textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+        textField.tag = 1;
+        [self.view addSubview:textField];
+    }
+    
+    if (indexPath.section == 1 && indexPath.row == 1) {
+        LastNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 10.0, 100.0, 30.0)];
+        LastNameLabel.font = [UIFont boldSystemFontOfSize:16.0];
+        LastNameLabel.text = @"Last Name";
+        LastNameLabel.textAlignment = NSTextAlignmentLeft;
+        LastNameLabel.backgroundColor = [UIColor clearColor];
+        [cell.contentView addSubview:LastNameLabel];
+        
+        UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(180, 163, 183, 30)];
+        textField.borderStyle = UITextBorderStyleRoundedRect;
+        textField.font = [UIFont systemFontOfSize:14];
+        textField.placeholder = @"enter last name";
+        textField.autocorrectionType = UITextAutocorrectionTypeNo;
+        textField.keyboardType = UIKeyboardTypeDefault;
+        textField.returnKeyType = UIReturnKeyDone;
+        textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+        textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+        textField.tag = 2;
+        [self.view addSubview:textField];
+    }
+    
+    if (indexPath.section == 1 && indexPath.row == 2) {
+        EmailLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 10.0, 100.0, 30.0)];
+        EmailLabel.font = [UIFont boldSystemFontOfSize:16.0];
+        EmailLabel.text = @"Email";
+        EmailLabel.textAlignment = NSTextAlignmentLeft;
+        EmailLabel.backgroundColor = [UIColor clearColor];
+        [cell.contentView addSubview:EmailLabel];
+        
+        UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(180, 206, 183, 30)];
+        textField.borderStyle = UITextBorderStyleRoundedRect;
+        textField.font = [UIFont systemFontOfSize:14];
+        textField.placeholder = @"enter email";
+        textField.autocorrectionType = UITextAutocorrectionTypeNo;
+        textField.keyboardType = UIKeyboardTypeDefault;
+        textField.returnKeyType = UIReturnKeyDone;
+        textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+        textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+        textField.tag = 3;
+        [self.view addSubview:textField];
+    }
+    
+    if (indexPath.section == 1 && indexPath.row == 3) {
+        PasswordLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 10.0, 100.0, 30.0)];
+        
+        PasswordLabel.font = [UIFont boldSystemFontOfSize:16.0];
+        PasswordLabel.text = @"Password";
+        
+        PasswordLabel.textAlignment = NSTextAlignmentLeft;
+        PasswordLabel.backgroundColor = [UIColor clearColor];
+        [cell.contentView addSubview:PasswordLabel];
+        
+        UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(180, 252, 183, 30)];
+        textField.borderStyle = UITextBorderStyleRoundedRect;
+        textField.font = [UIFont systemFontOfSize:14];
+        textField.placeholder = @"enter password";
+        textField.autocorrectionType = UITextAutocorrectionTypeNo;
+        textField.keyboardType = UIKeyboardTypeDefault;
+        textField.returnKeyType = UIReturnKeyDone;
+        textField.secureTextEntry = YES;
+        textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+        textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+        textField.tag = 4;
+        [self.view addSubview:textField];
+    }
+    
+    if (indexPath.section == 2 && indexPath.row == 0) {
+        BabyNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 10.0, 100.0, 30.0)];
+        //name = [UITextView alloc] ini
+        //[[[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, 150.0, 15.0)]];
+        BabyNameLabel.font = [UIFont boldSystemFontOfSize:16.0];
+        BabyNameLabel.text = @"Child Name";
+        //[cell setBackgroundColor:[UIColor lightGrayColor]];
+        BabyNameLabel.textAlignment = NSTextAlignmentLeft;
+        BabyNameLabel.backgroundColor = [UIColor clearColor];
+        [cell.contentView addSubview:BabyNameLabel];
+        
+        UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(180, 333, 183, 30)];
+        textField.borderStyle = UITextBorderStyleRoundedRect;
+        textField.font = [UIFont systemFontOfSize:15];
+        textField.placeholder = @"enter child name";
+        textField.autocorrectionType = UITextAutocorrectionTypeNo;
+        textField.keyboardType = UIKeyboardTypeDefault;
+        textField.returnKeyType = UIReturnKeyDone;
+        textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+        textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+        textField.tag = 5;
+        [self.view addSubview:textField];
+        
+    }
+    
+    if (indexPath.section == 2 && indexPath.row == 1) {
+        BabyDOBLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 10.0, 100.0, 30.0)];
+        //name = [UITextView alloc] ini
+        //[[[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, 220.0, 15.0)]];
+        BabyDOBLabel.font = [UIFont boldSystemFontOfSize:16.0];
+        BabyDOBLabel.text = @"Child DOB";
+        //[cell setBackgroundColor:[UIColor lightGrayColor]];
+        BabyDOBLabel.textAlignment = NSTextAlignmentLeft;
+        BabyDOBLabel.backgroundColor = [UIColor clearColor];
+        [cell.contentView addSubview:BabyDOBLabel];
+        
+
+        UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(180, 375, 183, 30)];
+        textField.borderStyle = UITextBorderStyleRoundedRect;
+        textField.font = [UIFont systemFontOfSize:15];
+        textField.placeholder = @"enter date of birth";
+        textField.autocorrectionType = UITextAutocorrectionTypeNo;
+        //textField.delegate = textField;
+        //textField.delegate = self;
+        datePicker = [[UIDatePicker alloc] init];
+        datePicker.datePickerMode = UIDatePickerModeDate;
+        [datePicker addTarget:self action:@selector(birthDateEntered:) forControlEvents:UIControlEventValueChanged];
+        
+        
+        [textField setInputView:datePicker];
+        textField.tag = 6;
+        [self.view addSubview:textField];
+
+        
+        //textField.keyboardType = UIKeyboardTypeDefault;
+        //textField.returnKeyType = UIReturnKeyDone;
+        textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+        textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+        
+    }
+    
+    if (indexPath.section == 2 && indexPath.row == 2) {
+        BabyGenderLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 10.0, 100.0, 30.0)];
+        
+        BabyGenderLabel.font = [UIFont boldSystemFontOfSize:16.0];
+        BabyGenderLabel.text = @"Child Gender";
+        
+        BabyGenderLabel.textAlignment = NSTextAlignmentLeft;
+        BabyGenderLabel.backgroundColor = [UIColor clearColor];
+        [cell.contentView addSubview:BabyGenderLabel];
+        
+        UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(180, 417, 183, 30)];
+        textField.borderStyle = UITextBorderStyleRoundedRect;
+        textField.font = [UIFont systemFontOfSize:15];
+        textField.placeholder = @"enter gender";
+        textField.autocorrectionType = UITextAutocorrectionTypeNo;
+        textField.keyboardType = UIKeyboardTypeDefault;
+        textField.returnKeyType = UIReturnKeyDone;
+        textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+        textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+        textField.tag = 7;
+        [self.view addSubview:textField];
+    }
+    
+    if (indexPath.section == 3 && indexPath.row == 0) {
+        PhoneNumberLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 10.0, 100.0, 30.0)];
+        PhoneNumberLabel.font = [UIFont boldSystemFontOfSize:16.0];
+        PhoneNumberLabel.text = @"Phone";
+        PhoneNumberLabel.textAlignment = NSTextAlignmentLeft;
+        PhoneNumberLabel.backgroundColor = [UIColor clearColor];
+        [cell.contentView addSubview:PhoneNumberLabel];
+        
+        UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(180, 500, 183, 30)];
+        textField.borderStyle = UITextBorderStyleRoundedRect;
+        textField.font = [UIFont systemFontOfSize:15];
+        textField.placeholder = @"enter phone";
+        textField.autocorrectionType = UITextAutocorrectionTypeNo;
+        textField.keyboardType = UIKeyboardTypeDefault;
+        textField.returnKeyType = UIReturnKeyDone;
+        textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+        textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+        textField.tag = 8;
+        [self.view addSubview:textField];
+        
+        
+    }
+    
+    if (indexPath.section == 3 && indexPath.row == 1) {
+        ZipcodeLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 10.0, 100.0, 30.0)];
+        
+        ZipcodeLabel.font = [UIFont boldSystemFontOfSize:16.0];
+        ZipcodeLabel.text = @"Zipcode";
+        ZipcodeLabel.textAlignment = NSTextAlignmentLeft;
+        ZipcodeLabel.backgroundColor = [UIColor clearColor];
+        [cell.contentView addSubview:ZipcodeLabel];
+        
+        
+        UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(180, 543, 183, 30)];
+        textField.borderStyle = UITextBorderStyleRoundedRect;
+        textField.font = [UIFont systemFontOfSize:15];
+        textField.placeholder = @"enter zipcode";
+        textField.autocorrectionType = UITextAutocorrectionTypeNo;
+        textField.keyboardType = UIKeyboardTypeDefault;
+        textField.returnKeyType = UIReturnKeyDone;
+        textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+        textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+        textField.tag = 9;
+        [self.view addSubview:textField];
+        
+    }
+    
+    return cell;
+
+}
+
+-(void)birthDateEntered:(id)sender
+{
+    
+    UITextField *field = (UITextField *)[self.view viewWithTag:6];
+    UIDatePicker *picker = (UIDatePicker*)field.inputView;
+    //NSDate *eventDate = datePicker.date;
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"yyyy-MM-dd"];
+    NSString *formattedDate = [dateFormat stringFromDate:picker.date];
+    //self.dateString = [dateFormat stringFromDate:eventDate];
+    
+    NSLog(@"date is: %@", formattedDate);
+    appDelegate.babyDOB = formattedDate;
+    field.text = formattedDate;
+    //[self.tableView reloadData];
+}
+
+/*
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0 && indexPath.row == 0) {
+        
+        
         
         UILabel *FirstNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 10.0, 100.0, 30.0)];
         FirstNameLabel.font = [UIFont boldSystemFontOfSize:16.0];
@@ -152,6 +427,8 @@
     
     if (indexPath.section == 0 && indexPath.row == 1) {
         
+        
+       
         UILabel *LastNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 10.0, 100.0, 30.0)];
         LastNameLabel.font = [UIFont boldSystemFontOfSize:16.0];
         LastNameLabel.text = @"Last Name";
@@ -175,6 +452,8 @@
     
     if (indexPath.section == 0 && indexPath.row == 2) {
         
+        
+       
         UILabel *PasswordLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 10.0, 100.0, 30.0)];
         PasswordLabel.font = [UIFont boldSystemFontOfSize:16.0];
         PasswordLabel.text = @"Email";
@@ -197,6 +476,7 @@
     
     if (indexPath.section == 0 && indexPath.row == 3) {
         
+       
         UILabel *PasswordConfirmLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 10.0, 100.0, 30.0)];
         //name = [UITextView alloc] ini
         //[[[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, 220.0, 15.0)]];
@@ -222,6 +502,7 @@
     
     if (indexPath.section == 0 && indexPath.row == 4) {
         
+       
         UILabel *EmailLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 10.0, 170.0, 30.0)];
         //name = [UITextView alloc] ini
         //[[[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, 220.0, 15.0)]];
@@ -246,6 +527,7 @@
     }
     
     if (indexPath.section == 1 && indexPath.row == 0) {
+        
         
         UILabel *BabyNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 10.0, 100.0, 30.0)];
         //name = [UITextView alloc] ini
@@ -273,6 +555,7 @@
     
     if (indexPath.section == 1 && indexPath.row == 1) {
         
+        
         UILabel *BabyDOBLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 10.0, 100.0, 30.0)];
         //name = [UITextView alloc] ini
         //[[[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, 220.0, 15.0)]];
@@ -299,6 +582,7 @@
     
     if (indexPath.section == 1 && indexPath.row == 2) {
         
+        
         UILabel *BabyGenderLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 10.0, 100.0, 30.0)];
         //name = [UITextView alloc] ini
         //[[[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, 220.0, 15.0)]];
@@ -324,6 +608,7 @@
     
     if (indexPath.section == 2 && indexPath.row == 0) {
         
+        
         UILabel *PhoneNumberLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 10.0, 100.0, 30.0)];
         PhoneNumberLabel.font = [UIFont boldSystemFontOfSize:16.0];
         PhoneNumberLabel.text = @"Phone";
@@ -347,6 +632,7 @@
     }
     
     if (indexPath.section == 2 && indexPath.row == 1) {
+        
         
         UILabel *ZipcodeLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 10.0, 100.0, 30.0)];
         
@@ -387,13 +673,25 @@
         
         
     //}
-    return cell;
+    //return cell;
 
     
 }
+ */
+
+
+- (BOOL) validateEmail: (NSString *) candidate {
+    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}";
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    
+    return [emailTest evaluateWithObject:candidate];
+}
+
 
 -(void)sendSignUpRequest
 {
+    
+    
     UITextField *field = (UITextField *)[self.view viewWithTag:1];
     NSString *text1 = field.text;
     
@@ -402,6 +700,7 @@
     
     field = (UITextField *)[self.view viewWithTag:3];
     NSString *text3 = field.text;
+    //NSString *emailEntered= text3;
     
     field = (UITextField *)[self.view viewWithTag:4];
     NSString *text4 = field.text;
@@ -421,62 +720,132 @@
     field = (UITextField *)[self.view viewWithTag:9];
     NSString *text9 = field.text;
     
-    if ([text1 isEqualToString:@""] || [text2 isEqualToString:@""] || [text3 isEqualToString:@""] || [text4 isEqualToString:@""] || [text5 isEqualToString:@""] || [text6 isEqualToString:@""] || [text7 isEqualToString:@""] || [text8 isEqualToString:@""] || [text9 isEqualToString:@""] ) {
+    if ([text1 isEqualToString:@""] || [text2 isEqualToString:@""] || [text3 isEqualToString:@""] || [text4 isEqualToString:@""] || [text5 isEqualToString:@""] || [text6 isEqualToString:@""] || [text7 isEqualToString:@""] || [text8 isEqualToString:@""] || [text9 isEqualToString:@""]) {
         
             UIAlertView *messageAlert = [[UIAlertView alloc]
                                      initWithTitle:@"Error" message:@"All information is required."   delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
             [messageAlert show];
     }
-    else {
-        
-    
-        responseData = [NSMutableData data];
-        NSURLRequest *request = [NSURLRequest requestWithURL:
-                             [NSURL URLWithString:@"http://localhost:3000/loginSignup/TEST@TEST.COM/qwe" ] cachePolicy:NSURLRequestUseProtocolCachePolicy
-                                  timeoutInterval:60.0];
-        receivedData = [NSMutableData dataWithCapacity: 0];
-        NSURLConnection *theConnection=[[NSURLConnection alloc] initWithRequest:request delegate:self];
-    
-        if (!theConnection) {
-            // Release the receivedData object.
-            receivedData = nil;
-        
-            // Inform the user that the connection failed.
-        }
-    
-    }
-    
-    //NSURL *url = [NSURL URLWithString:@""];
-    
-    /*NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60];
-    
-    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
-    operation.responseSerializer = [AFJSONResponseSerializer serializer];
-    
-    [request setHTTPMethod:@"GET"];
-    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    
-    NSError *error = [[NSError alloc] init];
-    NSHTTPURLResponse *responseCode = nil;
-    
-    NSData *oResponseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&responseCode error:&error];
-    
-    if([responseCode statusCode] != 200){
-        NSLog(@"Error getting %@, HTTP status code %li", url, [responseCode statusCode]);
-        
+    else if (![self validateEmail:text3])
+    {
+        UIAlertView *messageAlert = [[UIAlertView alloc]
+                                     initWithTitle:@"Error" message:@"Please enter a valid email."   delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [messageAlert show];
     }
     else {
+        
+    
+        UIBarButtonItem *saveButton = (UIBarButtonItem *)[self.view viewWithTag:10];
+        [saveButton setEnabled:NO];
+        
+        NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+        UITextField *field = (UITextField *)[self.view viewWithTag:1];
+        NSString *text = field.text;
+        [prefs setObject:text forKey:@"firstName"];
+        appDelegate.firstName = text;
+        
+        field = (UITextField *)[self.view viewWithTag:2];
+        text = field.text;
+        [prefs setObject:text forKey:@"lastName"];
+        field.placeholder = text;
+        //NSLog(@"last name is: %@", text);
+        appDelegate.lastName = text;
+        
+        field = (UITextField *)[self.view viewWithTag:3];
+        text = field.text;
+        [prefs setObject:text forKey:@"email"];
+        appDelegate.userEmail = text;
+        
+        field = (UITextField *)[self.view viewWithTag:4];
+        text = field.text;
+        [prefs setObject:text forKey:@"password"];
+        appDelegate.userPassword = text;
+        
+        field = (UITextField *)[self.view viewWithTag:5];
+        text = field.text;
+        [prefs setObject:text forKey:@"babyName"];
+        appDelegate.babyName = text;
+        
+        field = (UITextField *)[self.view viewWithTag:6];
+        text = field.text;
+        [prefs setObject:text forKey:@"babyDOB"];
+        //appDelegate.babyDOB = text;
+        
+        field = (UITextField *)[self.view viewWithTag:7];
+        text = field.text;
+        [prefs setObject:text forKey:@"babyGender"];
+        appDelegate.babyGender = text;
+        
+        field = (UITextField *)[self.view viewWithTag:8];
+        text = field.text;
+        [prefs setObject:text forKey:@"phoneNumber"];
+        appDelegate.phoneNumber = text;
+        
+        field = (UITextField *)[self.view viewWithTag:9];
+        text = field.text;
+        [prefs setObject:text forKey:@"zipcode"];
+        appDelegate.zipcode = text;
 
-        NSString *response = [[NSString alloc] initWithData:oResponseData encoding:NSUTF8StringEncoding];
-        NSLog(@"%@", response);
+        responseData = [NSMutableData data];
         
-       
-        UITabBarController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"tabbarController"];
-        [self.navigationController pushViewController:uiViewController animated:YES];
+        appDelegate.userEmail = [appDelegate.userEmail uppercaseString];
         
-        NSLog(@"done sending");
-    }*/
+        NSString *bodyData = [[[[[[[[[[[[[[[[appDelegate.firstName stringByAppendingString:@"/"] stringByAppendingString:appDelegate.lastName] stringByAppendingString:@"/"] stringByAppendingString:appDelegate.userEmail] stringByAppendingString:@"/"] stringByAppendingString:appDelegate.userPassword] stringByAppendingString:@"/"] stringByAppendingString:appDelegate.phoneNumber] stringByAppendingString:@"/"] stringByAppendingString:appDelegate.babyName] stringByAppendingString:@"/"] stringByAppendingString:appDelegate.babyDOB] stringByAppendingString:@"/"] stringByAppendingString:appDelegate.babyGender] stringByAppendingString:@"/"] stringByAppendingString:appDelegate.zipcode];
+        
+        NSString *urlString = [@"http://localhost:3000/loginSignup/" stringByAppendingString:bodyData];
+        
+        NSLog(@"wuery is: %@", urlString);
+        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:
+                             [NSURL URLWithString:urlString]];
+        [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+        [request setHTTPMethod:@"POST"];
+        NSData* data = [bodyData dataUsingEncoding:NSUTF8StringEncoding];
+        [request setHTTPBody:data];
+        receivedData = [NSMutableData dataWithCapacity: 0];
+        
+        NSURLResponse* response = [[NSURLResponse alloc] init];
+        NSError* error = nil;
+        [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+
+        //NSURLConnection *theConnection=[[NSURLConnection alloc] initWithRequest:request delegate:self];
+    
+        /*if (!theConnection) {
+                receivedData = nil;
+        }*/
+    
+        
+        if (error != nil)
+        {
+            NSLog(@"submitted request!");
+            NSLog(@"response: %@", response);
+            
+            UIAlertView *messageAlert = [[UIAlertView alloc]
+                                         initWithTitle:@"Success!" message:@"You have successfully signed up."   delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [messageAlert show];
+
+            
+            
+            UITabBarController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"tabbarController"];
+            [self.navigationController pushViewController:uiViewController animated:YES];
+            
+            UIImage *settingsImage = [UIImage imageNamed:@"19-gear.png"];
+            UIBarButtonItem *settingsButton = [[UIBarButtonItem alloc] initWithImage:settingsImage style:UIBarButtonItemStylePlain target:self action:@selector(settingsPressed)];
+            uiViewController.navigationItem.leftBarButtonItem = settingsButton;
+            
+            UIImage *accountImage = [UIImage imageNamed:@"76-baby.png"];
+            UIBarButtonItem *myAccountButton = [[UIBarButtonItem alloc] initWithImage:accountImage style:UIBarButtonItemStylePlain target:self action:@selector(myAccountPressed)];
+            
+            uiViewController.navigationItem.rightBarButtonItem = myAccountButton;
+            
+
+            
+        }
+        else {
+            NSString* errorLogFormat = @"request failed, error: %@";
+            NSLog(errorLogFormat, error);
+        }
+    }
+    
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
@@ -505,28 +874,41 @@
     NSError *myError = nil;
     NSDictionary *res = [NSJSONSerialization JSONObjectWithData:receivedData options:NSJSONReadingMutableLeaves error:&myError];
     NSLog(@"%@", res);
-    
-    
+    NSLog(@"received data: %@", receivedData);
     
     UITabBarController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"tabbarController"];
     [self.navigationController pushViewController:uiViewController animated:YES];
     
-    // Release the connection and the data object
-    // by setting the properties (declared elsewhere)
-    // to nil.  Note that a real-world app usually
-    // requires the delegate to manage more than one
-    // connection at a time, so these lines would
-    // typically be replaced by code to iterate through
-    // whatever data structures you are using.
-    //theConnection = nil;
+    UIImage *settingsImage = [UIImage imageNamed:@"19-gear.png"];
+    UIBarButtonItem *settingsButton = [[UIBarButtonItem alloc] initWithImage:settingsImage style:UIBarButtonItemStylePlain target:self action:@selector(settingsPressed)];
+    uiViewController.navigationItem.leftBarButtonItem = settingsButton;
+    
+    UIImage *accountImage = [UIImage imageNamed:@"76-baby.png"];
+    UIBarButtonItem *myAccountButton = [[UIBarButtonItem alloc] initWithImage:accountImage style:UIBarButtonItemStylePlain target:self action:@selector(myAccountPressed)];
+    
+    uiViewController.navigationItem.rightBarButtonItem = myAccountButton;
+    
+    
     receivedData = nil;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    // The header for the section is the region name -- get this from the region at the section index.
-    
-    return [sectionArray objectAtIndex:section];
+      return [sectionArray objectAtIndex:section];
 }
+
+-(void)myAccountPressed
+{
+    UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"accountViewController"];
+    [self.navigationController pushViewController:uiViewController animated:YES];
+}
+
+-(void)settingsPressed
+{
+    UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"settingsViewController"];
+    [self.navigationController pushViewController:uiViewController animated:YES];
+}
+
+
 
 
 @end

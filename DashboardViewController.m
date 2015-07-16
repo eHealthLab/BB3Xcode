@@ -14,6 +14,8 @@
 @implementation DashboardViewController
 {
     AppDelegate *appDelegate;
+    NSMutableData *responseData;
+    NSMutableData *receivedData;
 }
 
 -(void) viewDidLoad
@@ -23,7 +25,9 @@
     
     [self.view addSubview:self.buttonsView];
     
-    
+    [self gettotalPointsInfo];
+    [self getGoalsInfo];
+    [self getBadgeInfo];
                                                                               
         
     UIGraphicsBeginImageContext(self.view.frame.size);
@@ -132,20 +136,27 @@
     [self.messagesButton setTitle:@"Messages" forState:UIControlStateNormal];
     [self.messagesButton addTarget:self action:@selector(loadMessagesLibraryPressed) forControlEvents:UIControlEventTouchUpInside];
     //[self.view addSubview:self.messagesButton];
+    
+    
+    
+
 
     
 }
 
 -(void)setGoalsPressed
 {
+    //[self getGoalsInfo];
     UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"goalsViewController"];
     [self.navigationController pushViewController:uiViewController animated:YES];
 }
 
 -(void)showBadgesPressed
 {
+    [self getBadgeInfo];
     UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"badgeViewController"];
     [self.navigationController pushViewController:uiViewController animated:YES];
+    
     
 }
 
@@ -159,7 +170,9 @@
 
 -(void)logMinutesPressed
 {
+ 
     
+
     UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"logMinutesController"];
     [self.navigationController pushViewController:uiViewController animated:YES];
     UIBarButtonItem *barButton = [[UIBarButtonItem alloc] init];
@@ -204,6 +217,233 @@
     
     [self.navigationController pushViewController:uiViewController animated:YES];
 }
+
+-(void) gettotalPointsInfo
+{
+    NSString *url = [@"http://localhost:3000/totalPointsInfo/" stringByAppendingString:appDelegate.userID];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    [request setHTTPMethod:@"GET"];
+    [request setURL:[NSURL URLWithString:url]];
+    
+    NSError *error = [[NSError alloc] init];
+    NSHTTPURLResponse *responseCode = nil;
+    
+    NSData *oResponseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&responseCode error:&error];
+    
+    if([responseCode statusCode] != 200){
+        NSLog(@"Error getting %@, HTTP status code %li", url, (long)[responseCode statusCode]);
+        //return nil;
+    }
+    
+
+    NSError *myError = nil;
+    NSDictionary *res = [NSJSONSerialization JSONObjectWithData:oResponseData options:NSJSONReadingMutableLeaves error:&myError];
+    NSLog(@"%@", res);
+    
+    //NSLog(@"points info: %@", res);
+    
+    for (id key in res) {
+    
+            for (id key1 in key) {
+                if ([key1 isEqualToString:@"totalPoints"]) {
+                    appDelegate.totalPoints = [[key objectForKey:key1] intValue];
+                    NSLog(@"total points is: %d", appDelegate.totalPoints);
+                    break;
+                }
+            }
+    }
+}
+    
+    /*NSString *url = [@"http://localhost:3000/totalPointsInfo/" stringByAppendingString:appDelegate.userID];
+    url = [url stringByReplacingOccurrencesOfString:@" " withString:@""];
+    NSLog(@"url is: %@", url);
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:
+                                    [NSURL URLWithString:url] cachePolicy:NSURLRequestUseProtocolCachePolicy
+                                                       timeoutInterval:60.0];
+    receivedData = [NSMutableData dataWithCapacity: 0];
+    NSURLConnection *theConnection=[[NSURLConnection alloc] initWithRequest:request     delegate:self];
+    
+    if (!theConnection) {
+        
+        receivedData = nil;
+        NSLog(@"no connection \n");
+        // Inform the user that the connection failed.
+    }*/
+    
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+    NSLog(@"didReceiveResponse");
+    [receivedData setLength:0];
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    [receivedData appendData:data];
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+    NSLog(@"didFailWithError");
+    receivedData = nil;
+    NSLog(@"Connection failed! Error - %@ %@",
+          [error localizedDescription],
+          [[error userInfo] objectForKey:NSURLErrorFailingURLStringErrorKey]);
+}
+
+
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection
+{
+    // do something with the data
+    // receivedData is declared as a property elsewhere
+    NSLog(@"Succeeded! Received %lu bytes of data",(unsigned long)[receivedData length]);
+    
+    NSLog(@"received data: %@", receivedData);
+    NSError *myError = nil;
+    NSDictionary *res = [NSJSONSerialization JSONObjectWithData:receivedData options:NSJSONReadingMutableLeaves error:&myError];
+    NSLog(@"%@", res);
+    if (res == NULL) {
+        NSLog(@"well! there you go!");
+    }
+    else {
+        
+        for (id key in res) {
+            
+            if ([key count] > 3 )
+            {
+                for (id key1 in key) {
+                    if ([key1 isEqualToString:@"daysPerWeek"]) {
+                        NSLog(@"goals info\n");
+                        //NSLog(@"days per week is: %d", [[key objectAtIndex:key1] intValue]);
+                        //NSLog(@"minutes per day is: %@", [[key objectAtIndex:key1] intValue]);
+                    }
+                }
+            }
+            
+            else if ([key count] == 3)
+            {
+                
+                for (id key1 in key) {
+                    if ([key1 isEqualToString:@"totalPoints"]) {
+                        appDelegate.totalPoints = [[key objectForKey:key1] intValue];
+                        NSLog(@"total points is: %d", appDelegate.totalPoints);
+                        break;
+                    }
+                    else if ([key1 isEqualToString:@"badgeToEarn"]) {
+                        NSLog(@"found badge info: %@", [key objectForKey:key1]);
+                        appDelegate.nextBadgeToEarn = [[key objectForKey:key1] intValue];
+                        NSLog(@"badge to earn is : %d", appDelegate.nextBadgeToEarn);
+                        break;
+                    }
+                }
+                
+            }
+            
+            
+            
+            
+        }
+               
+    }
+    
+    receivedData = nil;
+}
+
+
+-(void) getGoalsInfo
+{
+    
+    NSString *url = [@"http://localhost:3000/goalsInfo/" stringByAppendingString:appDelegate.userID];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    [request setHTTPMethod:@"GET"];
+    [request setURL:[NSURL URLWithString:url]];
+    
+    NSError *error = [[NSError alloc] init];
+    NSHTTPURLResponse *responseCode = nil;
+    
+    NSData *oResponseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&responseCode error:&error];
+    
+    if([responseCode statusCode] != 200){
+        NSLog(@"Error getting %@, HTTP status code %li", url, (long)[responseCode statusCode]);
+        //return nil;
+    }
+    
+    NSError *myError = nil;
+    NSDictionary *res = [NSJSONSerialization JSONObjectWithData:oResponseData options:NSJSONReadingMutableLeaves error:&myError];
+    NSLog(@"%@", res);
+    
+    //NSLog(@"points info: %@", res);
+    
+    for (id key in res) {
+        
+        for (id key1 in key) {
+            if ([key1 isEqualToString:@"daysPerWeek"]) {
+                //appDelegate.totalPoints = [[key objectForKey:key1] intValue];
+                //NSLog(@"total points is: %d", appDelegate.totalPoints);
+                //break;
+            }
+        }
+    }
+
+    
+    /*NSString *string = [[NSString alloc] initWithData:oResponseData encoding:NSUTF8StringEncoding];
+    
+    NSLog(@"points info: %@", string);
+    
+    NSString *url = [@"http://localhost:3000/goalsInfo/" stringByAppendingString:appDelegate.userID];
+    url = [url stringByReplacingOccurrencesOfString:@" " withString:@""];
+    NSLog(@"url is: %@", url);
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:
+                                    [NSURL URLWithString:url] cachePolicy:NSURLRequestUseProtocolCachePolicy
+                                                       timeoutInterval:60.0];
+    receivedData = [NSMutableData dataWithCapacity: 0];
+    NSURLConnection *theConnection=[[NSURLConnection alloc] initWithRequest:request     delegate:self];
+    
+    if (!theConnection) {
+        
+        receivedData = nil;
+        NSLog(@"no connection \n");
+        // Inform the user that the connection failed.
+    }*/
+    
+
+}
+
+
+-(void) getBadgeInfo
+{
+    NSString *url = [@"http://localhost:3000/badgeInfo/" stringByAppendingString:appDelegate.userID];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    [request setHTTPMethod:@"GET"];
+    [request setURL:[NSURL URLWithString:url]];
+    
+    NSError *error = [[NSError alloc] init];
+    NSHTTPURLResponse *responseCode = nil;
+    
+    NSData *oResponseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&responseCode error:&error];
+    
+    if([responseCode statusCode] != 200){
+        NSLog(@"Error getting %@, HTTP status code %li", url, (long)[responseCode statusCode]);
+        //return nil;
+    }
+    
+    
+    NSError *myError = nil;
+    NSDictionary *res = [NSJSONSerialization JSONObjectWithData:oResponseData options:NSJSONReadingMutableLeaves error:&myError];
+    NSLog(@"%@", res);
+    
+    for (id key in res) {
+        
+        for (id key1 in key) {
+            if ([key1 isEqualToString:@"badgeToEarn"]) {
+                appDelegate.nextBadgeToEarn = [[key objectForKey:key1] intValue];
+                NSLog(@"badge to earn is: %d", appDelegate.nextBadgeToEarn);
+                break;
+            }
+        }
+    }
+
+    
+}
+
 
 
 @end

@@ -44,5 +44,12 @@
 @property(strong, nonatomic) NSMutableArray *sectionArray;
 @property(strong, nonatomic) NSMutableArray *numberOfRows;
 
+@property (strong, nonatomic) NSArray *items;
+@property (strong, nonatomic) NSArray *data;
+
+@property(assign, nonatomic) NSString *dateString;
+
+
+
 @end
 #endif
