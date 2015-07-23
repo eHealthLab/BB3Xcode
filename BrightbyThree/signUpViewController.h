@@ -39,6 +39,16 @@
 {
     NSMutableArray *sectionArray;
     NSMutableArray *numberOfRows;
+    
+    UITextField *firstNameField;
+    UITextField *lastNameField;
+    UITextField *emailField;
+    UITextField *passwordField;
+    UITextField *babyNameField;
+    UITextField *babyDOBField;
+    UITextField *babyGenderField;
+    UITextField *phoneNumberField;
+    UITextField *zipcodeField;
 }
 @property (strong, nonatomic) IBOutlet UITableView *signUptableView;
 @property(strong, nonatomic) NSMutableArray *sectionArray;

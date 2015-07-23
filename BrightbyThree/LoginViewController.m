@@ -61,28 +61,9 @@
     UIGraphicsEndImageContext();
     
     self.view.backgroundColor = [[UIColor colorWithPatternImage:image] colorWithAlphaComponent:0.3];
-    //[UIView beginAnimations:@"fade in" context:nil];
-    //[UIView setAnimationDuration:1.0];
-    //[UIView commitAnimations];
     
-    /*UIView *dimView = [[UIView alloc]initWithFrame:self.view.frame];
-    
-    dimView.backgroundColor = [UIColor blackColor];
-    dimView.alpha = 0;
-    [self.view addSubview:dimView];
-    [self.view bringSubviewToFront:dimView];
-    
-    [UIView animateWithDuration:0.3
-                     animations:^{
-                         dimView.alpha = 0.3;
-                     }];*/
-    
-    //self.view.alpha = 0.5;
-    //self.view.contentMode = UIViewContentModeTopLeft;
     
     appDelegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
-    //self.loginEmail.text = @" ";
-    //self.loginPassword.text = @" ";
     
     //UISwitch *mySwitch = [[UISwitch alloc] initWithFrame:CGRectMake(80, 300, 10, 10)];
     [self.rememberSwitch addTarget:self action:@selector(rememberMePressed) forControlEvents:UIControlEventTouchUpInside];
@@ -218,7 +199,7 @@
 
 -(void)ShowSignUpForm
 {
-    UITableViewController *uiTableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"signupView"];
+    UITableViewController *uiTableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"signupForm"];
     [self.navigationController pushViewController:uiTableViewController animated:YES];
 }
 
@@ -242,7 +223,7 @@
         NSLog(@"login info entered: %@ %@", self.loginEmail.text , self.loginPassword.text);
         NSString *newEmail = [self.loginEmail.text uppercaseString];
         responseData = [NSMutableData data];
-        NSString *url = [[[@"http://localhost:3000/loginSignup/" stringByAppendingString:newEmail] stringByAppendingString:@"/"] stringByAppendingString:self.loginPassword.text];
+        NSString *url = [[[@"http://cbb.ucdenver.edu:3000/loginSignup/" stringByAppendingString:newEmail] stringByAppendingString:@"/"] stringByAppendingString:self.loginPassword.text];
         url = [url stringByReplacingOccurrencesOfString:@" " withString:@""];
         NSLog(@"url is: %@", url);
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:
@@ -300,91 +281,60 @@
     
         for (id key in res) {
             
-            if ([key count] == 16 ) {
+            if ([key count] > 3 ) {
                 
             
-            for (id key1 in key) {
-                if ([key1  isEqual: @"firstname"]) {
-                    appDelegate.firstName = [key objectForKey:key1];
-                    NSLog(@"first name is: %@", appDelegate.firstName);
-                }
-                if ([key1  isEqual: @"lastname"]) {
-                    appDelegate.lastName = [key objectForKey:key1];
+                for (id key1 in key) {
+                    if ([key1  isEqual: @"firstname"]) {
+                        appDelegate.firstName = [key objectForKey:key1];
+                        NSLog(@"first name is: %@", appDelegate.firstName);
+                    }
+                    if ([key1  isEqual: @"lastname"]) {
+                        appDelegate.lastName = [key objectForKey:key1];
+                    }
+                    if ([key1  isEqual: @"email"]) {
+                        appDelegate.userEmail = [key objectForKey:key1];
                     //NSLog(@"first name is: %@", appDelegate.firstName);
-                }
-                if ([key1  isEqual: @"email"]) {
-                    appDelegate.userEmail = [key objectForKey:key1];
+                    }
+                    if ([key1  isEqual: @"password"]) {
+                        appDelegate.userPassword = [key objectForKey:key1];
                     //NSLog(@"first name is: %@", appDelegate.firstName);
-                }
-                if ([key1  isEqual: @"password"]) {
-                    appDelegate.userPassword = [key objectForKey:key1];
-                    //NSLog(@"first name is: %@", appDelegate.firstName);
-                }
-                if ([key1  isEqual: @"babyName"]) {
-                    appDelegate.babyName = [key objectForKey:key1];
-                    //NSLog(@"first name is: %@", appDelegate.firstName);
-                }
-                if ([key1  isEqual: @"babyDOB"]) {
-                    appDelegate.babyDOB = [key objectForKey:key1];
-                    //NSLog(@"first name is: %@", appDelegate.firstName);
-                }
-                if ([key1  isEqual: @"babyGender"]) {
-                    appDelegate.babyGender = [key objectForKey:key1];
-                    //NSLog(@"first name is: %@", appDelegate.firstName);
-                }
-                if ([key1  isEqual: @"phonenumber"]) {
-                    appDelegate.phoneNumber = [key objectForKey:key1];
-                    //NSLog(@"first name is: %@", appDelegate.firstName);
-                }
-                if ([key1  isEqual: @"zipcode"]) {
-                    appDelegate.zipcode = [key objectForKey:key1];
-                    //NSLog(@"first name is: %@", appDelegate.firstName);
-                }
-                if ([key1 isEqual:@"ID"]) {
-                    appDelegate.userID = [NSString stringWithFormat:@"%@", [key objectForKey:key1]];
-                    NSLog(@"id is: %@", appDelegate.userID);
-                }
+                    }
+                    if ([key1  isEqual: @"babyName"]) {
+                        appDelegate.babyName = [key objectForKey:key1];
+                        //NSLog(@"first name is: %@", appDelegate.firstName);
+                    }
+                    if ([key1  isEqual: @"babyDOB"]) {
+                        appDelegate.babyDOB = [key objectForKey:key1];
+                        //NSLog(@"first name is: %@", appDelegate.firstName);
+                    }
+                    if ([key1  isEqual: @"babyGender"]) {
+                        appDelegate.babyGender = [key objectForKey:key1];
+                        //NSLog(@"first name is: %@", appDelegate.firstName);
+                    }
+                    if ([key1  isEqual: @"phonenumber"]) {
+                        appDelegate.phoneNumber = [key objectForKey:key1];
+                        //NSLog(@"first name is: %@", appDelegate.firstName);
+                    }
+                    if ([key1  isEqual: @"zipcode"]) {
+                        appDelegate.zipcode = [key objectForKey:key1];
+                        //NSLog(@"first name is: %@", appDelegate.firstName);
+                    }
+                    if ([key1 isEqual:@"ID"]) {
+                        appDelegate.userID = [NSString stringWithFormat:@"%@", [key objectForKey:key1]];
+                        NSLog(@"id is: %@", appDelegate.userID);
+                    }
                 
-            }
+            }// end for key
             NSLog(@"values are: %@, %@, %@, %@, %@, %@, %@, %@, %@", appDelegate.firstName, appDelegate.lastName, appDelegate.userEmail, appDelegate.userPassword, appDelegate.babyName, appDelegate.babyDOB, appDelegate.babyGender, appDelegate.phoneNumber, appDelegate.zipcode);
             }
-            else if ([key count] > 3 )
-            {
-                for (id key1 in key) {
-                    if ([key1 isEqualToString:@"daysPerWeek"]) {
-                        NSLog(@"goals info\n");
-                        //NSLog(@"days per week is: %@", [key objectAtIndex:key1]);
-                        //NSLog(@"minutes per day is: %@", [key objectAtIndex:key1]);
-                    }
-                }
-            }
             
-            else if ([key count] == 3)
-            {
-                for (id key1 in key) {
-                    if ([key1 isEqualToString:@"totalPoints"]) {
-                        appDelegate.totalPoints = [[key objectForKey:key1] intValue];
-                        NSLog(@"total points is: %d", appDelegate.totalPoints);
-                        break;
-                    }
-                    else if ([key1 isEqualToString:@"badgeToEarn"]) {
-                        appDelegate.nextBadgeToEarn = [[key objectForKey:key1] intValue];
-                        NSLog(@"badge to earn is : %d", appDelegate.nextBadgeToEarn);
-                        break;
-                    }
-                }
-
-            }
-                
-            
-            
-            
-            }
+        }// end else
         
         NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
         
         // saving an NSString
-        [prefs setObject:appDelegate.firstName forKey:@"firstName"];
+       [prefs setObject:appDelegate.firstName forKey:@"firstName"];
         [prefs setObject:appDelegate.lastName forKey:@"lastName"];
         [prefs setObject:appDelegate.userEmail forKey:@"email"];
         [prefs setObject:appDelegate.userPassword forKey:@"password"];
@@ -417,53 +367,7 @@
     receivedData = nil;
 }
 
-    //NSLog(@"id and password: %@ %@", self.delegate.userEmail , self.delegate.userPassword);
-    
-    /*
-    NSArray *keys = [NSArray arrayWithObjects:@"lat", @"lng", nil];
-    NSArray *objects = [NSArray arrayWithObjects:@"0.0",@"0.0", nil];
-    
-    NSDictionary *jsonDictionary = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
-    NSData *jsonData ;
-    NSString *jsonString;
-    if([NSJSONSerialization isValidJSONObject:jsonDictionary])
-    {
-        jsonData = [NSJSONSerialization dataWithJSONObject:jsonDictionary options:0 error:nil];
-        jsonString = [[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
-    }
-    }*/
-    
-    /*NSString *urlString = [[[@"http://localhost:3000/loginSignup/" stringByAppendingString:self.delegate.userEmail] stringByAppendingString:@"/"] stringByAppendingString:self.loginPassword.text];
-    NSURL *url = [NSURL URLWithString:urlString];
-    
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60];*/
-    
-    /*AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
-    operation.responseSerializer = [AFJSONResponseSerializer serializer];
-    
-    [request setHTTPMethod:@"GET"];
-    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    
-    NSError *error = [[NSError alloc] init];
-    NSHTTPURLResponse *responseCode = nil;
 
-    NSData *oResponseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&responseCode error:&error];
-    
-    if([responseCode statusCode] != 200){
-        NSLog(@"Error getting %@, HTTP status code %li", url, [responseCode statusCode]);
-        
-    }*/
-    
-    /*else {
-        NSString *response = [[NSString alloc] initWithData:oResponseData encoding:NSUTF8StringEncoding];
-        NSLog(@"response is: %@", response);
-      */
-        /*UITabBarController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"tabbarController"];
-        [self.navigationController pushViewController:uiViewController animated:YES];
-        
-                
-        NSLog(@"done sending");*/
 
 -(void)myAccountPressed
 {

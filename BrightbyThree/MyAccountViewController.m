@@ -24,6 +24,7 @@
 
     appDelegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
     
+    appDelegate.numberOfClicksMyAccount++;
     
     UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:nil action:@selector(saveButtonPressed)];
     

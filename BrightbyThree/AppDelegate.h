@@ -56,8 +56,39 @@
 @property(strong, nonatomic) NSString *userID;
 @property(assign, nonatomic) int nextBadgeToEarn;
 
+@property(strong, nonatomic) NSMutableArray *messagesLibrary;
+@property(strong, nonatomic) NSMutableArray *favoriteMessagesLibrary;
+
+@property(strong, nonatomic) NSMutableArray *messagesSubjectLibrary;
+@property(strong, nonatomic) NSMutableArray *messagesImagesLibrary;
+@property(strong, nonatomic) NSMutableArray *messagesVideosLibrary;
+
+@property(strong, nonatomic) NSMutableArray *favoriteMessagesSubjectLibrary;
+@property(strong, nonatomic) NSMutableArray *favoriteMessagesImagesLibrary;
+@property(strong, nonatomic) NSMutableArray *favoriteMessagesVideosLibrary;
+
+@property(strong, nonatomic) NSMutableArray *quizMessage;
+
+@property(strong, nonatomic) NSString *currentImageView;
+@property(strong, nonatomic) NSString *currentMessageContent;
+@property(strong, nonatomic) NSString *currentVideoLink;
+@property(assign, nonatomic) int currentMessageIndex;
+
+@property(assign, nonatomic) int numberOfDaysEnrolled;
 
 @property(assign, nonatomic) int totalPoints;
+
+@property(assign, nonatomic) int numberOfClicksSetGoals;
+@property(assign, nonatomic) int numberOfClicksFacebookPage;
+@property(assign, nonatomic) int numberOfClicksLogMinutes;
+@property(assign, nonatomic) int numberOfClicksNetwork;
+@property(assign, nonatomic) int numberOfClicksBadges;
+@property(assign, nonatomic) int numberOfClicksMessages;
+@property(assign, nonatomic) int numberOfClicksSettings;
+@property(assign, nonatomic) int numberOfClicksMyAccount;
+@property(assign, nonatomic) int numberOfClicksDashboard;
+@property(assign, nonatomic) int numberOfClicksTutorial;
+@property(assign, nonatomic) int numberOfClicksAboutUs;
 
 
 

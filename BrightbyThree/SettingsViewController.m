@@ -22,6 +22,8 @@
 {
     appDelegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
     
+    appDelegate.numberOfClicksSettings++;
+    
     UIGraphicsBeginImageContext(self.view.frame.size);
     [[UIImage imageNamed:@"Baby with tongue out.jpg"] drawInRect:self.view.bounds];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
@@ -54,7 +56,7 @@
     }
     else {
         responseData = [NSMutableData data];
-        NSString *url = [@"http://localhost:3000/feedback/2/" stringByAppendingString:self.feedbackText.text];
+        NSString *url = [@"http://cbb.ucdenver.edu:3000/feedback/2/" stringByAppendingString:self.feedbackText.text];
         url = [url stringByReplacingOccurrencesOfString:@" " withString:@""];
         NSLog(@"url is: %@", url);
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:

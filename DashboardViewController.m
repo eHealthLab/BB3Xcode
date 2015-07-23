@@ -20,6 +20,8 @@
 
 -(void) viewDidLoad
 {
+    appDelegate.numberOfClicksDashboard++;
+    
     appDelegate = (AppDelegate*) [[UIApplication sharedApplication] delegate];
     self.title = @"Dashboard";
     
@@ -38,23 +40,8 @@
     
     self.view.backgroundColor = [[UIColor colorWithPatternImage:image] colorWithAlphaComponent:0.3];
     
-
-    /*CAGradientLayer *gradient = [CAGradientLayer layer];
-    gradient.frame = self.view.bounds;
-    UIColor *startColour = [UIColor colorWithHue:.580555 saturation:0.31 brightness:0.90 alpha:1.0];
-    UIColor *endColour = [UIColor colorWithHue:.58333 saturation:0.50 brightness:0.62 alpha:1.0];
-    gradient.colors = [NSArray arrayWithObjects:(id)[startColour CGColor], (id)[endColour CGColor], nil];
-    [self.view.layer insertSublayer:gradient atIndex:0];*/
-    
-    //CGRect frame = CGRectMake(30, 320, 150, 80);
-    //HTPressableButton *goalsButton = [[HTPressableButton alloc] initWithFrame:frame buttonStyle:HTPressableButtonStyleCircular];
-    
     [self.mainImage setImage:[UIImage imageNamed:@"baby with tongue out.jpg"]];
-    //self.mainImage.layer.cornerRadius = 10.0f;
-    //self.mainImage.clipsToBounds = YES;
     
-    //self.mainImage.layer.borderWidth = 3.0f;
-    //self.mainImage.layer.borderColor = [UIColor grayColor].CGColor;
     
     [self.setGoalsButton setStyle:HTPressableButtonStyleRounded];
     self.setGoalsButton.buttonColor = [UIColor ht_grapeFruitColor];
@@ -64,11 +51,6 @@
     [self.setGoalsButton setTitle:@"Set Goals" forState:UIControlStateNormal];
     [self.setGoalsButton addTarget:self action:@selector(setGoalsPressed) forControlEvents:UIControlEventTouchUpInside];
     
-    
-    //[self.view addSubview:self.setGoalsButton];
-    
-    //frame = CGRectMake(210, 320, 150, 80);
-    //HTPressableButton *facebookButton = [[HTPressableButton alloc] initWithFrame:frame buttonStyle:HTPressableButtonStyleCircular];
     [self.facebookButton setStyle:HTPressableButtonStyleRounded];
     self.facebookButton.buttonColor = [UIColor ht_blueJeansColor];
     self.facebookButton.shadowColor = [UIColor ht_blueJeansDarkColor];
@@ -76,10 +58,7 @@
     [self.facebookButton setDisabledButtonColor:[UIColor ht_sunflowerColor]];
     [self.facebookButton setTitle:@"Facebook" forState:UIControlStateNormal];
     [self.facebookButton addTarget:self action:@selector(visitBBFBPagePressed) forControlEvents:UIControlEventTouchUpInside];
-    //[self.view addSubview:self.facebookButton];
-    
-    //frame = CGRectMake(30, 420, 150, 80);
-    //HTPressableButton *logMinutesButton = [[HTPressableButton alloc] initWithFrame:frame buttonStyle:HTPressableButtonStyleCircular];
+  
     [self.logMinutesButton setStyle:HTPressableButtonStyleRounded];
     self.logMinutesButton.buttonColor = [UIColor ht_mintColor];
     self.logMinutesButton.shadowColor = [UIColor ht_mintDarkColor];
@@ -121,8 +100,6 @@
     
     self.centralImage.layer.borderWidth = 3.0f;
     self.centralImage.layer.borderColor = [UIColor blackColor].CGColor;
-
-    
     
     //[self.view addSubview:self.badgesButton];
     
@@ -136,23 +113,21 @@
     [self.messagesButton setTitle:@"Messages" forState:UIControlStateNormal];
     [self.messagesButton addTarget:self action:@selector(loadMessagesLibraryPressed) forControlEvents:UIControlEventTouchUpInside];
     //[self.view addSubview:self.messagesButton];
-    
-    
-    
 
-
-    
 }
 
 -(void)setGoalsPressed
 {
-    //[self getGoalsInfo];
+    appDelegate.numberOfClicksSetGoals++;
+    
     UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"goalsViewController"];
     [self.navigationController pushViewController:uiViewController animated:YES];
 }
 
 -(void)showBadgesPressed
 {
+    appDelegate.numberOfClicksBadges++;
+    
     [self getBadgeInfo];
     UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"badgeViewController"];
     [self.navigationController pushViewController:uiViewController animated:YES];
@@ -162,6 +137,8 @@
 
 -(void)displayNetworkPressed
 {
+    appDelegate.numberOfClicksNetwork++;
+    
     UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"networkViewController"];
     [self.navigationController pushViewController:uiViewController animated:YES];
     
@@ -171,7 +148,7 @@
 -(void)logMinutesPressed
 {
  
-    
+    appDelegate.numberOfClicksLogMinutes++;
 
     UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"logMinutesController"];
     [self.navigationController pushViewController:uiViewController animated:YES];
@@ -181,6 +158,7 @@
 
 -(void)visitBBFBPagePressed
 {
+    appDelegate.numberOfClicksFacebookPage = appDelegate.numberOfClicksFacebookPage + 1;
     UIWebView *webView = [[UIWebView alloc] init];
     webView.tag=55;
     webView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
@@ -207,6 +185,7 @@
 
 -(void)loadMessagesLibraryPressed
 {
+    appDelegate.numberOfClicksMessages++;
     UITabBarController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"libraryViewController"];
     
     UIBarButtonItem *barButton = [[UIBarButtonItem alloc] init];
@@ -220,7 +199,7 @@
 
 -(void) gettotalPointsInfo
 {
-    NSString *url = [@"http://localhost:3000/totalPointsInfo/" stringByAppendingString:appDelegate.userID];
+    NSString *url = [@"http://cbb.ucdenver.edu:3000/totalPointsInfo/" stringByAppendingString:appDelegate.userID];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setHTTPMethod:@"GET"];
     [request setURL:[NSURL URLWithString:url]];
@@ -253,23 +232,6 @@
             }
     }
 }
-    
-    /*NSString *url = [@"http://localhost:3000/totalPointsInfo/" stringByAppendingString:appDelegate.userID];
-    url = [url stringByReplacingOccurrencesOfString:@" " withString:@""];
-    NSLog(@"url is: %@", url);
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:
-                                    [NSURL URLWithString:url] cachePolicy:NSURLRequestUseProtocolCachePolicy
-                                                       timeoutInterval:60.0];
-    receivedData = [NSMutableData dataWithCapacity: 0];
-    NSURLConnection *theConnection=[[NSURLConnection alloc] initWithRequest:request     delegate:self];
-    
-    if (!theConnection) {
-        
-        receivedData = nil;
-        NSLog(@"no connection \n");
-        // Inform the user that the connection failed.
-    }*/
-    
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
     NSLog(@"didReceiveResponse");
@@ -336,10 +298,6 @@
                 }
                 
             }
-            
-            
-            
-            
         }
                
     }
@@ -351,7 +309,7 @@
 -(void) getGoalsInfo
 {
     
-    NSString *url = [@"http://localhost:3000/goalsInfo/" stringByAppendingString:appDelegate.userID];
+    NSString *url = [@"http://cbb.ucdenver.edu:3000/goalsInfo/" stringByAppendingString:appDelegate.userID];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setHTTPMethod:@"GET"];
     [request setURL:[NSURL URLWithString:url]];
@@ -382,35 +340,12 @@
             }
         }
     }
-
-    
-    /*NSString *string = [[NSString alloc] initWithData:oResponseData encoding:NSUTF8StringEncoding];
-    
-    NSLog(@"points info: %@", string);
-    
-    NSString *url = [@"http://localhost:3000/goalsInfo/" stringByAppendingString:appDelegate.userID];
-    url = [url stringByReplacingOccurrencesOfString:@" " withString:@""];
-    NSLog(@"url is: %@", url);
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:
-                                    [NSURL URLWithString:url] cachePolicy:NSURLRequestUseProtocolCachePolicy
-                                                       timeoutInterval:60.0];
-    receivedData = [NSMutableData dataWithCapacity: 0];
-    NSURLConnection *theConnection=[[NSURLConnection alloc] initWithRequest:request     delegate:self];
-    
-    if (!theConnection) {
-        
-        receivedData = nil;
-        NSLog(@"no connection \n");
-        // Inform the user that the connection failed.
-    }*/
-    
-
 }
 
 
 -(void) getBadgeInfo
 {
-    NSString *url = [@"http://localhost:3000/badgeInfo/" stringByAppendingString:appDelegate.userID];
+    NSString *url = [@"http://cbb.ucdenver.edu:3000/badgeInfo/" stringByAppendingString:appDelegate.userID];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setHTTPMethod:@"GET"];
     [request setURL:[NSURL URLWithString:url]];
@@ -440,8 +375,6 @@
             }
         }
     }
-
-    
 }
 
 

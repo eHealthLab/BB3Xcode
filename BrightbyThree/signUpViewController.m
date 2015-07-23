@@ -42,6 +42,7 @@
     AppDelegate *appDelegate;
     NSData *responseData;
     NSMutableData *receivedData;
+    NSMutableArray *dataArray;
 }
 
 @synthesize numberOfRows;
@@ -55,6 +56,8 @@
     appDelegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
     
     
+    dataArray = [[NSMutableArray alloc] initWithObjects:@"John",@"Alton",@"",@"",@"",@"",@"",@"",@"", nil];
+    
     appDelegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
     
     self.title = @"Sign Up";
@@ -64,30 +67,6 @@
     saveButton.tag = 10;
     
     [super viewDidLoad];
-
-}
-
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    
-    // Return the number of sections.
-    
-    return [sectionArray count];
-}
-
--(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
-    [f setLocale:[NSLocale currentLocale]];
-    [f setNumberStyle:NSNumberFormatterDecimalStyle];
-    NSString *numOfRows = [numberOfRows objectAtIndex:section];
-    NSNumber *tempNum = [f numberFromString:numOfRows];
-    return  [tempNum intValue];
-}
-
--(void) loadView {
-    
     UITableView *tableView = [[UITableView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame] style:UITableViewStyleGrouped];
     tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
     tableView.delegate = self;
@@ -114,14 +93,35 @@
     [tableView reloadData];
     
     self.view = tableView;
-    
+
 }
+
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    
+    // Return the number of sections.
+    
+    return [sectionArray count];
+}
+
+-(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
+    [f setLocale:[NSLocale currentLocale]];
+    [f setNumberStyle:NSNumberFormatterDecimalStyle];
+    NSString *numOfRows = [numberOfRows objectAtIndex:section];
+    NSNumber *tempNum = [f numberFromString:numOfRows];
+    return  [tempNum intValue];
+}
+
 
 -(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // NSLog(@"inside the table function");
     
-    UITableViewCell *cell, *cell1, *cell2, *cell3, *cell4, *cell5, *cell6, *cell7, *cell8, *cell9;
+    //UITableViewCell *cell;
+    //, *cell1, *cell2, *cell3, *cell4, *cell5, *cell6, *cell7, *cell8, *cell9;
     UILabel *FirstNameLabel;
     UILabel *LastNameLabel;
     UILabel *EmailLabel;
@@ -135,15 +135,20 @@
     
     
     //UITextView *name;
-    cell = [tableView dequeueReusableCellWithIdentifier:@"MyCell1"];
+    //cell = [tableView dequeueReusableCellWithIdentifier:nil];
     
-    
+    //cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+    //cell.selectionStyle = UITableViewCellSelectionStyleNone;
     //Step 2:
-    if(cell == nil)
+    
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    /*if(cell == nil)
     {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MyCell"];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    }
+           cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    }*/
     
     if (indexPath.section == 0 && indexPath.row == 0) {
         
@@ -154,6 +159,7 @@
         DescriptionLabel.textAlignment = NSTextAlignmentCenter;
         DescriptionLabel.backgroundColor = [UIColor clearColor];
         [cell.contentView addSubview:DescriptionLabel];
+        cell.tag = 0;
         
     }
     
@@ -165,18 +171,26 @@
         FirstNameLabel.backgroundColor = [UIColor clearColor];
         [cell.contentView addSubview:FirstNameLabel];
         
-        UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(180, 120, 183, 30)];
-        textField.borderStyle = UITextBorderStyleRoundedRect;
-        textField.font = [UIFont systemFontOfSize:14];
-        NSLog(@"delegate value: %@", appDelegate.firstName);
-        textField.placeholder = @"enter first name";
-        textField.autocorrectionType = UITextAutocorrectionTypeNo;
-        textField.keyboardType = UIKeyboardTypeDefault;
-        textField.returnKeyType = UIReturnKeyDone;
-        textField.clearButtonMode = UITextFieldViewModeWhileEditing;
-        textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
-        textField.tag = 1;
-        [self.view addSubview:textField];
+        firstNameField = [[UITextField alloc] init];
+        //firstNameField = [[UITextField alloc] initWithFrame:CGRectMake(180, 120, 183, 30)];
+        firstNameField.borderStyle = UITextBorderStyleRoundedRect;
+        firstNameField.font = [UIFont systemFontOfSize:14];
+        //NSLog(@"delegate value: %@", appDelegate.firstName);
+        firstNameField.placeholder = @"enter first name";
+        //[self.data insertObject:textField.text atIndex:0];
+        //textField.text = [self->dataArray objectAtIndex:0];
+        //textField.text = appDelegate.firstName;
+        firstNameField.textColor = [UIColor grayColor];
+        firstNameField.autocorrectionType = UITextAutocorrectionTypeNo;
+        firstNameField.keyboardType = UIKeyboardTypeDefault;
+        firstNameField.returnKeyType = UIReturnKeyDone;
+        firstNameField.clearButtonMode = UITextFieldViewModeWhileEditing;
+        firstNameField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+        firstNameField.tag = 1;
+        firstNameField.textColor = [UIColor colorWithRed:56.0f/255.0f green:84.0f/255.0f blue:135.0f/255.0f alpha:1.0f];
+        [cell.contentView addSubview:firstNameField];
+        [self->dataArray replaceObjectAtIndex:0 withObject:firstNameField];
+        appDelegate.firstName = firstNameField.text;
     }
     
     if (indexPath.section == 1 && indexPath.row == 1) {
@@ -190,7 +204,7 @@
         UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(180, 163, 183, 30)];
         textField.borderStyle = UITextBorderStyleRoundedRect;
         textField.font = [UIFont systemFontOfSize:14];
-        textField.placeholder = @"enter last name";
+        textField.text = @"Alton";
         textField.autocorrectionType = UITextAutocorrectionTypeNo;
         textField.keyboardType = UIKeyboardTypeDefault;
         textField.returnKeyType = UIReturnKeyDone;
@@ -213,7 +227,7 @@
         textField.font = [UIFont systemFontOfSize:14];
         textField.placeholder = @"enter email";
         textField.autocorrectionType = UITextAutocorrectionTypeNo;
-        textField.keyboardType = UIKeyboardTypeDefault;
+        textField.keyboardType = UIKeyboardTypeEmailAddress;
         textField.returnKeyType = UIReturnKeyDone;
         textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
@@ -342,7 +356,7 @@
         textField.font = [UIFont systemFontOfSize:15];
         textField.placeholder = @"enter phone";
         textField.autocorrectionType = UITextAutocorrectionTypeNo;
-        textField.keyboardType = UIKeyboardTypeDefault;
+        textField.keyboardType = UIKeyboardTypePhonePad;
         textField.returnKeyType = UIReturnKeyDone;
         textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
@@ -367,7 +381,7 @@
         textField.font = [UIFont systemFontOfSize:15];
         textField.placeholder = @"enter zipcode";
         textField.autocorrectionType = UITextAutocorrectionTypeNo;
-        textField.keyboardType = UIKeyboardTypeDefault;
+        textField.keyboardType = UIKeyboardTypeNumberPad;
         textField.returnKeyType = UIReturnKeyDone;
         textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
@@ -806,13 +820,6 @@
         NSURLResponse* response = [[NSURLResponse alloc] init];
         NSError* error = nil;
         [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-
-        //NSURLConnection *theConnection=[[NSURLConnection alloc] initWithRequest:request delegate:self];
-    
-        /*if (!theConnection) {
-                receivedData = nil;
-        }*/
-    
         
         if (error != nil)
         {

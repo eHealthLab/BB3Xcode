@@ -42,6 +42,8 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
+    appDelegate.numberOfClicksTutorial++;
+    
     [_tutorialScrollView setScrollEnabled:YES];
     [_tutorialScrollView setContentSize:CGSizeMake(320,750)];
 }
@@ -156,7 +158,7 @@
 
 -(void)whatIsBB3Pressed
 {
-    appDelegate.babyName = @"Nathan";
+    //appDelegate.babyName = @"Nathan";
     UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"tutorialDetailsViewController"];
     
     uiViewController.title = @"What is BB3?";
@@ -164,7 +166,7 @@
     
     
     UITextView *textViewDetail1 = [[UITextView alloc] initWithFrame:CGRectMake(30, 30, self.view.bounds.size.width-40, self.view.bounds.size.height-40)];
-    NSString *string1 = [[[[[[[[[@"The mission of Bright by Three (formerly Bright Beginnings) is to provide a bright beginning for all Colorado children by helping families support their children’s physical, emotional, and intellectual development during the critical first three years of life. You can find more information about Bright by Three and our other sponsors under “about” tab at the top of your screen. The Bright by Three app is designed to bring information about how you can help " stringByAppendingString:appDelegate.babyName] stringByAppendingString: @" learn and develop directly to your phone several times per week. You will receive this information via messages that contain useful information and activities that you can engage in with "] stringByAppendingString :appDelegate.babyName] stringByAppendingString:@". You can set your own goals and earn badges and prizes for reading with your child and completing recommended activities.\n\n"] stringByAppendingString:@"The Bright by Three app is designed to bring information about how you can help "] stringByAppendingString:appDelegate.babyName] stringByAppendingString:@"learn and develop directly to your phone several times per week. You will receive this information via messages that contain useful information and activities that you can engage in with "] stringByAppendingString: appDelegate.babyName] stringByAppendingString: @"You can set your own goals and earn badges and prizes for reading with your child and completing recommended activities."];
+    NSString *string1 = [[[[[[[[[[[@"The mission of Bright by Three (formerly Bright Beginnings) is to provide a bright beginning for all Colorado children by helping families support their children’s physical, emotional, and intellectual development during the critical first three years of life. You can find more information about Bright by Three and our other sponsors under “about” tab at the top of your screen. The Bright by Three app is designed to bring information about how you can help " stringByAppendingString:appDelegate.babyName] stringByAppendingString: @" "] stringByAppendingString: @"learn and develop directly to your phone several times per week. You will receive this information via messages that contain useful information and activities that you can engage in with "] stringByAppendingString :appDelegate.babyName] stringByAppendingString:@". You can set your own goals and earn badges and prizes for reading with your child and completing recommended activities.\n\n"] stringByAppendingString:@"The Bright by Three app is designed to bring information about how you can help "] stringByAppendingString:appDelegate.babyName] stringByAppendingString:@"learn and develop directly to your phone several times per week. You will receive this information via messages that contain useful information and activities that you can engage in with "] stringByAppendingString: appDelegate.babyName]  stringByAppendingString: @". " ] stringByAppendingString: @"You can set your own goals and earn badges and prizes for reading with your child and completing recommended activities."];
     
     
     [self.navigationController pushViewController:uiViewController animated:YES];
@@ -188,7 +190,7 @@
 -(void)whatIsDashboardPressed
 {
 
-    appDelegate.babyName = @"Nathan";
+    //appDelegate.babyName = @"Nathan";
     UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"tutorialDetailsViewController"];
     
     uiViewController.title = @"What is Dashboard?";
@@ -218,7 +220,7 @@
 -(void)howToSetGoalsPressed
 {
     
-    appDelegate.babyName = @"Nathan";
+    //appDelegate.babyName = @"Nathan";
     UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"tutorialDetailsViewController"];
     
     uiViewController.title = @"How can I set goals?";
@@ -245,7 +247,7 @@
 
 -(void)howToEarnPointsPressed
 {
-    appDelegate.babyName = @"Nathan";
+    //appDelegate.babyName = @"Nathan";
     UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"tutorialDetailsViewController"];
     
     uiViewController.title = @"How do I earn points?";
@@ -272,7 +274,7 @@
 -(void)howDoITrackPointsPressed
 {
  
-    appDelegate.babyName = @"Nathan";
+    //appDelegate.babyName = @"Nathan";
     UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"tutorialDetailsViewController"];
     
     uiViewController.title = @"How do I track points?";
@@ -298,7 +300,7 @@
 -(void)HowToEarnBadgesPressed
 {
     
-    appDelegate.babyName = @"Nathan";
+    //appDelegate.babyName = @"Nathan";
     UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"tutorialDetailsViewController"];
     
     uiViewController.title = @"How to earn badges and prizes?";
@@ -324,7 +326,7 @@
 -(void)changePasswordPressed
 {
     
-    appDelegate.babyName = @"Nathan";
+    //appDelegate.babyName = @"Nathan";
     UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"tutorialDetailsViewController"];
     
     uiViewController.title = @"How to change my password?";
@@ -350,7 +352,7 @@
 -(void)howToAccessFBPressed
 {
  
-    appDelegate.babyName = @"Nathan";
+    //appDelegate.babyName = @"Nathan";
     UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"tutorialDetailsViewController"];
     
     uiViewController.title = @"How can I access the Facebook page?";
@@ -376,7 +378,7 @@
 -(void)howToViewMessagesPressed
 {
     
-    appDelegate.babyName = @"Nathan";
+    //appDelegate.babyName = @"Nathan";
     UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"tutorialDetailsViewController"];
     
     uiViewController.title = @"How can I view messages?";
@@ -402,7 +404,7 @@
 -(void)saveFavoriteMessagesPressed
 {
     
-    appDelegate.babyName = @"Nathan";
+    //appDelegate.babyName = @"Nathan";
     UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"tutorialDetailsViewController"];
     
     uiViewController.title = @"How can I save favorite messages?";
@@ -427,7 +429,7 @@
 -(void)otherQuestionsPressed
 {
     
-    appDelegate.babyName = @"Nathan";
+    //appDelegate.babyName = @"Nathan";
     UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"tutorialDetailsViewController"];
     
     uiViewController.title = @"Other questions?";

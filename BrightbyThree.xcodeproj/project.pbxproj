@@ -54,12 +54,40 @@
 		1D487B311B446D6D00A64137 /* 2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D487B301B446D6D00A64137 /* 2x.png */; };
 		1D487B331B446D7300A64137 /* 3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D487B321B446D7300A64137 /* 3x.png */; };
 		1D487B391B4A344000A64137 /* Story1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D487B381B4A344000A64137 /* Story1.storyboard */; };
+		1D4A748D1B5E3A3B00760B32 /* IQNSArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4A746B1B5E3A3B00760B32 /* IQNSArray+Sort.m */; };
+		1D4A748E1B5E3A3B00760B32 /* IQUITextFieldView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4A746D1B5E3A3B00760B32 /* IQUITextFieldView+Additions.m */; };
+		1D4A748F1B5E3A3B00760B32 /* IQUIView+Hierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4A746F1B5E3A3B00760B32 /* IQUIView+Hierarchy.m */; };
+		1D4A74901B5E3A3B00760B32 /* IQUIViewController+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4A74711B5E3A3B00760B32 /* IQUIViewController+Additions.m */; };
+		1D4A74911B5E3A3B00760B32 /* IQUIWindow+Hierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4A74731B5E3A3B00760B32 /* IQUIWindow+Hierarchy.m */; };
+		1D4A74921B5E3A3B00760B32 /* IQKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4A74781B5E3A3B00760B32 /* IQKeyboardManager.m */; };
+		1D4A74931B5E3A3B00760B32 /* IQKeyboardReturnKeyHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4A747A1B5E3A3B00760B32 /* IQKeyboardReturnKeyHandler.m */; };
+		1D4A74941B5E3A3B00760B32 /* IQSegmentedNextPrevious.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4A747D1B5E3A3B00760B32 /* IQSegmentedNextPrevious.m */; };
+		1D4A74951B5E3A3B00760B32 /* IQTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4A74801B5E3A3B00760B32 /* IQTextView.m */; };
+		1D4A74961B5E3A3B00760B32 /* IQBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4A74831B5E3A3B00760B32 /* IQBarButtonItem.m */; };
+		1D4A74971B5E3A3B00760B32 /* IQTitleBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4A74851B5E3A3B00760B32 /* IQTitleBarButtonItem.m */; };
+		1D4A74981B5E3A3B00760B32 /* IQToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4A74871B5E3A3B00760B32 /* IQToolbar.m */; };
+		1D4A74991B5E3A3B00760B32 /* IQUIView+IQKeyboardToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4A74891B5E3A3B00760B32 /* IQUIView+IQKeyboardToolbar.m */; };
+		1D4A749A1B5E3A3B00760B32 /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1D4A748C1B5E3A3B00760B32 /* IQKeyboardManager.bundle */; };
 		1D4AAE3F1B182B34002D3F72 /* EnrollNow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4AAE3E1B182B34002D3F72 /* EnrollNow.m */; };
 		1D4B120F1B39345200D194BA /* HTPressableButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4B12081B39345200D194BA /* HTPressableButton.m */; };
 		1D4B12101B39345200D194BA /* HTPressableButtonPrefs.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4B120A1B39345200D194BA /* HTPressableButtonPrefs.m */; };
 		1D4B12111B39345200D194BA /* UIColor+HTColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4B120C1B39345200D194BA /* UIColor+HTColor.m */; };
 		1D4B12121B39345200D194BA /* UIImage+HTButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4B120E1B39345200D194BA /* UIImage+HTButton.m */; };
 		1D4B65051B1E9C1E007EAFAF /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4B65041B1E9C1E007EAFAF /* TutorialViewController.m */; };
+		1D4F88A51B5F571600132501 /* PictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4F88A41B5F571600132501 /* PictureViewController.m */; };
+		1D59EC2A1B5A786700633F92 /* SignupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D59EC291B5A786700633F92 /* SignupController.m */; };
+		1D59EC2E1B5B216800633F92 /* LibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D59EC2D1B5B216800633F92 /* LibraryViewController.m */; };
+		1D59EC301B5B24F600633F92 /* FavoriteMessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D59EC2F1B5B24F600633F92 /* FavoriteMessagesViewController.m */; };
+		1D59EC341B5B679D00633F92 /* TextDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D59EC331B5B679D00633F92 /* TextDetailsViewController.m */; };
+		1D59EC361B5CBA7000633F92 /* badgesShot.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D59EC351B5CBA7000633F92 /* badgesShot.png */; };
+		1D59EC381B5CBA7500633F92 /* minutesShot.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D59EC371B5CBA7500633F92 /* minutesShot.png */; };
+		1D59EC3A1B5CBA7900633F92 /* dashboardShot.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D59EC391B5CBA7900633F92 /* dashboardShot.png */; };
+		1D59EC3C1B5CBAFC00633F92 /* goalsShot.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D59EC3B1B5CBAFC00633F92 /* goalsShot.png */; };
+		1D59EC3E1B5CBB6000633F92 /* accountsShot.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D59EC3D1B5CBB6000633F92 /* accountsShot.png */; };
+		1D59EC401B5CBBC700633F92 /* facebookShot.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D59EC3F1B5CBBC700633F92 /* facebookShot.png */; };
+		1D59EC421B5CBD0500633F92 /* addToFavoritesShot.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D59EC411B5CBD0500633F92 /* addToFavoritesShot.png */; };
+		1D59EC441B5CBD0D00633F92 /* favoritesShot.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D59EC431B5CBD0D00633F92 /* favoritesShot.png */; };
+		1D59EC461B5CBD1400633F92 /* messagesShot.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D59EC451B5CBD1400633F92 /* messagesShot.png */; };
 		1D7279AE1B434FFB00585A94 /* Piton.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D7279AD1B434FFB00585A94 /* Piton.png */; };
 		1D7279B01B4350FD00585A94 /* walton.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D7279AF1B4350FD00585A94 /* walton.png */; };
 		1D7279B21B4352B000585A94 /* daniels.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D7279B11B4352B000585A94 /* daniels.png */; };
@@ -76,6 +104,9 @@
 		1D8617D51AFB16210047DE56 /* glyphicons-157-show-thumbnails.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D8617D41AFB16210047DE56 /* glyphicons-157-show-thumbnails.png */; };
 		1D8A32CA1B57F9A1006343E1 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D8A32C81B57F9A1006343E1 /* Icon-72.png */; };
 		1D8A32CB1B57F9A1006343E1 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D8A32C91B57F9A1006343E1 /* Icon.png */; };
+		1D8A32CF1B595A64006343E1 /* icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D8A32CC1B595A64006343E1 /* icon-76.png */; };
+		1D8A32D01B595A64006343E1 /* icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D8A32CD1B595A64006343E1 /* icon-120.png */; };
+		1D8A32D11B595A64006343E1 /* icon-152.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D8A32CE1B595A64006343E1 /* icon-152.png */; };
 		1D9872BF1AFC56DB00C0AC5D /* BB3_logo-icon_WEB_rgb.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D9872BE1AFC56DB00C0AC5D /* BB3_logo-icon_WEB_rgb.png */; };
 		1D9872C11AFC5BC600C0AC5D /* Dashboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9872C01AFC5BC600C0AC5D /* Dashboard.m */; };
 		1D9872C41B01381B00C0AC5D /* signUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9872C31B01381B00C0AC5D /* signUpViewController.m */; };
@@ -191,6 +222,36 @@
 		1D487B301B446D6D00A64137 /* 2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2x.png; sourceTree = "<group>"; };
 		1D487B321B446D7300A64137 /* 3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3x.png; sourceTree = "<group>"; };
 		1D487B381B4A344000A64137 /* Story1.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Story1.storyboard; sourceTree = "<group>"; };
+		1D4A746A1B5E3A3B00760B32 /* IQNSArray+Sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQNSArray+Sort.h"; sourceTree = "<group>"; };
+		1D4A746B1B5E3A3B00760B32 /* IQNSArray+Sort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQNSArray+Sort.m"; sourceTree = "<group>"; };
+		1D4A746C1B5E3A3B00760B32 /* IQUITextFieldView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQUITextFieldView+Additions.h"; sourceTree = "<group>"; };
+		1D4A746D1B5E3A3B00760B32 /* IQUITextFieldView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQUITextFieldView+Additions.m"; sourceTree = "<group>"; };
+		1D4A746E1B5E3A3B00760B32 /* IQUIView+Hierarchy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQUIView+Hierarchy.h"; sourceTree = "<group>"; };
+		1D4A746F1B5E3A3B00760B32 /* IQUIView+Hierarchy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQUIView+Hierarchy.m"; sourceTree = "<group>"; };
+		1D4A74701B5E3A3B00760B32 /* IQUIViewController+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQUIViewController+Additions.h"; sourceTree = "<group>"; };
+		1D4A74711B5E3A3B00760B32 /* IQUIViewController+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQUIViewController+Additions.m"; sourceTree = "<group>"; };
+		1D4A74721B5E3A3B00760B32 /* IQUIWindow+Hierarchy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQUIWindow+Hierarchy.h"; sourceTree = "<group>"; };
+		1D4A74731B5E3A3B00760B32 /* IQUIWindow+Hierarchy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQUIWindow+Hierarchy.m"; sourceTree = "<group>"; };
+		1D4A74751B5E3A3B00760B32 /* IQKeyboardManagerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQKeyboardManagerConstants.h; sourceTree = "<group>"; };
+		1D4A74761B5E3A3B00760B32 /* IQKeyboardManagerConstantsInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQKeyboardManagerConstantsInternal.h; sourceTree = "<group>"; };
+		1D4A74771B5E3A3B00760B32 /* IQKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQKeyboardManager.h; sourceTree = "<group>"; };
+		1D4A74781B5E3A3B00760B32 /* IQKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQKeyboardManager.m; sourceTree = "<group>"; };
+		1D4A74791B5E3A3B00760B32 /* IQKeyboardReturnKeyHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQKeyboardReturnKeyHandler.h; sourceTree = "<group>"; };
+		1D4A747A1B5E3A3B00760B32 /* IQKeyboardReturnKeyHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQKeyboardReturnKeyHandler.m; sourceTree = "<group>"; };
+		1D4A747C1B5E3A3B00760B32 /* IQSegmentedNextPrevious.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQSegmentedNextPrevious.h; sourceTree = "<group>"; };
+		1D4A747D1B5E3A3B00760B32 /* IQSegmentedNextPrevious.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQSegmentedNextPrevious.m; sourceTree = "<group>"; };
+		1D4A747F1B5E3A3B00760B32 /* IQTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQTextView.h; sourceTree = "<group>"; };
+		1D4A74801B5E3A3B00760B32 /* IQTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQTextView.m; sourceTree = "<group>"; };
+		1D4A74821B5E3A3B00760B32 /* IQBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQBarButtonItem.h; sourceTree = "<group>"; };
+		1D4A74831B5E3A3B00760B32 /* IQBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQBarButtonItem.m; sourceTree = "<group>"; };
+		1D4A74841B5E3A3B00760B32 /* IQTitleBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQTitleBarButtonItem.h; sourceTree = "<group>"; };
+		1D4A74851B5E3A3B00760B32 /* IQTitleBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQTitleBarButtonItem.m; sourceTree = "<group>"; };
+		1D4A74861B5E3A3B00760B32 /* IQToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQToolbar.h; sourceTree = "<group>"; };
+		1D4A74871B5E3A3B00760B32 /* IQToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQToolbar.m; sourceTree = "<group>"; };
+		1D4A74881B5E3A3B00760B32 /* IQUIView+IQKeyboardToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQUIView+IQKeyboardToolbar.h"; sourceTree = "<group>"; };
+		1D4A74891B5E3A3B00760B32 /* IQUIView+IQKeyboardToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQUIView+IQKeyboardToolbar.m"; sourceTree = "<group>"; };
+		1D4A748A1B5E3A3B00760B32 /* KeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardManager.h; sourceTree = "<group>"; };
+		1D4A748C1B5E3A3B00760B32 /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
 		1D4AAE3D1B182B29002D3F72 /* EnrollNow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnrollNow.h; sourceTree = "<group>"; };
 		1D4AAE3E1B182B34002D3F72 /* EnrollNow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnrollNow.m; sourceTree = "<group>"; };
 		1D4B11621B3929B800D194BA /* DKCircleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKCircleButton.h; sourceTree = "<group>"; };
@@ -205,6 +266,25 @@
 		1D4B120E1B39345200D194BA /* UIImage+HTButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HTButton.m"; sourceTree = "<group>"; };
 		1D4B65041B1E9C1E007EAFAF /* TutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialViewController.m; sourceTree = "<group>"; };
 		1D4B65061B1E9C2D007EAFAF /* TutorialViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TutorialViewController.h; sourceTree = "<group>"; };
+		1D4F88A41B5F571600132501 /* PictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureViewController.m; sourceTree = "<group>"; };
+		1D4F88A61B5F572800132501 /* PictureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PictureViewController.h; sourceTree = "<group>"; };
+		1D59EC291B5A786700633F92 /* SignupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupController.m; sourceTree = "<group>"; };
+		1D59EC2B1B5A787300633F92 /* SignupController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignupController.h; sourceTree = "<group>"; };
+		1D59EC2C1B5B215C00633F92 /* LibraryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LibraryViewController.h; sourceTree = "<group>"; };
+		1D59EC2D1B5B216800633F92 /* LibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibraryViewController.m; sourceTree = "<group>"; };
+		1D59EC2F1B5B24F600633F92 /* FavoriteMessagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteMessagesViewController.m; sourceTree = "<group>"; };
+		1D59EC311B5B250700633F92 /* FavoriteMessagesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FavoriteMessagesViewController.h; sourceTree = "<group>"; };
+		1D59EC321B5B678F00633F92 /* TextDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextDetailsViewController.h; sourceTree = "<group>"; };
+		1D59EC331B5B679D00633F92 /* TextDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextDetailsViewController.m; sourceTree = "<group>"; };
+		1D59EC351B5CBA7000633F92 /* badgesShot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = badgesShot.png; sourceTree = "<group>"; };
+		1D59EC371B5CBA7500633F92 /* minutesShot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minutesShot.png; sourceTree = "<group>"; };
+		1D59EC391B5CBA7900633F92 /* dashboardShot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dashboardShot.png; sourceTree = "<group>"; };
+		1D59EC3B1B5CBAFC00633F92 /* goalsShot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = goalsShot.png; sourceTree = "<group>"; };
+		1D59EC3D1B5CBB6000633F92 /* accountsShot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = accountsShot.png; sourceTree = "<group>"; };
+		1D59EC3F1B5CBBC700633F92 /* facebookShot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebookShot.png; sourceTree = "<group>"; };
+		1D59EC411B5CBD0500633F92 /* addToFavoritesShot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addToFavoritesShot.png; sourceTree = "<group>"; };
+		1D59EC431B5CBD0D00633F92 /* favoritesShot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favoritesShot.png; sourceTree = "<group>"; };
+		1D59EC451B5CBD1400633F92 /* messagesShot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = messagesShot.png; sourceTree = "<group>"; };
 		1D7279AD1B434FFB00585A94 /* Piton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Piton.png; sourceTree = "<group>"; };
 		1D7279AF1B4350FD00585A94 /* walton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = walton.png; sourceTree = "<group>"; };
 		1D7279B11B4352B000585A94 /* daniels.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = daniels.png; sourceTree = "<group>"; };
@@ -227,6 +307,9 @@
 		1D8617D41AFB16210047DE56 /* glyphicons-157-show-thumbnails.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glyphicons-157-show-thumbnails.png"; sourceTree = "<group>"; };
 		1D8A32C81B57F9A1006343E1 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "BrightbyThree/Images.xcassets/Icon.png.imageset/Icon-72.png"; sourceTree = "<group>"; };
 		1D8A32C91B57F9A1006343E1 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = BrightbyThree/Images.xcassets/Icon.png.imageset/Icon.png; sourceTree = "<group>"; };
+		1D8A32CC1B595A64006343E1 /* icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-76.png"; sourceTree = "<group>"; };
+		1D8A32CD1B595A64006343E1 /* icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-120.png"; sourceTree = "<group>"; };
+		1D8A32CE1B595A64006343E1 /* icon-152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-152.png"; sourceTree = "<group>"; };
 		1D9872BE1AFC56DB00C0AC5D /* BB3_logo-icon_WEB_rgb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BB3_logo-icon_WEB_rgb.png"; sourceTree = "<group>"; };
 		1D9872C01AFC5BC600C0AC5D /* Dashboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dashboard.m; sourceTree = "<group>"; };
 		1D9872C31B01381B00C0AC5D /* signUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = signUpViewController.m; sourceTree = "<group>"; };
@@ -358,6 +441,91 @@
 			path = AFNetworking/buttons;
 			sourceTree = "<group>";
 		};
+		1D4A74681B5E3A3B00760B32 /* IQKeyBoardManager */ = {
+			isa = PBXGroup;
+			children = (
+				1D4A74691B5E3A3B00760B32 /* Categories */,
+				1D4A74741B5E3A3B00760B32 /* Constants */,
+				1D4A74771B5E3A3B00760B32 /* IQKeyboardManager.h */,
+				1D4A74781B5E3A3B00760B32 /* IQKeyboardManager.m */,
+				1D4A74791B5E3A3B00760B32 /* IQKeyboardReturnKeyHandler.h */,
+				1D4A747A1B5E3A3B00760B32 /* IQKeyboardReturnKeyHandler.m */,
+				1D4A747B1B5E3A3B00760B32 /* IQSegmentedNextPrevious */,
+				1D4A747E1B5E3A3B00760B32 /* IQTextView */,
+				1D4A74811B5E3A3B00760B32 /* IQToolbar */,
+				1D4A748A1B5E3A3B00760B32 /* KeyboardManager.h */,
+				1D4A748B1B5E3A3B00760B32 /* Resources */,
+			);
+			path = IQKeyBoardManager;
+			sourceTree = "<group>";
+		};
+		1D4A74691B5E3A3B00760B32 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				1D4A746A1B5E3A3B00760B32 /* IQNSArray+Sort.h */,
+				1D4A746B1B5E3A3B00760B32 /* IQNSArray+Sort.m */,
+				1D4A746C1B5E3A3B00760B32 /* IQUITextFieldView+Additions.h */,
+				1D4A746D1B5E3A3B00760B32 /* IQUITextFieldView+Additions.m */,
+				1D4A746E1B5E3A3B00760B32 /* IQUIView+Hierarchy.h */,
+				1D4A746F1B5E3A3B00760B32 /* IQUIView+Hierarchy.m */,
+				1D4A74701B5E3A3B00760B32 /* IQUIViewController+Additions.h */,
+				1D4A74711B5E3A3B00760B32 /* IQUIViewController+Additions.m */,
+				1D4A74721B5E3A3B00760B32 /* IQUIWindow+Hierarchy.h */,
+				1D4A74731B5E3A3B00760B32 /* IQUIWindow+Hierarchy.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		1D4A74741B5E3A3B00760B32 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				1D4A74751B5E3A3B00760B32 /* IQKeyboardManagerConstants.h */,
+				1D4A74761B5E3A3B00760B32 /* IQKeyboardManagerConstantsInternal.h */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		1D4A747B1B5E3A3B00760B32 /* IQSegmentedNextPrevious */ = {
+			isa = PBXGroup;
+			children = (
+				1D4A747C1B5E3A3B00760B32 /* IQSegmentedNextPrevious.h */,
+				1D4A747D1B5E3A3B00760B32 /* IQSegmentedNextPrevious.m */,
+			);
+			path = IQSegmentedNextPrevious;
+			sourceTree = "<group>";
+		};
+		1D4A747E1B5E3A3B00760B32 /* IQTextView */ = {
+			isa = PBXGroup;
+			children = (
+				1D4A747F1B5E3A3B00760B32 /* IQTextView.h */,
+				1D4A74801B5E3A3B00760B32 /* IQTextView.m */,
+			);
+			path = IQTextView;
+			sourceTree = "<group>";
+		};
+		1D4A74811B5E3A3B00760B32 /* IQToolbar */ = {
+			isa = PBXGroup;
+			children = (
+				1D4A74821B5E3A3B00760B32 /* IQBarButtonItem.h */,
+				1D4A74831B5E3A3B00760B32 /* IQBarButtonItem.m */,
+				1D4A74841B5E3A3B00760B32 /* IQTitleBarButtonItem.h */,
+				1D4A74851B5E3A3B00760B32 /* IQTitleBarButtonItem.m */,
+				1D4A74861B5E3A3B00760B32 /* IQToolbar.h */,
+				1D4A74871B5E3A3B00760B32 /* IQToolbar.m */,
+				1D4A74881B5E3A3B00760B32 /* IQUIView+IQKeyboardToolbar.h */,
+				1D4A74891B5E3A3B00760B32 /* IQUIView+IQKeyboardToolbar.m */,
+			);
+			path = IQToolbar;
+			sourceTree = "<group>";
+		};
+		1D4A748B1B5E3A3B00760B32 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1D4A748C1B5E3A3B00760B32 /* IQKeyboardManager.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		1D4B11611B3929B800D194BA /* DKCircleButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -409,6 +577,13 @@
 			isa = PBXGroup;
 			children = (
 				1D487B381B4A344000A64137 /* Story1.storyboard */,
+				1D59EC321B5B678F00633F92 /* TextDetailsViewController.h */,
+				1D59EC331B5B679D00633F92 /* TextDetailsViewController.m */,
+				1D59EC2F1B5B24F600633F92 /* FavoriteMessagesViewController.m */,
+				1D59EC311B5B250700633F92 /* FavoriteMessagesViewController.h */,
+				1D59EC291B5A786700633F92 /* SignupController.m */,
+				1D59EC2B1B5A787300633F92 /* SignupController.h */,
+				1D8617BA1AFACA650047DE56 /* Images.xcassets */,
 				1D0D9E381B54C189009FD90C /* SettingsViewController.h */,
 				1D0D9E391B54C19A009FD90C /* SettingsViewController.m */,
 				1DEF81EC1B3EACDC003EEF92 /* MyAccountViewController.h */,
@@ -443,6 +618,10 @@
 				1D0D874C1B0387E400BFC6DC /* LoginViewController.m */,
 				1DBA0E461B3B2B2B0018E759 /* DashboardViewController.h */,
 				1DBA0E471B3B2B4F0018E759 /* DashboardViewController.m */,
+				1D4F88A41B5F571600132501 /* PictureViewController.m */,
+				1D4F88A61B5F572800132501 /* PictureViewController.h */,
+				1D59EC2C1B5B215C00633F92 /* LibraryViewController.h */,
+				1D59EC2D1B5B216800633F92 /* LibraryViewController.m */,
 				1D0D873C1B02498E00BFC6DC /* StartViewController.m */,
 				1D0D873E1B0249A000BFC6DC /* StartViewController.h */,
 				1D0D873B1B0240CF00BFC6DC /* PageContentViewController.h */,
@@ -451,7 +630,6 @@
 				1D9872C51B01382A00C0AC5D /* signUpViewController.h */,
 				1D9872C01AFC5BC600C0AC5D /* Dashboard.m */,
 				1D0D87361B01477800BFC6DC /* Dashboard.h */,
-				1D8617BA1AFACA650047DE56 /* Images.xcassets */,
 				1D8617BC1AFACA650047DE56 /* LaunchScreen.xib */,
 				1D8617AA1AFACA650047DE56 /* Supporting Files */,
 			);
@@ -470,18 +648,31 @@
 		1D8617D31AFB15EB0047DE56 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1D4A74681B5E3A3B00760B32 /* IQKeyBoardManager */,
 				1D14A5A81B518117000EECAB /* MRoundedButton.h */,
 				1D14A5A91B518117000EECAB /* MRoundedButton.m */,
 				1D4B11611B3929B800D194BA /* DKCircleButton */,
 				1DAB27E31B37213600A2FA5D /* MessageUI.framework */,
 				1D9A1ECD1B164E2F00DC66CE /* 28-star.png */,
+				1D59EC351B5CBA7000633F92 /* badgesShot.png */,
 				1D14A5AB1B518231000EECAB /* twitter@2x.png */,
 				1DAB27E11B35925000A2FA5D /* messages.jpeg */,
+				1D59EC391B5CBA7900633F92 /* dashboardShot.png */,
+				1D59EC371B5CBA7500633F92 /* minutesShot.png */,
 				1DBA0E4F1B3B44A50018E759 /* iStock_000015216865_Large.jpg */,
+				1D59EC3F1B5CBBC700633F92 /* facebookShot.png */,
 				1DBA0E4D1B3B449E0018E759 /* iStock_000024919385_XXXLarge.jpg */,
 				1D8A32C81B57F9A1006343E1 /* Icon-72.png */,
 				1D8A32C91B57F9A1006343E1 /* Icon.png */,
+				1D59EC431B5CBD0D00633F92 /* favoritesShot.png */,
+				1D59EC411B5CBD0500633F92 /* addToFavoritesShot.png */,
+				1D8A32CC1B595A64006343E1 /* icon-76.png */,
+				1D59EC451B5CBD1400633F92 /* messagesShot.png */,
+				1D8A32CD1B595A64006343E1 /* icon-120.png */,
+				1D8A32CE1B595A64006343E1 /* icon-152.png */,
+				1D59EC3B1B5CBAFC00633F92 /* goalsShot.png */,
 				1DBA0E4B1B3B44620018E759 /* Baby with tongue out.jpg */,
+				1D59EC3D1B5CBB6000633F92 /* accountsShot.png */,
 				1DEF81EA1B3E9D1B003EEF92 /* goals.jpg */,
 				1DBA0E491B3B33040018E759 /* Mom reading with baby - anglo.jpg */,
 				1DA9635E1B4C8C800055758A /* Toddler on grass.jpg */,
@@ -639,6 +830,7 @@
 				1D14A55A1B504C2A000EECAB /* blueButton@2x.png in Resources */,
 				1D487B2F1B446D6700A64137 /* 1x.png in Resources */,
 				1D9FB5A71B092F820007886F /* setGoals.png in Resources */,
+				1D59EC381B5CBA7500633F92 /* minutesShot.png in Resources */,
 				1D14A56A1B504C2A000EECAB /* tanButton.png in Resources */,
 				1D9FB58A1B092E7E0007886F /* Badge400.png in Resources */,
 				1DBA0E4C1B3B44620018E759 /* Baby with tongue out.jpg in Resources */,
@@ -649,17 +841,22 @@
 				1D9FB5B11B0930180007886F /* 53-house.png in Resources */,
 				1D14A5581B504C2A000EECAB /* blackButtonHighlight@2x.png in Resources */,
 				1D8617D51AFB16210047DE56 /* glyphicons-157-show-thumbnails.png in Resources */,
+				1D8A32D11B595A64006343E1 /* icon-152.png in Resources */,
 				1D14A5691B504C2A000EECAB /* orangeButtonHighlight@2x.png in Resources */,
 				1D487B331B446D7300A64137 /* 3x.png in Resources */,
 				1D9A1EC81B1600AB00DC66CE /* 187-pencil.png in Resources */,
 				1D0D87491B03123400BFC6DC /* page3.png in Resources */,
 				1D14A5AC1B518231000EECAB /* twitter@2x.png in Resources */,
+				1D4A749A1B5E3A3B00760B32 /* IQKeyboardManager.bundle in Resources */,
 				1D9FB5A31B092F250007886F /* 117-todo.png in Resources */,
 				1D14A5641B504C2A000EECAB /* greyButtonHighlight.png in Resources */,
 				1D14A5591B504C2A000EECAB /* blueButton.png in Resources */,
+				1D59EC461B5CBD1400633F92 /* messagesShot.png in Resources */,
 				1D9FB58C1B092E7E0007886F /* Badge1000.png in Resources */,
 				1D14A5621B504C2A000EECAB /* greyButton@2x.png in Resources */,
+				1D8A32CF1B595A64006343E1 /* icon-76.png in Resources */,
 				1D9FB5991B092F040007886F /* facebook-Logo.jpg in Resources */,
+				1D59EC441B5CBD0D00633F92 /* favoritesShot.png in Resources */,
 				1D14A55D1B504C2A000EECAB /* greenButton.png in Resources */,
 				1D14A5601B504C2A000EECAB /* greenButtonHighlight@2x.png in Resources */,
 				1D9FB5921B092E7E0007886F /* Badge4000.png in Resources */,
@@ -667,11 +864,16 @@
 				1D9FB5891B092E7E0007886F /* Badge150.png in Resources */,
 				1D14A5571B504C2A000EECAB /* blackButtonHighlight.png in Resources */,
 				1D9FB59D1B092F1A0007886F /* 81-dashboard.png in Resources */,
+				1D59EC361B5CBA7000633F92 /* badgesShot.png in Resources */,
 				1D14A56C1B504C2A000EECAB /* tanButtonHighlight.png in Resources */,
 				1D0D87471B03123400BFC6DC /* page1.png in Resources */,
 				1D9FB58E1B092E7E0007886F /* Badge2000.png in Resources */,
+				1D59EC3C1B5CBAFC00633F92 /* goalsShot.png in Resources */,
 				1D14A5611B504C2A000EECAB /* greyButton.png in Resources */,
+				1D8A32D01B595A64006343E1 /* icon-120.png in Resources */,
+				1D59EC401B5CBBC700633F92 /* facebookShot.png in Resources */,
 				1D9FB5931B092E7E0007886F /* Badge4500.png in Resources */,
+				1D59EC3E1B5CBB6000633F92 /* accountsShot.png in Resources */,
 				1D14A5561B504C2A000EECAB /* blackButton@2x.png in Resources */,
 				1DA9635F1B4C8C800055758A /* Toddler on grass.jpg in Resources */,
 				1D9FB5951B092E7E0007886F /* badges.png in Resources */,
@@ -701,7 +903,9 @@
 				1D487B311B446D6D00A64137 /* 2x.png in Resources */,
 				1D7279B01B4350FD00585A94 /* walton.png in Resources */,
 				1D8617BE1AFACA650047DE56 /* LaunchScreen.xib in Resources */,
+				1D59EC421B5CBD0500633F92 /* addToFavoritesShot.png in Resources */,
 				1D0D87481B03123400BFC6DC /* page2.png in Resources */,
+				1D59EC3A1B5CBA7900633F92 /* dashboardShot.png in Resources */,
 				1D9FB5901B092E7E0007886F /* Badge3000.png in Resources */,
 				1D14A56D1B504C2A000EECAB /* tanButtonHighlight@2x.png in Resources */,
 				1D0D87381B02359700BFC6DC /* BB3_logo_horiz_WEB_rgb.png in Resources */,
@@ -739,20 +943,36 @@
 				1D14A5AA1B518117000EECAB /* MRoundedButton.m in Sources */,
 				1D9872C41B01381B00C0AC5D /* signUpViewController.m in Sources */,
 				1D28EE991B12C54E00C712CC /* GoalsViewController.m in Sources */,
+				1D4A748E1B5E3A3B00760B32 /* IQUITextFieldView+Additions.m in Sources */,
+				1D4A74981B5E3A3B00760B32 /* IQToolbar.m in Sources */,
+				1D4A748D1B5E3A3B00760B32 /* IQNSArray+Sort.m in Sources */,
+				1D59EC301B5B24F600633F92 /* FavoriteMessagesViewController.m in Sources */,
 				1D8617B61AFACA650047DE56 /* SecondViewController.m in Sources */,
 				1D4B12111B39345200D194BA /* UIColor+HTColor.m in Sources */,
+				1D4A74971B5E3A3B00760B32 /* IQTitleBarButtonItem.m in Sources */,
 				1D28EE9F1B1488E300C712CC /* NetworkViewController.m in Sources */,
 				1D0D873A1B02401600BFC6DC /* PageContentViewController.m in Sources */,
 				1D4AAE3F1B182B34002D3F72 /* EnrollNow.m in Sources */,
+				1D4A74961B5E3A3B00760B32 /* IQBarButtonItem.m in Sources */,
 				1D740AC71B4E92380077D370 /* ACPButton.m in Sources */,
+				1D4A74951B5E3A3B00760B32 /* IQTextView.m in Sources */,
 				1D0D9E3A1B54C19A009FD90C /* SettingsViewController.m in Sources */,
+				1D59EC2A1B5A786700633F92 /* SignupController.m in Sources */,
+				1D59EC341B5B679D00633F92 /* TextDetailsViewController.m in Sources */,
+				1D4A748F1B5E3A3B00760B32 /* IQUIView+Hierarchy.m in Sources */,
 				1D8617B01AFACA650047DE56 /* AppDelegate.m in Sources */,
+				1D4A74901B5E3A3B00760B32 /* IQUIViewController+Additions.m in Sources */,
 				1D4B65051B1E9C1E007EAFAF /* TutorialViewController.m in Sources */,
 				1D4B12101B39345200D194BA /* HTPressableButtonPrefs.m in Sources */,
+				1D4A74911B5E3A3B00760B32 /* IQUIWindow+Hierarchy.m in Sources */,
 				1D4B12121B39345200D194BA /* UIImage+HTButton.m in Sources */,
 				1DBA0E481B3B2B4F0018E759 /* DashboardViewController.m in Sources */,
+				1D59EC2E1B5B216800633F92 /* LibraryViewController.m in Sources */,
+				1D4A74991B5E3A3B00760B32 /* IQUIView+IQKeyboardToolbar.m in Sources */,
+				1D4A74931B5E3A3B00760B32 /* IQKeyboardReturnKeyHandler.m in Sources */,
 				1D9A1ECC1B16027C00DC66CE /* DKCircleButton.m in Sources */,
 				1D8617B31AFACA650047DE56 /* FirstViewController.m in Sources */,
+				1D4F88A51B5F571600132501 /* PictureViewController.m in Sources */,
 				1DBA0E541B3C9EEF0018E759 /* AboutUsViewController.m in Sources */,
 				1D0D874D1B0387E400BFC6DC /* LoginViewController.m in Sources */,
 				1D9FB57A1B0922050007886F /* badgeViewController.m in Sources */,
@@ -761,7 +981,9 @@
 				1D8617AD1AFACA650047DE56 /* main.m in Sources */,
 				1DBA20E51B52858900982CA1 /* tutorialDetails.m in Sources */,
 				1D99088F1B0A9E5800D2A38F /* LogMinutes.m in Sources */,
+				1D4A74941B5E3A3B00760B32 /* IQSegmentedNextPrevious.m in Sources */,
 				1DEF81EE1B3EACF7003EEF92 /* MyAccountViewController.m in Sources */,
+				1D4A74921B5E3A3B00760B32 /* IQKeyboardManager.m in Sources */,
 				1D9872C11AFC5BC600C0AC5D /* Dashboard.m in Sources */,
 				1D9A1ED11B16506E00DC66CE /* TextMessageViewController.m in Sources */,
 			);

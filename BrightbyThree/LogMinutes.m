@@ -95,9 +95,9 @@
     
     NSLog(@"inside log minutes; next badge to earn: %d", delegate.nextBadgeToEarn);
     
-    for (int i=0; i < 11; i++) {
+    /*for (int i=0; i < 11; i++) {
         NSLog(@"element is: %@", [delegate.badgesArray objectAtIndex:i]);
-    }
+    }*/
     
     
     NSLog(@"value in array: %d, %@", delegate.nextBadgeToEarn, delegate.badgesArray[delegate.nextBadgeToEarn]);
@@ -117,7 +117,7 @@
     
     
     NSString *pointsstring = [NSString stringWithFormat:@"%d", newPoints];
-    NSString *urlString = [[[@"http://localhost:3000/logMinutes/" stringByAppendingString:pointsstring] stringByAppendingString:@"/"] stringByAppendingString:delegate.userID];
+    NSString *urlString = [[[@"http://cbb.ucdenver.edu:3000/logMinutes/" stringByAppendingString:pointsstring] stringByAppendingString:@"/"] stringByAppendingString:delegate.userID];
     NSLog(@"url string: %@", urlString);
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:
@@ -132,7 +132,7 @@
     NSError* error = nil;
     [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     
-    if (error != nil)
+    if (error == nil)
     {
         NSLog(@"submitted request!");
         NSLog(@"response: %@", response);
@@ -141,6 +141,10 @@
                                      initWithTitle:@"Success!" message:@"Your points have successfully been updated."   delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [messageAlert show];
         
+    }
+    else if (error != nil)
+    {
+        NSLog(@"error is: %@\n",error.description);
     }
 
     
@@ -167,8 +171,11 @@
     
     if (error != nil)
     {
-        NSLog(@"submitted request!");
-        NSLog(@"response: %@", response);
+        NSLog(@"Error: %@\n", error.description);
+    }
+    else if (error == nil) {
+        NSLog(@"Success!");
+        NSLog(@"response is: %@\n", response);
     }
 
     

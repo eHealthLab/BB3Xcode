@@ -33,6 +33,9 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    appDelegate.numberOfClicksAboutUs++;
+    
     aboutUsTable = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
     [aboutUsTable setSeparatorColor:[UIColor lightGrayColor]];
     self.sectionArray = [[NSMutableArray alloc] initWithCapacity:2];

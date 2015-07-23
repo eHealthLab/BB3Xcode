@@ -82,7 +82,7 @@
     
     NSLog(@"goals are: %@", goalsString);
     
-    NSString *urlString = [@"http://localhost:3000/setGoals/" stringByAppendingString:goalsString];
+    NSString *urlString = [@"http://cbb.ucdenver.edu:3000/setGoals/" stringByAppendingString:goalsString];
     NSLog(@"url string: %@", urlString);
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:
@@ -97,7 +97,7 @@
     NSError* error = nil;
     [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     
-    if (error != nil)
+    if (error == nil)
     {
         NSLog(@"submitted request!");
         NSLog(@"response: %@", response);
@@ -106,6 +106,9 @@
                                      initWithTitle:@"Success!" message:@"Your goals have successfully been updated."   delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [messageAlert show];
 
+    }
+    else if (error != nil) {
+        NSLog(@"error is: %@\n", error.description);
     }
 
 }

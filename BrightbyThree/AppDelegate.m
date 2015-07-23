@@ -50,11 +50,25 @@
     _goalsDaysComponent = @"";
     _goalsMinutesComponent = @"";
     _userID = @"";
-    self.nextBadgeToEarn = 3;
+    self.nextBadgeToEarn = 0;
+    
     self.badgesArray = [[NSMutableArray alloc] initWithObjects:@"150", @"400", @"700", @"1000", @"1500", @"2000", @"2500", @"3000", @"3500", @"4000", @"4500", @"5000", nil];
     
+    self.numberOfDaysEnrolled = 0;
 
-
+    self.numberOfClicksSettings=0;
+    self.numberOfClicksMyAccount=0;
+    
+    self.numberOfClicksDashboard=0;
+    self.numberOfClicksTutorial=0;
+    self.numberOfClicksAboutUs=0;
+    
+    self.numberOfClicksSetGoals=0;
+    self.numberOfClicksBadges=0;
+    self.numberOfClicksFacebookPage=0;
+    self.numberOfClicksLogMinutes=0;
+    self.numberOfClicksMessages=0;
+    self.numberOfClicksNetwork=0;
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

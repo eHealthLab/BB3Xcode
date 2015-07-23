@@ -45,6 +45,7 @@
 
 -(void)viewDidLoad
 {
+    
     appDelegate = (AppDelegate*) [[UIApplication sharedApplication] delegate];
     NSLog(@"total points: %d", appDelegate.totalPoints);
     [self.badgeProgressView setProgress:appDelegate.totalPoints/5000.0];

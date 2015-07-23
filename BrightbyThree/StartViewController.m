@@ -68,7 +68,7 @@
     NSString *blurb10 = @"You can designate a message as favorite by tapping on the star button on your message screen. Once you have selected a message as a “favorite” it will be stored under your favorites tab.  This option allows you to access your favorite messages quickly and easily. If you no longer want a message in your favorites library, simply tap the “Remove favorite” button on the message screen under the favorites tab.";
     
     
-    NSString *blurb11 = @"Your overview of the BB3 app is finished. Press start to begin using the BB3 app. If you want to review any of the information in the overivew you can find it by tapping on the tutorial icon on your navigation bar at the bottom of the screen.";
+    NSString *blurb11 = @"Your overview of the BB3 app is finished. Press Skip to begin using the BB3 app. If you want to review any of the information in the overivew you can find it by tapping on the tutorial icon on your navigation bar at the bottom of the screen.";
     
     // Create the data model
     _pageTitles = @[@"Welcome", @"Dashboard", @"Setting Goals", @"Earning Points", @"Tracking Points", @"Badges and Prizes", @"Changing Your Settings", @"The BB3 Facebook Page", @"Messages", @"Favorites", @"Begin"];
@@ -76,7 +76,7 @@
     _pageBlurbs = @[blurb1, blurb2, blurb3,blurb4,blurb5,blurb6,blurb7,blurb8,blurb9,blurb10,blurb11];
     
     
-    _pageImages = @[@"iStock_000015216865_Large.jpg", @"page2.png", @"page3.png", @"page4.png",@"page4.png",@"page4.png",@"page4.png",@"page4.png",@"page4.png",@"page4.png",@"page4.png",@"page4.png"];
+    _pageImages = @[@"iStock_000015216865_Large.jpg", @"dashboardShot.png", @"goalsShot.png", @"minutesShot.png",@"minutesShot.png",@"badgesShot.png",@"accountsShot.png",@"facebookShot.png",@"messagesShot.png",@"addToFavoritesShot.png",@"page4.png",@"page4.png"];
     
     // Create page view controller
     self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];
