@@ -45,6 +45,8 @@
     AppDelegate *appDelegate;
     NSMutableData *responseData;
     NSMutableData *receivedData;
+    NSUserDefaults *prefs;
+    
 }
 
 
@@ -52,10 +54,18 @@
 {
     [super viewDidLoad];
     
+    NSLog(@"inside login view didload\n");
+    
     //[self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Mom reading with baby - anglo.jpg"]]];
     
+    prefs = [NSUserDefaults standardUserDefaults];
+    
+    self.loginEmail.text = [prefs objectForKey:@"userName"];
+    self.loginPassword.text = [prefs objectForKey:@"password"];
+    
+    //self.loginEmail.text = appDelegate.userEmail;
     UIGraphicsBeginImageContext(self.view.frame.size);
-    [[UIImage imageNamed:@"Mom reading with baby - anglo.jpg"] drawInRect:self.view.bounds];
+    [[UIImage imageNamed:@"Toddler on grass.jpg"] drawInRect:self.view.bounds];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     [image drawAtPoint:CGPointZero blendMode:kCGBlendModeOverlay alpha:0.5];
     UIGraphicsEndImageContext();
@@ -75,42 +85,8 @@
         self.loginButton.shadowColor = [UIColor ht_mintDarkColor];
         [self.loginButton addTarget:self action:@selector(LoginPressed) forControlEvents:UIControlEventTouchUpInside];
     
+    
     [self.view addSubview:self.loginButton];
-    
-    //[self.view addSubview:mySwitch];
-
-    //NSDictionary *viewDict = NSDictionaryOfVariableBindings(loginButton, _loginPassword);
-    //[loginButton.superview addConstraint:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[login]-20-|" options:0 metrics:nil views:viewDict]];
-    
-    
-    //[loginButton.superview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[loginButton]-20-|" options:0 metrics:0 views:viewDict]];
-    
-    //[loginButton.superview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-350-[_loginPassword]-30-[loginButton]-70-|" options:0 metrics:0 views:viewDict]];
-    
-    //[loginButton.superview addConstraint:[NSLayoutConstraint constraintWithItem:loginButton.superview attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:loginButton attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0]];
-    
-    //[loginButton.superview addConstraint:[NSLayoutConstraint constraintWithItem:loginButton.superview attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:loginButton attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0.0]];
-    
-        /*NSDictionary *viewsDictionary = NSDictionaryOfVariableBindings(loginButton);
-        NSArray *constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[loginButton]-20-|" options:0 metrics:nil views:viewsDictionary];
-        [self.view addConstraint:[constraints objectAtIndex:0]];*/
-    
-    
-    /*else if (result.height == 667) {
-        frame = CGRectMake(110.0, 360.0, 220.0, 40.0);
-        HTPressableButton *loginButton = [[HTPressableButton alloc] initWithFrame:frame buttonStyle:HTPressableButtonStyleRounded];
-        [loginButton setTitle:@"Login" forState:UIControlStateNormal];
-        loginButton.buttonColor = [UIColor ht_blueJeansColor];
-        loginButton.shadowColor = [UIColor ht_blueJeansDarkColor];
-        [loginButton addTarget:self action:@selector(LoginPressed) forControlEvents:UIControlEventTouchUpInside];
-        [self.view addSubview:loginButton];
-        [self.view addSubview:mySwitch];
-    }*/
-    
-    
-    /*[self.signupButton setStyleType:ACPButtonOK];
-    [self.signupButton setLabelTextColor:[UIColor whiteColor] highlightedColor:[UIColor whiteColor] disableColor:nil];
-    [self.signupButton setLabelFont:[UIFont fontWithName:@"Trebuchet MS" size:20]];*/
     
     self.signupButton.cornerRadius = 10.0;
     self.signupButton.shadowHeight = self.signupButton.frame.size.height * 0.17;
@@ -122,14 +98,7 @@
     
     [self.signupButton addTarget:self action:@selector(ShowSignUpForm) forControlEvents:UIControlEventTouchUpInside];
     
-    
-    //UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(130, 400, 180, 30)];
-    //label.text = @"Forgot your password?";
-    //label.font = [UIFont systemFontOfSize:14.0];
-    //Tap Gesture
-    
-    
-    
+
     UITapGestureRecognizer* gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(userTappedForgotPassword:)];
     //Adding userinteraction for label
     [self.forgotPasswordLabel setUserInteractionEnabled:YES];
@@ -148,7 +117,7 @@
 
 -(void)rememberMePressed
 {
-    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+   // NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     
     // saving an NSString
     [prefs setObject:_loginEmail.text forKey:@"userName"];
@@ -166,7 +135,7 @@
         NSString *messageBody = @" ";
         mailComposer =[[MFMailComposeViewController alloc]init];
         mailComposer.mailComposeDelegate = self;
-        NSArray *emailAddresses = [[NSArray alloc]initWithObjects:@"agileehealth@gmail.com", nil]; //feedback@glimmpse.samplesizeshop.com
+        NSArray *emailAddresses = [[NSArray alloc]initWithObjects:@"agileehealth@gmail.com", nil]; 
         [mailComposer setSubject:emailTitle];
         [mailComposer setMessageBody:messageBody isHTML:YES];
         [mailComposer setToRecipients:emailAddresses];
@@ -320,9 +289,10 @@
             
         }// end else
         
-        NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+        
         
         // saving an NSString
+        [prefs setObject:appDelegate.userID forKey:@"userID"];
        [prefs setObject:appDelegate.firstName forKey:@"firstName"];
         [prefs setObject:appDelegate.lastName forKey:@"lastName"];
         [prefs setObject:appDelegate.userEmail forKey:@"email"];

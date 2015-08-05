@@ -142,13 +142,26 @@
     
     else if (buttonIndex == 1)
     {
-        NSLog(@"RESET Pressed");
+        NSLog(@"Logout Pressed\n");
+        NSLog(@"useremail is %@:\n", appDelegate.userEmail);
+        
+        NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+        
+        // saving an NSString
+        [prefs setObject:appDelegate.userEmail forKey:@"userName"];
+        [prefs setObject:appDelegate.userPassword forKey:@"password"];
+        
+        
+        
+        [prefs synchronize];
+        
+        NSLog(@"useremail is %@:\n", [prefs objectForKey:@"userName"]);
         appDelegate.firstName = @"";
         appDelegate.lastName = @"";
         appDelegate.userID = @"";
-        appDelegate.userEmail = @"";
-        appDelegate.userPassword = @"";
-        //appDelegate.babyDOB = @"";
+        //appDelegate.userEmail = @"";
+        //appDelegate.userPassword = @"";
+        appDelegate.babyDOB = @"";
         appDelegate.babyGender = @"";
         appDelegate.babyName = @"";
         appDelegate.phoneNumber = @"";
@@ -158,6 +171,7 @@
         
         
         [self.navigationController pushViewController:uiViewController animated:NO];
+        self.navigationItem.hidesBackButton=YES;
     }
 }
 

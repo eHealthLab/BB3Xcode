@@ -33,14 +33,16 @@
 
 @implementation StartViewController
 {
-    AppDelegate *delegate;
+    AppDelegate *appDelegate;
+    NSUserDefaults *prefs;
 }
 
 
 - (void)viewDidLoad
 {
-    delegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
+    appDelegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
     [super viewDidLoad];
+    prefs = [NSUserDefaults standardUserDefaults];
     
     CAGradientLayer *gradient = [CAGradientLayer layer];
     gradient.frame = self.view.bounds;
@@ -195,9 +197,9 @@
 
 -(void)startButtonPressed
 {
-    UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"loginViewController"];
-    [self.navigationController pushViewController:uiViewController animated:YES];
+            UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"loginViewController"];
+        [self.navigationController pushViewController:uiViewController animated:YES];
     
-}
+    }
 
 @end

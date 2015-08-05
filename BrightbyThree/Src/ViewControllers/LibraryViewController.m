@@ -73,7 +73,7 @@
     appDelegate.messagesLibrary = [NSMutableArray arrayWithObjects:string1, string2, nil];
    
     
-    appDelegate.messagesImagesLibrary = [NSMutableArray arrayWithObjects:@"BB3_AboutUs.png", nil];
+    appDelegate.messagesImagesLibrary = [NSMutableArray arrayWithObjects:@"Mom reading with baby - anglo.jpg", nil];
     [appDelegate.messagesImagesLibrary addObject:@"Baby with tongue out.jpg"];
     
     
@@ -102,6 +102,14 @@
     return [appDelegate.messagesSubjectLibrary count];
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if(indexPath.section == 0 && indexPath.row == 0) {
+        return 65.0;
+    }
+    
+    return 65.0;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *simpleTableIdentifier = @"MyCell";
@@ -117,15 +125,18 @@
     cell.textLabel.text = [appDelegate.messagesSubjectLibrary objectAtIndex:indexPath.row];
     if ([appDelegate.messagesReadStatusLibrary[appDelegate.currentMessageIndex] isEqualToString: @"0"]) {
         NSLog(@"found zero, so bolding\n");
-        UIFont *myFont = [ UIFont boldSystemFontOfSize: 18.0];
+        UIFont *myFont = [ UIFont boldSystemFontOfSize: 21.0];
         cell.textLabel.font = myFont;
     }
     else{
+        UIFont *myFont = [ UIFont boldSystemFontOfSize: 18.0];
+        cell.textLabel.font = myFont;
         NSLog(@"FOUND: %@\n", appDelegate.messagesReadStatusLibrary[appDelegate.currentMessageIndex]);
     }
     
     cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
-    cell.imageView.image = [UIImage imageNamed:@"Mom reading with baby - anglo.jpg"];
+    cell.imageView.image = [UIImage imageNamed:@"Toddler on grass.jpg"];
+    //cell.
     
     return cell;
 }

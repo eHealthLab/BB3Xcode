@@ -45,8 +45,9 @@
     
     datePicker = [[UIDatePicker alloc] init];
     genderPicker = [[UIPickerView alloc] init];
-    //genderPicker.delegate = genderPicker;
-    //genderPicker.dataSource = genderPicker;
+    genderPicker.delegate = genderPicker;
+    genderPicker.dataSource = genderPicker;
+    genderPicker.showsSelectionIndicator = YES;
     genderArray = [[NSArray alloc] initWithObjects:@"Female", @"Male", nil];
     
     
@@ -58,6 +59,8 @@
     
     [self.childDOBField setInputView:datePicker];
     //[self.childGenderField setInputView:genderPicker];
+    
+    [self.childGenderField setInputView:genderPicker];
     
     self.view.backgroundColor = [[UIColor colorWithPatternImage:image] colorWithAlphaComponent:0.3];
     
@@ -91,6 +94,11 @@
 -(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
     return [genderArray objectAtIndex:row];
+}
+
+-(void)genderChanged:(id)sender
+{
+    
 }
 
 

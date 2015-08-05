@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D3B055B1B71CEBF00675F9E /* LoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3B055A1B71CEBF00675F9E /* LoadingViewController.m */; };
 		1D487B391B4A344000A64137 /* Story1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D487B381B4A344000A64137 /* Story1.storyboard */; };
 		1D8617AD1AFACA650047DE56 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8617AC1AFACA650047DE56 /* main.m */; };
 		1D8617BB1AFACA650047DE56 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D8617BA1AFACA650047DE56 /* Images.xcassets */; };
@@ -145,6 +146,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D3B055A1B71CEBF00675F9E /* LoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingViewController.m; sourceTree = "<group>"; };
+		1D3B055C1B71CECC00675F9E /* LoadingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadingViewController.h; sourceTree = "<group>"; };
 		1D487B381B4A344000A64137 /* Story1.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Story1.storyboard; sourceTree = "<group>"; };
 		1D8617A71AFACA650047DE56 /* BrightbyThree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrightbyThree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D8617AB1AFACA650047DE56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -699,6 +702,8 @@
 				1DAB4CF31B6DE8F0008F186F /* tutorialDetails.m */,
 				1DAB4CF41B6DE8F0008F186F /* TutorialViewController.h */,
 				1DAB4CF51B6DE8F0008F186F /* TutorialViewController.m */,
+				1D3B055A1B71CEBF00675F9E /* LoadingViewController.m */,
+				1D3B055C1B71CECC00675F9E /* LoadingViewController.h */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -895,6 +900,7 @@
 				1DAB4CB51B6DE75A008F186F /* IQBarButtonItem.m in Sources */,
 				1D8617AD1AFACA650047DE56 /* main.m in Sources */,
 				1DAB4CFA1B6DE8F0008F186F /* DashboardViewController.m in Sources */,
+				1D3B055B1B71CEBF00675F9E /* LoadingViewController.m in Sources */,
 				1DAB4CB01B6DE75A008F186F /* IQUIWindow+Hierarchy.m in Sources */,
 				1DAB4CAB1B6DE75A008F186F /* DKCircleButton.m in Sources */,
 				1DAB4CB31B6DE75A008F186F /* IQSegmentedNextPrevious.m in Sources */,

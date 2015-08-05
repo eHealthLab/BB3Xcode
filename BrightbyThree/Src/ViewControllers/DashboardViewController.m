@@ -20,9 +20,10 @@
 
 -(void) viewDidLoad
 {
-    appDelegate.numberOfClicksDashboard++;
+    
     
     appDelegate = (AppDelegate*) [[UIApplication sharedApplication] delegate];
+    appDelegate.numberOfClicksDashboard++;
     self.title = @"Dashboard";
     
     [self.view addSubview:self.buttonsView];
@@ -33,19 +34,19 @@
                                                                               
         
     UIGraphicsBeginImageContext(self.view.frame.size);
-    [[UIImage imageNamed:@"Mom reading with baby - anglo.jpg"] drawInRect:self.view.bounds];
+    [[UIImage imageNamed:@"Toddler on grass.jpg"] drawInRect:self.view.bounds];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     [image drawAtPoint:CGPointZero blendMode:kCGBlendModeOverlay alpha:0.5];
     UIGraphicsEndImageContext();
     
-    self.view.backgroundColor = [[UIColor colorWithPatternImage:image] colorWithAlphaComponent:0.3];
+    self.view.backgroundColor = [[UIColor colorWithPatternImage:image] colorWithAlphaComponent:0.8];
     
-    [self.mainImage setImage:[UIImage imageNamed:@"baby with tongue out.jpg"]];
+    //[self.mainImage setImage:[UIImage imageNamed:@"baby with tongue out.jpg"]];
     
     
     self.setGoalsButton.cornerRadius = 10.0;
     self.setGoalsButton.shadowHeight = self.setGoalsButton.frame.size.height * 0.17;
-    [self.setGoalsButton setStyle:HTPressableButtonStyleCircular];
+    //[self.setGoalsButton setStyle:HTPressableButtonStyleCircular];
     self.setGoalsButton.buttonColor = [UIColor ht_grapeFruitColor];
     self.setGoalsButton.shadowColor = [UIColor ht_grapeFruitDarkColor];
     
@@ -82,13 +83,13 @@
     
     self.badgesButton.cornerRadius = 10.0;
     self.badgesButton.shadowHeight = self.badgesButton.frame.size.height * 0.17;
-    [self.badgesButton setStyle:HTPressableButtonStyleCircular];
+    //[self.badgesButton setStyle:HTPressableButtonStyleCircular];
     [self.badgesButton setTitle:@"My Badges" forState:UIControlStateNormal];
     self.badgesButton.buttonColor = [UIColor ht_sunflowerColor];
     self.badgesButton.shadowColor = [UIColor ht_citrusColor];
     [self.badgesButton addTarget:self action:@selector(showBadgesPressed) forControlEvents:UIControlEventTouchUpInside];
     
-    [self.centralImage setImage:[UIImage imageNamed:@"Mom reading with baby - anglo.jpg"]];
+    [self.centralImage setImage:[UIImage imageNamed:@"Toddler on grass.jpg"]];
     self.centralImage.layer.cornerRadius = self.centralImage.frame.size.width / 2;
     self.centralImage.clipsToBounds = YES;
     
@@ -97,7 +98,7 @@
     
     self.messagesButton.cornerRadius = 10.0;
     self.messagesButton.shadowHeight = self.messagesButton.frame.size.height * 0.17;
-    [self.messagesButton setStyle:HTPressableButtonStyleCircular];
+    //[self.messagesButton setStyle:HTPressableButtonStyleCircular];
     self.messagesButton.buttonColor = [UIColor ht_leadColor];
     self.messagesButton.shadowColor = [UIColor ht_leadDarkColor];
     [self.messagesButton setDisabledButtonColor:[UIColor ht_sunflowerColor]];
