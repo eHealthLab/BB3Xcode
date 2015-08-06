@@ -44,19 +44,6 @@
 {
     appDelegate.numberOfClicksTutorial++;
     
-    /*NSMutableAttributedString *stringName = [[NSMutableAttributedString alloc] initWithString:appDelegate.babyName];
-    NSRange selectedRange = NSMakeRange(0, appDelegate.babyName.length);
-    
-    [stringName beginEditing];
-    
-    [stringName addAttribute:NSFontAttributeName
-                   value:[UIFont fontWithName:@"Helvetica-Bold" size:17.0]
-                   range:selectedRange];
-    
-    [stringName endEditing];
-    
-    //appDelegate.babyName = stringName;*/
-    
     appDelegate.babyName = [appDelegate.babyName uppercaseString];
     
     [_tutorialScrollView setScrollEnabled:YES];
@@ -71,87 +58,125 @@
     appDelegate = (AppDelegate*) [[UIApplication sharedApplication] delegate];
     self.title = @"Tutorial";
     
+    // Create the colors
+    /*UIColor *darkOp =
+    [UIColor colorWithRed:0.62f green:0.4f blue:0.42f alpha:1.0];
+    UIColor *lightOp =
+    [UIColor colorWithRed:0.43f green:0.76f blue:0.07f alpha:1.0];*/
+    
+    
     UIGraphicsBeginImageContext(self.view.frame.size);
+    [[UIImage imageNamed:@"blue_minimalistic_gradient_colors_1200x1920.png"] drawInRect:self.view.bounds];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    [image drawAtPoint:CGPointZero blendMode:kCGBlendModeOverlay alpha:0.5];
+    UIGraphicsEndImageContext();
+    
+    self.view.backgroundColor = [[UIColor colorWithPatternImage:image] colorWithAlphaComponent:1.0];
+    
+    /*
+    UIColor *darkOp =
+    [UIColor whiteColor];
+    UIColor *lightOp =
+    [UIColor grayColor];
+    
+    // Create the gradient
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    
+    // Set colors
+    gradient.colors = [NSArray arrayWithObjects:
+                       (id)lightOp.CGColor,
+                       (id)darkOp.CGColor,
+                       nil];
+    
+    // Set bounds
+    gradient.frame = self.view.bounds;
+    
+    // Add the gradient to the view
+    [self.view.layer insertSublayer:gradient atIndex:0];
+    */
+    
+    /*UIGraphicsBeginImageContext(self.view.frame.size);
     [[UIImage imageNamed:@"Mom reading with baby - anglo.jpg"] drawInRect:self.view.bounds];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     [image drawAtPoint:CGPointZero blendMode:kCGBlendModeOverlay alpha:0.5];
     UIGraphicsEndImageContext();
     
-    self.view.backgroundColor = [[UIColor colorWithPatternImage:image] colorWithAlphaComponent:0.3];
+    self.view.backgroundColor = [[UIColor colorWithPatternImage:image] colorWithAlphaComponent:0.3];*/
     
-    
+    self.button1.cornerRadius = 10.0;
+    self.button1.shadowHeight = self.button1.frame.size.height * 0.17;
     [self.button1 setTitle:@"What is BB3?" forState:UIControlStateNormal];
-    [self.button1 setStyle:HTPressableButtonStyleRounded];
-    [self.button1 setShadowHeight:0.80];
     [self.button1 addTarget:self action:@selector(whatIsBB3Pressed) forControlEvents:UIControlEventTouchUpInside];
+    self.button1.buttonColor = [UIColor ht_ashColor];
+    self.button1.shadowColor = [UIColor ht_ashDarkColor];
     
     
+    self.button2.cornerRadius = 10.0;
+    self.button2.shadowHeight = self.button2.frame.size.height * 0.17;
     [self.button2 setTitle:@"What is Dashboard?" forState:UIControlStateNormal];
-    [self.button2 setStyle:HTPressableButtonStyleRounded];
     [self.button2 addTarget:self action:@selector(whatIsDashboardPressed) forControlEvents:UIControlEventTouchUpInside];
-    [self.button2 setShadowHeight:0.80];
-    self.button2.buttonColor = [UIColor ht_mintColor];
-    self.button2.shadowColor = [UIColor ht_mintDarkColor];
+    self.button2.buttonColor = [UIColor ht_ashColor];
+    self.button2.shadowColor = [UIColor ht_ashDarkColor];
     
     
+    self.button3.cornerRadius = 10.0;
+    self.button3.shadowHeight = self.button3.frame.size.height * 0.17;
     [self.button3 setTitle:@"How can I set goals?" forState:UIControlStateNormal];
     [self.button3 addTarget:self action:@selector(howToSetGoalsPressed) forControlEvents:UIControlEventTouchUpInside];
-    [self.button3 setShadowHeight:0.80];
-    [self.button3 setStyle:HTPressableButtonStyleRounded];
-    self.button3.buttonColor = [UIColor ht_bitterSweetColor];
-    self.button3.shadowColor = [UIColor ht_bitterSweetDarkColor];
+    self.button3.buttonColor = [UIColor ht_mediumColor];
+    self.button3.shadowColor = [UIColor ht_mediumDarkColor];
     
     
     [self.button4 setTitle:@"How do I earn points?" forState:UIControlStateNormal];
     [self.button4 addTarget:self action:@selector(howToEarnPointsPressed) forControlEvents:UIControlEventTouchUpInside];
-    [self.button4 setShadowHeight:0.80];
-    [self.button4 setStyle:HTPressableButtonStyleRounded];
-    self.button4.buttonColor = [UIColor ht_sunflowerColor];
-    self.button4.shadowColor = [UIColor ht_citrusColor];
+    self.button4.cornerRadius = 10.0;
+    self.button4.shadowHeight = self.button4.frame.size.height * 0.17;
+    self.button4.buttonColor = [UIColor ht_ashColor];
+    self.button4.shadowColor = [UIColor ht_ashDarkColor];
 
     
     [self.button5 setTitle:@"How do I track points?" forState:UIControlStateNormal];
     [self.button5 addTarget:self action:@selector(howDoITrackPointsPressed) forControlEvents:UIControlEventTouchUpInside];
-    [self.button5 setShadowHeight:0.80];
-    [self.button5 setStyle:HTPressableButtonStyleRounded];
-    self.button5.buttonColor = [UIColor ht_peterRiverColor];
-    self.button5.shadowColor = [UIColor ht_belizeHoleColor];
+    self.button5.cornerRadius = 10.0;
+    self.button5.shadowHeight = self.button5.frame.size.height * 0.17;
+    self.button5.buttonColor = [UIColor ht_ashColor];
+    self.button5.shadowColor = [UIColor ht_ashDarkColor];
     
     
     [self.button6 setTitle:@"How to earn badges?" forState:UIControlStateNormal];
     [self.button6 addTarget:self action:@selector(HowToEarnBadgesPressed) forControlEvents:UIControlEventTouchUpInside];
-    [self.button6 setShadowHeight:0.80];
-    [self.button6 setStyle:HTPressableButtonStyleRounded];
-    self.button6.buttonColor = [UIColor ht_mintColor];
-    self.button6.shadowColor = [UIColor ht_mintDarkColor];
+    self.button6.cornerRadius = 10.0;
+    self.button6.shadowHeight = self.button6.frame.size.height * 0.17;
+    self.button6.buttonColor = [UIColor ht_ashColor];
+    self.button6.shadowColor = [UIColor ht_ashDarkColor];
     
     
     [self.button7 setTitle:@"How to change my password?" forState:UIControlStateNormal];
     [self.button7 addTarget:self action:@selector(changePasswordPressed) forControlEvents:UIControlEventTouchUpInside];
-    [self.button7 setShadowHeight:0.80];
-    [self.button7 setStyle:HTPressableButtonStyleRounded];
+    self.button7.cornerRadius = 10.0;
+    self.button7.shadowHeight = self.button7.frame.size.height * 0.17;
     self.button7.buttonColor = [UIColor ht_bitterSweetColor];
     self.button7.shadowColor = [UIColor ht_bitterSweetDarkColor];
     
     [self.button8 setTitle:@"How to access Facebook page?" forState:UIControlStateNormal];
     [self.button8 addTarget:self action:@selector(howToAccessFBPressed) forControlEvents:UIControlEventTouchUpInside];
-    [self.button8 setShadowHeight:0.80];
-    [self.button8 setStyle:HTPressableButtonStyleRounded];
+    self.button8.cornerRadius = 10.0;
+    self.button8.shadowHeight = self.button8.frame.size.height * 0.17;
     self.button8.buttonColor = [UIColor ht_lemonColor];
     self.button8.shadowColor = [UIColor ht_lemonDarkColor];
     
     
     [self.button9 setTitle:@"How can I view messages?" forState:UIControlStateNormal];
     [self.button9 addTarget:self action:@selector(howToViewMessagesPressed) forControlEvents:UIControlEventTouchUpInside];
-    [self.button9 setShadowHeight:0.80];
-    [self.button9 setStyle:HTPressableButtonStyleRounded];
+    self.button9.cornerRadius = 10.0;
+    self.button9.shadowHeight = self.button9.frame.size.height * 0.17;
     
     
     
     [self.button10 setTitle:@"How to save favorite messages?" forState:UIControlStateNormal];
     [self.button10 addTarget:self action:@selector(saveFavoriteMessagesPressed) forControlEvents:UIControlEventTouchUpInside];
-    [self.button10 setShadowHeight:0.80];
-    [self.button10 setStyle:HTPressableButtonStyleRounded];
+    self.button10.cornerRadius = 10.0;
+    self.button10.shadowHeight = self.button10.frame.size.height * 0.17;
     self.button10.buttonColor = [UIColor ht_mintColor];
     self.button10.shadowColor = [UIColor ht_mintDarkColor];
     
@@ -159,8 +184,8 @@
     
     [self.button11 setTitle:@"Other questions?" forState:UIControlStateNormal];
     [self.button11 addTarget:self action:@selector(otherQuestionsPressed) forControlEvents:UIControlEventTouchUpInside];
-    [self.button11 setShadowHeight:0.80];
-    [self.button11 setStyle:HTPressableButtonStyleRounded];
+    self.button11.cornerRadius = 10.0;
+    self.button11.shadowHeight = self.button11.frame.size.height * 0.17;
     self.button11.buttonColor = [UIColor ht_bitterSweetColor];
     self.button11.shadowColor = [UIColor ht_bitterSweetDarkColor];
     
@@ -179,6 +204,27 @@
     uiViewController.title = @"What is BB3?";
     
     
+        UIColor *darkOp =
+        [UIColor whiteColor];
+        UIColor *lightOp =
+        [UIColor grayColor];
+        
+        // Create the gradient
+        CAGradientLayer *gradient = [CAGradientLayer layer];
+        
+        // Set colors
+        gradient.colors = [NSArray arrayWithObjects:
+                           (id)lightOp.CGColor,
+                           (id)darkOp.CGColor,
+                           nil];
+        
+        // Set bounds
+        gradient.frame = self.view.bounds;
+        
+        // Add the gradient to the view
+        [uiViewController.view.layer insertSublayer:gradient atIndex:0];
+    
+
     
     UITextView *textViewDetail1 = [[UITextView alloc] initWithFrame:CGRectMake(30, 30, self.view.bounds.size.width-40, self.view.bounds.size.height-40)];
     NSString *string1 = [[[[[[[[[[[@"The mission of Bright by Three (formerly Bright Beginnings) is to provide a bright beginning for all Colorado children by helping families support their children’s physical, emotional, and intellectual development during the critical first three years of life. You can find more information about Bright by Three and our other sponsors under “About Us” tab of this tabbar view. The Bright by Three app is designed to bring information about how you can help " stringByAppendingString: appDelegate.babyName] stringByAppendingString: @" "] stringByAppendingString: @"learn and develop directly to your phone several times per week. You will receive this information via messages that contain useful information and activities that you can engage in with "] stringByAppendingString :appDelegate.babyName] stringByAppendingString:@". You can set your own goals and earn badges and prizes for reading with your child and completing recommended activities.\n\n"] stringByAppendingString:@"The Bright by Three app is designed to bring information about how you can help "] stringByAppendingString:appDelegate.babyName] stringByAppendingString:@"learn and develop directly to your phone several times per week. You will receive this information via messages that contain useful information and activities that you can engage in with "] stringByAppendingString: appDelegate.babyName]  stringByAppendingString: @". " ] stringByAppendingString: @"You can set your own goals and earn badges and prizes for reading with your child and completing recommended activities."];
@@ -194,6 +240,7 @@
     CGRect frame = textViewDetail1.frame;
     frame.size.height = textViewDetail1.contentSize.height;
     textViewDetail1.frame = frame;
+    textViewDetail1.backgroundColor = [UIColor clearColor];
     
     UIBarButtonItem *barButton = [[UIBarButtonItem alloc] init];
     barButton.title=@"Tutorial";

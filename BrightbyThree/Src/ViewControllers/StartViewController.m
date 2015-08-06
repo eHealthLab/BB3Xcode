@@ -55,7 +55,7 @@
 
     NSString *blurb2 = @"The dashboard is the screen through which you can access all of the features of the BB3 app.  Tap on a button to set your goals, log minutes, track points, view your badges, change your settings, or access the BB3 Facebook page.";
     NSString *blurb3 = @"Set your reading goals! Looking at books together is a great way to teach your child new words and talk with him.  Looking at books with your child at least 6 days per week will help to make him ready for school.  Set your goal  by selecting the number of days and minutes that you plan to look at books with your child.  Try to increase your goal every 2 weeks until you are looking at books together at least 6 days per week for at least 10 minutes per day.";
-    NSString *blurb4 = @"You get points when you log your reading minutes and complete challenges. Log the number of minutes  that you read with your child each day.  For every minute of shared reading, you will earn 1 point.  Challenges will display in your message library once a week . Once you have finished a challenge, tap the “We did it!”  button at the bottom of the screen and you will get 10 bonus points.  You may also be asked to post a photo of you and your child doing an activity to earn extra points.";
+    NSString *blurb4 = @"You get points when you log your reading minutes and complete challenges. Log the number of minutes  that you read with your child each day. For every minute of shared reading, you will earn 1 point. Challenges will display in your message library once a week. Once you have finished a challenge, tap the “We did it!”  button at the bottom of the screen and you will get 10 bonus points. You may also be asked to post a photo of you and your child doing an activity to earn extra points.";
     
     NSString *blurb5 = @"The BB3 app will keep track of the points that you get for looking at books with your child and completing challenges. Your point total will increase when you log minutes or earn challenge points. You can view your point total on the same screen where you log your minutes. You can earn badges and prizes when you get enough points. A progress bar will show you how close you are to meeting your weekly goal. You can also see how you are doing compared to other users by tapping on the network button";
     
@@ -63,11 +63,11 @@
     
     NSString *blurb7 = @"You can change your password and log in information (including your email address and user name) by tapping on the Settings button on the dashboard.";
     
-    NSString *blurb8 = @"You can access the BB3 Facebook page by tapping on the Facebook button on your dashboard.  This will take you to the BB3 Facebook page where you can read and comment on posts with more information about early child development. You can receive posts from the BB3 Facebook page directly to your Facebook newsfeed if you “Like” the BB3 page.";
+    NSString *blurb8 = @"You can access the BB3 Facebook page by tapping on the Facebook button on your dashboard. This will take you to the BB3 Facebook page where you can read and comment on posts with more information about early child development. You can receive posts from the BB3 Facebook page directly to your Facebook newsfeed if you “Like” the BB3 page.";
     
     
-    NSString *blurb9 = @"You will receive 3-4 messages per week in your message library.  Messages have information about different ways that you can help your child learn.  When you have a new message, a notification will display on the BB3 app icon  and your tab bar. Some messages will contain a video that demonstrates the activity. Often messages will have helpful links that you can tap on for to help you complete the activity. Tap the “Why” button for more information about how the activity can help your child learn. Tap on the camera to take a photo of your child performing the activity  and share it on the BB3 Facebook page .  You can also “rate”  the message, save it as a favorite, or share it on Facebook. Once you receive a message it will be saved in the message library for 3 months and you can view it at any time.";
-    NSString *blurb10 = @"You can designate a message as favorite by tapping on the star button on your message screen. Once you have selected a message as a “favorite” it will be stored under your favorites tab.  This option allows you to access your favorite messages quickly and easily. If you no longer want a message in your favorites library, simply tap the “Remove favorite” button on the message screen under the favorites tab.";
+    NSString *blurb9 = @"You will receive 3-4 messages per week in your message library. Messages have information about different ways that you can help your child learn. When you have a new message, a notification will display on the BB3 app icon  and your tab bar. Some messages will contain a video that demonstrates the activity. Often messages will have helpful links that you can tap on for to help you complete the activity. Tap the “Why” button for more information about how the activity can help your child learn. Tap on the camera to take a photo of your child performing the activity and share it on the BB3 Facebook page. You can also “rate” the message, save it as a favorite, or share it on Facebook. Once you receive a message it will be saved in the message library for 3 months and you can view it at any time.";
+    NSString *blurb10 = @"You can designate a message as favorite by tapping on the star button on your message screen. Once you have selected a message as a “favorite” it will be stored under your favorites tab. This option allows you to access your favorite messages quickly and easily. If you no longer want a message in your favorites library, simply tap the “Remove favorite” button on the message screen under the favorites tab.";
     
     
     NSString *blurb11 = @"Your overview of the BB3 app is finished. Press Skip to begin using the BB3 app. If you want to review any of the information in the overivew you can find it by tapping on the tutorial icon on your navigation bar at the bottom of the screen.";
@@ -96,17 +96,11 @@
     [self.pageViewController didMoveToParentViewController:self];
     
     
-    //CGRect frame = CGRectMake(150.0, 460.0, 100.0, 100.0);
-    //CGRect frame = CGRectMake(150.0, 460.0, 100, self.view.frame.size.height - 10);
-    
-    
-    
-    
     self.skipButton.cornerRadius = 10.0;
     self.skipButton.shadowHeight = self.skipButton.frame.size.height * 0.17;
     [self.skipButton setTitle:@"Skip" forState:UIControlStateNormal];
     self.skipButton.buttonColor = [UIColor ht_grapeFruitColor];
-    self.skipButton.shadowColor = [UIColor ht_mintDarkColor];
+    self.skipButton.shadowColor = [UIColor ht_grapeFruitDarkColor];
     [self.skipButton addTarget:self action:@selector(startButtonPressed) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.skipButton];
     

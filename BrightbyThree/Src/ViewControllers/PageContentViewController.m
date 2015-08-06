@@ -44,6 +44,7 @@
     self.titleDescription.textAlignment=NSTextAlignmentJustified;
     [self.titleDescription sizeToFit];
     [self.titleDescription setScrollEnabled:YES];
+    [self.titleDescription setFont:[UIFont fontWithName:@"DIN Alternate" size:15.0]];
     //[uiViewController.view addSubview:textViewDetail1];
     CGRect frame = self.titleDescription.frame;
     frame.size.height = self.titleDescription.contentSize.height;

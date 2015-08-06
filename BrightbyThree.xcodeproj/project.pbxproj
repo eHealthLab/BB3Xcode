@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1D3B055B1B71CEBF00675F9E /* LoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3B055A1B71CEBF00675F9E /* LoadingViewController.m */; };
 		1D487B391B4A344000A64137 /* Story1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D487B381B4A344000A64137 /* Story1.storyboard */; };
+		1D4FA3BE1B727B1D001181C6 /* blue_minimalistic_gradient_colors_1200x1920.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D4FA3BD1B727B1D001181C6 /* blue_minimalistic_gradient_colors_1200x1920.png */; };
+		1D4FA3C01B727B23001181C6 /* blue_minimalistic_gradient_colors_1920x1200.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D4FA3BF1B727B23001181C6 /* blue_minimalistic_gradient_colors_1920x1200.png */; };
 		1D8617AD1AFACA650047DE56 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8617AC1AFACA650047DE56 /* main.m */; };
 		1D8617BB1AFACA650047DE56 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D8617BA1AFACA650047DE56 /* Images.xcassets */; };
 		1D8617BE1AFACA650047DE56 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D8617BC1AFACA650047DE56 /* LaunchScreen.xib */; };
@@ -149,6 +151,8 @@
 		1D3B055A1B71CEBF00675F9E /* LoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingViewController.m; sourceTree = "<group>"; };
 		1D3B055C1B71CECC00675F9E /* LoadingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadingViewController.h; sourceTree = "<group>"; };
 		1D487B381B4A344000A64137 /* Story1.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Story1.storyboard; sourceTree = "<group>"; };
+		1D4FA3BD1B727B1D001181C6 /* blue_minimalistic_gradient_colors_1200x1920.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue_minimalistic_gradient_colors_1200x1920.png; sourceTree = "<group>"; };
+		1D4FA3BF1B727B23001181C6 /* blue_minimalistic_gradient_colors_1920x1200.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue_minimalistic_gradient_colors_1920x1200.png; sourceTree = "<group>"; };
 		1D8617A71AFACA650047DE56 /* BrightbyThree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrightbyThree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D8617AB1AFACA650047DE56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D8617AC1AFACA650047DE56 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -411,6 +415,8 @@
 				1DAB4B781B6DDFF0008F186F /* 117-todo.png */,
 				1DAB4B791B6DDFF0008F186F /* 13-target.png */,
 				1DAB4B7A1B6DDFF0008F186F /* 18-envelope.png */,
+				1D4FA3BD1B727B1D001181C6 /* blue_minimalistic_gradient_colors_1200x1920.png */,
+				1D4FA3BF1B727B23001181C6 /* blue_minimalistic_gradient_colors_1920x1200.png */,
 				1DAB4B7B1B6DDFF0008F186F /* 187-pencil.png */,
 				1DAB4B7C1B6DDFF0008F186F /* 19-gear.png */,
 				1DAB4B7D1B6DDFF0008F186F /* 1x.png */,
@@ -781,6 +787,7 @@
 				1DAB4BCA1B6DDFF1008F186F /* 19-gear.png in Resources */,
 				1DAB4BD31B6DDFF1008F186F /* 85-trophy.png in Resources */,
 				1DAB4CB91B6DE75A008F186F /* IQKeyboardManager.bundle in Resources */,
+				1D4FA3BE1B727B1D001181C6 /* blue_minimalistic_gradient_colors_1200x1920.png in Resources */,
 				1DAB4BDF1B6DDFF1008F186F /* Badge3500.png in Resources */,
 				1DAB4BF51B6DDFF1008F186F /* facebook-Logo.jpg in Resources */,
 				1DAB4BC91B6DDFF1008F186F /* 187-pencil.png in Resources */,
@@ -849,6 +856,7 @@
 				1DAB4BE61B6DDFF1008F186F /* badgesShot.png in Resources */,
 				1DAB4BE31B6DDFF1008F186F /* Badge5000.png in Resources */,
 				1D8617BB1AFACA650047DE56 /* Images.xcassets in Resources */,
+				1D4FA3C01B727B23001181C6 /* blue_minimalistic_gradient_colors_1920x1200.png in Resources */,
 				1DAB4BE71B6DDFF1008F186F /* BB3120.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
