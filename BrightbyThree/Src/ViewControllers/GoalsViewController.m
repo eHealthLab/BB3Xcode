@@ -29,6 +29,11 @@
     
     [super viewDidLoad];
     
+    
+    //UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:<#(UIBarButtonSystemItem)#> target:<#(id)#> action:<#(SEL)#> target:self action:nil];
+    //self.navigationItem.leftBarButtonItem = backButton;
+    
+    
     NSString *stringLabel = [[[[@"Your current reading goal is: " stringByAppendingString:delegate.goalsDaysComponent] stringByAppendingString:@" days per week \n and "] stringByAppendingString:delegate.goalsMinutesComponent] stringByAppendingString:@" minutes per day."];
     
     self.readingGoalsLabel.text = stringLabel;

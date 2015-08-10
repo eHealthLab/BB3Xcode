@@ -244,6 +244,7 @@
     
     UIBarButtonItem *barButton = [[UIBarButtonItem alloc] init];
     barButton.title=@"Tutorial";
+    self.navigationController.navigationBar.topItem.backBarButtonItem = barButton;
     
     
 
@@ -305,7 +306,7 @@
     
     UIBarButtonItem *barButton = [[UIBarButtonItem alloc] init];
     barButton.title=@"Tutorial";
-    
+    self.navigationController.navigationBar.topItem.backBarButtonItem = barButton;
 }
 
 
@@ -334,6 +335,7 @@
     
     UIBarButtonItem *barButton = [[UIBarButtonItem alloc] init];
     barButton.title=@"Tutorial";
+    self.navigationController.navigationBar.topItem.backBarButtonItem = barButton;
 }
 
 
@@ -361,6 +363,10 @@
     frame.size.height = textViewDetail1.contentSize.height;
     textViewDetail1.frame = frame;
     
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] init];
+    barButton.title=@"Tutorial";
+    self.navigationController.navigationBar.topItem.backBarButtonItem = barButton;
+    
 }
 
 
@@ -387,6 +393,9 @@
     frame.size.height = textViewDetail1.contentSize.height;
     textViewDetail1.frame = frame;
     
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] init];
+    barButton.title=@"Tutorial";
+    self.navigationController.navigationBar.topItem.backBarButtonItem = barButton;
 }
 
 
@@ -413,6 +422,10 @@
     CGRect frame = textViewDetail1.frame;
     frame.size.height = textViewDetail1.contentSize.height;
     textViewDetail1.frame = frame;
+    
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] init];
+    barButton.title=@"Tutorial";
+    self.navigationController.navigationBar.topItem.backBarButtonItem = barButton;
     
 }
 
@@ -441,6 +454,9 @@
     frame.size.height = textViewDetail1.contentSize.height;
     textViewDetail1.frame = frame;
     
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] init];
+    barButton.title=@"Tutorial";
+    self.navigationController.navigationBar.topItem.backBarButtonItem = barButton;
 }
 
 
@@ -467,7 +483,10 @@
     CGRect frame = textViewDetail1.frame;
     frame.size.height = textViewDetail1.contentSize.height;
     textViewDetail1.frame = frame;
-    
+ 
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] init];
+    barButton.title=@"Tutorial";
+    self.navigationController.navigationBar.topItem.backBarButtonItem = barButton;
 }
 
 
@@ -494,6 +513,10 @@
     CGRect frame = textViewDetail1.frame;
     frame.size.height = textViewDetail1.contentSize.height;
     textViewDetail1.frame = frame;
+    
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] init];
+    barButton.title=@"Tutorial";
+    self.navigationController.navigationBar.topItem.backBarButtonItem = barButton;
     
 }
 
@@ -531,9 +554,19 @@
     contactusButton.shadowColor = [UIColor ht_grapeFruitDarkColor];
     
     [uiViewController.view addSubview:contactusButton];
+    
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] init];
+    barButton.title=@"Tutorial";
+    self.navigationController.navigationBar.topItem.backBarButtonItem = barButton;
 }
 
--(void)contactUsPressed:(id)sender
+-(void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    //[self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)contactUsPressed
 {
     if ([MFMailComposeViewController canSendMail]) {
         MFMailComposeViewController *mailComposer;
