@@ -93,6 +93,8 @@
 @property(assign, nonatomic) int numberOfClicksTutorial;
 @property(assign, nonatomic) int numberOfClicksAboutUs;
 
+@property(strong, nonatomic) NSString *urlToNodeJs;
+
 
 
 @end

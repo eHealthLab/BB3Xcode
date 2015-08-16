@@ -70,12 +70,21 @@
     self.numberOfClicksMessages=0;
     self.numberOfClicksNetwork=0;
     
+    self.urlToNodeJs = @"http://localhost:3000/";
+    
     
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.urlToNodeJs = @"http://localhost:3000/";
+    
     return YES;
+    
+    
+    
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

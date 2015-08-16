@@ -178,7 +178,10 @@
         NSLog(@"login info entered: %@ %@", self.loginEmail.text , self.loginPassword.text);
         NSString *newEmail = [self.loginEmail.text uppercaseString];
         responseData = [NSMutableData data];
-        NSString *url = [[[@"http://cbb.ucdenver.edu:3000/loginSignup/" stringByAppendingString:newEmail] stringByAppendingString:@"/"] stringByAppendingString:self.loginPassword.text];
+        //NSString *url = [[[@"http://cbb.ucdenver.edu:3000/loginSignup/" stringByAppendingString:newEmail] stringByAppendingString:@"/"] stringByAppendingString:self.loginPassword.text];
+        
+        NSString *url = [[[[appDelegate.urlToNodeJs stringByAppendingString:@"loginSignup/" ] stringByAppendingString:newEmail] stringByAppendingString:@"/"] stringByAppendingString:self.loginPassword.text];
+        
         url = [url stringByReplacingOccurrencesOfString:@" " withString:@""];
         NSLog(@"url is: %@", url);
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:

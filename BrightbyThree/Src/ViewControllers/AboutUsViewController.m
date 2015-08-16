@@ -115,7 +115,7 @@
     if(cell == nil)
     {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        //cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
     if (indexPath.section == 0 && indexPath.row == 0) {
@@ -224,19 +224,109 @@
     
     if(indexPath.section == 2 && indexPath.row == 0)
     {
+     
+        UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"aboutUsDetails"];
+        
+        uiViewController.title = @"Bright by Three";
+        
+        [self.navigationController pushViewController:uiViewController animated:YES];
+        
+        NSString *string1 = @"http://brightbythree.org";
+        
+        UITextView *textViewDetail1 = [[UITextView alloc] initWithFrame:CGRectMake(30, 30, self.view.bounds.size.width-40, self.view.bounds.size.height-40)];
+        textViewDetail1.text = string1;
+        textViewDetail1.textAlignment=NSTextAlignmentJustified;
+        [textViewDetail1 setFont:[UIFont systemFontOfSize:17]];
+        [textViewDetail1 sizeToFit];
+        [textViewDetail1 setScrollEnabled:YES];
+        [uiViewController.view addSubview:textViewDetail1];
+        CGRect frame = textViewDetail1.frame;
+        frame.size.height = textViewDetail1.contentSize.height;
+        textViewDetail1.frame = frame;
+        
+        UIBarButtonItem *barButton = [[UIBarButtonItem alloc] init];
+        barButton.title=@"About Us";
+        self.navigationController.navigationBar.topItem.backBarButtonItem = barButton;
         
     }
     else if(indexPath.section == 2 && indexPath.row == 1)
     {
         
+        UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"aboutUsDetails"];
+        
+        uiViewController.title = @"Children's Hospital Colorado";
+        
+        [self.navigationController pushViewController:uiViewController animated:YES];
+        
+        NSString *string1 = @"www.childrenscolorado.org";
+        
+        UITextView *textViewDetail1 = [[UITextView alloc] initWithFrame:CGRectMake(30, 30, self.view.bounds.size.width-40, self.view.bounds.size.height-40)];
+        textViewDetail1.text = string1;
+        textViewDetail1.textAlignment=NSTextAlignmentJustified;
+        [textViewDetail1 setFont:[UIFont systemFontOfSize:17]];
+        [textViewDetail1 sizeToFit];
+        [textViewDetail1 setScrollEnabled:YES];
+        [uiViewController.view addSubview:textViewDetail1];
+        CGRect frame = textViewDetail1.frame;
+        frame.size.height = textViewDetail1.contentSize.height;
+        textViewDetail1.frame = frame;
+        
+        UIBarButtonItem *barButton = [[UIBarButtonItem alloc] init];
+        barButton.title=@"About Us";
+        self.navigationController.navigationBar.topItem.backBarButtonItem = barButton;
+        
     
     }
     else if(indexPath.section == 2 && indexPath.row == 2)
     {
+        UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"aboutUsDetails"];
         
+        uiViewController.title = @"ACCORDS";
+        
+        [self.navigationController pushViewController:uiViewController animated:YES];
+        
+        NSString *string1 = @"http://www.ucdenver.edu/academics/colleges/medicalschool/programs/outcomes/ACCORDS";
+        
+        UITextView *textViewDetail1 = [[UITextView alloc] initWithFrame:CGRectMake(30, 30, self.view.bounds.size.width-40, self.view.bounds.size.height-40)];
+        textViewDetail1.text = string1;
+        textViewDetail1.textAlignment=NSTextAlignmentJustified;
+        [textViewDetail1 setFont:[UIFont systemFontOfSize:17]];
+        [textViewDetail1 sizeToFit];
+        [textViewDetail1 setScrollEnabled:YES];
+        [uiViewController.view addSubview:textViewDetail1];
+        CGRect frame = textViewDetail1.frame;
+        frame.size.height = textViewDetail1.contentSize.height;
+        textViewDetail1.frame = frame;
+        
+        UIBarButtonItem *barButton = [[UIBarButtonItem alloc] init];
+        barButton.title=@"About Us";
+        self.navigationController.navigationBar.topItem.backBarButtonItem = barButton;
     }
     else if(indexPath.section == 2 && indexPath.row == 3)
     {
+     
+        UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"aboutUsDetails"];
+        
+        uiViewController.title = @"CU mHealth Lab";
+        
+        [self.navigationController pushViewController:uiViewController animated:YES];
+        
+        NSString *string1 = @"www.mhealthimpact.ucdenver.edu";
+        
+        UITextView *textViewDetail1 = [[UITextView alloc] initWithFrame:CGRectMake(30, 30, self.view.bounds.size.width-40, self.view.bounds.size.height-40)];
+        textViewDetail1.text = string1;
+        textViewDetail1.textAlignment=NSTextAlignmentJustified;
+        [textViewDetail1 setFont:[UIFont systemFontOfSize:17]];
+        [textViewDetail1 sizeToFit];
+        [textViewDetail1 setScrollEnabled:YES];
+        [uiViewController.view addSubview:textViewDetail1];
+        CGRect frame = textViewDetail1.frame;
+        frame.size.height = textViewDetail1.contentSize.height;
+        textViewDetail1.frame = frame;
+        
+        UIBarButtonItem *barButton = [[UIBarButtonItem alloc] init];
+        barButton.title=@"About Us";
+        self.navigationController.navigationBar.topItem.backBarButtonItem = barButton;
         
     }
 }
