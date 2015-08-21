@@ -123,8 +123,8 @@
     self.button3.shadowHeight = self.button3.frame.size.height * 0.17;
     [self.button3 setTitle:@"How can I set goals?" forState:UIControlStateNormal];
     [self.button3 addTarget:self action:@selector(howToSetGoalsPressed) forControlEvents:UIControlEventTouchUpInside];
-    self.button3.buttonColor = [UIColor ht_mediumColor];
-    self.button3.shadowColor = [UIColor ht_mediumDarkColor];
+    self.button3.buttonColor = [UIColor ht_ashColor];
+    self.button3.shadowColor = [UIColor ht_ashDarkColor];
     
     
     [self.button4 setTitle:@"How do I earn points?" forState:UIControlStateNormal];
@@ -155,21 +155,23 @@
     [self.button7 addTarget:self action:@selector(changePasswordPressed) forControlEvents:UIControlEventTouchUpInside];
     self.button7.cornerRadius = 10.0;
     self.button7.shadowHeight = self.button7.frame.size.height * 0.17;
-    self.button7.buttonColor = [UIColor ht_bitterSweetColor];
-    self.button7.shadowColor = [UIColor ht_bitterSweetDarkColor];
+    self.button7.buttonColor = [UIColor ht_ashColor];
+    self.button7.shadowColor = [UIColor ht_ashDarkColor];
     
     [self.button8 setTitle:@"How to access Facebook page?" forState:UIControlStateNormal];
     [self.button8 addTarget:self action:@selector(howToAccessFBPressed) forControlEvents:UIControlEventTouchUpInside];
     self.button8.cornerRadius = 10.0;
     self.button8.shadowHeight = self.button8.frame.size.height * 0.17;
-    self.button8.buttonColor = [UIColor ht_lemonColor];
-    self.button8.shadowColor = [UIColor ht_lemonDarkColor];
+    self.button8.buttonColor = [UIColor ht_ashColor];
+    self.button8.shadowColor = [UIColor ht_ashDarkColor];
     
     
     [self.button9 setTitle:@"How can I view messages?" forState:UIControlStateNormal];
     [self.button9 addTarget:self action:@selector(howToViewMessagesPressed) forControlEvents:UIControlEventTouchUpInside];
     self.button9.cornerRadius = 10.0;
     self.button9.shadowHeight = self.button9.frame.size.height * 0.17;
+    self.button9.buttonColor = [UIColor ht_ashColor];
+    self.button9.shadowColor = [UIColor ht_ashDarkColor];
     
     
     
@@ -177,8 +179,8 @@
     [self.button10 addTarget:self action:@selector(saveFavoriteMessagesPressed) forControlEvents:UIControlEventTouchUpInside];
     self.button10.cornerRadius = 10.0;
     self.button10.shadowHeight = self.button10.frame.size.height * 0.17;
-    self.button10.buttonColor = [UIColor ht_mintColor];
-    self.button10.shadowColor = [UIColor ht_mintDarkColor];
+    self.button10.buttonColor = [UIColor ht_ashColor];
+    self.button10.shadowColor = [UIColor ht_ashDarkColor];
     
     
     
@@ -186,8 +188,8 @@
     [self.button11 addTarget:self action:@selector(otherQuestionsPressed) forControlEvents:UIControlEventTouchUpInside];
     self.button11.cornerRadius = 10.0;
     self.button11.shadowHeight = self.button11.frame.size.height * 0.17;
-    self.button11.buttonColor = [UIColor ht_bitterSweetColor];
-    self.button11.shadowColor = [UIColor ht_bitterSweetDarkColor];
+    self.button11.buttonColor = [UIColor ht_ashColor];
+    self.button11.shadowColor = [UIColor ht_ashDarkColor];
     
     
     

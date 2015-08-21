@@ -25,7 +25,7 @@
     appDelegate.numberOfClicksSettings++;
     
     UIGraphicsBeginImageContext(self.view.frame.size);
-    [[UIImage imageNamed:@"Baby with tongue out.jpg"] drawInRect:self.view.bounds];
+    [[UIImage imageNamed:@"Toddler on grass.jpg"] drawInRect:self.view.bounds];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     [image drawAtPoint:CGPointZero blendMode:kCGBlendModeOverlay alpha:0.5];
     UIGraphicsEndImageContext();
@@ -57,7 +57,7 @@
     }
     else {
         responseData = [NSMutableData data];
-        NSString *url = [@"http://cbb.ucdenver.edu:3000/feedback/2/" stringByAppendingString:self.feedbackText.text];
+        NSString *url = [[appDelegate.urlToNodeJs stringByAppendingString:@"/feedback/2/"] stringByAppendingString:self.feedbackText.text];
         url = [url stringByReplacingOccurrencesOfString:@" " withString:@""];
         NSLog(@"url is: %@", url);
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:

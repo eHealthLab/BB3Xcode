@@ -70,7 +70,7 @@
     self.numberOfClicksMessages=0;
     self.numberOfClicksNetwork=0;
     
-    self.urlToNodeJs = @"http://localhost:3000/";
+    self.urlToNodeJs = @"http://cbb.ucdenver.edu:3000";
     
     
 }
@@ -78,7 +78,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    self.urlToNodeJs = @"http://localhost:3000/";
+    self.urlToNodeJs = @"http://cbb.ucdenver.edu:3000";
+    _goalsDaysComponent = @"2";
+    _goalsMinutesComponent = @"10";
     
     return YES;
     

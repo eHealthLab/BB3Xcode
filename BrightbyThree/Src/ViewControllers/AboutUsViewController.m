@@ -120,7 +120,13 @@
     
     if (indexPath.section == 0 && indexPath.row == 0) {
        
-        
+        cell.textLabel.text = @"    ";
+        cell.detailTextLabel.text = @"OUR FUNDERS AND PARTNERS";
+        cell.textLabel.textColor = [UIColor redColor];
+        cell.detailTextLabel.textColor = [UIColor redColor];
+        UIFont *myFont = [ UIFont fontWithName: @"Times New" size: 18.0 ];
+        cell.detailTextLabel.font  = myFont;
+        //cell.textLabel.textAlignment = UITextA
     }
     
     if (indexPath.section == 1 && indexPath.row == 0) {
@@ -231,10 +237,12 @@
         
         [self.navigationController pushViewController:uiViewController animated:YES];
         
-        NSString *string1 = @"http://brightbythree.org";
+        NSMutableAttributedString * string1 = [[NSMutableAttributedString alloc] initWithString:@"http://brightbythree.org"];
+        [string1 addAttribute: NSLinkAttributeName value: @"http://brightbythree.org" range: NSMakeRange(0, string1.length)];
+        
         
         UITextView *textViewDetail1 = [[UITextView alloc] initWithFrame:CGRectMake(30, 30, self.view.bounds.size.width-40, self.view.bounds.size.height-40)];
-        textViewDetail1.text = string1;
+        textViewDetail1.attributedText = string1;
         textViewDetail1.textAlignment=NSTextAlignmentJustified;
         [textViewDetail1 setFont:[UIFont systemFontOfSize:17]];
         [textViewDetail1 sizeToFit];
@@ -243,6 +251,7 @@
         CGRect frame = textViewDetail1.frame;
         frame.size.height = textViewDetail1.contentSize.height;
         textViewDetail1.frame = frame;
+        textViewDetail1.editable = NO;
         
         UIBarButtonItem *barButton = [[UIBarButtonItem alloc] init];
         barButton.title=@"About Us";
@@ -258,10 +267,13 @@
         
         [self.navigationController pushViewController:uiViewController animated:YES];
         
-        NSString *string1 = @"www.childrenscolorado.org";
+        
+        NSMutableAttributedString * string1 = [[NSMutableAttributedString alloc] initWithString:@"www.childrenscolorado.org"];
+        [string1 addAttribute: NSLinkAttributeName value: @"www.childrenscolorado.org" range: NSMakeRange(0, string1.length)];
+        
         
         UITextView *textViewDetail1 = [[UITextView alloc] initWithFrame:CGRectMake(30, 30, self.view.bounds.size.width-40, self.view.bounds.size.height-40)];
-        textViewDetail1.text = string1;
+        textViewDetail1.attributedText = string1;
         textViewDetail1.textAlignment=NSTextAlignmentJustified;
         [textViewDetail1 setFont:[UIFont systemFontOfSize:17]];
         [textViewDetail1 sizeToFit];
@@ -270,6 +282,7 @@
         CGRect frame = textViewDetail1.frame;
         frame.size.height = textViewDetail1.contentSize.height;
         textViewDetail1.frame = frame;
+        textViewDetail1.editable = NO;
         
         UIBarButtonItem *barButton = [[UIBarButtonItem alloc] init];
         barButton.title=@"About Us";
@@ -285,10 +298,13 @@
         
         [self.navigationController pushViewController:uiViewController animated:YES];
         
-        NSString *string1 = @"http://www.ucdenver.edu/academics/colleges/medicalschool/programs/outcomes/ACCORDS";
+        
+        NSMutableAttributedString * string1 = [[NSMutableAttributedString alloc] initWithString:@"http://www.ucdenver.edu/academics/colleges/medicalschool/programs/outcomes/ACCORDS"];
+        [string1 addAttribute: NSLinkAttributeName value: @"http://www.ucdenver.edu/academics/colleges/medicalschool/programs/outcomes/ACCORDS" range: NSMakeRange(0, string1.length)];
+        
         
         UITextView *textViewDetail1 = [[UITextView alloc] initWithFrame:CGRectMake(30, 30, self.view.bounds.size.width-40, self.view.bounds.size.height-40)];
-        textViewDetail1.text = string1;
+        textViewDetail1.attributedText = string1;
         textViewDetail1.textAlignment=NSTextAlignmentJustified;
         [textViewDetail1 setFont:[UIFont systemFontOfSize:17]];
         [textViewDetail1 sizeToFit];
@@ -297,6 +313,7 @@
         CGRect frame = textViewDetail1.frame;
         frame.size.height = textViewDetail1.contentSize.height;
         textViewDetail1.frame = frame;
+        textViewDetail1.editable = NO;
         
         UIBarButtonItem *barButton = [[UIBarButtonItem alloc] init];
         barButton.title=@"About Us";
@@ -311,10 +328,13 @@
         
         [self.navigationController pushViewController:uiViewController animated:YES];
         
-        NSString *string1 = @"www.mhealthimpact.ucdenver.edu";
+        
+        NSMutableAttributedString * string1 = [[NSMutableAttributedString alloc] initWithString:@"www.mhealthimpact.ucdenver.edu"];
+        [string1 addAttribute: NSLinkAttributeName value: @"www.mhealthimpact.ucdenver.edu" range: NSMakeRange(0, string1.length)];
+        
         
         UITextView *textViewDetail1 = [[UITextView alloc] initWithFrame:CGRectMake(30, 30, self.view.bounds.size.width-40, self.view.bounds.size.height-40)];
-        textViewDetail1.text = string1;
+        textViewDetail1.attributedText = string1;
         textViewDetail1.textAlignment=NSTextAlignmentJustified;
         [textViewDetail1 setFont:[UIFont systemFontOfSize:17]];
         [textViewDetail1 sizeToFit];
@@ -323,6 +343,7 @@
         CGRect frame = textViewDetail1.frame;
         frame.size.height = textViewDetail1.contentSize.height;
         textViewDetail1.frame = frame;
+        textViewDetail1.editable = NO;
         
         UIBarButtonItem *barButton = [[UIBarButtonItem alloc] init];
         barButton.title=@"About Us";

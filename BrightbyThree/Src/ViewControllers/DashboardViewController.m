@@ -192,7 +192,7 @@
 
 -(void) gettotalPointsInfo
 {
-    NSString *url = [@"http://cbb.ucdenver.edu:3000/totalPointsInfo/" stringByAppendingString:appDelegate.userID];
+    NSString *url = [[appDelegate.urlToNodeJs stringByAppendingString:@"/totalPointsInfo/"] stringByAppendingString:appDelegate.userID];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setHTTPMethod:@"GET"];
     [request setURL:[NSURL URLWithString:url]];
@@ -302,7 +302,7 @@
 -(void) getGoalsInfo
 {
     
-    NSString *url = [@"http://cbb.ucdenver.edu:3000/goalsInfo/" stringByAppendingString:appDelegate.userID];
+    NSString *url = [[appDelegate.urlToNodeJs stringByAppendingString:@"/goalsInfo/"] stringByAppendingString:appDelegate.userID];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setHTTPMethod:@"GET"];
     [request setURL:[NSURL URLWithString:url]];
@@ -338,7 +338,7 @@
 
 -(void) getBadgeInfo
 {
-    NSString *url = [@"http://cbb.ucdenver.edu:3000/badgeInfo/" stringByAppendingString:appDelegate.userID];
+    NSString *url = [[appDelegate.urlToNodeJs stringByAppendingString:@"/badgeInfo/"] stringByAppendingString:appDelegate.userID];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setHTTPMethod:@"GET"];
     [request setURL:[NSURL URLWithString:url]];

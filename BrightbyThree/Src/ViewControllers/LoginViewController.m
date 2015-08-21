@@ -180,7 +180,7 @@
         responseData = [NSMutableData data];
         //NSString *url = [[[@"http://cbb.ucdenver.edu:3000/loginSignup/" stringByAppendingString:newEmail] stringByAppendingString:@"/"] stringByAppendingString:self.loginPassword.text];
         
-        NSString *url = [[[[appDelegate.urlToNodeJs stringByAppendingString:@"loginSignup/" ] stringByAppendingString:newEmail] stringByAppendingString:@"/"] stringByAppendingString:self.loginPassword.text];
+        NSString *url = [[[[appDelegate.urlToNodeJs stringByAppendingString:@"/loginSignup/" ] stringByAppendingString:newEmail] stringByAppendingString:@"/"] stringByAppendingString:self.loginPassword.text];
         
         url = [url stringByReplacingOccurrencesOfString:@" " withString:@""];
         NSLog(@"url is: %@", url);

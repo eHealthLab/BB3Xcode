@@ -117,7 +117,7 @@
     
     
     NSString *pointsstring = [NSString stringWithFormat:@"%d", newPoints];
-    NSString *urlString = [[[@"http://cbb.ucdenver.edu:3000/logMinutes/" stringByAppendingString:pointsstring] stringByAppendingString:@"/"] stringByAppendingString:delegate.userID];
+    NSString *urlString = [[[[delegate.urlToNodeJs stringByAppendingString:@"/logMinutes/"] stringByAppendingString:pointsstring] stringByAppendingString:@"/"] stringByAppendingString:delegate.userID];
     NSLog(@"url string: %@", urlString);
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:
@@ -154,7 +154,7 @@
 {
     
     NSString *badgeString = [NSString stringWithFormat:@"%d", delegate.nextBadgeToEarn];
-    NSString *urlString = [[[@"http://cbb.ucdenver.edu:3000/updateBadge/" stringByAppendingString:badgeString] stringByAppendingString:@"/"] stringByAppendingString:delegate.userID];
+    NSString *urlString = [[[[delegate.urlToNodeJs stringByAppendingString:@"/updateBadge/"] stringByAppendingString:badgeString] stringByAppendingString:@"/"] stringByAppendingString:delegate.userID];
     NSLog(@"url string: %@", urlString);
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:

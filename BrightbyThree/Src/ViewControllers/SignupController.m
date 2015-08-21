@@ -45,17 +45,14 @@
     
     datePicker = [[UIDatePicker alloc] init];
     genderPicker = [[UIPickerView alloc] init];
-    genderPicker.delegate = genderPicker;
-    genderPicker.dataSource = genderPicker;
+    genderPicker.delegate = self;
+    genderPicker.dataSource = self;
     genderPicker.showsSelectionIndicator = YES;
     genderArray = [[NSArray alloc] initWithObjects:@"Female", @"Male", nil];
     
     
     datePicker.datePickerMode = UIDatePickerModeDate;
     [datePicker addTarget:self action:@selector(birthDateEntered:) forControlEvents:UIControlEventValueChanged];
-    //[genderPicker addTarget:self action:@selector(genderChanged:) forControlEvents:UIControlEventValueChanged];
-    
-    
     
     [self.childDOBField setInputView:datePicker];
     //[self.childGenderField setInputView:genderPicker];
@@ -199,7 +196,7 @@
         
         NSString *bodyData = [[[[[[[[[[[[[[[[appDelegate.firstName stringByAppendingString:@"/"] stringByAppendingString:appDelegate.lastName] stringByAppendingString:@"/"] stringByAppendingString:appDelegate.userEmail] stringByAppendingString:@"/"] stringByAppendingString:appDelegate.userPassword] stringByAppendingString:@"/"] stringByAppendingString:appDelegate.phoneNumber] stringByAppendingString:@"/"] stringByAppendingString:appDelegate.babyName] stringByAppendingString:@"/"] stringByAppendingString:appDelegate.babyDOB] stringByAppendingString:@"/"] stringByAppendingString:appDelegate.babyGender] stringByAppendingString:@"/"] stringByAppendingString:appDelegate.zipcode];
         
-        NSString *urlString = [@"http://cbb.ucdenver.edu:3000/loginSignup/" stringByAppendingString:bodyData];
+        NSString *urlString = [[appDelegate.urlToNodeJs stringByAppendingString:@"/loginSignup/"] stringByAppendingString:bodyData];
         
         NSLog(@"query is: %@", urlString);
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:
@@ -228,7 +225,7 @@
             
             //PROCESS RESPONSE; SET DELEGATE VALUES
             
-            NSString *url = [[[@"http://cbb.ucdenver.edu:3000/loginSignUp/" stringByAppendingString:appDelegate.userEmail] stringByAppendingString:@"/"] stringByAppendingString:appDelegate.userPassword];
+            NSString *url = [[[[appDelegate.urlToNodeJs stringByAppendingString:@"/loginSignUp/"] stringByAppendingString:appDelegate.userEmail] stringByAppendingString:@"/"] stringByAppendingString:appDelegate.userPassword];
             NSLog(@"login url is: %@\n", url);
             
             NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
@@ -314,7 +311,7 @@
 -(bool) initializeTables
 {
     NSLog(@"user id: %@\n", appDelegate.userID);
-    NSString *urlString = [@"http://cbb.ucdenver.edu:3000/initialize/" stringByAppendingString:appDelegate.userID];
+    NSString *urlString = [[appDelegate.urlToNodeJs stringByAppendingString:@"/initialize/"] stringByAppendingString:appDelegate.userID];
     
     NSLog(@"query is: %@", urlString);
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:

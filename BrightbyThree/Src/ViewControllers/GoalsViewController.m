@@ -92,7 +92,7 @@
     
     NSLog(@"goals are: %@", goalsString);
     
-    NSString *urlString = [@"http://cbb.ucdenver.edu:3000/setGoals/" stringByAppendingString:goalsString];
+    NSString *urlString = [[delegate.urlToNodeJs stringByAppendingString:@"/setGoals/"] stringByAppendingString:goalsString];
     NSLog(@"url string: %@", urlString);
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:
