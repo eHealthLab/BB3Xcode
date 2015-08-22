@@ -1476,7 +1476,7 @@
         <scene sceneID="bgj-CF-NGo">
             <objects>
                 <tabBarController storyboardIdentifier="tabbarController" id="VOA-o9-IZ4" sceneMemberID="viewController">
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black" translucent="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="oGU-Wj-Ofw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

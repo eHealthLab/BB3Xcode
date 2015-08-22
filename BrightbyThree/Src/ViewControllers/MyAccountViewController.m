@@ -374,6 +374,7 @@
 
 -(void)sendSignUpRequest
 {
+
     
     NSLog(@"inside save button\n");
     
@@ -383,6 +384,11 @@
     
     //UIBarButtonItem *saveButton = (UIBarButtonItem *)[self.view viewWithTag:10];
     //[saveButton setEnabled:NO];
+
+    NSLog(@"inside save in account\n");
+    UIBarButtonItem *saveButton = (UIBarButtonItem *)[self.view viewWithTag:10];
+    [saveButton setEnabled:NO];
+
     
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     UITextField *field = (UITextField *)[self.view viewWithTag:1];
@@ -423,6 +429,7 @@
     text = field.text;
     [prefs setObject:text forKey:@"zipcode"];
     
+
     // getting an NSString
     NSString *savedFirstName = [prefs stringForKey:@"firstName"];
     NSString *savedLastName = [prefs stringForKey:@"lastName"];
@@ -447,15 +454,18 @@
     //NSString *name = [prefs stringForKey:@"firstName"];
     
     NSString *urlString = [[[[[[[[[[[[[[[[[[[[appDelegate.urlToNodeJs stringByAppendingString:@"/updateAccount/"] stringByAppendingString:appDelegate.userID] stringByAppendingString:@"/"] stringByAppendingString:savedFirstName] stringByAppendingString:@"/"] stringByAppendingString:savedLastName] stringByAppendingString:@"/"] stringByAppendingString:savedEmail] stringByAppendingString:@"/"] stringByAppendingString:savedPassword]  stringByAppendingString:@"/"] stringByAppendingString:savedPhoneNumber] stringByAppendingString:@"/"] stringByAppendingString:savedBabyName] stringByAppendingString:@"/"] stringByAppendingString:savedBabyGender] stringByAppendingString:@"/"] stringByAppendingString:savedBabyDOB] stringByAppendingString:@"/"] stringByAppendingString:savedZipcode];
+
     NSLog(@"url string: %@", urlString);
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:
                                     [NSURL URLWithString:urlString]];
     [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
     [request setHTTPMethod:@"POST"];
+
     NSData* data = [urlString dataUsingEncoding:NSUTF8StringEncoding];
     [request setHTTPBody:data];
     //NSData *receivedData = [NSMutableData dataWithCapacity: 0];
+
     
     NSURLResponse* response = [[NSURLResponse alloc] init];
     NSError* error = nil;
@@ -467,7 +477,11 @@
         NSLog(@"response: %@", response);
         
         UIAlertView *messageAlert = [[UIAlertView alloc]
+
                                      initWithTitle:@"Success!" message:@"Your profile has successfully been updated."   delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+
+        
+
         [messageAlert show];
         
     }
@@ -475,7 +489,9 @@
     {
         NSLog(@"error is: %@\n",error.description);
     }
+
     
+
 
     
 }
