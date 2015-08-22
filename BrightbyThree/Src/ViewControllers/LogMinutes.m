@@ -135,7 +135,6 @@
     [request setHTTPMethod:@"POST"];
     NSData* data = [pointsstring dataUsingEncoding:NSUTF8StringEncoding];
     [request setHTTPBody:data];
-    //NSData *receivedData = [NSMutableData dataWithCapacity: 0];
     
     NSURLResponse* response = [[NSURLResponse alloc] init];
     NSError* error = nil;

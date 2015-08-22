@@ -355,6 +355,7 @@
 
 -(void)saveButtonPressed
 {
+    NSLog(@"inside save in account\n");
     UIBarButtonItem *saveButton = (UIBarButtonItem *)[self.view viewWithTag:10];
     [saveButton setEnabled:NO];
     
@@ -396,6 +397,37 @@
     field = (UITextField *)[self.view viewWithTag:9];
     text = field.text;
     [prefs setObject:text forKey:@"zipcode"];
+    
+    NSString *urlString = [[[[[[[[[[[[[[[[[[appDelegate.urlToNodeJs stringByAppendingString:@"/updateAccount/"] stringByAppendingString:appDelegate.userID] stringByAppendingString:@"/"] stringByAppendingString:appDelegate.firstName] stringByAppendingString:@"/"] stringByAppendingString:appDelegate.lastName] stringByAppendingString:@"/"] stringByAppendingString:appDelegate.userEmail] stringByAppendingString:@"/"] stringByAppendingString:appDelegate.userPassword]  stringByAppendingString:@"/"] stringByAppendingString:appDelegate.phoneNumber] stringByAppendingString:@"/"] stringByAppendingString:appDelegate.babyName] stringByAppendingString:@"/"] stringByAppendingString:appDelegate.babyGender] stringByAppendingString:@"/"] stringByAppendingString:appDelegate.babyDOB];
+    NSLog(@"url string: %@", urlString);
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:
+                                    [NSURL URLWithString:urlString]];
+    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+    [request setHTTPMethod:@"POST"];
+    
+    NSData* data = [urlString dataUsingEncoding:NSUTF8StringEncoding];
+    [request setHTTPBody:data];
+    
+    NSURLResponse* response = [[NSURLResponse alloc] init];
+    NSError* error = nil;
+    [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    
+    if (error == nil)
+    {
+        NSLog(@"submitted request!");
+        NSLog(@"response: %@", response);
+        
+        UIAlertView *messageAlert = [[UIAlertView alloc]
+                                     initWithTitle:@"Success!" message:@"Your account have successfully been updated."   delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [messageAlert show];
+        
+    }
+    else if (error != nil)
+    {
+        NSLog(@"error is: %@\n",error.description);
+    }
+
     
 }
 
