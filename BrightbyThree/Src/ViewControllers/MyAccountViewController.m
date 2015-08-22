@@ -453,7 +453,7 @@
     
     //NSString *name = [prefs stringForKey:@"firstName"];
     
-    NSString *urlString = [[[[[[[[[[[[[[[[[[[[appDelegate.urlToNodeJs stringByAppendingString:@"/updateAccount/"] stringByAppendingString:appDelegate.userID] stringByAppendingString:@"/"] stringByAppendingString:savedFirstName] stringByAppendingString:@"/"] stringByAppendingString:savedLastName] stringByAppendingString:@"/"] stringByAppendingString:savedEmail] stringByAppendingString:@"/"] stringByAppendingString:savedPassword]  stringByAppendingString:@"/"] stringByAppendingString:savedPhoneNumber] stringByAppendingString:@"/"] stringByAppendingString:savedBabyName] stringByAppendingString:@"/"] stringByAppendingString:savedBabyGender] stringByAppendingString:@"/"] stringByAppendingString:savedBabyDOB] stringByAppendingString:@"/"] stringByAppendingString:savedZipcode];
+    NSString *urlString = [[[[[[[[[[[[[[[[[[appDelegate.urlToNodeJs stringByAppendingString:@"/updateAccount/"] stringByAppendingString:appDelegate.userID] stringByAppendingString:@"/"] stringByAppendingString:savedFirstName] stringByAppendingString:@"/"] stringByAppendingString:savedLastName] stringByAppendingString:@"/"] stringByAppendingString:savedEmail] stringByAppendingString:@"/"] stringByAppendingString:savedPassword]  stringByAppendingString:@"/"] stringByAppendingString:savedPhoneNumber] stringByAppendingString:@"/"] stringByAppendingString:savedBabyName] stringByAppendingString:@"/"] stringByAppendingString:savedBabyGender] stringByAppendingString:@"/"] stringByAppendingString:savedZipcode];
 
     NSLog(@"url string: %@", urlString);
     
