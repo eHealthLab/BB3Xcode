@@ -65,13 +65,25 @@
     [UIColor colorWithRed:0.43f green:0.76f blue:0.07f alpha:1.0];*/
     
     
-    UIGraphicsBeginImageContext(self.view.frame.size);
+    /*UIGraphicsBeginImageContext(self.view.frame.size);
     [[UIImage imageNamed:@"blue_minimalistic_gradient_colors_1200x1920.png"] drawInRect:self.view.bounds];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     [image drawAtPoint:CGPointZero blendMode:kCGBlendModeOverlay alpha:0.5];
     UIGraphicsEndImageContext();
     
-    self.view.backgroundColor = [[UIColor colorWithPatternImage:image] colorWithAlphaComponent:1.0];
+    self.view.backgroundColor = [[UIColor colorWithPatternImage:image] colorWithAlphaComponent:1.0];*/
+    
+    
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    [[UIImage imageNamed:@"iStock_000047232464_Full.jpg"] drawInRect:self.view.bounds];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    [image drawAtPoint:CGPointZero blendMode:kCGBlendModeOverlay alpha:0.5];
+    UIGraphicsEndImageContext();
+    
+    self.view.backgroundColor = [[UIColor colorWithPatternImage:image] colorWithAlphaComponent:0.6];
+    
+
+    
     
     /*
     UIColor *darkOp =

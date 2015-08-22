@@ -25,7 +25,7 @@
     appDelegate.numberOfClicksSettings++;
     
     UIGraphicsBeginImageContext(self.view.frame.size);
-    [[UIImage imageNamed:@"Toddler on grass.jpg"] drawInRect:self.view.bounds];
+    [[UIImage imageNamed:@"iStock_000024540608_Double.jpg"] drawInRect:self.view.bounds];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     [image drawAtPoint:CGPointZero blendMode:kCGBlendModeOverlay alpha:0.5];
     UIGraphicsEndImageContext();
@@ -57,7 +57,8 @@
     }
     else {
         responseData = [NSMutableData data];
-        NSString *url = [[appDelegate.urlToNodeJs stringByAppendingString:@"/feedback/2/"] stringByAppendingString:self.feedbackText.text];
+        NSString *url = [[[[appDelegate.urlToNodeJs stringByAppendingString:@"/feedback/"] stringByAppendingString:appDelegate.userID] stringByAppendingString:@"/"]
+            stringByAppendingString:self.feedbackText.text];
         url = [url stringByReplacingOccurrencesOfString:@" " withString:@""];
         NSLog(@"url is: %@", url);
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:

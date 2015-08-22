@@ -9,6 +9,10 @@
 #ifndef BrightbyThree_AboutUsViewController_h
 #define BrightbyThree_AboutUsViewController_h
 #import "UIKit/UIKit.h"
+#import "HTPressableButton.h"
+#import "UIColor+HTColor.h"
+
+
 @interface AboutUsViewController : UITableViewController<UITableViewDelegate, UITableViewDataSource, UITextViewDelegate>
 {
     NSMutableArray *sectionArray;

@@ -29,6 +29,14 @@
     
     [super viewDidLoad];
     
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    [[UIImage imageNamed:@"iStock_000024540608_Double.jpg"] drawInRect:self.view.bounds];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    [image drawAtPoint:CGPointZero blendMode:kCGBlendModeOverlay alpha:0.5];
+    UIGraphicsEndImageContext();
+    
+    self.view.backgroundColor = [[UIColor colorWithPatternImage:image] colorWithAlphaComponent:0.3];
+    
     
     //UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:<#(UIBarButtonSystemItem)#> target:<#(id)#> action:<#(SEL)#> target:self action:nil];
     //self.navigationItem.leftBarButtonItem = backButton;

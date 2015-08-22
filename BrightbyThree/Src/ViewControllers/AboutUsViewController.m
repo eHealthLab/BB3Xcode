@@ -68,8 +68,8 @@
     self.sectionArray = [[NSMutableArray alloc] initWithCapacity:2];
     self.numberOfRows = [[NSMutableArray alloc] initWithCapacity:2];
     [sectionArray addObject:@""];
-    [sectionArray addObject:@"Partners"];
-    [sectionArray addObject:@"Funders"];
+    [sectionArray addObject:@"Funder"];
+    [sectionArray addObject:@"Partner"];
     //[sectionArray addObject:@""];
     
     [numberOfRows addObject:@"1"];
@@ -350,6 +350,30 @@
         self.navigationController.navigationBar.topItem.backBarButtonItem = barButton;
         
     }
+}
+
+-(void)hyperLinkPressed:(NSString *)str
+{
+    UIWebView *webView = [[UIWebView alloc] init];
+    webView.tag=55;
+    webView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]];
+    [[self view] addSubview:webView];
+    
+    CGRect frame = CGRectMake(260, 80, 80, 40);
+    HTPressableButton *closeButton = [[HTPressableButton alloc] initWithFrame:frame buttonStyle:HTPressableButtonStyleRounded];
+    closeButton.buttonColor = [UIColor ht_mintColor];
+    closeButton.shadowColor = [UIColor ht_mintDarkColor];
+    [closeButton setTitle:@"Done" forState:UIControlStateNormal];
+    [closeButton addTarget:self action:@selector(closeWebView) forControlEvents:UIControlEventTouchUpInside];
+    [webView addSubview:closeButton];
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] init];
+    barButton.title=@"Back";
+}
+
+-(void)closeWebView
+{
+    [[self.view viewWithTag:55] removeFromSuperview];
 }
 
 
