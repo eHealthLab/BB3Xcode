@@ -19,21 +19,22 @@
 @synthesize numberOfRows;
 @synthesize sectionArray;
 @synthesize accounttableView;
--(void) viewDidLoad
+-(void) viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:YES];
 
     appDelegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
     
     appDelegate.numberOfClicksMyAccount++;
     
-    UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:nil action:@selector(saveButtonPressed)];
+    //UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:nil action:@selector(saveButtonPressed)];
     
-    self.navigationItem.rightBarButtonItem = saveButton;
-    saveButton.tag = 10;
+    //self.navigationItem.rightBarButtonItem = saveButton;
+    //saveButton.tag = 10;
 
     
     
-    [super viewDidLoad];
+    //[super viewDidLoad];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -68,11 +69,14 @@
     [sectionArray addObject:@""];
     [sectionArray addObject:@""];
     [sectionArray addObject:@""];
+    [sectionArray addObject:@""];
     
     [numberOfRows addObject:@"1"];
     [numberOfRows addObject:@"4"];
     [numberOfRows addObject:@"3"];
     [numberOfRows addObject:@"2"];
+    [numberOfRows addObject:@"1"];
+    
     
     [accounttableView insertSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationTop];
     [accounttableView insertSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationTop];
@@ -343,6 +347,21 @@
         [self.view addSubview:textField];
         
     }
+    
+    if (indexPath.section == 4 && indexPath.row == 0) {
+     
+        CGRect frame = CGRectMake(115, 620, 150, 40);
+        HTPressableButton *signupButton = [[HTPressableButton alloc] initWithFrame:frame buttonStyle:HTPressableButtonStyleRounded];
+        [signupButton setTitle:@"Update" forState:UIControlStateNormal];
+        [signupButton addTarget:self action:@selector(sendSignUpRequest) forControlEvents:UIControlEventTouchUpInside];
+        signupButton.buttonColor = [UIColor ht_grapeFruitColor];
+        signupButton.shadowColor = [UIColor ht_grapeFruitDarkColor];
+        
+        [signupButton addTarget:self action:@selector(sendSignUpRequest) forControlEvents:UIControlEventTouchUpInside];
+        signupButton.tag = 10;
+        [self.view addSubview:signupButton];
+        
+    }
 
     return cell;
 }
@@ -353,10 +372,17 @@
     return [sectionArray objectAtIndex:section];
 }
 
--(void)saveButtonPressed
+-(void)sendSignUpRequest
 {
-    UIBarButtonItem *saveButton = (UIBarButtonItem *)[self.view viewWithTag:10];
-    [saveButton setEnabled:NO];
+    
+    NSLog(@"inside save button\n");
+    
+    HTPressableButton *button = (HTPressableButton*)[self.view viewWithTag:10];
+    button.userInteractionEnabled = NO;
+    button.alpha = 0.5;
+    
+    //UIBarButtonItem *saveButton = (UIBarButtonItem *)[self.view viewWithTag:10];
+    //[saveButton setEnabled:NO];
     
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     UITextField *field = (UITextField *)[self.view viewWithTag:1];
@@ -396,6 +422,61 @@
     field = (UITextField *)[self.view viewWithTag:9];
     text = field.text;
     [prefs setObject:text forKey:@"zipcode"];
+    
+    // getting an NSString
+    NSString *savedFirstName = [prefs stringForKey:@"firstName"];
+    NSString *savedLastName = [prefs stringForKey:@"lastName"];
+    NSString *savedEmail = [prefs stringForKey:@"email"];
+    NSString *savedPassword = [prefs stringForKey:@"password"];
+    NSString *savedBabyName = [prefs stringForKey:@"babyName"];
+    NSString *savedBabyDOB = [prefs stringForKey:@"babyDOB"];
+    NSString *savedBabyGender = [prefs stringForKey:@"babyGender"];
+    NSString *savedPhoneNumber = [prefs stringForKey:@"phoneNumber"];
+    NSString *savedZipcode = [prefs stringForKey:@"zipcode"];
+    
+    appDelegate.firstName = savedFirstName;
+    appDelegate.lastName = savedLastName;
+    appDelegate.userEmail = savedEmail;
+    appDelegate.userPassword = savedPassword;
+    appDelegate.babyName = savedBabyName;
+    appDelegate.babyDOB = savedBabyDOB;
+    appDelegate.babyGender = savedBabyGender;
+    appDelegate.phoneNumber = savedPhoneNumber;
+    appDelegate.zipcode = savedZipcode;
+    
+    //NSString *name = [prefs stringForKey:@"firstName"];
+    
+    NSString *urlString = [[[[[[[[[[[[[[[[[[[[appDelegate.urlToNodeJs stringByAppendingString:@"/updateAccount/"] stringByAppendingString:appDelegate.userID] stringByAppendingString:@"/"] stringByAppendingString:savedFirstName] stringByAppendingString:@"/"] stringByAppendingString:savedLastName] stringByAppendingString:@"/"] stringByAppendingString:savedEmail] stringByAppendingString:@"/"] stringByAppendingString:savedPassword]  stringByAppendingString:@"/"] stringByAppendingString:savedPhoneNumber] stringByAppendingString:@"/"] stringByAppendingString:savedBabyName] stringByAppendingString:@"/"] stringByAppendingString:savedBabyGender] stringByAppendingString:@"/"] stringByAppendingString:savedBabyDOB] stringByAppendingString:@"/"] stringByAppendingString:savedZipcode];
+    NSLog(@"url string: %@", urlString);
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:
+                                    [NSURL URLWithString:urlString]];
+    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+    [request setHTTPMethod:@"POST"];
+    NSData* data = [urlString dataUsingEncoding:NSUTF8StringEncoding];
+    [request setHTTPBody:data];
+    //NSData *receivedData = [NSMutableData dataWithCapacity: 0];
+    
+    NSURLResponse* response = [[NSURLResponse alloc] init];
+    NSError* error = nil;
+    [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    
+    if (error == nil)
+    {
+        NSLog(@"submitted request!");
+        NSLog(@"response: %@", response);
+        
+        UIAlertView *messageAlert = [[UIAlertView alloc]
+                                     initWithTitle:@"Success!" message:@"Your profile has successfully been updated."   delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [messageAlert show];
+        
+    }
+    else if (error != nil)
+    {
+        NSLog(@"error is: %@\n",error.description);
+    }
+    
+
     
 }
 

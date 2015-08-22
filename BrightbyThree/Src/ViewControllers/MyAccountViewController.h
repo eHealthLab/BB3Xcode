@@ -10,6 +10,8 @@
 #define BrightbyThree_MyAccountViewController_h
 
 #import<UIKit/UIKit.h>
+#import "HTPressableButton.h"
+#import <UIColor+HTColor.h>
 
 @interface MyAccountViewController : UITableViewController<UITableViewDelegate, UITableViewDataSource, UITextViewDelegate>
 {
