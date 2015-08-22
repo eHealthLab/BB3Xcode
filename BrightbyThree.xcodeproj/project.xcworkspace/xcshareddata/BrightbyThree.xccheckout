@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>E8440C89-E40D-49F0-8971-DF74F42CD769</string>
 	<key>IDESourceControlProjectName</key>
-	<string>BrightbyThree</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>ECC04F9BDB04C85B8AB97816166F439D33581CCD</key>
 		<string>https://github.com/eHealthLab/BB3Xcode.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>BrightbyThree.xcodeproj</string>
+	<string>BrightbyThree.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>ECC04F9BDB04C85B8AB97816166F439D33581CCD</key>

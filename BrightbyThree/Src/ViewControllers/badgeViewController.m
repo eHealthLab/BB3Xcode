@@ -47,6 +47,12 @@
 {
     
     appDelegate = (AppDelegate*) [[UIApplication sharedApplication] delegate];
+    
+    if (appDelegate.newBadgeNotification > 0) {
+        appDelegate.newBadgeNotification--;
+    }
+    
+    
     NSLog(@"total points: %d", appDelegate.totalPoints);
     [self.badgeProgressView setProgress:appDelegate.totalPoints/5000.0];
     //[self.totalProgressLabel setText:[NSString stringWithFormat:@"%f", appDelegate.totalPoints/5000.0]];

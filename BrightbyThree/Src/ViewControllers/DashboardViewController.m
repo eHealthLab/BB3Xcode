@@ -18,12 +18,13 @@
     NSMutableData *receivedData;
 }
 
--(void) viewDidLoad
+-(void) viewWillAppear:(BOOL)animated
 {
-    
+    [super viewWillAppear:YES];
     
     appDelegate = (AppDelegate*) [[UIApplication sharedApplication] delegate];
     appDelegate.numberOfClicksDashboard++;
+    
     self.title = @"Dashboard";
     
     [self.view addSubview:self.buttonsView];
@@ -32,7 +33,9 @@
     [self getGoalsInfo];
     [self getBadgeInfo];
                                                                               
-        
+    
+    
+    
     UIGraphicsBeginImageContext(self.view.frame.size);
     [[UIImage imageNamed:@"iStock_000019163656_Double.jpg"] drawInRect:self.view.bounds];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
@@ -89,6 +92,26 @@
     self.badgesButton.shadowColor = [UIColor ht_citrusColor];
     [self.badgesButton addTarget:self action:@selector(showBadgesPressed) forControlEvents:UIControlEventTouchUpInside];
     
+    if (appDelegate.newBadgeNotification > 0) {
+        
+        UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+        
+        localNotification.applicationIconBadgeNumber = 1;// set here the value of badge
+        
+        
+        
+        //NSLog(@"still over 0: %d", appDelegate.numberOfUnreadMessages);
+        JSBadgeView *badgeView = [[JSBadgeView alloc] initWithParentView:self.badgesButton alignment:JSBadgeViewAlignmentTopRight];
+        badgeView.badgeText = [NSString stringWithFormat:@"%d", appDelegate.newBadgeNotification];
+        badgeView.tag = 10;
+    }
+    else {
+        [[self.badgesButton viewWithTag:10] removeFromSuperview];
+    }
+
+    
+    
+    
     [self.centralImage setImage:[UIImage imageNamed:@"Toddler on grass.jpg"]];
     self.centralImage.layer.cornerRadius = self.centralImage.frame.size.width / 2;
     self.centralImage.clipsToBounds = YES;
@@ -99,13 +122,31 @@
     self.messagesButton.cornerRadius = 10.0;
     self.messagesButton.shadowHeight = self.messagesButton.frame.size.height * 0.17;
     //[self.messagesButton setStyle:HTPressableButtonStyleCircular];
-    self.messagesButton.buttonColor = [UIColor ht_leadColor];
-    self.messagesButton.shadowColor = [UIColor ht_leadDarkColor];
+    self.messagesButton.buttonColor = [UIColor ht_mintColor];
+    self.messagesButton.shadowColor = [UIColor ht_mintDarkColor];
     [self.messagesButton setDisabledButtonColor:[UIColor ht_sunflowerColor]];
     [self.messagesButton setTitle:@"Messages" forState:UIControlStateNormal];
     [self.messagesButton addTarget:self action:@selector(loadMessagesLibraryPressed) forControlEvents:UIControlEventTouchUpInside];
     //[self.view addSubview:self.messagesButton];
-
+    //[self updateBadge];
+    
+    if (appDelegate.numberOfUnreadMessages > 0) {
+        
+        UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+        
+        localNotification.applicationIconBadgeNumber = 1;// set here the value of badge
+        
+        
+        
+        NSLog(@"still over 0: %d", appDelegate.numberOfUnreadMessages);
+        JSBadgeView *badgeView = [[JSBadgeView alloc] initWithParentView:self.messagesButton alignment:JSBadgeViewAlignmentTopRight];
+        badgeView.badgeText = [NSString stringWithFormat:@"%d", appDelegate.numberOfUnreadMessages];
+        badgeView.tag = 10;
+    }
+    else {
+        [[self.messagesButton viewWithTag:10] removeFromSuperview];
+    }
+    
 }
 
 -(void)setGoalsPressed

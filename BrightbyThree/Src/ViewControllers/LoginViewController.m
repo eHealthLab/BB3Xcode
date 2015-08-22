@@ -65,7 +65,7 @@
     
     //self.loginEmail.text = appDelegate.userEmail;
     UIGraphicsBeginImageContext(self.view.frame.size);
-    [[UIImage imageNamed:@"Toddler on grass.jpg"] drawInRect:self.view.bounds];
+    [[UIImage imageNamed:@"iStock_000017755733_Double.jpg"] drawInRect:self.view.bounds];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     [image drawAtPoint:CGPointZero blendMode:kCGBlendModeOverlay alpha:0.5];
     UIGraphicsEndImageContext();

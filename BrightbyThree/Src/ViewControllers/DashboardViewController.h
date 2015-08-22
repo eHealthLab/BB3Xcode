@@ -13,6 +13,7 @@
 #import "HTPressableButton.h"
 #import "UIColor+HTColor.h"
 #import "MRoundedButton.h"
+#import "JSBadgeView.h"
 
 @interface DashboardViewController : UIViewController
 

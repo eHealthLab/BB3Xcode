@@ -86,7 +86,7 @@
     
     appDelegate.messageResponseLibrary = [NSMutableArray arrayWithObjects:@"", @"", nil];
     
-    //appDelegate.messagesReadStatusLibrary = [NSMutableArray arrayWithObjects:@"0", @"0", nil];
+    appDelegate.messagesReadStatusLibrary = [NSMutableArray arrayWithObjects:@"0", @"1", nil];
 
 }
 
@@ -123,13 +123,13 @@
    // NSLog(@"data is: %@\n", [appDelegate.messagesSubjectLibrary objectAtIndex:indexPath.row]);
     
     cell.textLabel.text = [appDelegate.messagesSubjectLibrary objectAtIndex:indexPath.row];
-    if ([appDelegate.messagesReadStatusLibrary[appDelegate.currentMessageIndex] isEqualToString: @"0"]) {
+    if ([appDelegate.messagesReadStatusLibrary[indexPath.row] isEqualToString: @"0"]) {
         NSLog(@"found zero, so bolding\n");
         UIFont *myFont = [ UIFont boldSystemFontOfSize: 21.0];
         cell.textLabel.font = myFont;
     }
     else{
-        UIFont *myFont = [ UIFont boldSystemFontOfSize: 18.0];
+        UIFont *myFont = [ UIFont systemFontOfSize:18.0];
         cell.textLabel.font = myFont;
         NSLog(@"FOUND: %@\n", appDelegate.messagesReadStatusLibrary[appDelegate.currentMessageIndex]);
     }
@@ -165,9 +165,14 @@
     
     appDelegate.currentMessageIndex = (int)indexPath.row;
     
-    appDelegate.messagesReadStatusLibrary[appDelegate.currentMessageIndex] = @"1";
+    appDelegate.messagesReadStatusLibrary[indexPath.row] = @"1";
+    
+    appDelegate.numberOfUnreadMessages = appDelegate.numberOfUnreadMessages-1;
+    
+    NSLog(@"new unread number is: %d", appDelegate.numberOfUnreadMessages);
     
     [self.navigationController pushViewController:uiViewController animated:YES];
+    [tableView reloadData];
     
 }
 

@@ -78,6 +78,8 @@
 @property(assign, nonatomic) int currentMessageIndex;
 
 @property(assign, nonatomic) int numberOfDaysEnrolled;
+@property(assign, nonatomic) int numberOfUnreadMessages;
+@property(assign, nonatomic) int newBadgeNotification;
 
 @property(assign, nonatomic) int totalPoints;
 

@@ -69,8 +69,9 @@
     self.numberOfClicksLogMinutes=0;
     self.numberOfClicksMessages=0;
     self.numberOfClicksNetwork=0;
-    
-    self.urlToNodeJs = @"http://localhost:3000";
+    self.numberOfUnreadMessages=1;
+    self.newBadgeNotification=0;
+    self.urlToNodeJs = @"http://cbb.ucdenver.edu:3000";
     
     
 }
@@ -78,9 +79,25 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    self.urlToNodeJs = @"http://localhost:3000";
-    _goalsDaysComponent = @"2";
-    _goalsMinutesComponent = @"10";
+    self.urlToNodeJs = @"http://cbb.ucdenver.edu:3000";
+    //_goalsDaysComponent = @"2";
+    //_goalsMinutesComponent = @"10";
+    
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    
+    
+    self.firstName = [prefs objectForKey:@"firstName"];
+    self.lastName = [prefs objectForKey:@"lastName"];
+    self.userEmail = [prefs objectForKey:@"email"];
+    self.userPassword = [prefs objectForKey:@"password"];
+    self.babyName = [prefs objectForKey:@"babyName"];
+    self.babyDOB = [prefs objectForKey:@"babyDOB"];
+    self.babyGender = [prefs objectForKey:@"babyGender"];
+    self.phoneNumber = [prefs objectForKey:@"phoneNumber"];
+    self.zipcode = [prefs objectForKey:@"zipcode"];
+    
+    
+    self.numberOfUnreadMessages=1;
     
     return YES;
     
@@ -92,6 +109,21 @@
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    [prefs setObject:self.firstName forKey:@"firstName"];
+    [prefs setObject:self.lastName forKey:@"lastName"];
+    [prefs setObject:self.userEmail forKey:@"email"];
+    [prefs setObject:self.userPassword forKey:@"password"];
+    [prefs setObject:self.babyName forKey:@"babyName"];
+    [prefs setObject:self.babyDOB forKey:@"babyDOB"];
+    [prefs setObject:self.babyGender forKey:@"babyGender"];
+    [prefs setObject:self.phoneNumber forKey:@"phoneNumber"];
+    [prefs setObject:self.zipcode forKey:@"zipcode"];
+    NSLog(@"inside log in: phone number is: %@", self.phoneNumber);
+    
+    [prefs synchronize];
+    
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
@@ -105,6 +137,8 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+    
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

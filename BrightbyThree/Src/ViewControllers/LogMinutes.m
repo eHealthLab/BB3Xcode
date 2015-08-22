@@ -45,6 +45,14 @@
     frame.size.height = self.label.
     self.label.frame = frame;*/
     
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    [[UIImage imageNamed:@"iStock_000017755733_Double.jpg"] drawInRect:self.view.bounds];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    [image drawAtPoint:CGPointZero blendMode:kCGBlendModeOverlay alpha:0.5];
+    UIGraphicsEndImageContext();
+    
+    self.view.backgroundColor = [[UIColor colorWithPatternImage:image] colorWithAlphaComponent:0.3];
+    
     self.totalPointsView.text = [[@"You currently have " stringByAppendingString:[NSString stringWithFormat:@"%d", (int)delegate.totalPoints]] stringByAppendingString:@" total points. \n Log in more minutes."];
     self.totalPointsView.textAlignment=NSTextAlignmentJustified;
     [self.totalPointsView sizeToFit];
@@ -112,6 +120,7 @@
         UIAlertView *messageAlert = [[UIAlertView alloc]
                                      initWithTitle:@"Congratualtions!" message:@"You have earned a new badge."   delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [messageAlert show];
+        delegate.newBadgeNotification=1;
         
     }
     
