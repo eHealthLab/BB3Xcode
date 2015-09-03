@@ -15,6 +15,8 @@
 @implementation LogMinutes
 {
     AppDelegate *delegate;
+    UIPickerView *logMinutesPicker;
+    
     //badgeViewController *badgesControl = [[badgeViewController alloc] init];
 }
 
@@ -24,15 +26,36 @@
     delegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
     [super viewDidLoad];
     
+    logMinutesPicker = [[UIPickerView alloc] init];
     
+    logMinutesPicker.delegate = self;
+    logMinutesPicker.dataSource = self;
+    logMinutesPicker.showsSelectionIndicator  =YES;
     
     [self.logMinutesImage setImage:[UIImage imageNamed:@"Mom reading with baby - anglo.jpg"]];
 
     
     _minutesArray = [[NSArray alloc] initWithObjects:@"5", @"10", @"15", @"20", @"25", @"30", @"35", @"40", @"45", @"50", @"55", @"60", nil];
     
-    _logInMinutesPickerView.delegate = self;
-    _logInMinutesPickerView.dataSource = self;
+    //_logInMinutesPickerView.delegate = self;
+    //_logInMinutesPickerView.dataSource = self;
+    
+    [self.logMinutesTextField setInputView:logMinutesPicker];
+    
+    [self.pointsDisplayButton setTitle: [NSString stringWithFormat:@"%d", delegate.totalPoints] forState:UIControlStateNormal];
+    
+    self.pointsDisplayButton.cornerRadius = 10.0;
+    self.pointsDisplayButton.shadowHeight = self.pointsDisplayButton.frame.size.height * 0.17;
+    //[self.setGoalsButton setStyle:HTPressableButtonStyleCircular];
+    self.pointsDisplayButton.buttonColor = [UIColor ht_grapeFruitColor];
+    self.pointsDisplayButton.shadowColor = [UIColor ht_grapeFruitDarkColor];
+    
+    [self.pointsDisplayButton setDisabledButtonColor:[UIColor ht_sunflowerColor]];
+    self.pointsDisplayButton.userInteractionEnabled = NO;
+    
+    //[self.pointsDisplayButton setTitle:@"Set Goals" forState:UIControlStateNormal];
+    //[self.pointsDisplayButton addTarget:self action:@selector(setGoalsPressed) forControlEvents:UIControlEventTouchUpInside];
+    
     
     //UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20, 320, 350, 100)];
     /*self.label.numberOfLines = 3;
@@ -73,8 +96,9 @@
     [self.saveButton addTarget:self action:@selector(saveMinutesPressed) forControlEvents:UIControlEventTouchUpInside];
     self.saveButton.tag = 1;
     
-    [_logInMinutesPickerView reloadAllComponents];
+    [logMinutesPicker reloadAllComponents];
 }
+
 
 -(void)saveMinutesPressed
 {
@@ -82,7 +106,7 @@
     button.userInteractionEnabled = NO;
     button.alpha = 0.5;
     NSLog(@"total minutes before: %d", (int)delegate.totalPoints);
-    int newPoints = (int)[[_minutesArray objectAtIndex:[_logInMinutesPickerView selectedRowInComponent:0]] intValue];
+    int newPoints = (int)[[_minutesArray objectAtIndex:[logMinutesPicker selectedRowInComponent:0]] intValue];
     delegate.totalPoints = delegate.totalPoints + newPoints;
     NSLog(@"total minutes after: %d", (int)delegate.totalPoints);
     
@@ -103,13 +127,12 @@
     
     NSLog(@"inside log minutes; next badge to earn: %d", delegate.nextBadgeToEarn);
     
-    /*for (int i=0; i < 11; i++) {
-        NSLog(@"element is: %@", [delegate.badgesArray objectAtIndex:i]);
-    }*/
-    
-    
     NSLog(@"value in array: %d, %@", delegate.nextBadgeToEarn, delegate.badgesArray[delegate.nextBadgeToEarn]);
     int value = [delegate.badgesArray[delegate.nextBadgeToEarn] intValue];
+    NSString *points = [NSString stringWithFormat:@"%d", delegate.totalPoints];
+    
+    [self.pointsDisplayButton setTitle: points forState:UIControlStateNormal];
+    
     
     if (delegate.totalPoints >= value) {
         NSLog(@"total points are: %d and value is: %d", delegate.totalPoints, value);
@@ -154,6 +177,8 @@
     {
         NSLog(@"error is: %@\n",error.description);
     }
+    
+    self.logMinutesTextField.text = @"";
 
     
 }
@@ -187,6 +212,13 @@
     }
 
     
+}
+
+- (void)pickerView:(UIPickerView *)thePickerView
+      didSelectRow:(NSInteger)row
+       inComponent:(NSInteger)component {
+    
+    self.logMinutesTextField.text=[_minutesArray objectAtIndex:row];
 }
 
 -(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component

@@ -72,6 +72,7 @@
     self.numberOfUnreadMessages=1;
     self.newBadgeNotification=0;
     self.urlToNodeJs = @"http://localhost:3000";
+    //self.urlToNodeJs = @"http://cbb.ucdenver.edu:3000";
     
     
 }
@@ -80,6 +81,7 @@
     // Override point for customization after application launch.
     
     self.urlToNodeJs = @"http://localhost:3000";
+    //self.urlToNodeJs = @"http://cbb.ucdenver.edu:3000";
     _goalsDaysComponent = @"2";
     _goalsMinutesComponent = @"10";
     

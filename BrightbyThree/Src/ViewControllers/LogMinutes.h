@@ -17,7 +17,10 @@
 @interface LogMinutes : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
 
 //@property (nonatomic, retain) UIPickerView *logMinutesPicker;
-@property (weak, nonatomic) IBOutlet UIPickerView *logInMinutesPickerView;
+//@property (weak, nonatomic) IBOutlet UIPickerView *logInMinutesPickerView;
+@property (weak, nonatomic) IBOutlet UILabel *pointsLabel;
+@property (weak, nonatomic) IBOutlet HTPressableButton *pointsDisplayButton;
+@property (weak, nonatomic) IBOutlet UITextField *logMinutesTextField;
 
 @property(strong, nonatomic) NSString *selectedValue;
 @property(strong, nonatomic) NSArray *minutesArray;
