@@ -34,19 +34,9 @@
 #import "HTPressableButton.h"
 #import "UIColor+HTColor.h"
 
-@interface Dashboard : UITableViewController <UIPopoverControllerDelegate, UITableViewDelegate, UITableViewDataSource>
-{
+@interface Dashboard : UIViewController
 
-    IBOutlet UIViewController *popoverView;
-    IBOutlet UIButton *login;
-    
-    NSMutableArray *sectionArray;
-    NSMutableArray *numberOfRows;
-    
-}
-@property (strong, nonatomic) IBOutlet UITableView *dashboardTableView;
-@property(strong, nonatomic) NSMutableArray *sectionArray;
-@property(strong, nonatomic) NSMutableArray *numberOfRows;
+@property(weak, nonatomic) IBOutlet UIBarButtonItem *menuButton;
 
 @end
 

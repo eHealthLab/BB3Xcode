@@ -30,7 +30,7 @@
 #import <Foundation/Foundation.h>
 #import "LoginViewController.h"
 #import "AppDelegate.h"
-//#import "AFNetworking.h"
+#import "SWRevealViewController.h"
 
 
 @interface LoginViewController ()
@@ -64,23 +64,23 @@
     self.loginPassword.text = [prefs objectForKey:@"password"];
     
     //self.loginEmail.text = appDelegate.userEmail;
-    UIGraphicsBeginImageContext(self.view.frame.size);
+    /*UIGraphicsBeginImageContext(self.view.frame.size);
     [[UIImage imageNamed:@"iStock_000017755733_Double.jpg"] drawInRect:self.view.bounds];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     [image drawAtPoint:CGPointZero blendMode:kCGBlendModeOverlay alpha:0.5];
     UIGraphicsEndImageContext();
     
     self.view.backgroundColor = [[UIColor colorWithPatternImage:image] colorWithAlphaComponent:0.3];
-    
+    */
     
     appDelegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
     
     //UISwitch *mySwitch = [[UISwitch alloc] initWithFrame:CGRectMake(80, 300, 10, 10)];
-    [self.rememberSwitch addTarget:self action:@selector(rememberMePressed) forControlEvents:UIControlEventTouchUpInside];
+    //[self.rememberSwitch addTarget:self action:@selector(rememberMePressed) forControlEvents:UIControlEventTouchUpInside];
     
         self.loginButton.cornerRadius = 10.0;
         self.loginButton.shadowHeight = self.loginButton.frame.size.height * 0.17;
-        [self.loginButton setTitle:@"Login" forState:UIControlStateNormal];
+        [self.loginButton setTitle:@"LOG IN" forState:UIControlStateNormal];
         self.loginButton.buttonColor = [UIColor ht_mintColor];
         self.loginButton.shadowColor = [UIColor ht_mintDarkColor];
         [self.loginButton addTarget:self action:@selector(LoginPressed) forControlEvents:UIControlEventTouchUpInside];
@@ -88,7 +88,7 @@
     
     [self.view addSubview:self.loginButton];
     
-    self.signupButton.cornerRadius = 10.0;
+    /*self.signupButton.cornerRadius = 10.0;
     self.signupButton.shadowHeight = self.signupButton.frame.size.height * 0.17;
     [self.signupButton setTitle:@"Signup" forState:UIControlStateNormal];
     self.signupButton.buttonColor = [UIColor ht_grapeFruitColor];
@@ -97,7 +97,7 @@
     [self.view addSubview:self.signupButton];
     
     [self.signupButton addTarget:self action:@selector(ShowSignUpForm) forControlEvents:UIControlEventTouchUpInside];
-    
+    */
 
     UITapGestureRecognizer* gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(userTappedForgotPassword:)];
     //Adding userinteraction for label
@@ -313,17 +313,19 @@
         
         appDelegate.firstName = @"";
         
-        UITabBarController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"tabbarController"];
+        UIViewController  *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"revealView"];
+        
+        //UITabBarController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"tabbarController"];
         [self.navigationController pushViewController:uiViewController animated:YES];
-        UIImage *settingsImage = [UIImage imageNamed:@"19-gear.png"];
+        /*UIImage *settingsImage = [UIImage imageNamed:@"19-gear.png"];
         UIBarButtonItem *settingsButton = [[UIBarButtonItem alloc] initWithImage:settingsImage style:UIBarButtonItemStylePlain target:self action:@selector(settingsPressed)];
         uiViewController.navigationItem.leftBarButtonItem = settingsButton;
     
         UIImage *accountImage = [UIImage imageNamed:@"76-baby.png"];
-        UIBarButtonItem *myAccountButton = [[UIBarButtonItem alloc] initWithImage:accountImage style:UIBarButtonItemStylePlain target:self action:@selector(myAccountPressed)];
+        UIBarButtonItem *myAccountButton = [[UIBarButtonItem alloc] initWithImage:accountImage style:UIBarButtonItemStylePlain target:self action:@selector(myAccountPressed)];*/
         //uiViewController.navigationItem.leftBarButtonItem = settingsButton;
         
-        uiViewController.navigationItem.rightBarButtonItem = myAccountButton;
+        //uiViewController.navigationItem.rightBarButtonItem = myAccountButton;
     }
     
     receivedData = nil;
