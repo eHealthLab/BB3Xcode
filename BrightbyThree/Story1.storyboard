@@ -1556,7 +1556,7 @@
         <!--About Us-->
         <scene sceneID="xXQ-YF-2Al">
             <objects>
-                <tableViewController title="About Us" id="mmn-eL-B3y" customClass="AboutUsViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="aboutUs" title="About Us" id="mmn-eL-B3y" customClass="AboutUsViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="f45-2I-rc4">
                         <rect key="frame" x="0.0" y="94" width="600" height="457"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1945,6 +1945,9 @@
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="16J-ar-mj8">
                                 <rect key="frame" x="0.0" y="369" width="600" height="152"/>
+                                <connections>
+                                    <segue destination="n4m-Il-XB7" kind="embed" id="fnN-GT-Hwd"/>
+                                </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   Your Goals" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XIc-sZ-uSC">
                                 <rect key="frame" x="0.0" y="282" width="600" height="47"/>
@@ -2005,7 +2008,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Es8-bO-xZU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="733" y="1500"/>
+            <point key="canvasLocation" x="705" y="1506"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="2B8-cf-1Zf">
@@ -2090,16 +2093,16 @@
             </objects>
             <point key="canvasLocation" x="733" y="2179.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Goals Chart Controller-->
         <scene sceneID="bBr-ys-irr">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="n4m-Il-XB7" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="n4m-Il-XB7" customClass="GoalsChartController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="e1c-dJ-wPr"/>
                         <viewControllerLayoutGuide type="bottom" id="AcR-QH-4Q8"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="r1B-WY-4pV">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="152"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

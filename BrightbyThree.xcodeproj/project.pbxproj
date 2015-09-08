@@ -156,6 +156,8 @@
 		1DAF75C11B998AD7008C8F80 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DAF75BF1B998AD7008C8F80 /* menu.png */; };
 		1DAF75C21B998AD7008C8F80 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DAF75C01B998AD7008C8F80 /* menu@2x.png */; };
 		1DFB41061B9E4ABA007D87A8 /* SlideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFB41051B9E4ABA007D87A8 /* SlideMenu.m */; };
+		1DFB41091B9EB0E6007D87A8 /* PieChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFB41081B9EB0E6007D87A8 /* PieChartView.m */; };
+		1DFB410B1B9EB27D007D87A8 /* GoalsChartController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFB410A1B9EB27D007D87A8 /* GoalsChartController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -367,6 +369,10 @@
 		1DAF75C01B998AD7008C8F80 /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
 		1DFB41041B9E4AB0007D87A8 /* SlideMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlideMenu.h; sourceTree = "<group>"; };
 		1DFB41051B9E4ABA007D87A8 /* SlideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideMenu.m; sourceTree = "<group>"; };
+		1DFB41071B9EB0E6007D87A8 /* PieChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieChartView.h; sourceTree = "<group>"; };
+		1DFB41081B9EB0E6007D87A8 /* PieChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieChartView.m; sourceTree = "<group>"; };
+		1DFB410A1B9EB27D007D87A8 /* GoalsChartController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalsChartController.m; sourceTree = "<group>"; };
+		1DFB410C1B9EB284007D87A8 /* GoalsChartController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoalsChartController.h; sourceTree = "<group>"; };
 		1DFC79651B9BBE3D00AAF2FA /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		1DFC79671B9BBE6100AAF2FA /* SWRevealViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -534,6 +540,8 @@
 			children = (
 				1D7529DE1B88652400BC8E03 /* JSBadgeView.h */,
 				1D053EAD1B9E30410093F2DC /* SWRevealViewController.h */,
+				1DFB41071B9EB0E6007D87A8 /* PieChartView.h */,
+				1DFB41081B9EB0E6007D87A8 /* PieChartView.m */,
 				1D053EAE1B9E30410093F2DC /* SWRevealViewController.m */,
 				1D7529DF1B88652400BC8E03 /* JSBadgeView.m */,
 				1DAB4D121B6DE928008F186F /* StarRatingView.h */,
@@ -755,6 +763,8 @@
 				1DA169321B98DDC8009CCE14 /* LoginSignupView.h */,
 				1DFB41041B9E4AB0007D87A8 /* SlideMenu.h */,
 				1DFB41051B9E4ABA007D87A8 /* SlideMenu.m */,
+				1DFB410A1B9EB27D007D87A8 /* GoalsChartController.m */,
+				1DFB410C1B9EB284007D87A8 /* GoalsChartController.h */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -932,10 +942,12 @@
 				1DAB4D001B6DE8F0008F186F /* LibraryViewController.m in Sources */,
 				1DAB4CAF1B6DE75A008F186F /* IQUIViewController+Additions.m in Sources */,
 				1DAB4D0C1B6DE8F0008F186F /* signUpViewController.m in Sources */,
+				1DFB41091B9EB0E6007D87A8 /* PieChartView.m in Sources */,
 				1DAB4D081B6DE8F0008F186F /* rateMessage.m in Sources */,
 				1DAB4D0D1B6DE8F0008F186F /* StartViewController.m in Sources */,
 				1DAB4CB41B6DE75A008F186F /* IQTextView.m in Sources */,
 				1DAB4D0B1B6DE8F0008F186F /* SignupController.m in Sources */,
+				1DFB410B1B9EB27D007D87A8 /* GoalsChartController.m in Sources */,
 				1DAB4CB81B6DE75A008F186F /* IQUIView+IQKeyboardToolbar.m in Sources */,
 				1DAB4CFC1B6DE8F0008F186F /* FavoriteMessagesViewController.m in Sources */,
 				1DAB4CB61B6DE75A008F186F /* IQTitleBarButtonItem.m in Sources */,

@@ -76,11 +76,34 @@
 
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    UIViewController *uiViewController;
+    if (indexPath.row == 1) {
+        uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"accountViewController"];
+    }
+    else if (indexPath.row == 2)
+    {
+        uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"libraryViewController"];
+    }
     
-    UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"textDetailsViewController"];
+    else if (indexPath.row == 3)
+    {
+        uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"aboutUs"];
+    }
+    
+    else if (indexPath.row == 4)
+    {
+        uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"contactUs"];
+    }
+    else if (indexPath.row == 5)
+    {
+        uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"privacyPolicy"];
+    }
+    else {
+        uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"logOut"];
+    }
     
     [self.navigationController pushViewController:uiViewController animated:YES];
-    [tableView reloadData];
+    //[tableView reloadData];
     
 }
 
