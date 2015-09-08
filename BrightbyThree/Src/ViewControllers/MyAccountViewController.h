@@ -21,6 +21,7 @@
 @property (strong, nonatomic) IBOutlet UITableView *accounttableView;
 @property(strong, nonatomic) NSMutableArray *sectionArray;
 @property(strong, nonatomic) NSMutableArray *numberOfRows;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *menuButton;
 
 
 

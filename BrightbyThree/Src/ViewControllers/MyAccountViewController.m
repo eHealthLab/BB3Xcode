@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "MyAccountViewController.h"
 #import "AppDelegate.h"
+#import "SWRevealViewController.h"
 
 @implementation MyAccountViewController
 
@@ -26,6 +27,14 @@
     appDelegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
     
     appDelegate.numberOfClicksMyAccount++;
+    
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        [self.menuButton setTarget: self.revealViewController];
+        [self.menuButton setAction: @selector( revealToggle: )];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
     
     //UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:nil action:@selector(saveButtonPressed)];
     
