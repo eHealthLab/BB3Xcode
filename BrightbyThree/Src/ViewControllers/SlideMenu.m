@@ -117,6 +117,7 @@
 
 @implementation SlideMenu{
     NSArray *menu;
+    NSArray *imagesArray;
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -132,6 +133,7 @@
 {
     [super viewDidLoad];
     menu = @[@"extra",@"first", @"second", @"third", @"fourth", @"fifth", @"sixth", @"seventh"];
+    imagesArray = @[@"", @"81-dashboard.png", @"76-baby.png", @"18-envelope.png", @"BB372.png", @"111-user.png",@"187-pencil.png", @"19-gear.png" ];
     
 }
 
@@ -166,7 +168,18 @@
     
     // Configure the cell...
     
+    //cell.textLabel.text = [self.dataArray objectAtIndex:indexPath.row];
+    
+    
+    UIFont *myFont = [ UIFont systemFontOfSize:18.0];
+    cell.textLabel.font = myFont;
+    cell.textLabel.textColor= [UIColor whiteColor];
+    //cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+    cell.backgroundColor = [UIColor grayColor];
+    cell.imageView.image = [UIImage imageNamed:[imagesArray objectAtIndex:indexPath.row]];
+    
     return cell;
+    
 }
 
 
