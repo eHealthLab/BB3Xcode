@@ -171,7 +171,8 @@
     //cell.textLabel.text = [self.dataArray objectAtIndex:indexPath.row];
     
     
-    UIFont *myFont = [ UIFont systemFontOfSize:18.0];
+    //UIFont *myFont = [ UIFont systemFontOfSize:18.0];
+    UIFont *myFont = [UIFont fontWithName:@"DIN Alternate" size:21.0];
     cell.textLabel.font = myFont;
     cell.textLabel.textColor= [UIColor whiteColor];
     //cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;

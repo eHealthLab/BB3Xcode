@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "AboutUsViewController.h"
 #import "AppDelegate.h"
+#import "SWRevealViewController.h"
 
 @implementation AboutUsViewController
 {
@@ -37,6 +38,15 @@
     [super viewDidLoad];
     
     self.edgesForExtendedLayout = UIRectEdgeNone;
+    
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        [self.menuButton setTarget: self.revealViewController];
+        [self.menuButton setAction: @selector( revealToggle: )];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
+
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
