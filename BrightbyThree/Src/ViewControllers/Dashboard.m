@@ -40,10 +40,15 @@
 
 -(void)viewDidLoad{
     [super viewDidLoad];
+    
+    appDelegate = (AppDelegate*) [[UIApplication sharedApplication] delegate];
+    
     NSLog(@"the view loads\n");
     self.menuButton.target = self.revealViewController;
     self.menuButton.action = @selector(revealToggle:);
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    appDelegate.firstName = @"MARY";
+    self.title = [@"WELCOME BACK, " stringByAppendingString:appDelegate.firstName];
 }
 
 -(void)didReceiveMemoryWarning{
