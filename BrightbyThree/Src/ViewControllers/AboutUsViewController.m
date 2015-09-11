@@ -36,6 +36,7 @@
     appDelegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
     
     [super viewDidLoad];
+    self.title = @"About BrightbyThree";
     
     self.edgesForExtendedLayout = UIRectEdgeNone;
     

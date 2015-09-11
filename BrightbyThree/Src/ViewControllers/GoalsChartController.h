@@ -10,8 +10,11 @@
 #define BrightbyThree_GoalsChartController_h
 
 #import<UIKit/UIKit.h>
+#import "HTPressableButton.h"
+#import "UIColor+HTColor.h"
 
 @interface GoalsChartController : UIViewController
+@property (weak, nonatomic) IBOutlet HTPressableButton *modifyGoals;
 
 @end
 

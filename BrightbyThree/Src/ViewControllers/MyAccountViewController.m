@@ -23,6 +23,8 @@
 -(void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:YES];
+    
+    self.title = @"My Account";
 
     appDelegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
     

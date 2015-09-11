@@ -48,6 +48,14 @@ PieChartViewDataSource
 
 -(void)loadView
 {
+    
+    self.modifyGoals.cornerRadius = 10.0;
+    self.modifyGoals.shadowHeight = self.modifyGoals.frame.size.height * 0.17;
+    [self.modifyGoals setTitle:@"MODIFY GOALS" forState:UIControlStateNormal];
+    self.modifyGoals.buttonColor = [UIColor ht_mintColor];
+    self.modifyGoals.shadowColor = [UIColor ht_mintDarkColor];
+    //[self.modifyGoals addTarget:self action:@selector(LoginPressed) forControlEvents:UIControlEventTouchUpInside];
+    
     CGFloat h =  [UIApplication sharedApplication].statusBarHidden ? 0 :
     [UIApplication sharedApplication].statusBarFrame.size.height;
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0,

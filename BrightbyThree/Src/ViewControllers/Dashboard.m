@@ -41,12 +41,26 @@
 -(void)viewDidLoad{
     [super viewDidLoad];
     
+    
     appDelegate = (AppDelegate*) [[UIApplication sharedApplication] delegate];
     
+    //UIImage *menuImage = [UIImage imageNamed:@"menu.png"];
+    //UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:menuImage style:UIBarButtonItemStylePlain target:self action:@selector(menuPressed)];
+    //self.navigationItem.rightBarButtonItem = menuButton;
+    
+    //menuButton.target = self.revealViewController;
+    //menuButton.action = @selector(revealToggle:);
+    //[self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    
     NSLog(@"the view loads\n");
+    /*self.menuButton.target = self.revealViewController;
+    self.menuButton.action = @selector(revealToggle:);
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];*/
+    
     self.menuButton.target = self.revealViewController;
     self.menuButton.action = @selector(revealToggle:);
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    
     appDelegate.firstName = @"MARY";
     self.title = [@"WELCOME BACK, " stringByAppendingString:appDelegate.firstName];
 }

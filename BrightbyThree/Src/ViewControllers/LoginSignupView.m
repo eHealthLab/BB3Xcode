@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "LoginSignupView.h"
+#import "SWRevealViewController.h"
 
 @implementation LoginSignupView
 
@@ -29,5 +30,20 @@
             break;
     }
     
+}
+
+
+
+- (IBAction)loginButtonPressed:(id)sender {
+    NSLog(@"inside login pressed\n");
+    
+    SWRevealViewController  *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"revealView"];
+    
+    //SWRevealViewController *revealViewController = self.revealViewController;
+    [self.revealViewController setFrontViewController:uiViewController];
+    [self.revealViewController setFrontViewPosition: FrontViewPositionLeft animated: YES];
+
+    [self.navigationController pushViewController:uiViewController  animated:YES];
+    self.navigationItem.leftBarButtonItem = nil;
 }
 @end

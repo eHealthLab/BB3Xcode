@@ -18,6 +18,8 @@
 
 
 
+@property (weak, nonatomic) IBOutlet UIButton *loginButtonPressed;
+- (IBAction)loginButtonPressed:(id)sender;
 
 @end
 

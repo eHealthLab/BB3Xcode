@@ -313,24 +313,57 @@
         
         appDelegate.firstName = @"";
         
-        UIViewController  *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"revealView"];
+        SWRevealViewController  *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"revealView"];
+        
+        appDelegate.firstName = @"MARY";
+        uiViewController.title = [@"WELCOME BACK, " stringByAppendingString:appDelegate.firstName];
+        
+        SWRevealViewController *uiRearViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"slideMenu"];
+        SWRevealViewController *uiFrontViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"frontMenu"];
+        
+        //SWRevealViewController *revealViewController = self.revealViewController;
+        [uiViewController.revealViewController setFrontViewController:uiFrontViewController];
+        [uiViewController.revealViewController setRearViewController:uiRearViewController];
+        [uiViewController.revealViewController setFrontViewPosition: FrontViewPositionRight animated: YES];
+        
+        [self.navigationController pushViewController:uiViewController  animated:YES];
+        self.navigationItem.leftBarButtonItem = nil;
+        
+        //SWRevealViewController  *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"revealView"];
+        
+        //SWRevealViewController *revealViewController = self.revealViewController;
+        
         
         //UITabBarController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"tabbarController"];
-        [self.navigationController pushViewController:uiViewController animated:YES];
-        /*UIImage *settingsImage = [UIImage imageNamed:@"19-gear.png"];
-        UIBarButtonItem *settingsButton = [[UIBarButtonItem alloc] initWithImage:settingsImage style:UIBarButtonItemStylePlain target:self action:@selector(settingsPressed)];
+        //[self.navigationController pushViewController:revealViewController  animated:YES];
+        //UIImage *settingsImage = [UIImage imageNamed:@"BB3_logo-icon_WEB_rgb_28x28.png"];
+        
+        UIBarButtonItem *settingsButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"BB3_AbousUs_icon2.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(settingsPressed)];
+        
         uiViewController.navigationItem.leftBarButtonItem = settingsButton;
     
-        UIImage *accountImage = [UIImage imageNamed:@"76-baby.png"];
-        UIBarButtonItem *myAccountButton = [[UIBarButtonItem alloc] initWithImage:accountImage style:UIBarButtonItemStylePlain target:self action:@selector(myAccountPressed)];*/
-        //uiViewController.navigationItem.leftBarButtonItem = settingsButton;
+        UIImage *menuImage = [UIImage imageNamed:@"menu.png"];
+        UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:menuImage style:UIBarButtonItemStylePlain target:self action:@selector(menuPressed)];
+        uiViewController.navigationItem.rightBarButtonItem = menuButton;
         
-        //uiViewController.navigationItem.rightBarButtonItem = myAccountButton;
+        menuButton.target = uiViewController.revealViewController.rearViewController;
+        menuButton.action = @selector(revealToggle:);
+        //[self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+        
+        /*UIImage *accountImage = [UIImage imageNamed:@"76-baby.png"];
+        UIBarButtonItem *myAccountButton = [[UIBarButtonItem alloc] initWithImage:accountImage style:UIBarButtonItemStylePlain target:self action:@selector(myAccountPressed)];
+        uiViewController.navigationItem.leftBarButtonItem = settingsButton;
+        
+        uiViewController.navigationItem.rightBarButtonItem = myAccountButton;*/
     }
     
     receivedData = nil;
 }
 
+-(void)menuPressed
+{
+    
+}
 
 
 -(void)myAccountPressed
