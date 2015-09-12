@@ -118,6 +118,7 @@
 @implementation SlideMenu{
     NSArray *menu;
     NSArray *imagesArray;
+    AppDelegate *appDelegate;
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -131,9 +132,13 @@
 
 - (void)viewDidLoad
 {
+    appDelegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
+    
+    self.view.backgroundColor = [UIColor grayColor];
+    
     [super viewDidLoad];
-    menu = @[@"extra",@"first", @"second", @"third", @"fourth", @"fifth", @"sixth", @"seventh"];
-    imagesArray = @[@"", @"81-dashboard.png", @"76-baby.png", @"18-envelope.png", @"BB372.png", @"111-user.png",@"187-pencil.png", @"19-gear.png" ];
+    menu = @[@"extra",@"first", @"second", @"third", @"fourth", @"fifth", @"sixth", @"seventh", @"eigth", @"ninth"];
+    imagesArray = @[@"", @"81-dashboard.png", @"123-id-card.png", @"40-inbox.png", @"facebook_icon.jpeg", @"164-glasses-2.png", @"112-group.png", @"187-pencil.png", @"54-lock.png", @"63-runner.png"];
     
 }
 
@@ -202,7 +207,61 @@
     }
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == 9) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Sign out" message:@"Are you sure you want to sign out?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
+        //UIImage *image = [UIImage imageNamed:@"184-warning.png"];
+        //UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+        //[alert addSubview:imageView];
+        
+        [alert show];
+    }
+}
 
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0)
+    {
+        //NSLog(@"user pressed the Cancel Button");
+        [self viewWillAppear:YES];
+    }
+    
+    
+    else if (buttonIndex == 1)
+    {
+        NSLog(@"Logout Pressed\n");
+        NSLog(@"useremail is %@:\n", appDelegate.userEmail);
+        
+        NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+        
+        // saving an NSString
+        [prefs setObject:appDelegate.userEmail forKey:@"userName"];
+        [prefs setObject:appDelegate.userPassword forKey:@"password"];
+        
+        
+        
+        [prefs synchronize];
+        
+        NSLog(@"useremail is %@:\n", [prefs objectForKey:@"userName"]);
+        appDelegate.firstName = @"";
+        appDelegate.lastName = @"";
+        appDelegate.userID = @"";
+        //appDelegate.userEmail = @"";
+        //appDelegate.userPassword = @"";
+        appDelegate.babyDOB = @"";
+        appDelegate.babyGender = @"";
+        appDelegate.babyName = @"";
+        appDelegate.phoneNumber = @"";
+        appDelegate.zipcode = @"";
+        
+        //UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"loginViewController"];
+        
+        
+        //[self.revealViewController frontViewController:uiViewController];
+        //self.navigationItem.hidesBackButton=YES;
+    }
+}
 
 
 @end

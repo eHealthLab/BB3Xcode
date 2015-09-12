@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0512C54A1BA358B400C79514 /* contactUs.m in Sources */ = {isa = PBXBuildFile; fileRef = 0512C5491BA358B400C79514 /* contactUs.m */; };
+		0579D4E41BA4B7D4000F4422 /* PrivacyPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0579D4E31BA4B7D4000F4422 /* PrivacyPolicy.m */; };
+		05ED815B1BA360F400C014E4 /* 63-runner.png in Resources */ = {isa = PBXBuildFile; fileRef = 05ED815A1BA360F400C014E4 /* 63-runner.png */; };
+		05ED815D1BA3612B00C014E4 /* 112-group.png in Resources */ = {isa = PBXBuildFile; fileRef = 05ED815C1BA3612B00C014E4 /* 112-group.png */; };
+		05ED815F1BA3614900C014E4 /* 123-id-card.png in Resources */ = {isa = PBXBuildFile; fileRef = 05ED815E1BA3614900C014E4 /* 123-id-card.png */; };
+		05ED81611BA3618D00C014E4 /* 164-glasses-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 05ED81601BA3618D00C014E4 /* 164-glasses-2.png */; };
+		05ED81631BA363C200C014E4 /* 184-warning.png in Resources */ = {isa = PBXBuildFile; fileRef = 05ED81621BA363C200C014E4 /* 184-warning.png */; };
+		05ED81651BA3667400C014E4 /* 40-inbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 05ED81641BA3667400C014E4 /* 40-inbox.png */; };
+		05ED81671BA3669200C014E4 /* 54-lock.png in Resources */ = {isa = PBXBuildFile; fileRef = 05ED81661BA3669200C014E4 /* 54-lock.png */; };
+		05ED81691BA3690900C014E4 /* facebook_icon.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 05ED81681BA3690900C014E4 /* facebook_icon.jpeg */; };
+		05ED816B1BA374C300C014E4 /* LogMinutesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05ED816A1BA374C300C014E4 /* LogMinutesController.m */; };
+		05ED816F1BA379C000C014E4 /* LogMinutesContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 05ED816E1BA379C000C014E4 /* LogMinutesContainer.m */; };
 		1D053EAF1B9E30410093F2DC /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D053EAE1B9E30410093F2DC /* SWRevealViewController.m */; };
 		1D1EABFE1BA155F80068BEE4 /* BB3_AbousUs_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D1EABFD1BA155F80068BEE4 /* BB3_AbousUs_icon.png */; };
 		1D1EAC001BA158060068BEE4 /* BB3_AbousUs_icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D1EABFF1BA158060068BEE4 /* BB3_AbousUs_icon2.png */; };
@@ -163,6 +175,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0512C5481BA358A800C79514 /* contactUs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = contactUs.h; sourceTree = "<group>"; };
+		0512C5491BA358B400C79514 /* contactUs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = contactUs.m; sourceTree = "<group>"; };
+		0579D4E31BA4B7D4000F4422 /* PrivacyPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrivacyPolicy.m; sourceTree = "<group>"; };
+		0579D4E51BA4B7DA000F4422 /* PrivacyPolicy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrivacyPolicy.h; sourceTree = "<group>"; };
+		05ED815A1BA360F400C014E4 /* 63-runner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "63-runner.png"; sourceTree = "<group>"; };
+		05ED815C1BA3612B00C014E4 /* 112-group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "112-group.png"; sourceTree = "<group>"; };
+		05ED815E1BA3614900C014E4 /* 123-id-card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "123-id-card.png"; sourceTree = "<group>"; };
+		05ED81601BA3618D00C014E4 /* 164-glasses-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "164-glasses-2.png"; sourceTree = "<group>"; };
+		05ED81621BA363C200C014E4 /* 184-warning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "184-warning.png"; sourceTree = "<group>"; };
+		05ED81641BA3667400C014E4 /* 40-inbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "40-inbox.png"; sourceTree = "<group>"; };
+		05ED81661BA3669200C014E4 /* 54-lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "54-lock.png"; sourceTree = "<group>"; };
+		05ED81681BA3690900C014E4 /* facebook_icon.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = facebook_icon.jpeg; sourceTree = "<group>"; };
+		05ED816A1BA374C300C014E4 /* LogMinutesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogMinutesController.m; sourceTree = "<group>"; };
+		05ED816C1BA374C800C014E4 /* LogMinutesController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogMinutesController.h; sourceTree = "<group>"; };
+		05ED816D1BA379B300C014E4 /* LogMinutesContainer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogMinutesContainer.h; sourceTree = "<group>"; };
+		05ED816E1BA379C000C014E4 /* LogMinutesContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogMinutesContainer.m; sourceTree = "<group>"; };
 		1D053EAD1B9E30410093F2DC /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		1D053EAE1B9E30410093F2DC /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		1D1EABFD1BA155F80068BEE4 /* BB3_AbousUs_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BB3_AbousUs_icon.png; sourceTree = "<group>"; };
@@ -454,19 +482,27 @@
 				1DAF75C01B998AD7008C8F80 /* menu@2x.png */,
 				1D7529E31B88DA6300BC8E03 /* iStock_000020606010_XXXLarge.jpg */,
 				1D1EABFF1BA158060068BEE4 /* BB3_AbousUs_icon2.png */,
+				05ED815E1BA3614900C014E4 /* 123-id-card.png */,
 				1DAB4B751B6DDFF0008F186F /* 06-magnify.png */,
 				1DAB4B761B6DDFF0008F186F /* 08-chat.png */,
+				05ED815C1BA3612B00C014E4 /* 112-group.png */,
 				1D725B711B8795730006521E /* iStock_000024540608_Double.jpg */,
+				05ED81621BA363C200C014E4 /* 184-warning.png */,
+				05ED81601BA3618D00C014E4 /* 164-glasses-2.png */,
+				05ED815A1BA360F400C014E4 /* 63-runner.png */,
 				1DAB4B771B6DDFF0008F186F /* 111-user.png */,
 				1DAB4B781B6DDFF0008F186F /* 117-todo.png */,
 				1D725B6F1B8794A90006521E /* iStock_000019163656_Double.jpg */,
 				1DAB4B791B6DDFF0008F186F /* 13-target.png */,
 				1DAB4B7A1B6DDFF0008F186F /* 18-envelope.png */,
 				1D4FA3BD1B727B1D001181C6 /* blue_minimalistic_gradient_colors_1200x1920.png */,
+				05ED81641BA3667400C014E4 /* 40-inbox.png */,
+				05ED81661BA3669200C014E4 /* 54-lock.png */,
 				1D4FA3BF1B727B23001181C6 /* blue_minimalistic_gradient_colors_1920x1200.png */,
 				1DAB4B7B1B6DDFF0008F186F /* 187-pencil.png */,
 				1DAB4B7C1B6DDFF0008F186F /* 19-gear.png */,
 				1DAB4B7D1B6DDFF0008F186F /* 1x.png */,
+				05ED81681BA3690900C014E4 /* facebook_icon.jpeg */,
 				1DAB4B7E1B6DDFF0008F186F /* 28-star.png */,
 				1DAB4B7F1B6DDFF0008F186F /* 2x.png */,
 				1DAB4B801B6DDFF0008F186F /* 3x.png */,
@@ -771,6 +807,14 @@
 				1DFB41051B9E4ABA007D87A8 /* SlideMenu.m */,
 				1DFB410A1B9EB27D007D87A8 /* GoalsChartController.m */,
 				1DFB410C1B9EB284007D87A8 /* GoalsChartController.h */,
+				0512C5481BA358A800C79514 /* contactUs.h */,
+				0512C5491BA358B400C79514 /* contactUs.m */,
+				05ED816A1BA374C300C014E4 /* LogMinutesController.m */,
+				05ED816C1BA374C800C014E4 /* LogMinutesController.h */,
+				05ED816D1BA379B300C014E4 /* LogMinutesContainer.h */,
+				05ED816E1BA379C000C014E4 /* LogMinutesContainer.m */,
+				0579D4E31BA4B7D4000F4422 /* PrivacyPolicy.m */,
+				0579D4E51BA4B7DA000F4422 /* PrivacyPolicy.h */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -834,6 +878,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DAB4BFF1B6DDFF1008F186F /* iStock_000024919385_XXXLarge.jpg in Resources */,
+				05ED815F1BA3614900C014E4 /* 123-id-card.png in Resources */,
 				1DAB4BCD1B6DDFF1008F186F /* 2x.png in Resources */,
 				1DAB4BD01B6DDFF1008F186F /* 5starsgray.png in Resources */,
 				1D1EABFE1BA155F80068BEE4 /* BB3_AbousUs_icon.png in Resources */,
@@ -870,6 +915,7 @@
 				1DAB4BC71B6DDFF1008F186F /* 13-target.png in Resources */,
 				1DAB4C061B6DDFF1008F186F /* page2.png in Resources */,
 				1DAF75C21B998AD7008C8F80 /* menu@2x.png in Resources */,
+				05ED81631BA363C200C014E4 /* 184-warning.png in Resources */,
 				1DAB4BFB1B6DDFF1008F186F /* icon-120.png in Resources */,
 				1DAB4BC81B6DDFF1008F186F /* 18-envelope.png in Resources */,
 				1DAB4BF01B6DDFF1008F186F /* BB3_logo_horiz_WEB_rgb.png in Resources */,
@@ -881,14 +927,17 @@
 				1DAB4BF61B6DDFF1008F186F /* facebookShot.png in Resources */,
 				1DAB4BE21B6DDFF1008F186F /* Badge4500.png in Resources */,
 				1DAB4BFA1B6DDFF1008F186F /* goalsShot.png in Resources */,
+				05ED815B1BA360F400C014E4 /* 63-runner.png in Resources */,
 				1D7529E41B88DA6300BC8E03 /* iStock_000020606010_XXXLarge.jpg in Resources */,
 				1D8A32CB1B57F9A1006343E1 /* Icon.png in Resources */,
 				1DAB4C0D1B6DDFF1008F186F /* twitter@2x.png in Resources */,
 				1DAB4BCC1B6DDFF1008F186F /* 28-star.png in Resources */,
 				1DAB4BE11B6DDFF1008F186F /* Badge4000.png in Resources */,
+				05ED81611BA3618D00C014E4 /* 164-glasses-2.png in Resources */,
 				1DAB4C0C1B6DDFF1008F186F /* Toddler on grass.jpg in Resources */,
 				1DAB4BF91B6DDFF1008F186F /* goals.jpg in Resources */,
 				1DAB4C041B6DDFF1008F186F /* network.jpg in Resources */,
+				05ED81691BA3690900C014E4 /* facebook_icon.jpeg in Resources */,
 				1DAB4BEC1B6DDFF1008F186F /* BB3_AbousUs.png in Resources */,
 				1DAB4C091B6DDFF1008F186F /* Piton.png in Resources */,
 				1DAB4BF41B6DDFF1008F186F /* dashboardShot.png in Resources */,
@@ -916,9 +965,11 @@
 				1DAB4BD41B6DDFF1008F186F /* 86-camera.png in Resources */,
 				1D725B741B8796B30006521E /* iStock_000047232464_Full.jpg in Resources */,
 				1D487B391B4A344000A64137 /* Story1.storyboard in Resources */,
+				05ED81671BA3669200C014E4 /* 54-lock.png in Resources */,
 				1DAB4BDB1B6DDFF1008F186F /* Badge1500.png in Resources */,
 				1DAB4BD61B6DDFF1008F186F /* accountsShot.png in Resources */,
 				1DAB4C0F1B6DDFF1008F186F /* walton.png in Resources */,
+				05ED815D1BA3612B00C014E4 /* 112-group.png in Resources */,
 				1D725B721B8795730006521E /* iStock_000024540608_Double.jpg in Resources */,
 				1DAB4BFE1B6DDFF1008F186F /* iStock_000015216865_Large.jpg in Resources */,
 				1DAF75C11B998AD7008C8F80 /* menu.png in Resources */,
@@ -926,6 +977,7 @@
 				1DAB4BE61B6DDFF1008F186F /* badgesShot.png in Resources */,
 				1DAB4BE31B6DDFF1008F186F /* Badge5000.png in Resources */,
 				1D8617BB1AFACA650047DE56 /* Images.xcassets in Resources */,
+				05ED81651BA3667400C014E4 /* 40-inbox.png in Resources */,
 				1D4FA3C01B727B23001181C6 /* blue_minimalistic_gradient_colors_1920x1200.png in Resources */,
 				1DAB4BE71B6DDFF1008F186F /* BB3120.png in Resources */,
 			);
@@ -941,9 +993,11 @@
 				1DAB4CF61B6DE8F0008F186F /* AppDelegate.m in Sources */,
 				1DAB4C1D1B6DE016008F186F /* UIImage+HTButton.m in Sources */,
 				1DAB4CF81B6DE8F0008F186F /* badgeViewController.m in Sources */,
+				0579D4E41BA4B7D4000F4422 /* PrivacyPolicy.m in Sources */,
 				1DAB4D091B6DE8F0008F186F /* SecondViewController.m in Sources */,
 				1DAB4D0F1B6DE8F0008F186F /* TextMessageViewController.m in Sources */,
 				1DAB4D061B6DE8F0008F186F /* PictureViewController.m in Sources */,
+				0512C54A1BA358B400C79514 /* contactUs.m in Sources */,
 				1DAB4C1C1B6DE016008F186F /* UIColor+HTColor.m in Sources */,
 				1DAB4CAC1B6DE75A008F186F /* IQNSArray+Sort.m in Sources */,
 				1DAB4CFF1B6DE8F0008F186F /* GoalsViewController.m in Sources */,
@@ -957,6 +1011,7 @@
 				1DAB4D0B1B6DE8F0008F186F /* SignupController.m in Sources */,
 				1DFB410B1B9EB27D007D87A8 /* GoalsChartController.m in Sources */,
 				1DAB4CB81B6DE75A008F186F /* IQUIView+IQKeyboardToolbar.m in Sources */,
+				05ED816B1BA374C300C014E4 /* LogMinutesController.m in Sources */,
 				1DAB4CFC1B6DE8F0008F186F /* FavoriteMessagesViewController.m in Sources */,
 				1DAB4CB61B6DE75A008F186F /* IQTitleBarButtonItem.m in Sources */,
 				1DAB4CFE1B6DE8F0008F186F /* FormTableController.m in Sources */,
@@ -974,6 +1029,7 @@
 				1DAB4CB71B6DE75A008F186F /* IQToolbar.m in Sources */,
 				1DAB4CB21B6DE75A008F186F /* IQKeyboardReturnKeyHandler.m in Sources */,
 				1D053EAF1B9E30410093F2DC /* SWRevealViewController.m in Sources */,
+				05ED816F1BA379C000C014E4 /* LogMinutesContainer.m in Sources */,
 				1D7529E01B88652400BC8E03 /* JSBadgeView.m in Sources */,
 				1DAB4CB11B6DE75A008F186F /* IQKeyboardManager.m in Sources */,
 				1DAB4D011B6DE8F0008F186F /* LoginViewController.m in Sources */,

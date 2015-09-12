@@ -22,7 +22,7 @@
 @property(strong, nonatomic) NSMutableArray *sectionArray;
 @property(strong, nonatomic) NSMutableArray *numberOfRows;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *menuButton;
-
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *iconButton;
 
 
 

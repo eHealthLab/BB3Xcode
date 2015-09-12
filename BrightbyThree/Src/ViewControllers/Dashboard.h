@@ -37,6 +37,11 @@
 @interface Dashboard : UIViewController
 
 @property(weak, nonatomic) IBOutlet UIBarButtonItem *menuButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *BB3IconButton;
+@property (weak, nonatomic) IBOutlet UIView *container1;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *minutesBadgesSegment;
+
+
 
 @end
 
