@@ -30,6 +30,7 @@
 #import <Foundation/Foundation.h>
 #import "TutorialViewController.h"
 #import "AppDelegate.h"
+#import "SWRevealViewController.h"
 #import <MessageUI/MessageUI.h>
 
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
@@ -58,6 +59,8 @@
     appDelegate = (AppDelegate*) [[UIApplication sharedApplication] delegate];
     self.title = @"Tutorial";
     
+    appDelegate.babyName = @"Nate";
+    
     // Create the colors
     /*UIColor *darkOp =
     [UIColor colorWithRed:0.62f green:0.4f blue:0.42f alpha:1.0];
@@ -72,6 +75,18 @@
     UIGraphicsEndImageContext();
     
     self.view.backgroundColor = [[UIColor colorWithPatternImage:image] colorWithAlphaComponent:1.0];*/
+    
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        [self.menuButton setImage:[[UIImage imageNamed:@"menu.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+        [self.menuButton setTarget: self.revealViewController];
+        [self.menuButton setAction: @selector( revealToggle: )];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
+    
+    [self.iconButton setImage:[[UIImage imageNamed:@"BB3_AbousUs_icon2.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    
     
     
     UIGraphicsBeginImageContext(self.view.frame.size);

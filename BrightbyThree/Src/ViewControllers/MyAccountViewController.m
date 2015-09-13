@@ -33,6 +33,7 @@
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
     {
+        [self.menuButton setImage:[[UIImage imageNamed:@"menu.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
         [self.menuButton setTarget: self.revealViewController];
         [self.menuButton setAction: @selector( revealToggle: )];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];

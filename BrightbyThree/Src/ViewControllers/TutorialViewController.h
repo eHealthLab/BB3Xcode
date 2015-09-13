@@ -28,6 +28,10 @@
 @property (weak, nonatomic) IBOutlet HTPressableButton *button9;
 @property (weak, nonatomic) IBOutlet HTPressableButton *button10;
 @property (weak, nonatomic) IBOutlet HTPressableButton *button11;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *menuButton;
+
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *iconButton;
+
 
 @end
 

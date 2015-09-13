@@ -39,6 +39,12 @@
 @property(weak, nonatomic) IBOutlet UIBarButtonItem *menuButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *BB3IconButton;
 @property (weak, nonatomic) IBOutlet UIView *container1;
+@property (weak, nonatomic) IBOutlet UIView *container2;
+- (IBAction)selectionContainer1Made:(id)sender;
+- (IBAction)selectionContainer2Made:(id)sender;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *goalsSegment;
+
+@property (weak, nonatomic) IBOutlet UIView *container3;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *minutesBadgesSegment;
 
 

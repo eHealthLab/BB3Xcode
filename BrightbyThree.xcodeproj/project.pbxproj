@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0512C54A1BA358B400C79514 /* contactUs.m in Sources */ = {isa = PBXBuildFile; fileRef = 0512C5491BA358B400C79514 /* contactUs.m */; };
 		0579D4E41BA4B7D4000F4422 /* PrivacyPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0579D4E31BA4B7D4000F4422 /* PrivacyPolicy.m */; };
+		0579D4E81BA4EC84000F4422 /* facebookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0579D4E71BA4EC84000F4422 /* facebookViewController.m */; };
+		0579D4EA1BA56AE9000F4422 /* SignUpViewPart1.m in Sources */ = {isa = PBXBuildFile; fileRef = 0579D4E91BA56AE9000F4422 /* SignUpViewPart1.m */; };
 		05ED815B1BA360F400C014E4 /* 63-runner.png in Resources */ = {isa = PBXBuildFile; fileRef = 05ED815A1BA360F400C014E4 /* 63-runner.png */; };
 		05ED815D1BA3612B00C014E4 /* 112-group.png in Resources */ = {isa = PBXBuildFile; fileRef = 05ED815C1BA3612B00C014E4 /* 112-group.png */; };
 		05ED815F1BA3614900C014E4 /* 123-id-card.png in Resources */ = {isa = PBXBuildFile; fileRef = 05ED815E1BA3614900C014E4 /* 123-id-card.png */; };
@@ -179,6 +181,10 @@
 		0512C5491BA358B400C79514 /* contactUs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = contactUs.m; sourceTree = "<group>"; };
 		0579D4E31BA4B7D4000F4422 /* PrivacyPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrivacyPolicy.m; sourceTree = "<group>"; };
 		0579D4E51BA4B7DA000F4422 /* PrivacyPolicy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrivacyPolicy.h; sourceTree = "<group>"; };
+		0579D4E61BA4EC79000F4422 /* facebookViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = facebookViewController.h; sourceTree = "<group>"; };
+		0579D4E71BA4EC84000F4422 /* facebookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = facebookViewController.m; sourceTree = "<group>"; };
+		0579D4E91BA56AE9000F4422 /* SignUpViewPart1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewPart1.m; sourceTree = "<group>"; };
+		0579D4EB1BA56AF1000F4422 /* SignUpViewPart1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignUpViewPart1.h; sourceTree = "<group>"; };
 		05ED815A1BA360F400C014E4 /* 63-runner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "63-runner.png"; sourceTree = "<group>"; };
 		05ED815C1BA3612B00C014E4 /* 112-group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "112-group.png"; sourceTree = "<group>"; };
 		05ED815E1BA3614900C014E4 /* 123-id-card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "123-id-card.png"; sourceTree = "<group>"; };
@@ -808,6 +814,8 @@
 				1DFB410A1B9EB27D007D87A8 /* GoalsChartController.m */,
 				1DFB410C1B9EB284007D87A8 /* GoalsChartController.h */,
 				0512C5481BA358A800C79514 /* contactUs.h */,
+				0579D4E61BA4EC79000F4422 /* facebookViewController.h */,
+				0579D4E71BA4EC84000F4422 /* facebookViewController.m */,
 				0512C5491BA358B400C79514 /* contactUs.m */,
 				05ED816A1BA374C300C014E4 /* LogMinutesController.m */,
 				05ED816C1BA374C800C014E4 /* LogMinutesController.h */,
@@ -815,6 +823,8 @@
 				05ED816E1BA379C000C014E4 /* LogMinutesContainer.m */,
 				0579D4E31BA4B7D4000F4422 /* PrivacyPolicy.m */,
 				0579D4E51BA4B7DA000F4422 /* PrivacyPolicy.h */,
+				0579D4E91BA56AE9000F4422 /* SignUpViewPart1.m */,
+				0579D4EB1BA56AF1000F4422 /* SignUpViewPart1.h */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1004,6 +1014,7 @@
 				1DAB4D001B6DE8F0008F186F /* LibraryViewController.m in Sources */,
 				1DAB4CAF1B6DE75A008F186F /* IQUIViewController+Additions.m in Sources */,
 				1DAB4D0C1B6DE8F0008F186F /* signUpViewController.m in Sources */,
+				0579D4E81BA4EC84000F4422 /* facebookViewController.m in Sources */,
 				1DFB41091B9EB0E6007D87A8 /* PieChartView.m in Sources */,
 				1DAB4D081B6DE8F0008F186F /* rateMessage.m in Sources */,
 				1DAB4D0D1B6DE8F0008F186F /* StartViewController.m in Sources */,
@@ -1044,6 +1055,7 @@
 				1DAB4CAB1B6DE75A008F186F /* DKCircleButton.m in Sources */,
 				1DAB4CB31B6DE75A008F186F /* IQSegmentedNextPrevious.m in Sources */,
 				1DAB4CAD1B6DE75A008F186F /* IQUITextFieldView+Additions.m in Sources */,
+				0579D4EA1BA56AE9000F4422 /* SignUpViewPart1.m in Sources */,
 				1DAB4CFB1B6DE8F0008F186F /* EnrollNow.m in Sources */,
 				1DAB4D041B6DE8F0008F186F /* NetworkViewController.m in Sources */,
 				1DAB4CAE1B6DE75A008F186F /* IQUIView+Hierarchy.m in Sources */,

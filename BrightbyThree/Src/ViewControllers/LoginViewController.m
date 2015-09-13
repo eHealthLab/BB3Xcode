@@ -319,71 +319,28 @@
         uiViewController.title = [@"WELCOME BACK, " stringByAppendingString:appDelegate.firstName];
         
         SWRevealViewController *uiRearViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"slideMenu"];
+        
         SWRevealViewController *uiFrontViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"frontMenu"];
         
-        //SWRevealViewController *revealViewController = self.revealViewController;
-        [uiViewController.revealViewController setFrontViewController:uiFrontViewController];
-        [uiViewController.revealViewController setRearViewController:uiRearViewController];
-        [uiViewController.revealViewController setFrontViewPosition: FrontViewPositionRight animated: YES];
+        [uiViewController setFrontViewController:uiFrontViewController];
+        [uiViewController setRearViewController:uiRearViewController];
+        [uiViewController setFrontViewPosition: FrontViewPositionRight animated: NO];
         
         [self.navigationController pushViewController:uiViewController  animated:YES];
         self.navigationItem.leftBarButtonItem = nil;
         
-        //SWRevealViewController  *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"revealView"];
-        
-        //SWRevealViewController *revealViewController = self.revealViewController;
-        
-        
-        //UITabBarController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"tabbarController"];
-        //[self.navigationController pushViewController:revealViewController  animated:YES];
-        //UIImage *settingsImage = [UIImage imageNamed:@"BB3_logo-icon_WEB_rgb_28x28.png"];
-        
-        UIBarButtonItem *settingsButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"BB3_AbousUs_icon2.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(settingsPressed)];
+        UIBarButtonItem *settingsButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"BB3_AbousUs_icon2.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:nil];
         
         uiViewController.navigationItem.leftBarButtonItem = settingsButton;
     
         UIImage *menuImage = [UIImage imageNamed:@"menu.png"];
-        UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:menuImage style:UIBarButtonItemStylePlain target:self action:@selector(menuPressed)];
+        UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:menuImage style:UIBarButtonItemStylePlain target:uiViewController action:@selector(revealToggle:)];
+        [uiViewController.frontViewController.view addGestureRecognizer:uiViewController.panGestureRecognizer];
         uiViewController.navigationItem.rightBarButtonItem = menuButton;
-        
-        menuButton.target = uiViewController.revealViewController.rearViewController;
-        menuButton.action = @selector(revealToggle:);
-        //[self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
-        
-        /*UIImage *accountImage = [UIImage imageNamed:@"76-baby.png"];
-        UIBarButtonItem *myAccountButton = [[UIBarButtonItem alloc] initWithImage:accountImage style:UIBarButtonItemStylePlain target:self action:@selector(myAccountPressed)];
-        uiViewController.navigationItem.leftBarButtonItem = settingsButton;
-        
-        uiViewController.navigationItem.rightBarButtonItem = myAccountButton;*/
-    }
-    
+   }
     receivedData = nil;
 }
 
--(void)menuPressed
-{
-    
-}
-
-
--(void)myAccountPressed
-{
-    UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"accountViewController"];
-    [self.navigationController pushViewController:uiViewController animated:YES];
-    
-    //UIImage *accountImage = [UIImage imageNamed:@"76-baby.png"];
-    //UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:nil action:nil];
-    //[[UIBarButtonItem alloc] initWithImage:accountImage style:UIBarButtonItemStylePlain target:self action:@selector(myAccountPressed)];
-    //uiViewController.navigationItem.rightBarButtonItem = saveButton;
-    
-    //uiViewController.navigationItem.rightBarButtonItem = myAccountButton;
-}
-
--(void)settingsPressed
-{
-    UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"settingsViewController"];
-    [self.navigationController pushViewController:uiViewController animated:YES];
-}
 
 - (BOOL) validateEmail: (NSString *) candidate {
     NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}";

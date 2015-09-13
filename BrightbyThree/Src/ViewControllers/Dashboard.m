@@ -44,45 +44,83 @@
     
     appDelegate = (AppDelegate*) [[UIApplication sharedApplication] delegate];
     
-    //UIImage *menuImage = [UIImage imageNamed:@"menu.png"];
-    //UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:menuImage style:UIBarButtonItemStylePlain target:self action:@selector(menuPressed)];
-    //self.navigationItem.rightBarButtonItem = menuButton;
-
-    
     NSLog(@"the view loads\n");
     
-    
-    [self.menuButton setImage:[[UIImage imageNamed:@"menu.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
-    self.menuButton.target = self.revealViewController;
-    
-    self.menuButton.action = @selector(revealToggle:);
-    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
-    
-    [self.BB3IconButton setImage:[[UIImage imageNamed:@"BB3_AbousUs_icon2.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
-    
-    appDelegate.firstName = @"MARY";
-    self.title = [@"WELCOME BACK, " stringByAppendingString:appDelegate.firstName];
+    //appDelegate.firstName = @"MARY";
+    //self.title = [@"WELCOME BACK, " stringByAppendingString:appDelegate.firstName];
 }
 
 -(void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
 }
 
--(IBAction)indexChanged:(UISegmentedControl *)sender
-{
-    switch (self.minutesBadgesSegment.selectedSegmentIndex)
-    {
+- (IBAction)selectionContainer1Made:(id)sender {
+    int choice = (int)self.minutesBadgesSegment.selectedSegmentIndex;
+    switch (choice) {
         case 0:
-     //       UIViewController *viewController1 = [self.storyboard instantiateViewControllerWithIdentifier:@"badges"];
-       //     self.container1.view = UIViewController;
+        {
+            NSLog(@"existing user\n");
+            UIViewController *vc1 = [self.storyboard instantiateViewControllerWithIdentifier:@"minutes"];
+            vc1.view.frame = self.container1.bounds;
+            [self.container1 addSubview:vc1.view];
+            [self addChildViewController:vc1];
+            [vc1 didMoveToParentViewController:self];
             break;
+        }
         case 1:
-         //   self.textLabel.text = @"Second Segment selected";
+        {
+            NSLog(@"new user\n");
+            UIViewController *vc1 = [self.storyboard instantiateViewControllerWithIdentifier:@"badges"];
+            vc1.view.frame = self.container1.bounds;
+            [self.container1 addSubview:vc1.view];
+            [self addChildViewController:vc1];
+            [vc1 didMoveToParentViewController:self];
             break;
-        default: 
-            break; 
-    } 
+        }
+        default:
+            break;
+    }
+
 }
 
-
+- (IBAction)selectionContainer2Made:(id)sender {
+ 
+    int choice = (int)self.goalsSegment.selectedSegmentIndex;
+    switch (choice) {
+        case 0:
+        {
+            NSLog(@"existing user\n");
+            UIViewController *vc1 = [self.storyboard instantiateViewControllerWithIdentifier:@"dailyGoals"];
+            vc1.view.frame = self.container2.bounds;
+            [self.container2 addSubview:vc1.view];
+            [self addChildViewController:vc1];
+            [vc1 didMoveToParentViewController:self];
+            break;
+        }
+        case 1:
+        {
+            NSLog(@"new user\n");
+            UIViewController *vc1 = [self.storyboard instantiateViewControllerWithIdentifier:@"weeklyGoals"];
+            vc1.view.frame = self.container2.bounds;
+            [self.container2 addSubview:vc1.view];
+            [self addChildViewController:vc1];
+            [vc1 didMoveToParentViewController:self];
+            break;
+        }
+        
+        case 3:
+        {
+            NSLog(@"new user\n");
+            UIViewController *vc1 = [self.storyboard instantiateViewControllerWithIdentifier:@"monthlyGoals"];
+            vc1.view.frame = self.container2.bounds;
+            [self.container2 addSubview:vc1.view];
+            [self addChildViewController:vc1];
+            [vc1 didMoveToParentViewController:self];
+            break;
+        }
+        default:
+            break;
+    }
+    
+}
 @end
