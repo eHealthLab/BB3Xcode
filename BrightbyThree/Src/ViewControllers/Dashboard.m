@@ -46,6 +46,8 @@
     
     NSLog(@"the view loads\n");
     
+    [self.menuButton setImage:[[UIImage imageNamed:@"menu.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    
     //appDelegate.firstName = @"MARY";
     //self.title = [@"WELCOME BACK, " stringByAppendingString:appDelegate.firstName];
 }
