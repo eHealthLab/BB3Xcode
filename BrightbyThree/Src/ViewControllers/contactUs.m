@@ -54,6 +54,13 @@
     self.sendFeedback.shadowColor = [UIColor ht_mintDarkColor];
     [self.sendFeedback addTarget:self action:@selector(sendFeedbackButtonPressed) forControlEvents:UIControlEventTouchUpInside];
     
+    
+    [self.textLabel sizeToFit];
+    [self.view addSubview:self.textLabel];
+    CGRect frame = self.textLabel.frame;
+    frame.size.height = self.textLabel.contentSize.height;
+    self.textLabel.frame = frame;
+    
 }
 
 -(void)sendFeedbackButtonPressed

@@ -118,6 +118,7 @@
 @implementation SlideMenu{
     NSArray *menu;
     NSArray *imagesArray;
+    NSArray *titlePages;
     AppDelegate *appDelegate;
 }
 
@@ -137,8 +138,9 @@
     self.view.backgroundColor = [UIColor grayColor];
     
     [super viewDidLoad];
-    menu = @[@"extra",@"first", @"second", @"third", @"fourth", @"fifth", @"sixth", @"seventh", @"eigth", @"ninth"];
-    imagesArray = @[@"", @"81-dashboard.png", @"123-id-card.png", @"40-inbox.png", @"facebook_icon.jpeg", @"164-glasses-2.png", @"112-group.png", @"187-pencil.png", @"54-lock.png", @"63-runner.png"];
+    menu = @[@"extra",@"first", @"second", @"third", @"fourth", @"fifth", @"sixth", @"seventh", @"eigth", @"ninth", @"tenth", @"eleventh",@"twelth"];
+    imagesArray = @[@"", @"81-dashboard.png", @"123-id-card.png", @"40-inbox.png", @"badge_icon_24.png" , @"17-bar-chart.png", @"28-star.png", @"facebook_icon.jpeg", @"164-glasses-2.png", @"112-group.png", @"187-pencil.png", @"54-lock.png", @"63-runner.png"];
+    titlePages = @[@"",@"Dashboard",@"My Account",@"Messages",@"Rewards",@"Leaderboard",@"Favorites",@"Facebook Page",@"Tutorial",@"About BrightbyThree",@"Contact Us",@"Privacy Policy",@"Sign Out"];
     
 }
 
@@ -201,6 +203,7 @@
             
             UINavigationController* navController = (UINavigationController*)self.revealViewController.frontViewController;
             [navController setViewControllers: @[dvc] animated: NO ];
+            
             [self.revealViewController setFrontViewPosition: FrontViewPositionLeft animated: YES];
         };
         
@@ -209,7 +212,19 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 9) {
+    
+    if (indexPath.row == 3) {
+        
+        UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MessagesLibrary"];
+        
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:uiViewController];
+        
+        //nav.modalPresentationStyle = UIModalPresentationFullScreen;
+        
+        [self presentViewController:nav animated:NO completion:nil];
+    }
+    
+    if (indexPath.row == 12) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Sign out" message:@"Are you sure you want to sign out?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
         //UIImage *image = [UIImage imageNamed:@"184-warning.png"];
         //UIImageView *imageView = [[UIImageView alloc] initWithImage:image];

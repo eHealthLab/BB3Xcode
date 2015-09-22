@@ -14,6 +14,7 @@
 {
     NSMutableArray *sectionArray;
     NSMutableArray *numberOfRows;
+    int selectedIndex;
 }
 @property(strong, nonatomic) NSMutableArray *sectionArray;
 @property(strong, nonatomic) NSMutableArray *numberOfRows;

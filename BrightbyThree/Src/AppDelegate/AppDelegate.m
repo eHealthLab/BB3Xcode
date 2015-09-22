@@ -71,8 +71,8 @@
     self.numberOfClicksNetwork=0;
     self.numberOfUnreadMessages=1;
     self.newBadgeNotification=0;
-    //self.urlToNodeJs = @"http://localhost:3000";
-    self.urlToNodeJs = @"http://cbb.ucdenver.edu:3000";
+    self.urlToNodeJs = @"http://localhost:3000";
+    //self.urlToNodeJs = @"http://cbb.ucdenver.edu:3000";
     
     
 }
@@ -80,8 +80,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    //self.urlToNodeJs = @"http://localhost:3000";
-    self.urlToNodeJs = @"http://cbb.ucdenver.edu:3000";
+    self.urlToNodeJs = @"http://localhost:3000";
+    //self.urlToNodeJs = @"http://cbb.ucdenver.edu:3000";
     _goalsDaysComponent = @"2";
     _goalsMinutesComponent = @"10";
     
@@ -129,6 +129,22 @@
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
+    
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    //[prefs setObject:self.firstName forKey:@"firstName"];
+    //[prefs setObject:self.lastName forKey:@"lastName"];
+    [prefs setObject:self.userEmail forKey:@"email"];
+    [prefs setObject:self.userPassword forKey:@"password"];
+    //[prefs setObject:self.babyName forKey:@"babyName"];
+    //[prefs setObject:self.babyDOB forKey:@"babyDOB"];
+    //[prefs setObject:self.babyGender forKey:@"babyGender"];
+    //[prefs setObject:self.phoneNumber forKey:@"phoneNumber"];
+    //[prefs setObject:self.zipcode forKey:@"zipcode"];
+    //NSLog(@"inside log in: phone number is: %@", self.phoneNumber);
+    
+    [prefs synchronize];
+    
+    
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }

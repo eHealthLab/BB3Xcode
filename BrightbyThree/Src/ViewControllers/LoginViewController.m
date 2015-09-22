@@ -60,7 +60,7 @@
     
     prefs = [NSUserDefaults standardUserDefaults];
     
-    self.loginEmail.text = [prefs objectForKey:@"userName"];
+    self.loginEmail.text = [prefs objectForKey:@"email"];
     self.loginPassword.text = [prefs objectForKey:@"password"];
     
     //self.loginEmail.text = appDelegate.userEmail;
@@ -180,7 +180,7 @@
         appDelegate.firstName = @"MARY";
         uiViewController.title = [@"WELCOME BACK, " stringByAppendingString:appDelegate.firstName];
         
-        SWRevealViewController *uiRearViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"slideMenu"];
+        /*SWRevealViewController *uiRearViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"slideMenu"];
         
         SWRevealViewController *uiFrontViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"frontMenu"];
         
@@ -202,9 +202,9 @@
         [menuButton setImage:[[UIImage imageNamed:@"menu.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
         
         [uiViewController.frontViewController.view addGestureRecognizer:uiViewController.panGestureRecognizer];
-        uiViewController.navigationItem.rightBarButtonItem = menuButton;
+        uiViewController.navigationItem.rightBarButtonItem = menuButton;*/
     
-        /*
+        
         NSLog(@"login info entered: %@ %@", self.loginEmail.text , self.loginPassword.text);
         NSString *newEmail = [self.loginEmail.text uppercaseString];
         responseData = [NSMutableData data];
@@ -226,7 +226,7 @@
             receivedData = nil;
             NSLog(@"no connection \n");
             // Inform the user that the connection failed.
-        }*/
+        }
     }
 }
 
@@ -354,7 +354,7 @@
         
         [uiViewController setFrontViewController:uiFrontViewController];
         [uiViewController setRearViewController:uiRearViewController];
-        [uiViewController setFrontViewPosition: FrontViewPositionRight animated: NO];
+        [uiViewController setFrontViewPosition: FrontViewPositionLeft animated: NO];
         
         [self.navigationController pushViewController:uiViewController  animated:YES];
         self.navigationItem.leftBarButtonItem = nil;
@@ -365,6 +365,9 @@
     
         UIImage *menuImage = [UIImage imageNamed:@"menu.png"];
         UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:menuImage style:UIBarButtonItemStylePlain target:uiViewController action:@selector(revealToggle:)];
+        
+        [menuButton setImage:[[UIImage imageNamed:@"menu.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+        
         [uiViewController.frontViewController.view addGestureRecognizer:uiViewController.panGestureRecognizer];
         uiViewController.navigationItem.rightBarButtonItem = menuButton;
    }

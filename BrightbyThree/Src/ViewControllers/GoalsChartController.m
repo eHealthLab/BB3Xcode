@@ -20,7 +20,8 @@ static inline UIColor *GetRandomUIColor()
 
 static const CGFloat dia = 100.0f;
 
-static const CGRect kPieChartViewFrame = {{35.0f, 35.0f},{dia, dia}};
+static const CGRect kPieChartViewFrame = {{35.0f, 20.0f},{dia, dia}};
+static const CGRect kPieChartViewFrame2 = {{235.0f, 20.0f},{dia, dia}};
 static const CGRect kHoleSliderFrame = {{35.0f, 300.0f},{dia, 20.0}};
 static const CGRect kSlicesSliderFrame = {{35.0f, 330.0f},{dia, 20.0}};
 
@@ -37,6 +38,7 @@ PieChartViewDataSource
 >
 {
     PieChartView *pieChartView;
+    PieChartView *pieChartView2;
     UISlider *holeSlider;
     UISlider *slicesSlider;
     UILabel *holeLabel;
@@ -63,9 +65,16 @@ PieChartViewDataSource
     view.backgroundColor = [UIColor lightGrayColor];
     
     pieChartView = [[PieChartView alloc] initWithFrame:kPieChartViewFrame];
+    pieChartView2 = [[PieChartView alloc] initWithFrame:kPieChartViewFrame2
+                     ];
     pieChartView.delegate = self;
     pieChartView.datasource = self;
+    
+    pieChartView2.delegate = self;
+    pieChartView2.datasource = self;
+    
     [view addSubview:pieChartView];
+    [view addSubview:pieChartView2];
     //[pieChartView release];
     
     holeLabel = [self labelWithFrame:kHoleLabelFrame];
@@ -95,8 +104,34 @@ PieChartViewDataSource
     [view addSubview:slicesSlider];
     //[slicesSlider release];
     
+    
+    //UIScrollView *scroll = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 435)];
+    //scroll.contentSize = CGSizeMake(320, 700);
+    //scroll.showsHorizontalScrollIndicator = YES;
+    
+    //NSArray *itemArray = [NSArray arrayWithObjects: @"DAILY", @"WEEKLY", @"MONTHLY", nil];
+    
+    
+    
     self.view = view;
     //[view release];
+}
+
+-(void)segmentedControlValueDidChange:(UISegmentedControl *)segment
+{
+    switch (segment.selectedSegmentIndex) {
+        case 0:{
+            //action for the first button (Current)
+            break;}
+        case 1:{
+            //action for the first button (Current)
+            break;}
+    }
+}
+
+-(void)MySegmentControlAction:(id)sender
+{
+    
 }
 
 - (void)viewDidLoad
@@ -105,6 +140,16 @@ PieChartViewDataSource
     [self didChangeValueForSlider:holeSlider];
     [self didChangeValueForSlider:slicesSlider];
     [pieChartView reloadData];
+    
+    UISegmentedControl *segmentedControl = [[UISegmentedControl alloc] initWithItems:@[@"DAILY", @"WEEKLY", @"MONTHLY"]];
+    segmentedControl.frame = CGRectMake(35, 140, 300, 30);
+    //segmentedControl.segmentedControlStyle = UISegmentedControlStylePlain;
+    [segmentedControl addTarget:self action:@selector(MySegmentControlAction:) forControlEvents: UIControlEventValueChanged];
+    segmentedControl.selectedSegmentIndex = 0;
+    //[scroll addSubview:segmentedControl];
+    //[segmentedControl release];
+    [self.view addSubview:segmentedControl];
+    
 }
 
 - (UILabel*)labelWithFrame:(CGRect)frame

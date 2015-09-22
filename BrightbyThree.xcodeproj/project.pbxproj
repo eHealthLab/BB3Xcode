@@ -8,9 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		0512C54A1BA358B400C79514 /* contactUs.m in Sources */ = {isa = PBXBuildFile; fileRef = 0512C5491BA358B400C79514 /* contactUs.m */; };
+		05784A031BAF01C10096703F /* badge_icon_24.png in Resources */ = {isa = PBXBuildFile; fileRef = 05784A021BAF01C10096703F /* badge_icon_24.png */; };
+		05784A051BAF024C0096703F /* 17-bar-chart.png in Resources */ = {isa = PBXBuildFile; fileRef = 05784A041BAF024C0096703F /* 17-bar-chart.png */; };
+		05784A071BB08EBE0096703F /* ExpandingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05784A061BB08EBE0096703F /* ExpandingCell.xib */; };
+		05784A0E1BB0AA7F0096703F /* downArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 05784A0D1BB0AA7F0096703F /* downArrow.png */; };
+		05784A121BB100BE0096703F /* imagesUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 05784A111BB100BE0096703F /* imagesUp.png */; };
+		05784A141BB100C20096703F /* imagesdown.png in Resources */ = {isa = PBXBuildFile; fileRef = 05784A131BB100C20096703F /* imagesdown.png */; };
+		05784A161BB101210096703F /* upArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 05784A151BB101210096703F /* upArrow.png */; };
+		05784A191BB11EB90096703F /* ProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05784A181BB11EB90096703F /* ProgressViewController.m */; };
+		05784A1B1BB120F60096703F /* RewardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05784A1A1BB120F60096703F /* RewardsViewController.m */; };
+		05784A1F1BB1211C0096703F /* ModifyGoalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05784A1E1BB1211C0096703F /* ModifyGoalsViewController.m */; };
+		05784A221BB1B6B50096703F /* arrow-Down.png in Resources */ = {isa = PBXBuildFile; fileRef = 05784A201BB1B6B50096703F /* arrow-Down.png */; };
+		05784A231BB1B6B50096703F /* arrow-Up.png in Resources */ = {isa = PBXBuildFile; fileRef = 05784A211BB1B6B50096703F /* arrow-Up.png */; };
 		0579D4E41BA4B7D4000F4422 /* PrivacyPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0579D4E31BA4B7D4000F4422 /* PrivacyPolicy.m */; };
 		0579D4E81BA4EC84000F4422 /* facebookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0579D4E71BA4EC84000F4422 /* facebookViewController.m */; };
 		0579D4EA1BA56AE9000F4422 /* SignUpViewPart1.m in Sources */ = {isa = PBXBuildFile; fileRef = 0579D4E91BA56AE9000F4422 /* SignUpViewPart1.m */; };
+		058A68501BACADB4009E3816 /* start-icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 058A684F1BACADB4009E3816 /* start-icon.jpg */; };
+		058A68521BACADB8009E3816 /* video-24-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 058A68511BACADB8009E3816 /* video-24-24.png */; };
+		058A68541BACAF76009E3816 /* chevron-arrow-to-right--ios-7-interface-symbol_318-33616.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 058A68531BACAF76009E3816 /* chevron-arrow-to-right--ios-7-interface-symbol_318-33616.jpg */; };
+		058A68561BACB00D009E3816 /* cbevron_icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 058A68551BACB00D009E3816 /* cbevron_icon.jpg */; };
 		05ED815B1BA360F400C014E4 /* 63-runner.png in Resources */ = {isa = PBXBuildFile; fileRef = 05ED815A1BA360F400C014E4 /* 63-runner.png */; };
 		05ED815D1BA3612B00C014E4 /* 112-group.png in Resources */ = {isa = PBXBuildFile; fileRef = 05ED815C1BA3612B00C014E4 /* 112-group.png */; };
 		05ED815F1BA3614900C014E4 /* 123-id-card.png in Resources */ = {isa = PBXBuildFile; fileRef = 05ED815E1BA3614900C014E4 /* 123-id-card.png */; };
@@ -179,12 +195,32 @@
 /* Begin PBXFileReference section */
 		0512C5481BA358A800C79514 /* contactUs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = contactUs.h; sourceTree = "<group>"; };
 		0512C5491BA358B400C79514 /* contactUs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = contactUs.m; sourceTree = "<group>"; };
+		05784A021BAF01C10096703F /* badge_icon_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = badge_icon_24.png; sourceTree = "<group>"; };
+		05784A041BAF024C0096703F /* 17-bar-chart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "17-bar-chart.png"; sourceTree = "<group>"; };
+		05784A061BB08EBE0096703F /* ExpandingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpandingCell.xib; sourceTree = "<group>"; };
+		05784A0C1BB0917B0096703F /* ExpandingCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExpandingCell.h; sourceTree = "<group>"; };
+		05784A0D1BB0AA7F0096703F /* downArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = downArrow.png; sourceTree = "<group>"; };
+		05784A111BB100BE0096703F /* imagesUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imagesUp.png; sourceTree = "<group>"; };
+		05784A131BB100C20096703F /* imagesdown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imagesdown.png; sourceTree = "<group>"; };
+		05784A151BB101210096703F /* upArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upArrow.png; sourceTree = "<group>"; };
+		05784A171BB11EB00096703F /* ProgressViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProgressViewController.h; sourceTree = "<group>"; };
+		05784A181BB11EB90096703F /* ProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressViewController.m; sourceTree = "<group>"; };
+		05784A1A1BB120F60096703F /* RewardsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RewardsViewController.m; sourceTree = "<group>"; };
+		05784A1C1BB121000096703F /* RewardsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RewardsViewController.h; sourceTree = "<group>"; };
+		05784A1D1BB121130096703F /* ModifyGoalsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModifyGoalsViewController.h; sourceTree = "<group>"; };
+		05784A1E1BB1211C0096703F /* ModifyGoalsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyGoalsViewController.m; sourceTree = "<group>"; };
+		05784A201BB1B6B50096703F /* arrow-Down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-Down.png"; sourceTree = "<group>"; };
+		05784A211BB1B6B50096703F /* arrow-Up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-Up.png"; sourceTree = "<group>"; };
 		0579D4E31BA4B7D4000F4422 /* PrivacyPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrivacyPolicy.m; sourceTree = "<group>"; };
 		0579D4E51BA4B7DA000F4422 /* PrivacyPolicy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrivacyPolicy.h; sourceTree = "<group>"; };
 		0579D4E61BA4EC79000F4422 /* facebookViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = facebookViewController.h; sourceTree = "<group>"; };
 		0579D4E71BA4EC84000F4422 /* facebookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = facebookViewController.m; sourceTree = "<group>"; };
 		0579D4E91BA56AE9000F4422 /* SignUpViewPart1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewPart1.m; sourceTree = "<group>"; };
 		0579D4EB1BA56AF1000F4422 /* SignUpViewPart1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignUpViewPart1.h; sourceTree = "<group>"; };
+		058A684F1BACADB4009E3816 /* start-icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "start-icon.jpg"; sourceTree = "<group>"; };
+		058A68511BACADB8009E3816 /* video-24-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video-24-24.png"; sourceTree = "<group>"; };
+		058A68531BACAF76009E3816 /* chevron-arrow-to-right--ios-7-interface-symbol_318-33616.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "chevron-arrow-to-right--ios-7-interface-symbol_318-33616.jpg"; sourceTree = "<group>"; };
+		058A68551BACB00D009E3816 /* cbevron_icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cbevron_icon.jpg; sourceTree = "<group>"; };
 		05ED815A1BA360F400C014E4 /* 63-runner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "63-runner.png"; sourceTree = "<group>"; };
 		05ED815C1BA3612B00C014E4 /* 112-group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "112-group.png"; sourceTree = "<group>"; };
 		05ED815E1BA3614900C014E4 /* 123-id-card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "123-id-card.png"; sourceTree = "<group>"; };
@@ -486,19 +522,31 @@
 				1D7529E11B88D9E900BC8E03 /* iStock_000017755733_Double.jpg */,
 				1DAF75BF1B998AD7008C8F80 /* menu.png */,
 				1DAF75C01B998AD7008C8F80 /* menu@2x.png */,
+				05784A111BB100BE0096703F /* imagesUp.png */,
 				1D7529E31B88DA6300BC8E03 /* iStock_000020606010_XXXLarge.jpg */,
 				1D1EABFF1BA158060068BEE4 /* BB3_AbousUs_icon2.png */,
+				058A68551BACB00D009E3816 /* cbevron_icon.jpg */,
+				05784A131BB100C20096703F /* imagesdown.png */,
 				05ED815E1BA3614900C014E4 /* 123-id-card.png */,
+				05784A021BAF01C10096703F /* badge_icon_24.png */,
 				1DAB4B751B6DDFF0008F186F /* 06-magnify.png */,
+				05784A201BB1B6B50096703F /* arrow-Down.png */,
+				05784A211BB1B6B50096703F /* arrow-Up.png */,
+				05784A0D1BB0AA7F0096703F /* downArrow.png */,
 				1DAB4B761B6DDFF0008F186F /* 08-chat.png */,
 				05ED815C1BA3612B00C014E4 /* 112-group.png */,
+				05784A151BB101210096703F /* upArrow.png */,
 				1D725B711B8795730006521E /* iStock_000024540608_Double.jpg */,
+				05784A041BAF024C0096703F /* 17-bar-chart.png */,
 				05ED81621BA363C200C014E4 /* 184-warning.png */,
+				058A684F1BACADB4009E3816 /* start-icon.jpg */,
 				05ED81601BA3618D00C014E4 /* 164-glasses-2.png */,
 				05ED815A1BA360F400C014E4 /* 63-runner.png */,
 				1DAB4B771B6DDFF0008F186F /* 111-user.png */,
 				1DAB4B781B6DDFF0008F186F /* 117-todo.png */,
 				1D725B6F1B8794A90006521E /* iStock_000019163656_Double.jpg */,
+				058A68531BACAF76009E3816 /* chevron-arrow-to-right--ios-7-interface-symbol_318-33616.jpg */,
+				058A68511BACADB8009E3816 /* video-24-24.png */,
 				1DAB4B791B6DDFF0008F186F /* 13-target.png */,
 				1DAB4B7A1B6DDFF0008F186F /* 18-envelope.png */,
 				1D4FA3BD1B727B1D001181C6 /* blue_minimalistic_gradient_colors_1200x1920.png */,
@@ -757,6 +805,8 @@
 				1DAB4CC31B6DE8F0008F186F /* badgeViewController.m */,
 				1DAB4CC41B6DE8F0008F186F /* Dashboard.h */,
 				1DAB4CC51B6DE8F0008F186F /* Dashboard.m */,
+				05784A171BB11EB00096703F /* ProgressViewController.h */,
+				05784A181BB11EB90096703F /* ProgressViewController.m */,
 				1DAB4CC61B6DE8F0008F186F /* DashboardViewController.h */,
 				1DAB4CC71B6DE8F0008F186F /* DashboardViewController.m */,
 				1DAB4CC81B6DE8F0008F186F /* EnrollNow.h */,
@@ -825,6 +875,12 @@
 				0579D4E51BA4B7DA000F4422 /* PrivacyPolicy.h */,
 				0579D4E91BA56AE9000F4422 /* SignUpViewPart1.m */,
 				0579D4EB1BA56AF1000F4422 /* SignUpViewPart1.h */,
+				05784A061BB08EBE0096703F /* ExpandingCell.xib */,
+				05784A0C1BB0917B0096703F /* ExpandingCell.h */,
+				05784A1A1BB120F60096703F /* RewardsViewController.m */,
+				05784A1C1BB121000096703F /* RewardsViewController.h */,
+				05784A1D1BB121130096703F /* ModifyGoalsViewController.h */,
+				05784A1E1BB1211C0096703F /* ModifyGoalsViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -896,6 +952,7 @@
 				1DAB4BE81B6DDFF1008F186F /* BB3152.png in Resources */,
 				1DAB4BFC1B6DDFF1008F186F /* icon-152.png in Resources */,
 				1DAB4BEA1B6DDFF1008F186F /* BB372.png in Resources */,
+				05784A051BAF024C0096703F /* 17-bar-chart.png in Resources */,
 				1D7529E21B88D9E900BC8E03 /* iStock_000017755733_Double.jpg in Resources */,
 				1DAB4BC51B6DDFF1008F186F /* 111-user.png in Resources */,
 				1DAB4BDC1B6DDFF1008F186F /* Badge2000.png in Resources */,
@@ -910,6 +967,7 @@
 				1DAB4BF51B6DDFF1008F186F /* facebook-Logo.jpg in Resources */,
 				1DAB4BC91B6DDFF1008F186F /* 187-pencil.png in Resources */,
 				1DAB4BD91B6DDFF1008F186F /* Badge1000.png in Resources */,
+				058A68521BACADB8009E3816 /* video-24-24.png in Resources */,
 				1DAB4BE01B6DDFF1008F186F /* Badge400.png in Resources */,
 				1DAB4BF11B6DDFF1008F186F /* BB3_logo_vert-tag_WEB_rgb_1024.png in Resources */,
 				1DAB4BEB1B6DDFF1008F186F /* BB376.png in Resources */,
@@ -919,6 +977,7 @@
 				1DAB4BEF1B6DDFF1008F186F /* BB3_logo-icon_WEB_rgb_28x28.png in Resources */,
 				1DAB4BED1B6DDFF1008F186F /* BB3_AboutUs.png in Resources */,
 				1DAB4BD51B6DDFF1008F186F /* Accords.png in Resources */,
+				05784A161BB101210096703F /* upArrow.png in Resources */,
 				1DAB4C011B6DDFF1008F186F /* minutesShot.png in Resources */,
 				1DAB4C081B6DDFF1008F186F /* page4.png in Resources */,
 				1DAB4BDD1B6DDFF1008F186F /* Badge2500.png in Resources */,
@@ -927,12 +986,18 @@
 				1DAF75C21B998AD7008C8F80 /* menu@2x.png in Resources */,
 				05ED81631BA363C200C014E4 /* 184-warning.png in Resources */,
 				1DAB4BFB1B6DDFF1008F186F /* icon-120.png in Resources */,
+				05784A121BB100BE0096703F /* imagesUp.png in Resources */,
+				05784A221BB1B6B50096703F /* arrow-Down.png in Resources */,
+				05784A071BB08EBE0096703F /* ExpandingCell.xib in Resources */,
 				1DAB4BC81B6DDFF1008F186F /* 18-envelope.png in Resources */,
+				058A68501BACADB4009E3816 /* start-icon.jpg in Resources */,
 				1DAB4BF01B6DDFF1008F186F /* BB3_logo_horiz_WEB_rgb.png in Resources */,
 				1DAB4BC21B6DDFF1008F186F /* 01-refresh.png in Resources */,
 				1DAB4BE51B6DDFF1008F186F /* badges.png in Resources */,
+				05784A141BB100C20096703F /* imagesdown.png in Resources */,
 				1DAB4C0A1B6DDFF1008F186F /* rateMessage.png in Resources */,
 				1DAB4BC31B6DDFF1008F186F /* 06-magnify.png in Resources */,
+				05784A031BAF01C10096703F /* badge_icon_24.png in Resources */,
 				1DAB4BF71B6DDFF1008F186F /* favoritesShot.png in Resources */,
 				1DAB4BF61B6DDFF1008F186F /* facebookShot.png in Resources */,
 				1DAB4BE21B6DDFF1008F186F /* Badge4500.png in Resources */,
@@ -957,8 +1022,10 @@
 				1DAB4BDE1B6DDFF1008F186F /* Badge3000.png in Resources */,
 				1D8A32CA1B57F9A1006343E1 /* Icon-72.png in Resources */,
 				1D725B701B8794A90006521E /* iStock_000019163656_Double.jpg in Resources */,
+				058A68541BACAF76009E3816 /* chevron-arrow-to-right--ios-7-interface-symbol_318-33616.jpg in Resources */,
 				1DAB4BFD1B6DDFF1008F186F /* icon-76.png in Resources */,
 				1DAB4BD21B6DDFF1008F186F /* 81-dashboard.png in Resources */,
+				05784A0E1BB0AA7F0096703F /* downArrow.png in Resources */,
 				1DAB4BCB1B6DDFF1008F186F /* 1x.png in Resources */,
 				1DAB4C051B6DDFF1008F186F /* page1.png in Resources */,
 				1DAB4BCE1B6DDFF1008F186F /* 3x.png in Resources */,
@@ -974,7 +1041,9 @@
 				1DAB4C001B6DDFF1008F186F /* messages.jpeg in Resources */,
 				1DAB4BD41B6DDFF1008F186F /* 86-camera.png in Resources */,
 				1D725B741B8796B30006521E /* iStock_000047232464_Full.jpg in Resources */,
+				058A68561BACB00D009E3816 /* cbevron_icon.jpg in Resources */,
 				1D487B391B4A344000A64137 /* Story1.storyboard in Resources */,
+				05784A231BB1B6B50096703F /* arrow-Up.png in Resources */,
 				05ED81671BA3669200C014E4 /* 54-lock.png in Resources */,
 				1DAB4BDB1B6DDFF1008F186F /* Badge1500.png in Resources */,
 				1DAB4BD61B6DDFF1008F186F /* accountsShot.png in Resources */,
@@ -1007,11 +1076,13 @@
 				1DAB4D091B6DE8F0008F186F /* SecondViewController.m in Sources */,
 				1DAB4D0F1B6DE8F0008F186F /* TextMessageViewController.m in Sources */,
 				1DAB4D061B6DE8F0008F186F /* PictureViewController.m in Sources */,
+				05784A191BB11EB90096703F /* ProgressViewController.m in Sources */,
 				0512C54A1BA358B400C79514 /* contactUs.m in Sources */,
 				1DAB4C1C1B6DE016008F186F /* UIColor+HTColor.m in Sources */,
 				1DAB4CAC1B6DE75A008F186F /* IQNSArray+Sort.m in Sources */,
 				1DAB4CFF1B6DE8F0008F186F /* GoalsViewController.m in Sources */,
 				1DAB4D001B6DE8F0008F186F /* LibraryViewController.m in Sources */,
+				05784A1F1BB1211C0096703F /* ModifyGoalsViewController.m in Sources */,
 				1DAB4CAF1B6DE75A008F186F /* IQUIViewController+Additions.m in Sources */,
 				1DAB4D0C1B6DE8F0008F186F /* signUpViewController.m in Sources */,
 				0579D4E81BA4EC84000F4422 /* facebookViewController.m in Sources */,
@@ -1048,6 +1119,7 @@
 				1DAB4D141B6DE928008F186F /* StarRatingView.m in Sources */,
 				1DAB4C1B1B6DE016008F186F /* HTPressableButtonPrefs.m in Sources */,
 				1DAB4CB51B6DE75A008F186F /* IQBarButtonItem.m in Sources */,
+				05784A1B1BB120F60096703F /* RewardsViewController.m in Sources */,
 				1D8617AD1AFACA650047DE56 /* main.m in Sources */,
 				1DAB4CFA1B6DE8F0008F186F /* DashboardViewController.m in Sources */,
 				1D3B055B1B71CEBF00675F9E /* LoadingViewController.m in Sources */,

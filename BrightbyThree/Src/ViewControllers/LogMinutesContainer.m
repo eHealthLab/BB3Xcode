@@ -25,10 +25,16 @@
     
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:uiViewController];
     
+    
+    
     //UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleBordered target:nil action:@selector(dismiss)];
     //nav.topViewController.navigationItem.rightBarButtonItem = item;
     
-    nav.modalPresentationStyle = UIModalPresentationCurrentContext;
+    nav.modalPresentationStyle = UIModalPresentationFullScreen;
+    
+    //uiViewController.transitionStyle = UIModalTransitionStyleCoverVertical;
+    
+    //UIModalPresentationCurrentContext;
     [self presentViewController:nav animated:NO completion:nil];
     
     //[uiViewController dismissViewControllerAnimated:YES];

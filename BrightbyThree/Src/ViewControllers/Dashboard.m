@@ -49,7 +49,7 @@
     [self.menuButton setImage:[[UIImage imageNamed:@"menu.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     
     //appDelegate.firstName = @"MARY";
-    //self.title = [@"WELCOME BACK, " stringByAppendingString:appDelegate.firstName];
+    self.title = [@"WELCOME BACK, " stringByAppendingString:appDelegate.firstName];
 }
 
 -(void)didReceiveMemoryWarning{
@@ -92,7 +92,7 @@
         case 0:
         {
             NSLog(@"existing user\n");
-            UIViewController *vc1 = [self.storyboard instantiateViewControllerWithIdentifier:@"dailyGoals"];
+            UIViewController *vc1 = [self.storyboard instantiateViewControllerWithIdentifier:@"progress"];
             vc1.view.frame = self.container2.bounds;
             [self.container2 addSubview:vc1.view];
             [self addChildViewController:vc1];
@@ -102,18 +102,7 @@
         case 1:
         {
             NSLog(@"new user\n");
-            UIViewController *vc1 = [self.storyboard instantiateViewControllerWithIdentifier:@"weeklyGoals"];
-            vc1.view.frame = self.container2.bounds;
-            [self.container2 addSubview:vc1.view];
-            [self addChildViewController:vc1];
-            [vc1 didMoveToParentViewController:self];
-            break;
-        }
-        
-        case 3:
-        {
-            NSLog(@"new user\n");
-            UIViewController *vc1 = [self.storyboard instantiateViewControllerWithIdentifier:@"monthlyGoals"];
+            UIViewController *vc1 = [self.storyboard instantiateViewControllerWithIdentifier:@"dailyGoals"];
             vc1.view.frame = self.container2.bounds;
             [self.container2 addSubview:vc1.view];
             [self addChildViewController:vc1];

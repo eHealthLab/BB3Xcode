@@ -20,6 +20,8 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *menuButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *iconButton;
 
+@property (weak, nonatomic) IBOutlet UITextView *textLabel;
+
 @end
 
 #endif

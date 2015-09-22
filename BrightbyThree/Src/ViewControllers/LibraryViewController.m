@@ -10,6 +10,10 @@
 #import "LibraryViewController.h"
 #import "AppDelegate.h"
 
+@interface LibraryViewController()
+@property(strong, nonatomic) IBOutlet UITableView *tableView;
+@end
+
 @implementation LibraryViewController
 {
     AppDelegate *appDelegate;
@@ -21,6 +25,16 @@
     [super viewDidLoad];
     
     appDelegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
+    
+    self.title = @"Messages";
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(onDoneButton:)];
+    self.navigationItem.rightBarButtonItem = doneButton;
+
+    
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
+    selectedIndex = -1;
     
     // send http request to get messages
     
@@ -90,6 +104,12 @@
 
 }
 
+
+- (void)onDoneButton:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
 - (void)viewDidUnload
 {
     [super viewDidUnload];
@@ -103,11 +123,10 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if(indexPath.section == 0 && indexPath.row == 0) {
+    if(indexPath.section == 0 && selectedIndex== indexPath.row) {
+        return 100.0;
+    }else
         return 65.0;
-    }
-    
-    return 65.0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -117,25 +136,34 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"ExpandingCell" owner:self options:nil];
+        cell  = [nib objectAtIndex:0];
+        //cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
+    if (selectedIndex == indexPath.row) {
+        NSLog(@"expand stuff\n");
+    }
+    else
+        NSLog(@"non-expand stuff\n");
     
    // NSLog(@"data is: %@\n", [appDelegate.messagesSubjectLibrary objectAtIndex:indexPath.row]);
     
-    cell.textLabel.text = [appDelegate.messagesSubjectLibrary objectAtIndex:indexPath.row];
-    if ([appDelegate.messagesReadStatusLibrary[indexPath.row] isEqualToString: @"0"]) {
+    //cell.textLabel.text = [appDelegate.messagesSubjectLibrary objectAtIndex:indexPath.row];
+    /*if ([appDelegate.messagesReadStatusLibrary[indexPath.row] isEqualToString: @"0"]) {
         NSLog(@"found zero, so bolding\n");
         UIFont *myFont = [ UIFont boldSystemFontOfSize: 21.0];
         cell.textLabel.font = myFont;
-    }
-    else{
+    }*/
+    /*else{
         UIFont *myFont = [ UIFont systemFontOfSize:18.0];
         cell.textLabel.font = myFont;
         NSLog(@"FOUND: %@\n", appDelegate.messagesReadStatusLibrary[appDelegate.currentMessageIndex]);
-    }
+    }*/
     
-    cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
-    cell.imageView.image = [UIImage imageNamed:@"Toddler on grass.jpg"];
+    //cell.
+    
+    //cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+    //cell.imageView.image = [UIImage imageNamed:@"Toddler on grass.jpg"];
     //cell.
     
     return cell;
@@ -153,7 +181,19 @@
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"textDetailsViewController"];
+    if (selectedIndex == indexPath.row) {
+        selectedIndex = -1;
+        [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
+    if (selectedIndex == -1) {
+        NSIndexPath *prevPath = [NSIndexPath indexPathForRow:selectedIndex inSection:0];
+        selectedIndex = indexPath.row;
+        [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:prevPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
+    selectedIndex = indexPath.row;
+    [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    
+    /*UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"textDetailsViewController"];
     
     uiViewController.title = [appDelegate.messagesSubjectLibrary objectAtIndex:indexPath.row];
     
@@ -171,7 +211,7 @@
     
     NSLog(@"new unread number is: %d", appDelegate.numberOfUnreadMessages);
     
-    [self.navigationController pushViewController:uiViewController animated:YES];
+    [self.navigationController pushViewController:uiViewController animated:YES];*/
     [tableView reloadData];
     
 }
