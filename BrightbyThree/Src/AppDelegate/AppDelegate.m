@@ -71,6 +71,7 @@
     self.numberOfClicksNetwork=0;
     self.numberOfUnreadMessages=1;
     self.newBadgeNotification=0;
+    self.newPoints = 0;
     self.urlToNodeJs = @"http://localhost:3000";
     //self.urlToNodeJs = @"http://cbb.ucdenver.edu:3000";
     

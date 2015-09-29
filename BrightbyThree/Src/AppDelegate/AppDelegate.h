@@ -82,6 +82,7 @@
 @property(assign, nonatomic) int newBadgeNotification;
 
 @property(assign, nonatomic) int totalPoints;
+@property(assign, nonatomic) int newPoints;
 
 @property(assign, nonatomic) int numberOfClicksSetGoals;
 @property(assign, nonatomic) int numberOfClicksFacebookPage;

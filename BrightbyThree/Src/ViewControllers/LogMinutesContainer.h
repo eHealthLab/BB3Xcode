@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *logMinutes;
 - (IBAction)logMinutesPressed:(id)sender;
 
+@property (strong) NSTimer * messageTimer;
+
 @end
 
 

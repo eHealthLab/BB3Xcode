@@ -64,14 +64,14 @@
     self.loginPassword.text = [prefs objectForKey:@"password"];
     
     //self.loginEmail.text = appDelegate.userEmail;
-    /*UIGraphicsBeginImageContext(self.view.frame.size);
+    UIGraphicsBeginImageContext(self.view.frame.size);
     [[UIImage imageNamed:@"iStock_000017755733_Double.jpg"] drawInRect:self.view.bounds];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     [image drawAtPoint:CGPointZero blendMode:kCGBlendModeOverlay alpha:0.5];
     UIGraphicsEndImageContext();
     
     self.view.backgroundColor = [[UIColor colorWithPatternImage:image] colorWithAlphaComponent:0.3];
-    */
+    
     
     appDelegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
     
@@ -160,7 +160,7 @@
 
 - (void)LoginPressed{
     NSLog(@"inside login pressed\n");
-    
+    /*
     if (self.loginEmail.text.length == 1 || self.loginPassword.text.length == 1) {
         UIAlertView *messageAlert = [[UIAlertView alloc]
                                      initWithTitle:@"Error" message:@"Please fill in the login info." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
@@ -174,13 +174,15 @@
     }
         
     else {
-        
+        */
         SWRevealViewController  *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"revealView"];
         
         appDelegate.firstName = @"MARY";
         uiViewController.title = [@"WELCOME BACK, " stringByAppendingString:appDelegate.firstName];
+     
+     
         
-        /*SWRevealViewController *uiRearViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"slideMenu"];
+        SWRevealViewController *uiRearViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"slideMenu"];
         
         SWRevealViewController *uiFrontViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"frontMenu"];
         
@@ -202,9 +204,9 @@
         [menuButton setImage:[[UIImage imageNamed:@"menu.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
         
         [uiViewController.frontViewController.view addGestureRecognizer:uiViewController.panGestureRecognizer];
-        uiViewController.navigationItem.rightBarButtonItem = menuButton;*/
+        uiViewController.navigationItem.rightBarButtonItem = menuButton;
     
-        
+      /*
         NSLog(@"login info entered: %@ %@", self.loginEmail.text , self.loginPassword.text);
         NSString *newEmail = [self.loginEmail.text uppercaseString];
         responseData = [NSMutableData data];
@@ -227,7 +229,8 @@
             NSLog(@"no connection \n");
             // Inform the user that the connection failed.
         }
-    }
+       */
+    //}
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {

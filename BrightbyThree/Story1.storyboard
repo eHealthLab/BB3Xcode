@@ -2120,7 +2120,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="whj-wY-k8R">
-                        <barButtonItem key="leftBarButtonItem" image="B9FD085F-4AEB-4CC0-BB7A-16A01871471B" id="uC2-3n-gfl">
+                        <barButtonItem key="leftBarButtonItem" image="AFE01EB5-58A7-4107-B099-1E8355EBCBA8" id="uC2-3n-gfl">
                             <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="menu.png" id="YOJ-ff-ohd"/>
@@ -3007,7 +3007,6 @@
         <!--Modify Goals View Controller-->
         <scene sceneID="v8m-yf-sW0">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3c3-bX-a5S" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="goalsView" id="xUw-dO-feM" customClass="ModifyGoalsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IHy-WT-mIh"/>
@@ -3083,13 +3082,14 @@
                         </constraints>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3c3-bX-a5S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1818" y="3234"/>
         </scene>
-        <!--View Controller-->
+        <!--Minutes Timer-->
         <scene sceneID="Iso-nr-QLy">
             <objects>
-                <viewController storyboardIdentifier="minutesTimer" id="WiW-HI-DuP" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="minutesTimer" id="WiW-HI-DuP" customClass="MinutesTimer" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ywv-sI-2rY"/>
                         <viewControllerLayoutGuide type="bottom" id="Zyd-2q-2Za"/>
@@ -3111,15 +3111,18 @@
                             <constraint firstAttribute="centerX" secondItem="PY1-A2-dF5" secondAttribute="centerX" constant="15.5" id="iPa-97-rpL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="timerLabel" destination="PY1-A2-dF5" id="MGZ-Mu-EY2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0H1-4h-K4e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2586" y="2418.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Minutes Value-->
         <scene sceneID="3H0-yx-Tag">
             <objects>
-                <viewController storyboardIdentifier="minutesValue" id="icY-yc-HnP" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="minutesValue" id="icY-yc-HnP" customClass="MinutesValue" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uz3-wk-H1K"/>
                         <viewControllerLayoutGuide type="bottom" id="T4w-aX-UPc"/>
@@ -3139,12 +3142,18 @@
                                 <state key="normal" image="arrow-Up.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="incrementMinutes:" destination="icY-yc-HnP" eventType="touchUpInside" id="pMm-cI-M1P"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kke-cb-bMI">
                                 <rect key="frame" x="185" y="275" width="50" height="50"/>
                                 <state key="normal" image="arrow-Down.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="decrementMinutes:" destination="icY-yc-HnP" eventType="touchUpInside" id="N7b-uU-BBQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -3157,6 +3166,11 @@
                             <constraint firstItem="EHC-wh-2W7" firstAttribute="centerY" secondItem="Kke-cb-bMI" secondAttribute="centerY" id="vGr-Z5-dRM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="decrement" destination="Kke-cb-bMI" id="KgP-5a-enK"/>
+                        <outlet property="increment" destination="KtA-cw-8Jf" id="qcJ-re-I8q"/>
+                        <outlet property="timerLabel" destination="EHC-wh-2W7" id="cbZ-mm-ETC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mz1-Rz-JUI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3481,7 +3495,7 @@
         <image name="18-envelope.png" width="24" height="16"/>
         <image name="28-star.png" width="26" height="26"/>
         <image name="81-dashboard.png" width="28" height="28"/>
-        <image name="B9FD085F-4AEB-4CC0-BB7A-16A01871471B" width="26" height="26">
+        <image name="AFE01EB5-58A7-4107-B099-1E8355EBCBA8" width="26" height="26">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOzxYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISksLzU4VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA

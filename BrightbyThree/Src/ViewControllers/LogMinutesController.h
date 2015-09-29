@@ -19,7 +19,14 @@
 - (IBAction)container1SelectionMade:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UIView *container1;
+@property(weak, nonatomic) NSString *startTimer;
+
+
+@property (strong) NSTimer * messageTimer;
+
+
 @property (weak, nonatomic) IBOutlet UIButton *startStopTimer;
+
 - (IBAction)timerPressed:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;

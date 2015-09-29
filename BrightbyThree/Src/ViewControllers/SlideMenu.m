@@ -139,8 +139,9 @@
     
     [super viewDidLoad];
     menu = @[@"extra",@"first", @"second", @"third", @"fourth", @"fifth", @"sixth", @"seventh", @"eigth", @"ninth", @"tenth", @"eleventh",@"twelth"];
-    imagesArray = @[@"", @"81-dashboard.png", @"123-id-card.png", @"40-inbox.png", @"badge_icon_24.png" , @"17-bar-chart.png", @"28-star.png", @"facebook_icon.jpeg", @"164-glasses-2.png", @"112-group.png", @"187-pencil.png", @"54-lock.png", @"63-runner.png"];
-    titlePages = @[@"",@"Dashboard",@"My Account",@"Messages",@"Rewards",@"Leaderboard",@"Favorites",@"Facebook Page",@"Tutorial",@"About BrightbyThree",@"Contact Us",@"Privacy Policy",@"Sign Out"];
+    imagesArray = @[@"", @"81-dashboard.png", @"123-id-card.png", @"40-inbox.png", @"ribbon-18-xl.png" , @"17-bar-chart.png", @"28-star.png", @"facebook_icon.jpeg", @"164-glasses-2.png", @"112-group.png", @"187-pencil.png", @"54-lock.png", @"63-runner.png"];
+    titlePages = @[@"",@"Dashboard",@"My Account",@"Notifications",@"Rewards",@"Leaderboard",@"Favorites",@"Facebook Page",@"Tutorial",@"About BrightbyThree",@"Contact Us",@"Privacy Policy",@"Sign Out"];
+    // badge_icon_24.png
     
 }
 

@@ -20,6 +20,8 @@
 		05784A1F1BB1211C0096703F /* ModifyGoalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05784A1E1BB1211C0096703F /* ModifyGoalsViewController.m */; };
 		05784A221BB1B6B50096703F /* arrow-Down.png in Resources */ = {isa = PBXBuildFile; fileRef = 05784A201BB1B6B50096703F /* arrow-Down.png */; };
 		05784A231BB1B6B50096703F /* arrow-Up.png in Resources */ = {isa = PBXBuildFile; fileRef = 05784A211BB1B6B50096703F /* arrow-Up.png */; };
+		05784A251BB304EA0096703F /* ribbon.png in Resources */ = {isa = PBXBuildFile; fileRef = 05784A241BB304EA0096703F /* ribbon.png */; };
+		05784A271BB305E70096703F /* ribbon-18-xl.png in Resources */ = {isa = PBXBuildFile; fileRef = 05784A261BB305E70096703F /* ribbon-18-xl.png */; };
 		0579D4E41BA4B7D4000F4422 /* PrivacyPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0579D4E31BA4B7D4000F4422 /* PrivacyPolicy.m */; };
 		0579D4E81BA4EC84000F4422 /* facebookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0579D4E71BA4EC84000F4422 /* facebookViewController.m */; };
 		0579D4EA1BA56AE9000F4422 /* SignUpViewPart1.m in Sources */ = {isa = PBXBuildFile; fileRef = 0579D4E91BA56AE9000F4422 /* SignUpViewPart1.m */; };
@@ -27,6 +29,8 @@
 		058A68521BACADB8009E3816 /* video-24-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 058A68511BACADB8009E3816 /* video-24-24.png */; };
 		058A68541BACAF76009E3816 /* chevron-arrow-to-right--ios-7-interface-symbol_318-33616.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 058A68531BACAF76009E3816 /* chevron-arrow-to-right--ios-7-interface-symbol_318-33616.jpg */; };
 		058A68561BACB00D009E3816 /* cbevron_icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 058A68551BACB00D009E3816 /* cbevron_icon.jpg */; };
+		05943C651BB8A6BD005DF268 /* MinutesTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 05943C641BB8A6BD005DF268 /* MinutesTimer.m */; };
+		05943C691BB8AB10005DF268 /* MinutesValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 05943C681BB8AB10005DF268 /* MinutesValue.m */; };
 		05ED815B1BA360F400C014E4 /* 63-runner.png in Resources */ = {isa = PBXBuildFile; fileRef = 05ED815A1BA360F400C014E4 /* 63-runner.png */; };
 		05ED815D1BA3612B00C014E4 /* 112-group.png in Resources */ = {isa = PBXBuildFile; fileRef = 05ED815C1BA3612B00C014E4 /* 112-group.png */; };
 		05ED815F1BA3614900C014E4 /* 123-id-card.png in Resources */ = {isa = PBXBuildFile; fileRef = 05ED815E1BA3614900C014E4 /* 123-id-card.png */; };
@@ -211,6 +215,8 @@
 		05784A1E1BB1211C0096703F /* ModifyGoalsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyGoalsViewController.m; sourceTree = "<group>"; };
 		05784A201BB1B6B50096703F /* arrow-Down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-Down.png"; sourceTree = "<group>"; };
 		05784A211BB1B6B50096703F /* arrow-Up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-Up.png"; sourceTree = "<group>"; };
+		05784A241BB304EA0096703F /* ribbon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ribbon.png; sourceTree = "<group>"; };
+		05784A261BB305E70096703F /* ribbon-18-xl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ribbon-18-xl.png"; sourceTree = "<group>"; };
 		0579D4E31BA4B7D4000F4422 /* PrivacyPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrivacyPolicy.m; sourceTree = "<group>"; };
 		0579D4E51BA4B7DA000F4422 /* PrivacyPolicy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrivacyPolicy.h; sourceTree = "<group>"; };
 		0579D4E61BA4EC79000F4422 /* facebookViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = facebookViewController.h; sourceTree = "<group>"; };
@@ -221,6 +227,10 @@
 		058A68511BACADB8009E3816 /* video-24-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video-24-24.png"; sourceTree = "<group>"; };
 		058A68531BACAF76009E3816 /* chevron-arrow-to-right--ios-7-interface-symbol_318-33616.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "chevron-arrow-to-right--ios-7-interface-symbol_318-33616.jpg"; sourceTree = "<group>"; };
 		058A68551BACB00D009E3816 /* cbevron_icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cbevron_icon.jpg; sourceTree = "<group>"; };
+		05943C641BB8A6BD005DF268 /* MinutesTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MinutesTimer.m; sourceTree = "<group>"; };
+		05943C661BB8A6C4005DF268 /* MinutesTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MinutesTimer.h; sourceTree = "<group>"; };
+		05943C671BB8AB0A005DF268 /* MinutesValue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MinutesValue.h; sourceTree = "<group>"; };
+		05943C681BB8AB10005DF268 /* MinutesValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MinutesValue.m; sourceTree = "<group>"; };
 		05ED815A1BA360F400C014E4 /* 63-runner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "63-runner.png"; sourceTree = "<group>"; };
 		05ED815C1BA3612B00C014E4 /* 112-group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "112-group.png"; sourceTree = "<group>"; };
 		05ED815E1BA3614900C014E4 /* 123-id-card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "123-id-card.png"; sourceTree = "<group>"; };
@@ -524,6 +534,7 @@
 				1DAF75C01B998AD7008C8F80 /* menu@2x.png */,
 				05784A111BB100BE0096703F /* imagesUp.png */,
 				1D7529E31B88DA6300BC8E03 /* iStock_000020606010_XXXLarge.jpg */,
+				05784A241BB304EA0096703F /* ribbon.png */,
 				1D1EABFF1BA158060068BEE4 /* BB3_AbousUs_icon2.png */,
 				058A68551BACB00D009E3816 /* cbevron_icon.jpg */,
 				05784A131BB100C20096703F /* imagesdown.png */,
@@ -536,6 +547,7 @@
 				1DAB4B761B6DDFF0008F186F /* 08-chat.png */,
 				05ED815C1BA3612B00C014E4 /* 112-group.png */,
 				05784A151BB101210096703F /* upArrow.png */,
+				05784A261BB305E70096703F /* ribbon-18-xl.png */,
 				1D725B711B8795730006521E /* iStock_000024540608_Double.jpg */,
 				05784A041BAF024C0096703F /* 17-bar-chart.png */,
 				05ED81621BA363C200C014E4 /* 184-warning.png */,
@@ -881,6 +893,10 @@
 				05784A1C1BB121000096703F /* RewardsViewController.h */,
 				05784A1D1BB121130096703F /* ModifyGoalsViewController.h */,
 				05784A1E1BB1211C0096703F /* ModifyGoalsViewController.m */,
+				05943C641BB8A6BD005DF268 /* MinutesTimer.m */,
+				05943C661BB8A6C4005DF268 /* MinutesTimer.h */,
+				05943C671BB8AB0A005DF268 /* MinutesValue.h */,
+				05943C681BB8AB10005DF268 /* MinutesValue.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -997,6 +1013,7 @@
 				05784A141BB100C20096703F /* imagesdown.png in Resources */,
 				1DAB4C0A1B6DDFF1008F186F /* rateMessage.png in Resources */,
 				1DAB4BC31B6DDFF1008F186F /* 06-magnify.png in Resources */,
+				05784A251BB304EA0096703F /* ribbon.png in Resources */,
 				05784A031BAF01C10096703F /* badge_icon_24.png in Resources */,
 				1DAB4BF71B6DDFF1008F186F /* favoritesShot.png in Resources */,
 				1DAB4BF61B6DDFF1008F186F /* facebookShot.png in Resources */,
@@ -1058,6 +1075,7 @@
 				1D8617BB1AFACA650047DE56 /* Images.xcassets in Resources */,
 				05ED81651BA3667400C014E4 /* 40-inbox.png in Resources */,
 				1D4FA3C01B727B23001181C6 /* blue_minimalistic_gradient_colors_1920x1200.png in Resources */,
+				05784A271BB305E70096703F /* ribbon-18-xl.png in Resources */,
 				1DAB4BE71B6DDFF1008F186F /* BB3120.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1093,6 +1111,7 @@
 				1DAB4D0B1B6DE8F0008F186F /* SignupController.m in Sources */,
 				1DFB410B1B9EB27D007D87A8 /* GoalsChartController.m in Sources */,
 				1DAB4CB81B6DE75A008F186F /* IQUIView+IQKeyboardToolbar.m in Sources */,
+				05943C651BB8A6BD005DF268 /* MinutesTimer.m in Sources */,
 				05ED816B1BA374C300C014E4 /* LogMinutesController.m in Sources */,
 				1DAB4CFC1B6DE8F0008F186F /* FavoriteMessagesViewController.m in Sources */,
 				1DAB4CB61B6DE75A008F186F /* IQTitleBarButtonItem.m in Sources */,
@@ -1119,6 +1138,7 @@
 				1DAB4D141B6DE928008F186F /* StarRatingView.m in Sources */,
 				1DAB4C1B1B6DE016008F186F /* HTPressableButtonPrefs.m in Sources */,
 				1DAB4CB51B6DE75A008F186F /* IQBarButtonItem.m in Sources */,
+				05943C691BB8AB10005DF268 /* MinutesValue.m in Sources */,
 				05784A1B1BB120F60096703F /* RewardsViewController.m in Sources */,
 				1D8617AD1AFACA650047DE56 /* main.m in Sources */,
 				1DAB4CFA1B6DE8F0008F186F /* DashboardViewController.m in Sources */,
