@@ -15,6 +15,12 @@
 @property (weak, nonatomic) IBOutlet UIView *loginView;
 - (IBAction)selectionMade:(id)sender;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *loginSignupSegment;
+@property (weak, nonatomic) IBOutlet UIButton *nextButton;
+- (IBAction)nextButtonPressed:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *cancelButton;
+@property (weak, nonatomic) IBOutlet UIButton *cancelButtonPressed;
+@property (weak, nonatomic) IBOutlet UIButton *createAccountButton;
+- (IBAction)createAccountButtonPressed:(id)sender;
 
 
 

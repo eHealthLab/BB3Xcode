@@ -31,6 +31,8 @@
 		058A68561BACB00D009E3816 /* cbevron_icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 058A68551BACB00D009E3816 /* cbevron_icon.jpg */; };
 		05943C651BB8A6BD005DF268 /* MinutesTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 05943C641BB8A6BD005DF268 /* MinutesTimer.m */; };
 		05943C691BB8AB10005DF268 /* MinutesValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 05943C681BB8AB10005DF268 /* MinutesValue.m */; };
+		05E0904B1BC2542D004816CE /* DailyGoals.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E0904A1BC2542D004816CE /* DailyGoals.m */; };
+		05E0904E1BC25440004816CE /* WeeklyGoals.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E0904D1BC25440004816CE /* WeeklyGoals.m */; };
 		05ED815B1BA360F400C014E4 /* 63-runner.png in Resources */ = {isa = PBXBuildFile; fileRef = 05ED815A1BA360F400C014E4 /* 63-runner.png */; };
 		05ED815D1BA3612B00C014E4 /* 112-group.png in Resources */ = {isa = PBXBuildFile; fileRef = 05ED815C1BA3612B00C014E4 /* 112-group.png */; };
 		05ED815F1BA3614900C014E4 /* 123-id-card.png in Resources */ = {isa = PBXBuildFile; fileRef = 05ED815E1BA3614900C014E4 /* 123-id-card.png */; };
@@ -231,6 +233,10 @@
 		05943C661BB8A6C4005DF268 /* MinutesTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MinutesTimer.h; sourceTree = "<group>"; };
 		05943C671BB8AB0A005DF268 /* MinutesValue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MinutesValue.h; sourceTree = "<group>"; };
 		05943C681BB8AB10005DF268 /* MinutesValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MinutesValue.m; sourceTree = "<group>"; };
+		05E090491BC25423004816CE /* DailyGoals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DailyGoals.h; sourceTree = "<group>"; };
+		05E0904A1BC2542D004816CE /* DailyGoals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DailyGoals.m; sourceTree = "<group>"; };
+		05E0904C1BC25435004816CE /* WeeklyGoals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeeklyGoals.h; sourceTree = "<group>"; };
+		05E0904D1BC25440004816CE /* WeeklyGoals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeeklyGoals.m; sourceTree = "<group>"; };
 		05ED815A1BA360F400C014E4 /* 63-runner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "63-runner.png"; sourceTree = "<group>"; };
 		05ED815C1BA3612B00C014E4 /* 112-group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "112-group.png"; sourceTree = "<group>"; };
 		05ED815E1BA3614900C014E4 /* 123-id-card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "123-id-card.png"; sourceTree = "<group>"; };
@@ -897,6 +903,10 @@
 				05943C661BB8A6C4005DF268 /* MinutesTimer.h */,
 				05943C671BB8AB0A005DF268 /* MinutesValue.h */,
 				05943C681BB8AB10005DF268 /* MinutesValue.m */,
+				05E090491BC25423004816CE /* DailyGoals.h */,
+				05E0904A1BC2542D004816CE /* DailyGoals.m */,
+				05E0904C1BC25435004816CE /* WeeklyGoals.h */,
+				05E0904D1BC25440004816CE /* WeeklyGoals.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1096,6 +1106,7 @@
 				1DAB4D061B6DE8F0008F186F /* PictureViewController.m in Sources */,
 				05784A191BB11EB90096703F /* ProgressViewController.m in Sources */,
 				0512C54A1BA358B400C79514 /* contactUs.m in Sources */,
+				05E0904B1BC2542D004816CE /* DailyGoals.m in Sources */,
 				1DAB4C1C1B6DE016008F186F /* UIColor+HTColor.m in Sources */,
 				1DAB4CAC1B6DE75A008F186F /* IQNSArray+Sort.m in Sources */,
 				1DAB4CFF1B6DE8F0008F186F /* GoalsViewController.m in Sources */,
@@ -1149,6 +1160,7 @@
 				1DAB4CAD1B6DE75A008F186F /* IQUITextFieldView+Additions.m in Sources */,
 				0579D4EA1BA56AE9000F4422 /* SignUpViewPart1.m in Sources */,
 				1DAB4CFB1B6DE8F0008F186F /* EnrollNow.m in Sources */,
+				05E0904E1BC25440004816CE /* WeeklyGoals.m in Sources */,
 				1DAB4D041B6DE8F0008F186F /* NetworkViewController.m in Sources */,
 				1DAB4CAE1B6DE75A008F186F /* IQUIView+Hierarchy.m in Sources */,
 				1DAB4CFD1B6DE8F0008F186F /* FirstViewController.m in Sources */,

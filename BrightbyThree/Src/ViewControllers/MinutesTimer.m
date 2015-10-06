@@ -8,13 +8,19 @@
 
 #import <Foundation/Foundation.h>
 #import "MinutesTimer.h"
+#import "AppDelegate.h"
 
 @implementation MinutesTimer
+{
+    AppDelegate *delegate;
+}
 
 -(void)viewDidLoad
 {
-    NSLog(@"timer pressed\n");
-    if ([self.startTimer isEqualToString:@"start"]) {
+    self.timerLabel.text = @"00:00";
+    delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    //NSLog(@"timer pressed\n");
+    /*if ([self.startTimer isEqualToString:@"start"]) {
         
         NSLog(@"timer start\n");
         self.startTimer = @"stop";
@@ -29,12 +35,18 @@
         [self.messageTimer invalidate];
         self.messageTimer = nil;
         [self updateMinutes];
-    }
+    }*/
 
     
 }
 -(void)updateMinutes {
-    NSDate *currentDate = [NSDate date];
+    if ([delegate.logMinutesCounter isEqualToString:@"00:00"]) {
+        
+    }
+    else {
+        self.timerLabel.text =  delegate.logMinutesCounter;
+    }
+    /*NSDate *currentDate = [NSDate date];
     NSDate *date = [NSDate date];
     NSTimeInterval timeInterval = [currentDate timeIntervalSinceDate:date];
     NSDate *timerDate = [NSDate dateWithTimeIntervalSince1970:timeInterval];
@@ -45,8 +57,9 @@
     [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0.0]];
     
     // Format the elapsed time and set it to the label
-    NSString *timeString = [dateFormatter stringFromDate:timerDate];
-    self.timerLabel.text = timeString;
+    NSString *timeString = [dateFormatter stringFromDate:timerDate];*/
+    
+    //self.timerLabel.text =  delegate.logMinutesCounter;//timeString;
 }
 
 

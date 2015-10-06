@@ -16,10 +16,16 @@
     self.title = @"MODIFY YOUR GOALS";
     UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(onDoneButton:)];
     self.navigationItem.rightBarButtonItem = doneButton;
+    
 }
 
 - (void)onDoneButton:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (IBAction)savePressed:(id)sender {
+}
+
+- (IBAction)cancelPressed:(id)sender {
+}
 @end

@@ -17,6 +17,7 @@
 @property (strong) NSTimer * messageTimer;
 
 @property(strong, nonatomic) IBOutlet UILabel *timerLabel;
+-(void)updateMinutes;
 
 @end
 

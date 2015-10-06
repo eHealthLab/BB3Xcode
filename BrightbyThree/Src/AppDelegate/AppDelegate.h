@@ -83,6 +83,13 @@
 
 @property(assign, nonatomic) int totalPoints;
 @property(assign, nonatomic) int newPoints;
+@property(assign, nonatomic) int weeklyPoints;
+@property(assign, nonatomic) int monthlyPoints;
+@property(assign, nonatomic) int dailyPoints;
+
+@property(assign, nonatomic) int dailyPointsGoals;
+@property(assign, nonatomic) int weeklyPointsGoals;
+@property(assign, nonatomic) int monthlyPointsGoals;
 
 @property(assign, nonatomic) int numberOfClicksSetGoals;
 @property(assign, nonatomic) int numberOfClicksFacebookPage;
@@ -97,6 +104,8 @@
 @property(assign, nonatomic) int numberOfClicksAboutUs;
 
 @property(strong, nonatomic) NSString *urlToNodeJs;
+
+@property(strong, nonatomic) NSString *logMinutesCounter;
 
 
 

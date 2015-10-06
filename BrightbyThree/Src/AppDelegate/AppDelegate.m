@@ -72,8 +72,20 @@
     self.numberOfUnreadMessages=1;
     self.newBadgeNotification=0;
     self.newPoints = 0;
-    self.urlToNodeJs = @"http://localhost:3000";
-    //self.urlToNodeJs = @"http://cbb.ucdenver.edu:3000";
+    
+    self.dailyPoints=0;
+    self.weeklyPoints=0;
+    self.monthlyPoints=0;
+    
+    self.dailyPointsGoals=0;
+    self.weeklyPointsGoals=0;
+    self.monthlyPointsGoals=0;
+    
+    
+    self.logMinutesCounter = @"00:00";
+    
+    //self.urlToNodeJs = @"http://localhost:3000";
+    self.urlToNodeJs = @"http://cbb.ucdenver.edu:3000";
     
     
 }
@@ -81,8 +93,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    self.urlToNodeJs = @"http://localhost:3000";
-    //self.urlToNodeJs = @"http://cbb.ucdenver.edu:3000";
+    //self.urlToNodeJs = @"http://localhost:3000";
+    self.urlToNodeJs = @"http://cbb.ucdenver.edu:3000";
     _goalsDaysComponent = @"2";
     _goalsMinutesComponent = @"10";
     

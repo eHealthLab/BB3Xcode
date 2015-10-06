@@ -64,13 +64,13 @@
     self.loginPassword.text = [prefs objectForKey:@"password"];
     
     //self.loginEmail.text = appDelegate.userEmail;
-    UIGraphicsBeginImageContext(self.view.frame.size);
+    /*UIGraphicsBeginImageContext(self.view.frame.size);
     [[UIImage imageNamed:@"iStock_000017755733_Double.jpg"] drawInRect:self.view.bounds];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     [image drawAtPoint:CGPointZero blendMode:kCGBlendModeOverlay alpha:0.5];
     UIGraphicsEndImageContext();
     
-    self.view.backgroundColor = [[UIColor colorWithPatternImage:image] colorWithAlphaComponent:0.3];
+    self.view.backgroundColor = [[UIColor colorWithPatternImage:image] colorWithAlphaComponent:0.3];*/
     
     
     appDelegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
@@ -78,11 +78,11 @@
     //UISwitch *mySwitch = [[UISwitch alloc] initWithFrame:CGRectMake(80, 300, 10, 10)];
     //[self.rememberSwitch addTarget:self action:@selector(rememberMePressed) forControlEvents:UIControlEventTouchUpInside];
     
-        self.loginButton.cornerRadius = 10.0;
+        /*self.loginButton.cornerRadius = 10.0;
         self.loginButton.shadowHeight = self.loginButton.frame.size.height * 0.17;
         [self.loginButton setTitle:@"LOG IN" forState:UIControlStateNormal];
         self.loginButton.buttonColor = [UIColor ht_mintColor];
-        self.loginButton.shadowColor = [UIColor ht_mintDarkColor];
+        self.loginButton.shadowColor = [UIColor ht_mintDarkColor];*/
         [self.loginButton addTarget:self action:@selector(LoginPressed) forControlEvents:UIControlEventTouchUpInside];
     
     
@@ -160,7 +160,7 @@
 
 - (void)LoginPressed{
     NSLog(@"inside login pressed\n");
-    /*
+    
     if (self.loginEmail.text.length == 1 || self.loginPassword.text.length == 1) {
         UIAlertView *messageAlert = [[UIAlertView alloc]
                                      initWithTitle:@"Error" message:@"Please fill in the login info." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
@@ -174,8 +174,8 @@
     }
         
     else {
-        */
-        SWRevealViewController  *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"revealView"];
+     
+       /* SWRevealViewController  *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"revealView"];
         
         appDelegate.firstName = @"MARY";
         uiViewController.title = [@"WELCOME BACK, " stringByAppendingString:appDelegate.firstName];
@@ -205,8 +205,8 @@
         
         [uiViewController.frontViewController.view addGestureRecognizer:uiViewController.panGestureRecognizer];
         uiViewController.navigationItem.rightBarButtonItem = menuButton;
+        */
     
-      /*
         NSLog(@"login info entered: %@ %@", self.loginEmail.text , self.loginPassword.text);
         NSString *newEmail = [self.loginEmail.text uppercaseString];
         responseData = [NSMutableData data];
@@ -229,8 +229,8 @@
             NSLog(@"no connection \n");
             // Inform the user that the connection failed.
         }
-       */
-    //}
+       
+    }
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {

@@ -8,11 +8,18 @@
 
 #import <Foundation/Foundation.h>
 #import "ProgressViewController.h"
+#import "AppDelegate.h"
 
 @implementation ProgressViewController
+{
+    AppDelegate *delegate;
+}
 
 -(void)viewDidLoad{
-    
+    delegate = (AppDelegate*) [[UIApplication sharedApplication] delegate];
+    self.totalMinutesLabel.text = [NSString stringWithFormat:@"%d", delegate.totalPoints];
+    self.lastWeekPoints.text = [NSString stringWithFormat:@"%d", delegate.weeklyPoints];
+    self.monthlyPoints.text = [NSString stringWithFormat:@"%d", delegate.monthlyPoints];
     
 }
 

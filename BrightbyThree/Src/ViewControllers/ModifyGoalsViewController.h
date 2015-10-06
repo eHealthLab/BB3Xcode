@@ -13,6 +13,9 @@
 
 @interface ModifyGoalsViewController : UIViewController
 
+- (IBAction)savePressed:(id)sender;
+- (IBAction)cancelPressed:(id)sender;
+
 @end
 
 #endif

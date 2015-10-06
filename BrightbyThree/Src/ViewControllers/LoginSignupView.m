@@ -23,6 +23,9 @@
     
     UIViewController *vc1 = [self viewControllerForSegmentIndex:self.loginSignupSegment.selectedSegmentIndex];
     [self addChildViewController:vc1];
+    self.cancelButton.hidden = YES;
+    self.nextButton.hidden = YES;
+    self.createAccountButton.hidden = YES;
     //vc1.view.frame = self.contentView.bounds;
     //[self.contentView addSubview:vc1.view];
     
@@ -55,6 +58,9 @@
             [self.loginView addSubview:vc1.view];
             [self addChildViewController:vc1];
             [vc1 didMoveToParentViewController:self];
+            self.cancelButton.hidden = YES;
+            self.nextButton.hidden = YES;
+            self.createAccountButton.hidden = YES;
             break;
         }
         case 1:
@@ -65,6 +71,9 @@
             [self.loginView addSubview:vc1.view];
             [self addChildViewController:vc1];
             [vc1 didMoveToParentViewController:self];
+            self.cancelButton.hidden = NO;
+            self.nextButton.hidden = NO;
+            self.createAccountButton.hidden = YES;
             break;
         }
         default:
@@ -86,5 +95,18 @@
 
     [self.navigationController pushViewController:uiViewController  animated:YES];
     self.navigationItem.leftBarButtonItem = nil;
+}
+- (IBAction)nextButtonPressed:(id)sender {
+    //NSLog(@"new user\n");
+    UIViewController *vc1 = [self.storyboard instantiateViewControllerWithIdentifier:@"createAccount-2"];
+    vc1.view.frame = self.loginView.bounds;
+    [self.loginView addSubview:vc1.view];
+    [self addChildViewController:vc1];
+    [vc1 didMoveToParentViewController:self];
+    self.cancelButton.hidden = NO;
+    self.nextButton.hidden = YES;
+    self.createAccountButton.hidden = NO;
+}
+- (IBAction)createAccountButtonPressed:(id)sender {
 }
 @end

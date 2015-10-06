@@ -8,6 +8,7 @@
 
 #import "GoalsChartController.h"
 #import "PieChartView.h"
+#import "AppDelegate.h"
 
 static inline UIColor *GetRandomUIColor()
 {
@@ -47,9 +48,15 @@ PieChartViewDataSource
 @end
 
 @implementation GoalsChartController
+{
+    AppDelegate *delegate;
+    int indexOfSegment;
+}
 
 -(void)loadView
 {
+    
+    
     
     self.modifyGoals.cornerRadius = 10.0;
     self.modifyGoals.shadowHeight = self.modifyGoals.frame.size.height * 0.17;
@@ -122,9 +129,15 @@ PieChartViewDataSource
     switch (segment.selectedSegmentIndex) {
         case 0:{
             //action for the first button (Current)
+            indexOfSegment=0;
             break;}
         case 1:{
             //action for the first button (Current)
+            indexOfSegment=1;
+            break;}
+        case 2:{
+            //action for the first button (Current)
+            indexOfSegment=2;
             break;}
     }
 }
@@ -137,6 +150,13 @@ PieChartViewDataSource
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    delegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
+    
+    //NSLog(@"daily, weekly, monthly goals are: %d, %d, %d\n", delegate.dailyPointsGoals, delegate.weeklyPointsGoals, delegate.monthlyPointsGoals);
+    
+    indexOfSegment=0;
+    
     [self didChangeValueForSlider:holeSlider];
     [self didChangeValueForSlider:slicesSlider];
     [pieChartView reloadData];
@@ -193,10 +213,38 @@ PieChartViewDataSource
 -(double)pieChartView:(PieChartView *)pieChartView valueForSliceAtIndex:(NSUInteger)index
 {
     if (index == 0) {
-        return 20.0;
+        //return 20.0;
+        NSLog(@"segment: %d\n", indexOfSegment);
+        if (indexOfSegment== 0){
+             if (delegate.dailyPoints == 0 || delegate.dailyPointsGoals == 0)
+                 return 0;
+             else {
+                 NSLog(@"daily: %d, %d", delegate.dailyPoints, delegate.dailyPointsGoals);
+                 return delegate.dailyPoints/delegate.dailyPointsGoals;
+             }
+            
+        }
+        else if (indexOfSegment == 1) {
+            if (delegate.weeklyPoints == 0 || delegate.weeklyPointsGoals == 0)
+                return 0;
+            else {
+                NSLog(@"daily: %d, %d", delegate.weeklyPoints, delegate.weeklyPointsGoals);
+                return delegate.weeklyPoints/delegate.weeklyPointsGoals;
+            }
+        }
+        else if (indexOfSegment == 2) {
+            if (delegate.monthlyPoints == 0 || delegate.monthlyPointsGoals == 0)
+                return 0;
+            else {
+                NSLog(@"daily: %d, %d", delegate.monthlyPoints, delegate.monthlyPointsGoals);
+                return delegate.monthlyPoints/delegate.monthlyPointsGoals;
+            }
+        }
+        else return 10;
     }
     else
-        return 80.0;
+        return 70.0;
+        //return delegate.dailyPoints/delegate.dailyPointsGoals;
     //return 100/slicesSlider.value;
 }
 #pragma mark -
