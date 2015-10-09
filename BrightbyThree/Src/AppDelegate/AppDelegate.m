@@ -43,6 +43,7 @@
     _lastName = @"";
     _userEmail = @"";
     _userPassword = @"";
+    _confirmPassword = @"";
     _babyGender = @"";
     _babyDOB = @"";
     _phoneNumber = @"";
@@ -84,8 +85,8 @@
     
     self.logMinutesCounter = @"00:00";
     
-    //self.urlToNodeJs = @"http://localhost:3000";
-    self.urlToNodeJs = @"http://cbb.ucdenver.edu:3000";
+    self.urlToNodeJs = @"http://localhost:3000";
+    //self.urlToNodeJs = @"http://cbb.ucdenver.edu:3000";
     
     
 }
@@ -93,8 +94,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    //self.urlToNodeJs = @"http://localhost:3000";
-    self.urlToNodeJs = @"http://cbb.ucdenver.edu:3000";
+    self.urlToNodeJs = @"http://localhost:3000";
+    //self.urlToNodeJs = @"http://cbb.ucdenver.edu:3000";
     _goalsDaysComponent = @"2";
     _goalsMinutesComponent = @"10";
     

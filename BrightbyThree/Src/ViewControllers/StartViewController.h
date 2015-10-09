@@ -38,13 +38,14 @@
 
 @interface StartViewController : UIViewController <UIPageViewControllerDataSource>
 
-- (IBAction)startReview:(id)sender;
+//- (IBAction)startReview:(id)sender;
 
 @property(strong, nonatomic) UIPageViewController *pageViewController;
 @property(strong, nonatomic) NSArray *pageTitles;
-@property(strong, nonatomic) NSArray *pageBlurbs;
-@property(strong, nonatomic) NSArray *pageImages;
-@property (strong, nonatomic) IBOutlet HTPressableButton *skipButton;
+@property(strong, nonatomic) NSArray *badgeBlurbs;
+@property(strong, nonatomic) NSArray *badgeImages;
+@property(strong, nonatomic) NSArray *badgeDates;
+//@property (strong, nonatomic) IBOutlet HTPressableButton *skipButton;
 
 
 

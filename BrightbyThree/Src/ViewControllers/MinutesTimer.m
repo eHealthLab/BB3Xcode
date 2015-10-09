@@ -19,6 +19,16 @@
 {
     self.timerLabel.text = @"00:00";
     delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    if ([delegate.logMinutesCounter isEqualToString:@"00:00"]) {
+        
+    }
+    else {
+        NSLog(@"updating here with %@\n", delegate.logMinutesCounter);
+        self.timerLabel.text =  @"0.00";
+    }
+
+    
     //NSLog(@"timer pressed\n");
     /*if ([self.startTimer isEqualToString:@"start"]) {
         
@@ -35,16 +45,20 @@
         [self.messageTimer invalidate];
         self.messageTimer = nil;
         [self updateMinutes];
+     
     }*/
-
-    
 }
--(void)updateMinutes {
+
+
+-(void)updateMinutes:(id)sender
+{
     if ([delegate.logMinutesCounter isEqualToString:@"00:00"]) {
         
     }
     else {
-        self.timerLabel.text =  delegate.logMinutesCounter;
+        NSLog(@"updating now %@\n", sender);
+        NSString *value = [NSString stringWithFormat:@"%@", sender];
+        self.timerLabel.text = value;
     }
     /*NSDate *currentDate = [NSDate date];
     NSDate *date = [NSDate date];

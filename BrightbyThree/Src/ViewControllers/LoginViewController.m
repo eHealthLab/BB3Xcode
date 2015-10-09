@@ -344,12 +344,12 @@
         [prefs synchronize];
 
         
-        appDelegate.firstName = @"";
+        //appDelegate.firstName = @"";
         
         SWRevealViewController  *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"revealView"];
         
-        appDelegate.firstName = @"MARY";
-        uiViewController.title = [@"WELCOME BACK, " stringByAppendingString:appDelegate.firstName];
+        //appDelegate.firstName = @"MARY";
+        uiViewController.title = [@"Welcome back, " stringByAppendingString:appDelegate.firstName];
         
         SWRevealViewController *uiRearViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"slideMenu"];
         

@@ -214,16 +214,27 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    if (indexPath.row == 3) {
+    /*if (indexPath.row == 3) {
         
-        UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MessagesLibrary"];
+        UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"LibraryStartViewController"];
         
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:uiViewController];
         
         //nav.modalPresentationStyle = UIModalPresentationFullScreen;
         
         [self presentViewController:nav animated:NO completion:nil];
-    }
+    }*/
+    
+    /*if (indexPath.row == 6) {
+        
+        UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"FavoritesStartViewController"];
+        
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:uiViewController];
+        
+        //nav.modalPresentationStyle = UIModalPresentationFullScreen;
+        
+        [self presentViewController:nav animated:NO completion:nil];
+    }*/
     
     if (indexPath.row == 12) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Sign out" message:@"Are you sure you want to sign out?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
@@ -271,10 +282,17 @@
         appDelegate.phoneNumber = @"";
         appDelegate.zipcode = @"";
         
+        UINavigationController *uiView = [self.storyboard instantiateViewControllerWithIdentifier:@"loginNavigation"];
+        
+        //[self.navigationController pushViewController:uiView  animated:YES];
+        
+        uiView.navigationItem.hidesBackButton = YES;
+        
         //UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"loginViewController"];
         
         
-        //[self.revealViewController frontViewController:uiViewController];
+        
+        //[self.revealViewController frontViewController:uiView];
         //self.navigationItem.hidesBackButton=YES;
     }
 }

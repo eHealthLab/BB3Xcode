@@ -26,6 +26,18 @@
     }
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+    delegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
+    if (delegate.weeklyPointsGoals == 0 || delegate.dailyPointsGoals == 0) {
+        
+    }
+    else {
+        self.minutesLabel.text = [NSString stringWithFormat:@"%d", delegate.dailyPointsGoals];
+    }
+}
+
 - (IBAction)decrementPressed:(id)sender {
     if ([self.minutesLabel.text isEqualToString:@"10"]) {
         

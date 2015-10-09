@@ -37,19 +37,36 @@
 
 @interface PageContentViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *badge1Image;
+@property (weak, nonatomic) IBOutlet UIImageView *badge2Image;
+@property (weak, nonatomic) IBOutlet UIImageView *badge3Image;
 
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateBadge1;
+@property (weak, nonatomic) IBOutlet UILabel *dateBadge2;
+@property (weak, nonatomic) IBOutlet UILabel *dateBadge3;
 
-@property (weak, nonatomic) IBOutlet UITextView *titleDescription;
+@property (weak, nonatomic) IBOutlet UILabel *badge1Label;
+@property (weak, nonatomic) IBOutlet UILabel *badge2Label;
+@property (weak, nonatomic) IBOutlet UILabel *badge3Label;
 
+@property (weak, nonatomic) IBOutlet UILabel *earned1Label;
+@property (weak, nonatomic) IBOutlet UILabel *earned2Label;
+@property (weak, nonatomic) IBOutlet UILabel *earned3Label;
 
 @property NSUInteger pageIndex;
-@property NSString *titleText;
-@property NSString *titleBlurb;
-@property NSString *imageFile;
 
-@property (weak, nonatomic) IBOutlet HTPressableButton *skipButton;
+@property NSString *descriptionBadge1;
+@property NSString *descriptionBadge2;
+@property NSString *descriptionBadge3;
+
+
+@property NSString *dateBadge1Earned;
+@property NSString *dateBadge2Earned;
+@property NSString *dateBadge3Earned;
+
+@property NSString *imageFile1;
+@property NSString *imageFile2;
+@property NSString *imageFile3;
 
 @end
 

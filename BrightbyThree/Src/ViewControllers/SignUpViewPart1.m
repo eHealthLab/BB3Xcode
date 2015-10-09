@@ -15,34 +15,47 @@
 {
     NSData *responseData;
     NSMutableData *receivedData;
-    AppDelegate *appDelegate;
+    AppDelegate *delegate;
     LoginSignupView *login;
 }
 
-
-
--(void) viewDidLoad
+-(void) viewWillAppear:(BOOL)animated
 {
-    login = [[LoginSignupView alloc] init];
-    //login = (LoginSignupView*) [[UIApplication sharedApplication]];
+    NSLog(@"view is here\n");
+    
+    [super viewWillAppear:YES];
+    
+    delegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
+    
+    self.firstNameField.delegate = self;
+    self.lastNameField.delegate = self;
+    self.emailField.delegate = self;
+    self.passwordField.delegate = self;
+    self.reenterPassword.delegate = self;
+    
+    
+    
 }
 
-- (IBAction)nextButtonPressed:(id)sender {
-    
-    
-    NSLog(@"next pressed");
-    //NSLog(@"new user\n");
-    UIViewController *vc2 = [self.storyboard instantiateViewControllerWithIdentifier:@"createAccount-2"];
-    vc2.view.frame = login.loginView.bounds;
-    [login.loginView addSubview:vc2.view];
-    [self addChildViewController:vc2];
-    [vc2 didMoveToParentViewController:self];
-    
-    /*UIViewController *vc1 = [self.storyboard instantiateViewControllerWithIdentifier:@"createAccount-2"];
-    vc1.view.frame = self.loginView.bounds;
-    [self.loginView addSubview:vc1.view];
-    [self addChildViewController:vc1];
-    [vc1 didMoveToParentViewController:self];*/
-    
+- (void)textFieldDidEndEditing:(UITextField *)textField{
+    NSLog(@"textFieldDidEndEditing");
+    if (textField == self.firstNameField) {
+        delegate.firstName = self.firstNameField.text;
+    }
+    else if (textField == self.lastNameField) {
+        delegate.lastName = self.lastNameField.text;
+    }
+    else if (textField == self.emailField){
+        delegate.userEmail = self.emailField.text;
+    }
+    else if (textField == self.passwordField){
+        delegate.userPassword = self.passwordField.text;
+    }
+    else if (textField == self.reenterPassword){
+        delegate.confirmPassword = self.reenterPassword.text;
+    }
 }
+
+
+
 @end

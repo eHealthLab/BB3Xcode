@@ -15,14 +15,16 @@
 #import "UIColor+HTColor.h"
 #import "ACPButton.h"
 
-@interface SignUpViewPart1: UIViewController
+@interface SignUpViewPart1: UIViewController<UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *firstNameField;
 @property (weak, nonatomic) IBOutlet UITextField *lastNameField;
 @property (weak, nonatomic) IBOutlet UITextField *emailField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
-@property (weak, nonatomic) IBOutlet HTPressableButton *nextButton;
-- (IBAction)nextButtonPressed:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *reenterPassword;
+
+//@property (weak, nonatomic) IBOutlet HTPressableButton *nextButton;
+//- (IBAction)nextButtonPressed:(id)sender;
 
 @end
 

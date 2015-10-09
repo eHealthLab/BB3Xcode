@@ -10,7 +10,7 @@
 #define BrightbyThree_LibraryViewController_h
 #import<UIKit/UIKit.h>
 
-@interface LibraryViewController : UITableViewController<UITableViewDelegate, UITableViewDataSource, UITextViewDelegate>
+@interface LibraryViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, UITextViewDelegate>
 {
     NSMutableArray *sectionArray;
     NSMutableArray *numberOfRows;

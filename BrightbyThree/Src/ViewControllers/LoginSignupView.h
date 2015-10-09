@@ -18,14 +18,15 @@
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
 - (IBAction)nextButtonPressed:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
-@property (weak, nonatomic) IBOutlet UIButton *cancelButtonPressed;
+//@property (weak, nonatomic) IBOutlet UIButton *cancelButtonPressed;
 @property (weak, nonatomic) IBOutlet UIButton *createAccountButton;
 - (IBAction)createAccountButtonPressed:(id)sender;
+- (IBAction)cancelButtonPressed:(id)sender;
 
 
 
-@property (weak, nonatomic) IBOutlet UIButton *loginButtonPressed;
-- (IBAction)loginButtonPressed:(id)sender;
+//@property (weak, nonatomic) IBOutlet UIButton *loginButtonPressed;
+//- (IBAction)loginButtonPressed:(id)sender;
 
 @end
 

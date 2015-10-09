@@ -59,7 +59,7 @@
     appDelegate = (AppDelegate*) [[UIApplication sharedApplication] delegate];
     self.title = @"Tutorial";
     
-    appDelegate.babyName = @"Nate";
+    //appDelegate.babyName = @"Nate";
     
     // Create the colors
     /*UIColor *darkOp =

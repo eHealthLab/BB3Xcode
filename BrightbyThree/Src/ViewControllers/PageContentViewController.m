@@ -36,21 +36,46 @@
 {
     [super viewDidLoad];
     
-    self.backgroundImageView.image = [UIImage imageNamed:self.imageFile];
-    self.titleLabel.text = self.titleText;
-    self.titleDescription.text = self.titleBlurb;
+    //self.backgroundImageView.image = [UIImage imageNamed:self.imageFile];
+    //self.titleLabel.text = self.titleText;
+    //self.titleDescription.text = self.titleBlurb;
     
     
-    self.titleDescription.textAlignment=NSTextAlignmentJustified;
+    
+    self.badge1Image.image = [UIImage imageNamed:self.imageFile1];
+    self.badge2Image.image = [UIImage imageNamed:self.imageFile2];
+    self.badge3Image.image = [UIImage imageNamed:self.imageFile3];
+    
+    self.dateBadge1.text = self.dateBadge1Earned;
+    self.dateBadge2.text = self.dateBadge2Earned;
+    self.dateBadge3.text = self.dateBadge3Earned;
+    
+    self.badge1Label.text = self.descriptionBadge1;
+    self.badge2Label.text = self.descriptionBadge2;
+    self.badge3Label.text = self.descriptionBadge3;
+    
+    if (self.badge1Label.text.length < 2) {
+        self.earned1Label.hidden = YES;
+    }
+    
+    if (self.badge2Label.text.length < 2) {
+        self.earned2Label.hidden = YES;
+    }
+    
+    if (self.badge3Label.text.length < 2) {
+        self.earned3Label.hidden = YES;
+    }
+    
+    
+    /*self.titleDescription.textAlignment=NSTextAlignmentJustified;
     [self.titleDescription sizeToFit];
     [self.titleDescription setScrollEnabled:YES];
     [self.titleDescription setFont:[UIFont fontWithName:@"DIN Alternate" size:15.0]];
     //[uiViewController.view addSubview:textViewDetail1];
     CGRect frame = self.titleDescription.frame;
     frame.size.height = self.titleDescription.contentSize.height;
-    self.titleDescription.frame = frame;
+    self.titleDescription.frame = frame;*/
     
-    self.skipButton.buttonColor = [UIColor ht_mintColor];
 }
 
 @end

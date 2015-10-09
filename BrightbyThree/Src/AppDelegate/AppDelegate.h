@@ -37,6 +37,7 @@
 @property (strong, nonatomic) UIWindow *window;
 @property(strong, nonatomic) NSString *userEmail;
 @property(strong, nonatomic) NSString *userPassword;
+@property(strong, nonatomic) NSString *confirmPassword;
 @property(strong, nonatomic) NSString *firstName;
 @property(strong, nonatomic) NSString *lastName;
 @property(strong, nonatomic) NSString *phoneNumber;
@@ -76,6 +77,7 @@
 @property(strong, nonatomic) NSString *currentMessageContent;
 @property(strong, nonatomic) NSString *currentVideoLink;
 @property(assign, nonatomic) int currentMessageIndex;
+@property(strong, nonatomic) NSString *currentMessageTitle;
 
 @property(assign, nonatomic) int numberOfDaysEnrolled;
 @property(assign, nonatomic) int numberOfUnreadMessages;

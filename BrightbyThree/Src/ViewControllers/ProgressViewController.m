@@ -23,6 +23,15 @@
     
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+    delegate = (AppDelegate*) [[UIApplication sharedApplication] delegate];
+    self.totalMinutesLabel.text = [NSString stringWithFormat:@"%d", delegate.totalPoints];
+    self.lastWeekPoints.text = [NSString stringWithFormat:@"%d", delegate.weeklyPoints];
+    self.monthlyPoints.text = [NSString stringWithFormat:@"%d", delegate.monthlyPoints];
+}
+
 - (IBAction)modifyGoalsButtonPressed:(id)sender {
     
     
@@ -38,7 +47,8 @@
     
     
     
-    UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"rewardsView"];
+    
+    UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"startViewController"];
     
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:uiViewController];
     
@@ -46,4 +56,11 @@
     
     [self presentViewController:nav animated:NO completion:nil];
 }
+
+-(void)dismiss
+{
+    [self.presentedViewController dismissViewControllerAnimated:YES completion:nil];
+    
+}
+
 @end

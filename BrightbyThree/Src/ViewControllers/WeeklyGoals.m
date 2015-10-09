@@ -16,8 +16,22 @@
 }
 
 
--(void)viewDidLoad
+/*-(void)viewDidLoad
 {
+    delegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
+    if (delegate.weeklyPointsGoals == 0 || delegate.dailyPointsGoals == 0) {
+        
+    }
+    else {
+        int days = delegate.weeklyPointsGoals/delegate.dailyPointsGoals;
+        self.daysLabel.text = [NSString stringWithFormat:@"%d", days];
+    }
+    
+}*/
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
     delegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
     if (delegate.weeklyPointsGoals == 0 || delegate.dailyPointsGoals == 0) {
         
