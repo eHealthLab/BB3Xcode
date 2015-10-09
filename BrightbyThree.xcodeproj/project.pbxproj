@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0512C54A1BA358B400C79514 /* contactUs.m in Sources */ = {isa = PBXBuildFile; fileRef = 0512C5491BA358B400C79514 /* contactUs.m */; };
+		052E29291BC8431600B14105 /* ExpandingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 052E29281BC8431600B14105 /* ExpandingCell.m */; };
 		05548E571BC707DF005B527E /* FavoritesStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05548E561BC707DF005B527E /* FavoritesStartViewController.m */; };
 		05548E5B1BC70805005B527E /* FavoritesPageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05548E5A1BC70805005B527E /* FavoritesPageContentViewController.m */; };
 		05548E5D1BC70828005B527E /* LibraryPageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05548E5C1BC70828005B527E /* LibraryPageContentViewController.m */; };
@@ -212,6 +213,7 @@
 /* Begin PBXFileReference section */
 		0512C5481BA358A800C79514 /* contactUs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = contactUs.h; sourceTree = "<group>"; };
 		0512C5491BA358B400C79514 /* contactUs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = contactUs.m; sourceTree = "<group>"; };
+		052E29281BC8431600B14105 /* ExpandingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpandingCell.m; sourceTree = "<group>"; };
 		05548E561BC707DF005B527E /* FavoritesStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesStartViewController.m; sourceTree = "<group>"; };
 		05548E581BC707EB005B527E /* FavoritesStartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FavoritesStartViewController.h; sourceTree = "<group>"; };
 		05548E591BC707FD005B527E /* FavoritesPageContentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FavoritesPageContentViewController.h; sourceTree = "<group>"; };
@@ -893,6 +895,7 @@
 				1DAB4CE61B6DE8F0008F186F /* SettingsViewController.h */,
 				1DAB4CE71B6DE8F0008F186F /* SettingsViewController.m */,
 				1DAB4CE81B6DE8F0008F186F /* SignupController.h */,
+				052E29281BC8431600B14105 /* ExpandingCell.m */,
 				1DAB4CE91B6DE8F0008F186F /* SignupController.m */,
 				1DAB4CEA1B6DE8F0008F186F /* signUpViewController.h */,
 				1DAB4CEB1B6DE8F0008F186F /* signUpViewController.m */,
@@ -1175,6 +1178,7 @@
 				05548E601BC7083C005B527E /* LibraryStartViewController.m in Sources */,
 				1DAB4D0B1B6DE8F0008F186F /* SignupController.m in Sources */,
 				1DFB410B1B9EB27D007D87A8 /* GoalsChartController.m in Sources */,
+				052E29291BC8431600B14105 /* ExpandingCell.m in Sources */,
 				1DAB4CB81B6DE75A008F186F /* IQUIView+IQKeyboardToolbar.m in Sources */,
 				05943C651BB8A6BD005DF268 /* MinutesTimer.m in Sources */,
 				05ED816B1BA374C300C014E4 /* LogMinutesController.m in Sources */,
@@ -1348,7 +1352,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "7b184e9c-dabf-400a-ae89-3707bb2f6c36";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1359,14 +1363,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Sheana Bull (8B2Z9YK54P)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Sheana Bull (8B2Z9YK54P)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
 				INFOPLIST_FILE = BrightbyThree/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0cdf8238-a70f-4be1-b97d-c359a3d7a2d3";
-				"PROVISIONING_PROFILE[sdk=*]" = "0cdf8238-a70f-4be1-b97d-c359a3d7a2d3";
+				PROVISIONING_PROFILE = "7b184e9c-dabf-400a-ae89-3707bb2f6c36";
+				"PROVISIONING_PROFILE[sdk=*]" = "7b184e9c-dabf-400a-ae89-3707bb2f6c36";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

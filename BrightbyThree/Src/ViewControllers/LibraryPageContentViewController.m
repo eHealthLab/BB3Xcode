@@ -82,7 +82,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if(indexPath.section == 0 && selectedIndex== indexPath.row) {
-        return 130.0;
+        return 200.0;
     }
     else
         return 65.0;
@@ -97,17 +97,29 @@
     if (cell == nil) {
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"ExpandingCell" owner:self options:nil];
         cell  = [nib objectAtIndex:0];
-        //cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+        cell.textLabel.text = @"Hello there";
+        cell.detailTextLabel.text = @"Hello there";
+        cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
     }
     if (selectedIndex == indexPath.row) {
         NSLog(@"expand stuff\n");
+        cell.textLabel.text = @"Hello there";
+        cell.detailTextLabel.text = @"Hello there";
+        cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
     }
     else
         NSLog(@"non-expand stuff\n");
+        cell.textLabel.text = @"Hello only";
+        cell.detailTextLabel.text = @"Hello there";
+        cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+
+        NSLog(@"data is: %@\n", [appDelegate.messagesSubjectLibrary objectAtIndex:indexPath.row]);
     
-    // NSLog(@"data is: %@\n", [appDelegate.messagesSubjectLibrary objectAtIndex:indexPath.row]);
+        cell.textLabel.text = [appDelegate.messagesSubjectLibrary objectAtIndex:indexPath.row];
     
-    //cell.textLabel.text = [appDelegate.messagesSubjectLibrary objectAtIndex:indexPath.row];
+        cell.detailTextLabel.text = [appDelegate.messagesLibrary objectAtIndex:indexPath.row];
+    
     /*if ([appDelegate.messagesReadStatusLibrary[indexPath.row] isEqualToString: @"0"]) {
      NSLog(@"found zero, so bolding\n");
      UIFont *myFont = [ UIFont boldSystemFontOfSize: 21.0];
@@ -152,9 +164,11 @@
     selectedIndex = (int)indexPath.row;
     [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
     
-    /*UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"textDetailsViewController"];
-     
-     uiViewController.title = [appDelegate.messagesSubjectLibrary objectAtIndex:indexPath.row];
+    
+    
+    
+    
+    
      
      appDelegate.currentMessageContent = [appDelegate.messagesLibrary objectAtIndex:indexPath.row];
      
@@ -170,8 +184,18 @@
      
      NSLog(@"new unread number is: %d", appDelegate.numberOfUnreadMessages);
      
-     [self.navigationController pushViewController:uiViewController animated:YES];*/
     [tableView reloadData];
+    
+    UIViewController *uiViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"fullMessageView"];
+    
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:uiViewController];
+    
+    uiViewController.title = [appDelegate.messagesSubjectLibrary objectAtIndex:indexPath.row];
+    
+    nav.modalPresentationStyle = UIModalPresentationFullScreen;
+    
+    [self presentViewController:nav animated:NO completion:nil];
+
     
 }
 

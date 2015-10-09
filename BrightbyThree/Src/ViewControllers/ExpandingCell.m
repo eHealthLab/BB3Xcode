@@ -18,5 +18,12 @@
     self.detailsText.text = @"Hello there";
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    //[super viewWillAppear:YES];
+    self.cellLabel.text = @"Hello";
+    self.detailsText.text = @"Hello there";
+}
+
 @end
 
